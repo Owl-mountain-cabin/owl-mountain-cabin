@@ -1,56 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700&display=swap');
-$body-font-family:'Montserrat',
-'Noto Sans KR',
-sans-serif;
-$basic-font: 'Montserrat',
-'Noto Sans KR',
-sans-serif;
-$sub-font: 'Noto Sans KR',
-'Montserrat',
-sans-serif;
-$material-light: ('background': #F5F7F8);
-$info-color: 'blue-grey darken-4';
-$normal-color: 'cyan lighten-2';
-$warning-color: 'yellow';
-$major-color: 'orange darken-2';
-$critical-color: 'red darken-1';
+$body-font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; 
+$border-radius-root: 6px; 
+$font-size-root: 14px;
 
-/* font-standard-size: */
-$font-standard-size: 16px;
+$color-main : #ff3322; 
+$color-sub : #334455; 
+$color-gray-1 : #333333; 
+$color-gray-2 : #666666; 
+$color-gray-3 : #999999;
 
-/* Screen-size: */
-$breakpoint-small :580px;
-$breakpoint-medium : 1350px;
-$breakpoint-large :1920px;
-
-/* Color */
-$sp-body-bg-color: #F5F7F8;
-$sp-primary: #344A63;
-$sp-secondary: #125A90;
-$sp-teriary: #036EB8;
-$sp-quaternary: #2A4058;
-$sp-title: #1A3350;
-$sp-success: #29AA54;
-$sp-warning: #FFCD56;
-$sp-danger: #DE0655;
-$sp-grey-900: #5D5D5D;
-$sp-grey-800: #1A3350;
-$sp-grey-700: #4E4B66;
-$sp-grey-600: #5B6C82;
-$sp-grey-400: #8C98A7;
-$sp-grey-300: #A4A9B2;
-$sp-grey-200: #F7F9FB;
-$sp-grey-100: #FBFCFD;
-$sp-blue-500: #0078FF;
-$sp-blue-400: #06ABEA;
-$sp-sky-blue-500: #4B5566;
-$sp-box-border: #DBDFE1;
-$sp-orange: #FF8000;
-$sp-pink: #FC00C5;
-$sp-cerise: #FF005F;
-$sp-red: #EA1606;
-$sp-green: #00BA88;
-$sp-black-500: #2F3E4E;
-$sp-black-700: #14142b;
-$sp-border-color: #E5E9EB;

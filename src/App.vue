@@ -1,23 +1,25 @@
 <template>
-  <div id="app">
-    <header>
-      <router-link to="/home">Home</router-link>
-      <router-link to="/about">About</router-link>
-      <router-link to="/menu">Menu</router-link>
-      <router-link to="/store">Store</router-link>
-      <router-link to="/franchise">Franchise</router-link>
-    </header>
-    <main>
+  <appLayout>
+    <cHeader />
+    <v-main>
       <router-view></router-view>
-    </main>
-  </div>
+    </v-main>
+  </appLayout>
 </template>
 
 <script>
+import AppLayout from "@/layouts/AppLayout.vue";
+import CHeader from "@/layouts/Header.vue";
+
 export default {
   name: "App",
-  components: {},
+  components: {
+    AppLayout,
+    CHeader,
+  },
+  data() {
+    return {};
+  },
 };
 </script>
-
-<style lang="sass"></style>
+<style lang="scss" scoped></style>
