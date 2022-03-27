@@ -1,9 +1,24 @@
 <template>
-  <div class="owl-franchise">Franchise</div>
+  <div class="owl-franchise">
+    <div class="owl-store">
+      <Dimmed :height="'463px'" />
+      <ImageWrapper
+        :imageSrc="'franchise-header-image.png'"
+        title="FRANCHISE"
+      />
+    </div>
+  </div>
 </template>
 
 <script>
-export default {};
+import Dimmed from "@/components/Dimmed.vue";
+import ImageWrapper from "@/components/imageWrapper.vue";
+export default {
+  components: {
+    Dimmed,
+    ImageWrapper,
+  },
+};
 </script>
 
 <style lang="scss"></style>

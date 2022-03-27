@@ -25,14 +25,42 @@ export default {
 <style lang="scss">
 .owl-header-wrapper {
   $this: "owl-header";
-  display: flex;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  @include flex-center-vert();
   justify-content: space-between;
-  align-items: center;
-  background-color: rgba($color: #000, $alpha: 0.5);
+  padding: 0 140px;
+  padding-top: 34px;
+  z-index: 501;
   .#{$this}__logo-wrapper {
+    width: 149px;
   }
-
   .#{$this}__link-wrapper {
+    @include flex-center-vert();
+    a {
+      text-decoration: none;
+      margin-right: 45px;
+      @include set-text(400, 20, rgba($color: #fff, $alpha: 1));
+      @include transition(color 0.5s ease-in);
+      &:after {
+        display: block;
+        content: "";
+        border-bottom: solid 3px $color-orange;
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;
+        transform-origin: 0% 50%;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        color: rgba($color: $color-orange, $alpha: 1);
+      }
+      &:hover:after {
+        transform: scaleX(1);
+      }
+    }
   }
 }
 </style>
