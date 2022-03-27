@@ -1,10 +1,40 @@
-$body-font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; 
-$border-radius-root: 6px; 
-$font-size-root: 14px;
+@font-face {
+    font-family: 'Helvetica';
+    src: url('@/assets/font/Helvetica.ttf') format('truetype'), 
+         url('@/assets/font/Helvetica-BoldOblique.ttf') format('truetype'),
+         url('@/assets/font/helvetica-light-587ebe5a59211.ttf') format('truetype'),
+         url('@/assets/font/Helvetica-Oblique.ttf') format('truetype'),
+         url('@/assets/font/Helvetica-Bold.ttf') format('truetype'),
+         ;
+}
 
+// 폰트
+$body-font-family: "Helvetica", sans-serif; 
+$sub-font-family: "Helvetica", sans-serif; 
+
+/* font-standard-size: */
+$font-standard-size: 16px;
+
+/* Screen-size: */
+$breakpoint-small :580px;
+$breakpoint-medium : 1350px;
+$breakpoint-large :1920px;
+
+// 스크롤 
+$card-border-radius: 15px;
+$scroll-width: 4px;
+$scroll-height: 17%;
+$scroll-background-color: #C4C4C4;
+$scroll-border-color: #707070;
+$scroll-border-radius: 10px;
+
+// 컬러
 $color-main : #ff3322; 
 $color-sub : #334455; 
+$color-white : #ffffff;
+$color-black : #000000;
 $color-gray-1 : #333333; 
 $color-gray-2 : #666666; 
 $color-gray-3 : #999999;
+$color-orange : #F0A30F;
 
