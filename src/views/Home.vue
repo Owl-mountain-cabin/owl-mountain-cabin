@@ -18,7 +18,7 @@
 
 <script>
 import Dimmed from "@/components/Dimmed.vue";
-import FirstSection from "@/features/home/FirstSection.vue";
+import FirstSection from "@/features/home/FirstSections.vue";
 import SecondSection from "@/features/home/SecondSection.vue";
 import ThirdSection from "@/features/home/ThirdSection.vue";
 import ForthSection from "@/features/home/ForthSection.vue";
