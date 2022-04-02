@@ -177,6 +177,10 @@
   }
 }
 
+@function pxtopercent($target, $parent: 16) {
+  @return percentage($target / $parent);
+}
+
 // 미디어 쿼리 
 @mixin desktop-small($small:$breakpoint-small, $medium:$breakpoint-medium) {
   @media (min-width: #{$small}) and (max-width: #{$medium}) {
