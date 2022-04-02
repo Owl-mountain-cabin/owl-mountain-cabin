@@ -18,11 +18,11 @@
         />
       </div>
       <div class="owl-home-first__desc">
-        차가운 도심 속 따뜻하고 아늑한 공간 속에서
+        {{ desc1 }}
         <br />
-        주막요리를 즐기며 하루를 마감하는
+        {{ desc2 }}
         <br />
-        현대인의 작은 아지트
+        {{ desc3 }}
       </div>
       <div class="owl-home-first__button-wrapper">
         <v-btn class="owl-home-first--more">
@@ -43,7 +43,16 @@
 </template>
 
 <script>
-export default {};
+import { desc1, desc2, desc3 } from "@/constants/home/first.json";
+export default {
+  data() {
+    return {
+      desc1,
+      desc2,
+      desc3,
+    };
+  },
+};
 </script>
 
 <style lang="scss">
