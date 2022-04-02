@@ -1,9 +1,9 @@
 <template>
   <div class="owl-home-first-wrapper">
-    <div class="owl-home-first__backgrond-wrapper">
+    <div class="owl-home-first__background-wrapper">
       <v-img
-        class="owl-home-first__backgrond"
-        contain
+        class="owl-home-first__background"
+        cover
         :lazy-src="require(`@/assets/images/home-first-section.png`)"
         :src="require(`@/assets/images/home-first-section.png`)"
       />
@@ -18,11 +18,11 @@
         />
       </div>
       <div class="owl-home-first__desc">
-        차가운 도심 속 따뜻하고 아늑한 공간 속에서
+        {{ desc1 }}
         <br />
-        주막요리를 즐기며 하루를 마감하는
+        {{ desc2 }}
         <br />
-        현대인의 작은 아지트
+        {{ desc3 }}
       </div>
       <div class="owl-home-first__button-wrapper">
         <v-btn class="owl-home-first--more">
@@ -43,26 +43,38 @@
 </template>
 
 <script>
-export default {};
+import { desc1, desc2, desc3 } from "@/constants/home/first.json";
+export default {
+  data() {
+    return {
+      desc1,
+      desc2,
+      desc3,
+    };
+  },
+};
 </script>
 
 <style lang="scss">
 .owl-home-first-wrapper {
   $this: "owl-home-first";
   position: relative;
+  height: 100%;
   .#{$this}__background-wrapper {
+    height: 100%;
     .#{$this}__background {
       @include cover-background;
+      height: 100%;
     }
   }
 
   .#{$this}__contents-wrapper {
     position: absolute;
-    width: calc(100% - 274px - 274px);
-    top: 476px;
-    left: 274px;
+    width: calc(100% - 15% - 15%);
+    top: 40%;
+    left: 15%;
     z-index: 501;
-    @include desktop-medium {
+    @include desktop-small {
       top: 340px;
     }
     .#{$this}__title-wrapper {
@@ -91,9 +103,9 @@ export default {};
     .#{$this}__scroll-wrapper {
       position: absolute;
       left: 50%;
-      margin-top: 121px;
+      margin-top: 147px;
       .#{$this}__scroll-image {
-        width: 31px;
+        width: 20px;
       }
     }
   }

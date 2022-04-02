@@ -7,7 +7,7 @@
 
 <script>
 import Dimmed from "@/components/Dimmed.vue";
-import ImageWrapper from "@/components/imageWrapper.vue";
+import ImageWrapper from "@/components/ImageWrapper.vue";
 export default {
   components: {
     Dimmed,

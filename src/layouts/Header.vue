@@ -46,7 +46,7 @@ export default {
       &:after {
         display: block;
         content: "";
-        border-bottom: solid 3px $color-orange;
+        border-bottom: solid 3px $color-accent;
         transform: scaleX(0);
         transition: transform 250ms ease-in-out;
         transform-origin: 0% 50%;
@@ -55,7 +55,7 @@ export default {
         margin-right: 0;
       }
       &:hover {
-        color: rgba($color: $color-orange, $alpha: 1);
+        color: rgba($color: $color-accent, $alpha: 1);
       }
       &:hover:after {
         transform: scaleX(1);
