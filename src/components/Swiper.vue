@@ -42,7 +42,7 @@ export default {
         slidesPerView: 1,
         spaceBetween: 0,
         loop: false,
-        // autoplay: true,
+        autoplay: true,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
@@ -82,17 +82,17 @@ export default {
   }
 
   .swiper-button-prev {
-    background: url("@/assets/images/home-second-owl.svg") no-repeat;
+    background: url("@/assets/images/swiper-left.svg") no-repeat;
     background-size: 100% auto;
     background-position: center;
-    border: 1px solid red;
+    margin-left: 30px;
   }
 
   .swiper-button-next {
-    background: url("@/assets/images/home-second-owl.svg") no-repeat;
+    background: url("@/assets/images/swiper-right.svg") no-repeat;
     background-size: 100% auto;
     background-position: center;
-    border: 1px solid red;
+    margin-right: 30px;
   }
   .swiper-button-next::after,
   .swiper-button-prev::after {
