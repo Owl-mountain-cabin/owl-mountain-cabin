@@ -1,19 +1,25 @@
 <template>
   <div class="owl-home">
-    <Dimmed />
-    <ImageWrapper />
+    <div class="owl-home__first-section"><Dimmed /> <FirstSection /></div>
   </div>
 </template>
 
 <script>
 import Dimmed from "@/components/Dimmed.vue";
-import ImageWrapper from "@/features/home/imageWrapper.vue";
+import FirstSection from "@/features/home/firstSection.vue";
 export default {
   components: {
     Dimmed,
-    ImageWrapper,
+    FirstSection,
   },
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.owl-home {
+  $this: "owl-home";
+  .#{$this}__first-section {
+    height: 100vh;
+  }
+}
+</style>

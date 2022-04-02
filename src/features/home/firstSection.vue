@@ -1,9 +1,9 @@
 <template>
   <div class="owl-home-first-wrapper">
-    <div class="owl-home-first__backgrond-wrapper">
+    <div class="owl-home-first__background-wrapper">
       <v-img
-        class="owl-home-first__backgrond"
-        contain
+        class="owl-home-first__background"
+        cover
         :lazy-src="require(`@/assets/images/home-first-section.png`)"
         :src="require(`@/assets/images/home-first-section.png`)"
       />
@@ -50,19 +50,22 @@ export default {};
 .owl-home-first-wrapper {
   $this: "owl-home-first";
   position: relative;
+  height: 100%;
   .#{$this}__background-wrapper {
+    height: 100%;
     .#{$this}__background {
       @include cover-background;
+      height: 100%;
     }
   }
 
   .#{$this}__contents-wrapper {
     position: absolute;
-    width: calc(100% - 274px - 274px);
-    top: 476px;
-    left: 274px;
+    width: calc(100% - 15% - 15%);
+    top: 40%;
+    left: 15%;
     z-index: 501;
-    @include desktop-medium {
+    @include desktop-small {
       top: 340px;
     }
     .#{$this}__title-wrapper {
@@ -91,9 +94,9 @@ export default {};
     .#{$this}__scroll-wrapper {
       position: absolute;
       left: 50%;
-      margin-top: 121px;
+      margin-top: 147px;
       .#{$this}__scroll-image {
-        width: 31px;
+        width: 20px;
       }
     }
   }
