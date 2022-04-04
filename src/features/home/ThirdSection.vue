@@ -2,11 +2,7 @@
   <div class="owl-home-third-wrapper">
     <div class="owl-home-third__contents-wrapper">
       <div class="owl-home-third__title-wrapper">{{ title }}</div>
-      <div class="owl-home-third__desc-wrapper">
-        {{ desc1 }}
-        <br />
-        {{ desc2 }}
-      </div>
+      <div class="owl-home-third__desc-wrapper" v-html="checkN(desc)" />
     </div>
     <div class="owl-home-third__swiper-wrapper">
       <swiper :images="images" />
@@ -18,27 +14,30 @@
         :key="index"
       >
         <div class="owl-home-third__summury-title">{{ item.title }}</div>
-        <div class="owl-home-third__summury-desc-wrapper">
-          {{ item.desc }}
-        </div>
+        <div class="owl-home-third__summury-desc-wrapper">{{ item.desc }}</div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { title, desc1, desc2, summaries } from "@/constants/home/third.json";
+import { title, desc, summaries } from "@/constants/home/third.json";
 import Swiper from "@/components/Swiper.vue";
+import { lineBreak } from "@/utils/helper";
 
 export default {
   components: {
     Swiper,
   },
+  computed: {
+    checkN() {
+      return (str) => lineBreak(str);
+    },
+  },
   data() {
     return {
       title,
-      desc1,
-      desc2,
+      desc,
       summaries,
       images: [
         "home-slide-image1",

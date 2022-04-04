@@ -17,7 +17,7 @@
       <div class="owl-home-forth__title-wrapper">
         <div class="owl-home-forth__title">{{ item.title }}</div>
         <div class="owl-home-forth__sub-title">{{ item.subTitle }}</div>
-        <div class="owl-home-forth__desc">{{ item.desc }}</div>
+        <div class="owl-home-forth__desc" v-html="checkN(item.desc)" />
       </div>
     </div>
   </div>
@@ -25,8 +25,14 @@
 
 <script>
 import { foods } from "@/constants/home/forth.json";
+import { lineBreak } from "@/utils/helper";
 
 export default {
+  computed: {
+    checkN() {
+      return (str) => lineBreak(str);
+    },
+  },
   data() {
     return {
       foods,
@@ -54,6 +60,7 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      width: 100%;
       align-items: center;
       .#{$this}__title {
         @include set-text(
@@ -69,7 +76,6 @@ export default {
         @include set-text(400, 25, rgba($color: $color-title, $alpha: 1));
       }
       .#{$this}__desc {
-        padding: 0 264px;
         line-height: 1.7;
         @include set-text(400, 20, rgba($color: $color-desc, $alpha: 1));
       }
