@@ -17,10 +17,7 @@
           />
         </div>
         <div class="owl-home-fifth__content-title">{{ item.title }}</div>
-        <div
-          class="owl-home-fifth__content-desc"
-          v-html="checkN(item.desc)"
-        ></div>
+        <div class="owl-home-fifth__content-desc" v-html="checkN(item.desc)" />
       </div>
     </div>
   </div>
@@ -71,10 +68,10 @@ export default {
         top: 140px;
       }
       .#{$this}__image-wrapper {
-        width: 405px;
+        width: 100%;
         height: 100%;
-        @include cover-background;
         .#{$this}__image {
+          @include cover-background;
         }
       }
       .#{$this}__content-title {

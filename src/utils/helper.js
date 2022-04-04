@@ -1,1 +1,5 @@
-export const lineBreak = (str) => str.replace("\n", "<br />");
+export const lineBreak = (str) =>
+  str
+    .split("")
+    .map((item) => item.replace("\n", "<br />"))
+    .join("");
