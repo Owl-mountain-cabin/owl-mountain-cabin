@@ -22,45 +22,26 @@
     </div>
     <div class="owl-home-second__contents-wrapper">
       <div class="owl-home-second__title-wrapper">{{ title }}</div>
-      <div class="owl-home-second__desc-wrapper">
-        {{ desc1 }}
-        <br />
-        {{ desc2 }}
-        <br />
-        {{ desc3 }}
-        <br />
-        {{ desc4 }}
-        <br />
-        {{ desc5 }}
-        <br />
-        <br />
-        {{ desc6 }}
-      </div>
+      <div class="owl-home-second__desc-wrapper" v-html="checkN(desc1)" />
+      <div class="owl-home-second__desc-wrapper" v-html="checkN(desc2)" />
     </div>
   </div>
 </template>
 
 <script>
-import {
-  title,
-  desc1,
-  desc2,
-  desc3,
-  desc4,
-  desc5,
-  desc6,
-} from "@/constants/home/second.json";
-
+import { title, desc1, desc2 } from "@/constants/home/second.json";
+import { lineBreak } from "@/utils/helper";
 export default {
+  computed: {
+    checkN() {
+      return (str) => lineBreak(str);
+    },
+  },
   data() {
     return {
       title,
       desc1,
       desc2,
-      desc3,
-      desc4,
-      desc5,
-      desc6,
     };
   },
 };
@@ -101,10 +82,10 @@ export default {
     height: 80%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin-left: 228px;
+    max-width: 652px;
     justify-content: center;
     .#{$this}__title-wrapper {
-      width: 652px;
       padding-bottom: 14px;
       @include set-text(
         400,
@@ -116,7 +97,6 @@ export default {
       border-bottom: 1px solid rgba($color: $color-border, $alpha: 1);
     }
     .#{$this}__desc-wrapper {
-      width: 652px;
       margin-top: 43px;
       @include set-text(400, 18, rgba($color: $color-desc, $alpha: 1));
       justify-self: flex-start;

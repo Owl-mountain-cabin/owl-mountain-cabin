@@ -13,6 +13,12 @@
     <div class="owl-home__forth-section">
       <ForthSection />
     </div>
+    <div class="owl-home__section owl-home__fifth-section">
+      <FifthSection />
+    </div>
+    <div class="owl-home__sixth-section">
+      <SixthSection />
+    </div>
   </div>
 </template>
 
@@ -22,6 +28,8 @@ import FirstSection from "@/features/home/FirstSections.vue";
 import SecondSection from "@/features/home/SecondSection.vue";
 import ThirdSection from "@/features/home/ThirdSection.vue";
 import ForthSection from "@/features/home/ForthSection.vue";
+import FifthSection from "@/features/home/FifthSection.vue";
+import SixthSection from "@/features/home/SixthSection.vue";
 export default {
   components: {
     Dimmed,
@@ -29,6 +37,8 @@ export default {
     SecondSection,
     ThirdSection,
     ForthSection,
+    FifthSection,
+    SixthSection,
   },
 };
 </script>
@@ -49,6 +59,12 @@ export default {
   }
   .#{$this}__forth-section {
     padding-top: 60px;
+  }
+  .#{$this}__fifth-section {
+    padding: 55px 254px 0;
+  }
+  .#{$this}__sixth-section {
+    padding: 322px 140px 200px;
   }
 }
 </style>
