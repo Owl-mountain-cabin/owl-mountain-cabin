@@ -9,10 +9,10 @@
     </div>
     <div class="owl-header__link-wrapper">
       <router-link to="/home">Home</router-link>
-      <router-link to="/about">About</router-link>
       <router-link to="/menu">Menu</router-link>
       <router-link to="/store">Store</router-link>
       <router-link to="/franchise">Franchise</router-link>
+      <router-link to="/company">Company</router-link>
     </div>
   </header>
 </template>
