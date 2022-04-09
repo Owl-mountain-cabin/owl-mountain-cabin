@@ -13,6 +13,17 @@
       <router-link to="/store">Store</router-link>
       <router-link to="/franchise">Franchise</router-link>
       <router-link to="/company">Company</router-link>
+      <router-link to="/company">
+        <div class="owl-header__image-wrapper">
+          <v-img
+            contain
+            class="owl-header__image"
+            :lazy-src="require(`@/assets/images/insta.svg`)"
+            :src="require(`@/assets/images/insta.svg`)"
+          />
+        </div>
+      </router-link>
+      <div class="owl-header__phone">02-6080-4251</div>
     </div>
   </header>
 </template>
@@ -60,6 +71,17 @@ export default {
       &:hover:after {
         transform: scaleX(1);
       }
+    }
+    .#{$this}__image-wrapper {
+      .#{$this}__image {
+        width: 100%;
+        height: 100%;
+        @include cover-background;
+      }
+    }
+
+    .#{$this}__phone {
+      @include set-text(400, 15, rgba($color: #fff, $alpha: 1));
     }
   }
 }
