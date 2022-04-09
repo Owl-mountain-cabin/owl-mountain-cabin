@@ -63,6 +63,7 @@ export default {
     }
     .#{$this}__desc {
       @include set-text(300, 80, rgba($color: $color-white, $alpha: 1));
+      font-family: $menu-font-family;
       margin-top: 32px;
     }
   }

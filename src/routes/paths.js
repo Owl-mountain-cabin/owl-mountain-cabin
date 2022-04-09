@@ -9,11 +9,6 @@ const paths = [
     component: () => import("@/views/Home.vue"),
   },
   {
-    path: "/about",
-    name: "About",
-    component: () => import("@/views/About.vue"),
-  },
-  {
     path: "/menu",
     name: "Menu",
     component: () => import("@/views/Menu.vue"),
@@ -27,6 +22,11 @@ const paths = [
     path: "/franchise",
     name: "Franchise",
     component: () => import("@/views/Franchise.vue"),
+  },
+  {
+    path: "/company",
+    name: "Company",
+    component: () => import("@/views/Company.vue"),
   },
   {
     path: "*",

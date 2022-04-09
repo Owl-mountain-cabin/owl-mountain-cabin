@@ -1,7 +1,7 @@
 <template>
   <div class="owl-about">
     <Dimmed :height="'463px'" />
-    <ImageWrapper :imageSrc="'about-header-image.png'" title="ABOUT" />
+    <ImageWrapper :imageSrc="'about-header-image.png'" title="Company" />
   </div>
 </template>
 
