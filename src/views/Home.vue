@@ -19,6 +19,9 @@
     <div class="owl-home__sixth-section">
       <SixthSection />
     </div>
+    <div class="owl-home__seven-section">
+      <SevenSection />
+    </div>
   </div>
 </template>
 
@@ -30,6 +33,7 @@ import ThirdSection from "@/features/home/ThirdSection.vue";
 import ForthSection from "@/features/home/ForthSection.vue";
 import FifthSection from "@/features/home/FifthSection.vue";
 import SixthSection from "@/features/home/SixthSection.vue";
+import SevenSection from "@/features/home/SevenSection.vue";
 export default {
   components: {
     Dimmed,
@@ -39,6 +43,7 @@ export default {
     ForthSection,
     FifthSection,
     SixthSection,
+    SevenSection,
   },
 };
 </script>
@@ -64,7 +69,11 @@ export default {
     padding: 55px 254px 0;
   }
   .#{$this}__sixth-section {
-    padding: 322px 140px 200px;
+    padding: 322px 140px 0;
+  }
+  .#{$this}__seven-section {
+    padding-top: 247px;
+    padding-bottom: 91px;
   }
 }
 </style>
