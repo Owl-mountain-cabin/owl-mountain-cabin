@@ -5,7 +5,7 @@
       <div class="owl-home-third__desc-wrapper" v-html="checkN(desc)" />
     </div>
     <div class="owl-home-third__swiper-wrapper">
-      <swiper :images="images" />
+      <swiper isDimmed :images="images" />
     </div>
     <div class="owl-home-third__summury-wrapper">
       <div
