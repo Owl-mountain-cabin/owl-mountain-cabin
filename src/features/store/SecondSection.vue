@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { title, desc, address } from "@/constants/store/second.json";
+import contents from "@/constants/store/second.json";
 import { lineBreak } from "@/utils/helper";
 
 export default {
@@ -28,9 +28,9 @@ export default {
   },
   data() {
     return {
-      title,
-      desc,
-      address,
+      title: contents.title,
+      desc: contents.desc,
+      address: contents.address,
     };
   },
 };

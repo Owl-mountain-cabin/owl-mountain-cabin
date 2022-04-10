@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { summary } from "@/constants/menu/fifth.json";
+import contents from "@/constants/menu/fifth.json";
 import ImageRowBox from "@/components/ImageRowBox.vue";
 export default {
   components: {
@@ -24,7 +24,7 @@ export default {
   },
   data() {
     return {
-      summary,
+      summary: contents.summary,
     };
   },
 };

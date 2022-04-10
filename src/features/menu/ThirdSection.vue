@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import { title, subTitle, desc } from "@/constants/menu/third.json";
+import contents from "@/constants/menu/third.json";
 import { lineBreak } from "@/utils/helper";
 
 export default {
@@ -38,9 +38,9 @@ export default {
   },
   data() {
     return {
-      title,
-      subTitle,
-      desc,
+      title: contents.title,
+      subTitle: contents.subTitle,
+      desc: contents.desc,
       images: ["menu-third2.png", "menu-third1.png"],
     };
   },

@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import { foods } from "@/constants/home/forth.json";
+import contents from "@/constants/home/forth.json";
 import { lineBreak } from "@/utils/helper";
 
 export default {
@@ -35,7 +35,7 @@ export default {
   },
   data() {
     return {
-      foods,
+      foods: contents.foods,
     };
   },
 };

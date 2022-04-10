@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { title, desc } from "@/constants/home/sixth.json";
+import contents from "@/constants/home/sixth.json";
 import { lineBreak } from "@/utils/helper";
 
 export default {
@@ -27,8 +27,8 @@ export default {
   },
   data() {
     return {
-      title,
-      desc,
+      title: contents.title,
+      desc: contents.desc,
     };
   },
 };

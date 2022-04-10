@@ -1,19 +1,50 @@
 <template>
-  <div class="owl-about">
-    <Dimmed :height="'463px'" />
-    <ImageWrapper :imageSrc="'about-header-image.png'" title="Company" />
+  <div class="owl-company">
+    <div class="owl-company__first-section">
+      <Dimmed :height="'463px'" />
+      <ImageWrapper :imageSrc="'franchise-header-image.png'" title="Company" />
+    </div>
+    <div class="owl-company__section owl-company__second-section">
+      <SecondSection />
+    </div>
+    <Banner :title="title" :desc="desc" />
   </div>
 </template>
 
 <script>
 import Dimmed from "@/components/Dimmed.vue";
 import ImageWrapper from "@/components/ImageWrappers.vue";
+import SecondSection from "@/features/company/SecondSection.vue";
+import Banner from "@/components/Banner.vue";
+import contents from "@/constants/common/index.json";
+
 export default {
   components: {
     Dimmed,
     ImageWrapper,
+    SecondSection,
+    Banner,
+  },
+  data() {
+    return {
+      title: contents.bannerTitle,
+      desc: contents.phone,
+    };
   },
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.owl-company {
+  $this: "owl-company";
+  .#{$this}__section {
+    height: 100vh;
+  }
+  .#{$this}__first-section {
+  }
+  .#{$this}__second-section {
+    padding-top: 207px;
+    padding-bottom: 207px;
+  }
+}
+</style>

@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import { title, desc1, desc2 } from "@/constants/home/second.json";
+import contents from "@/constants/home/second.json";
 import { lineBreak } from "@/utils/helper";
 export default {
   computed: {
@@ -39,9 +39,9 @@ export default {
   },
   data() {
     return {
-      title,
-      desc1,
-      desc2,
+      title: contents.title,
+      desc1: contents.desc1,
+      desc2: contents.desc2,
     };
   },
 };
