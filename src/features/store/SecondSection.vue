@@ -47,6 +47,7 @@ export default {
     width: 50%;
     height: 100%;
     .#{$this}__image {
+      height: 100%;
       @include cover-background;
     }
   }
