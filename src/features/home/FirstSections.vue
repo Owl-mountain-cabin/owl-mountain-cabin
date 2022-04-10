@@ -43,13 +43,13 @@
 </template>
 
 <script>
-import { desc1, desc2, desc3 } from "@/constants/home/first.json";
+import contents from "@/constants/home/first.json";
 export default {
   data() {
     return {
-      desc1,
-      desc2,
-      desc3,
+      desc1: contents.desc1,
+      desc2: contents.desc2,
+      desc3: contents.desc3,
     };
   },
 };

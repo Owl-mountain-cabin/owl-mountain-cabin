@@ -13,6 +13,7 @@
     <div class="owl-store__forth-section">
       <ForthSection />
     </div>
+    <Banner :title="title" :desc="desc" />
   </div>
 </template>
 
@@ -22,6 +23,9 @@ import ImageWrapper from "@/components/ImageWrappers.vue";
 import SecondSection from "@/features/store/SecondSection.vue";
 import ThirdSection from "@/features/store/ThirdSection.vue";
 import ForthSection from "@/features/store/ForthSection.vue";
+import Banner from "@/components/Banner.vue";
+import contents from "@/constants/common/index.json";
+
 export default {
   components: {
     Dimmed,
@@ -29,6 +33,13 @@ export default {
     SecondSection,
     ThirdSection,
     ForthSection,
+    Banner,
+  },
+  data() {
+    return {
+      title: contents.bannerTitle,
+      desc: contents.phone,
+    };
   },
 };
 </script>

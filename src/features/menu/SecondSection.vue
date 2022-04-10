@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import { title, desc } from "@/constants/menu/second.json";
+import contents from "@/constants/menu/second.json";
 import { lineBreak } from "@/utils/helper";
 
 export default {
@@ -34,8 +34,8 @@ export default {
   },
   data() {
     return {
-      title,
-      desc,
+      title: contents.title,
+      desc: contents.desc,
       images: ["menu-second1.png", "menu-second3.png", "menu-second2.png"],
     };
   },

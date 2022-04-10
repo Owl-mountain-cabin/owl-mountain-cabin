@@ -1,0 +1,86 @@
+<template>
+  <footer class="owl-footer-wrapper">
+    <div class="owl-footer__logo-wrapper">
+      <v-img
+        contain
+        :lazy-src="require(`@/assets/images/footer-logo.svg`)"
+        :src="require(`@/assets/images/footer-logo.svg`)"
+      />
+    </div>
+    <div class="owl-footer__contents-wrapper">
+      <div class="owl-footer__desc-wrapper">Address</div>
+      <div class="owl-footer__desc-wrapper desc" v-html="checkN(address)" />
+    </div>
+    <div class="owl-footer__contents-wrapper">
+      <div class="owl-footer__desc-wrapper">Contact</div>
+      <div class="owl-footer__desc-wrapper desc">{{ name }}</div>
+      <div class="owl-footer__desc-wrapper">{{ contact }}</div>
+    </div>
+    <div class="owl-footer__contents-wrapper">
+      <div class="owl-footer__desc-wrapper">Email</div>
+      <div class="owl-footer__desc-wrapper desc">{{ email }}</div>
+    </div>
+    <div class="owl-footer__contents-wrapper">
+      <div class="owl-footer__desc-wrapper">SNS</div>
+      <a
+        class="owl-footer__desc-wrapper desc"
+        href="https://www.naver.com"
+        target="_blank"
+      >
+        <v-img
+          width="18px"
+          height="auto"
+          contain
+          :lazy-src="require(`@/assets/images/footer-insta.svg`)"
+          :src="require(`@/assets/images/footer-insta.svg`)"
+        />
+      </a>
+    </div>
+  </footer>
+</template>
+
+<script>
+import contents from "@/constants/common/footer.json";
+import { lineBreak } from "@/utils/helper";
+export default {
+  props: {},
+  data() {
+    return {
+      address: contents.address,
+      name: contents.name,
+      email: contents.email,
+      contact: contents.contact,
+    };
+  },
+  computed: {
+    checkN() {
+      return (str) => lineBreak(str);
+    },
+  },
+};
+</script>
+<style lang="scss">
+.owl-footer-wrapper {
+  $this: "owl-footer";
+  @include flex-center-vert;
+  justify-content: space-around;
+  width: 100%;
+  height: 230px;
+  border-top: 1px $scroll-border-color solid;
+  padding: 0 283px 0 140px;
+  .#{$this}__logo-wrapper {
+    width: 149px;
+  }
+  .#{$this}__contents-wrapper {
+    min-height: 90px;
+    max-height: 90px;
+    @include flex-column;
+    .#{$this}__desc-wrapper {
+      @include set-text(400, 14, rgba($color: $color-footer, $alpha: 1));
+      &.desc {
+        margin-top: 25px;
+      }
+    }
+  }
+}
+</style>

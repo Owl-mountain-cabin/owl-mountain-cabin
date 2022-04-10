@@ -22,6 +22,7 @@
     <div class="owl-home__seven-section">
       <SevenSection />
     </div>
+    <Banner :title="title" :desc="desc" />
   </div>
 </template>
 
@@ -34,6 +35,9 @@ import ForthSection from "@/features/home/ForthSection.vue";
 import FifthSection from "@/features/home/FifthSection.vue";
 import SixthSection from "@/features/home/SixthSection.vue";
 import SevenSection from "@/features/home/SevenSection.vue";
+import Banner from "@/components/Banner.vue";
+import contents from "@/constants/common/index.json";
+
 export default {
   components: {
     Dimmed,
@@ -44,6 +48,13 @@ export default {
     FifthSection,
     SixthSection,
     SevenSection,
+    Banner,
+  },
+  data() {
+    return {
+      title: contents.bannerTitle,
+      desc: contents.phone,
+    };
   },
 };
 </script>

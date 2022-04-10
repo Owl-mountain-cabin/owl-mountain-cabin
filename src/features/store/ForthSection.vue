@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { title } from "@/constants/store/forth.json";
+import contents from "@/constants/store/forth.json";
 import { lineBreak } from "@/utils/helper";
 export default {
   computed: {
@@ -25,7 +25,7 @@ export default {
   },
   data() {
     return {
-      title,
+      title: contents.title,
     };
   },
 };

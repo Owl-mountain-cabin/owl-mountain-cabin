@@ -13,7 +13,7 @@
       <router-link to="/store">Store</router-link>
       <router-link to="/franchise">Franchise</router-link>
       <router-link to="/company">Company</router-link>
-      <router-link to="/company">
+      <a href="https://www.naver.com" target="_blank">
         <div class="owl-header__image-wrapper">
           <v-img
             contain
@@ -22,7 +22,7 @@
             :src="require(`@/assets/images/insta.svg`)"
           />
         </div>
-      </router-link>
+      </a>
       <div class="owl-header__phone">02-6080-4251</div>
     </div>
   </header>

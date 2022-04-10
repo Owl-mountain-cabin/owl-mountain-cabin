@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import { title, data } from "@/constants/home/fifth.json";
+import contents from "@/constants/home/fifth.json";
 import { lineBreak } from "@/utils/helper";
 
 export default {
@@ -36,8 +36,8 @@ export default {
   },
   data() {
     return {
-      title,
-      data,
+      title: contents.title,
+      data: contents.data,
     };
   },
 };
