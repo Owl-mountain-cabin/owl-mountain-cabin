@@ -16,6 +16,7 @@
     <div class="owl-menu__fifth-section">
       <FifthSection />
     </div>
+    <Banner :title="title" :desc="desc" />
   </div>
 </template>
 
@@ -26,6 +27,9 @@ import SecondSection from "@/features/menu/SecondSection.vue";
 import ThirdSection from "@/features/menu/ThirdSection.vue";
 import ForthSection from "@/features/menu/ForthSection.vue";
 import FifthSection from "@/features/menu/FifthSection.vue";
+import Banner from "@/components/Banner.vue";
+import contents from "@/constants/common/index.json";
+
 export default {
   components: {
     Dimmed,
@@ -34,6 +38,13 @@ export default {
     ThirdSection,
     ForthSection,
     FifthSection,
+    Banner,
+  },
+  data() {
+    return {
+      title: contents.bannerTitle,
+      desc: contents.phone,
+    };
   },
 };
 </script>

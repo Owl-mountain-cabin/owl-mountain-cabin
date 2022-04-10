@@ -13,12 +13,12 @@
 </template>
 
 <script>
-import { title } from "@/constants/home/seven.json";
+import contents from "@/constants/home/seven.json";
 
 export default {
   data() {
     return {
-      title,
+      title: contents.title,
     };
   },
 };

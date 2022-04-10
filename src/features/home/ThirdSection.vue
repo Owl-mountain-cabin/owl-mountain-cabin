@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { title, desc, summaries } from "@/constants/home/third.json";
+import contents from "@/constants/home/third.json";
 import Swiper from "@/components/Swiper.vue";
 import { lineBreak } from "@/utils/helper";
 
@@ -36,9 +36,9 @@ export default {
   },
   data() {
     return {
-      title,
-      desc,
-      summaries,
+      title: contents.title,
+      desc: contents.desc,
+      summaries: contents.summaries,
       images: [
         "home-slide-image1",
         "home-slide-image2",
