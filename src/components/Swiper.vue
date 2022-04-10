@@ -1,11 +1,11 @@
 <template>
-  <swiper class="owl-swiper" :options="swiperOption">
+  <swiper class="owl-swiper" :class="[width]" :options="swiperOption">
     <swiperSlide
       class="owl-swiper__slide"
       v-for="(src, index) in images"
       :key="index"
     >
-      <Dimmed height="100%" />
+      <Dimmed v-if="isDimmed" height="100%" />
       <v-img
         contain
         class="owl-swiper__slide-image"
@@ -30,10 +30,24 @@ export default {
     Dimmed,
   },
   props: {
+    width: {
+      type: String,
+      default: "",
+      description: "width 여부",
+    },
+    isDimmed: {
+      type: Boolean,
+      default: false,
+      description: "Dimmed 처리 여부",
+    },
     images: {
       type: Array,
       default: () => [],
       description: "Array of objects with image and title properties",
+    },
+    swiperOptions: {
+      type: Object,
+      default: () => {},
     },
   },
   data() {
@@ -51,6 +65,8 @@ export default {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+
+        ...this.swiperOptions,
       },
     };
   },
@@ -60,7 +76,10 @@ export default {
 <style lang="scss">
 .owl-swiper {
   $this: "owl-swiper";
-
+  width: 100%;
+  &.w-30 {
+    width: 30%;
+  }
   .#{$this}__slide {
     .#{$this}__slide-image {
       width: 100%;

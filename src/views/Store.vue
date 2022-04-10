@@ -7,8 +7,12 @@
     <div class="owl-store__section owl-store__second-section">
       <SecondSection />
     </div>
-    <!-- <div class="owl-store__section owl-store__third-section"></div> -->
-    <!-- <div class="owl-store__forth-section"></div> -->
+    <div class="owl-store__section owl-store__third-section">
+      <ThirdSection />
+    </div>
+    <div class="owl-store__forth-section">
+      <ForthSection />
+    </div>
   </div>
 </template>
 
@@ -16,11 +20,15 @@
 import Dimmed from "@/components/Dimmed.vue";
 import ImageWrapper from "@/components/ImageWrappers.vue";
 import SecondSection from "@/features/store/SecondSection.vue";
+import ThirdSection from "@/features/store/ThirdSection.vue";
+import ForthSection from "@/features/store/ForthSection.vue";
 export default {
   components: {
     Dimmed,
     ImageWrapper,
     SecondSection,
+    ThirdSection,
+    ForthSection,
   },
 };
 </script>
@@ -37,8 +45,11 @@ export default {
     padding: 159px 233px 0 329px;
   }
   .#{$this}__third-section {
+    padding-top: 266px;
   }
   .#{$this}__forth-section {
+    padding-top: 155px;
+    padding-bottom: 100px;
   }
 }
 </style>
