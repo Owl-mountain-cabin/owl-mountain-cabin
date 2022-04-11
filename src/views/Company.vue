@@ -1,7 +1,7 @@
 <template>
   <div class="owl-company">
     <div class="owl-company__first-section">
-      <Dimmed :height="'463px'" />
+      <Dimmed :height="'100%'" />
       <ImageWrapper :imageSrc="'franchise-header-image.png'" title="Company" />
     </div>
     <div class="owl-company__section owl-company__second-section">
@@ -41,6 +41,7 @@ export default {
     height: 100vh;
   }
   .#{$this}__first-section {
+    position: relative;
   }
   .#{$this}__second-section {
     padding-top: 207px;

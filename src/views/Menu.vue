@@ -1,7 +1,7 @@
 <template>
   <div class="owl-menu">
     <div class="owl-menu__first-section">
-      <Dimmed :height="'463px'" />
+      <Dimmed :height="'100%'" />
       <ImageWrapper :imageSrc="'about-header-image.png'" title="MENU" />
     </div>
     <div class="owl-menu__second-section">
@@ -53,6 +53,7 @@ export default {
 .owl-menu {
   $this: "owl-menu";
   .#{$this}__first-section {
+    position: relative;
   }
   .#{$this}__second-section {
     padding: 184px 140px 0 140px;
