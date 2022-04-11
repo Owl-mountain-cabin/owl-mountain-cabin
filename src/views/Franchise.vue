@@ -1,7 +1,7 @@
 <template>
   <div class="owl-franchise">
     <div class="owl-franchise__first-section">
-      <Dimmed :height="'463px'" />
+      <Dimmed :height="'100%'" />
       <ImageWrapper
         :imageSrc="'franchise-header-image.png'"
         title="FRANCHISE"
@@ -10,9 +10,11 @@
     <div class="owl-franchise__second-section">
       <SecondSection />
     </div>
-    <div class="owl-franchise__third-section"></div>
-    <!-- <div class="owl-franchise__forth-section"></div>
-    <div class="owl-franchise__fifith-section"></div> -->
+    <div class="owl-franchise__third-section">
+      <ThirdSection />
+    </div>
+    <div class="owl-franchise__forth-section"></div>
+    <!-- <div class="owl-franchise__fifith-section"></div> -->
     <Banner :title="title" :desc="desc" />
   </div>
 </template>
@@ -23,6 +25,7 @@ import ImageWrapper from "@/components/ImageWrappers.vue";
 import Banner from "@/components/Banner.vue";
 import contents from "@/constants/common/index.json";
 import SecondSection from "@/features/franchise/SecondSection.vue";
+import ThirdSection from "@/features/franchise/ThirdSection.vue";
 
 export default {
   components: {
@@ -30,6 +33,7 @@ export default {
     ImageWrapper,
     Banner,
     SecondSection,
+    ThirdSection,
   },
   data() {
     return {
@@ -47,6 +51,7 @@ export default {
     height: 100vh;
   }
   .#{$this}__first-section {
+    position: relative;
   }
   .#{$this}__second-section {
     padding: 160px 273px 0 273px;
@@ -55,6 +60,7 @@ export default {
     padding-top: 175px;
   }
   .#{$this}__forth-section {
+    padding-top: 142px;
   }
 }
 </style>
