@@ -1,7 +1,7 @@
 <template>
   <div class="owl-store">
     <div class="owl-store__first-section">
-      <Dimmed :height="'463px'" />
+      <Dimmed :height="'100%'" />
       <ImageWrapper :imageSrc="'store-header-image.png'" title="STORE" />
     </div>
     <div class="owl-store__section owl-store__second-section">
@@ -51,6 +51,7 @@ export default {
     height: 100vh;
   }
   .#{$this}__first-section {
+    position: relative;
   }
   .#{$this}__second-section {
     padding: 159px 233px 0 329px;
