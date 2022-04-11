@@ -13,8 +13,12 @@
     <div class="owl-franchise__third-section">
       <ThirdSection />
     </div>
-    <div class="owl-franchise__forth-section"></div>
-    <!-- <div class="owl-franchise__fifith-section"></div> -->
+    <div class="owl-franchise__forth-section">
+      <ForthSection width="w-45" />
+    </div>
+    <div class="owl-franchise__fifth-section">
+      <ForthSection width="w-45" />
+    </div>
     <Banner :title="title" :desc="desc" />
   </div>
 </template>
@@ -26,6 +30,7 @@ import Banner from "@/components/Banner.vue";
 import contents from "@/constants/common/index.json";
 import SecondSection from "@/features/franchise/SecondSection.vue";
 import ThirdSection from "@/features/franchise/ThirdSection.vue";
+import ForthSection from "@/features/franchise/ForthSection.vue";
 
 export default {
   components: {
@@ -34,6 +39,7 @@ export default {
     Banner,
     SecondSection,
     ThirdSection,
+    ForthSection,
   },
   data() {
     return {
@@ -60,7 +66,10 @@ export default {
     padding-top: 175px;
   }
   .#{$this}__forth-section {
-    padding-top: 142px;
+    padding: 142px 140px 0 140px;
+  }
+  .#{$this}__fifth-section {
+    padding: 202px 140px 0 140px;
   }
 }
 </style>
