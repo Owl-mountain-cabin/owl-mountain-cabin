@@ -49,7 +49,6 @@ import cost from "@/constants/franchise/table/cost.js";
 import profitContents from "@/constants/franchise/forth.json";
 import costContents from "@/constants/franchise/fifth.json";
 
-
 export default {
   components: {
     Dimmed,
