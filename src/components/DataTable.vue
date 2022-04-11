@@ -159,7 +159,7 @@ export default {
           border-bottom: 1px solid rgba($color: $color-accent, $alpha: 1) !important;
           border-top: 1px solid rgba($color: $color-accent, $alpha: 1) !important;
           border-right: 1px solid rgba($color: $color-border, $alpha: 1) !important;
-          padding: 0 60px !important;
+          padding: 0 30px !important;
           &:last-child {
             border-right: none !important;
           }
@@ -175,12 +175,23 @@ export default {
         &:nth-child(even) {
           background-color: $color-white;
         }
+        &:hover {
+          background: transparent !important;
+        }
+
+        &:last-child {
+          td {
+            @include set-text(400, 14, rgba($color: $color-title, $alpha: 1));
+            background-color: rgba($color: #fef8ec, $alpha: 1);
+            border-bottom: 1px solid rgba($color: $color-accent, $alpha: 1) !important;
+          }
+        }
         td {
           height: 67px !important;
-          @include set-text(400, 20, rgba($color: $color-desc, $alpha: 1));
+          @include set-text(400, 14, rgba($color: $color-desc, $alpha: 1));
           border-bottom: 1px solid rgba($color: $color-border, $alpha: 1) !important;
           border-right: 1px solid rgba($color: $color-border, $alpha: 1) !important;
-          padding: 0 60px !important;
+          padding: 0 30px !important;
           &:last-child {
             border-right: none !important;
           }

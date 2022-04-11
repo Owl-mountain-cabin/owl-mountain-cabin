@@ -10,18 +10,16 @@
     </div>
     <div class="owl-franchise-forth__table-wrapper" :class="[width]">
       <DataTable
-        :headers="profit.headers"
-        :datas="profit.data"
-        :options="profit.options"
-        :custom-slot-info="profit.customSlotInfo"
+        :headers="data.headers"
+        :datas="data.data"
+        :options="data.options"
+        :custom-slot-info="data.customSlotInfo"
       />
     </div>
   </div>
 </template>
 
 <script>
-import contents from "@/constants/franchise/forth.json";
-import profit from "@/constants/franchise/table/profit.js";
 import DataTable from "@/components/DataTable.vue";
 import { lineBreak } from "@/utils/helper";
 export default {
@@ -32,19 +30,31 @@ export default {
       default: "w-50",
       description: "contents-width",
     },
+    title: {
+      type: String,
+      default: "",
+      description: "contents-title",
+    },
+    subTitle: {
+      type: String,
+      default: "",
+      description: "contents-subTitle",
+    },
+    desc: {
+      type: String,
+      default: "",
+      description: "contents-desc",
+    },
+    data: {
+      type: Object,
+      default: () => {},
+      description: "contents-data",
+    },
   },
   computed: {
     checkN() {
       return (str) => lineBreak(str);
     },
-  },
-  data() {
-    return {
-      title: contents.title,
-      subTitle: contents.subTitle,
-      desc: contents.desc,
-      profit,
-    };
   },
 };
 </script>
@@ -60,6 +70,9 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    &.w-35 {
+      width: 35%;
+    }
     &.w-45 {
       width: 45%;
     }
@@ -87,7 +100,9 @@ export default {
   .#{$this}__table-wrapper {
     width: 50%;
     height: 100%;
-    // border: 1px solid pink;
+    &.w-35 {
+      width: 65%;
+    }
     &.w-45 {
       width: 55%;
     }
