@@ -68,7 +68,7 @@ export default {
     padding: 423px 140px 0 140px;
   }
   .#{$this}__fifth-section {
-    padding: 171px 140px 0 140px;
+    padding: 171px 140px 135px 140px;
   }
 }
 </style>
