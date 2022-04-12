@@ -9,6 +9,12 @@
     </div>
     <div class="owl-header__link-wrapper">
       <router-link to="/home">Home</router-link>
+      <a
+        href="https://www.datanews.co.kr/news/article.html?no=120626"
+        target="_blank"
+      >
+        News
+      </a>
       <router-link to="/menu">Menu</router-link>
       <router-link to="/store">Store</router-link>
       <router-link to="/franchise">Franchise</router-link>
@@ -49,6 +55,10 @@ export default {
   }
   .#{$this}__link-wrapper {
     @include flex-center-vert();
+    .router-link-exact-active {
+      border-bottom: solid 3px $color-accent;
+      @include set-text(400, 20, rgba($color: $color-accent, $alpha: 1));
+    }
     a {
       text-decoration: none;
       margin-right: 45px;

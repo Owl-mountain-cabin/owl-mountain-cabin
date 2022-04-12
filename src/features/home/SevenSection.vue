@@ -3,7 +3,11 @@
     <div class="owl-home-seven__contents-wrapper">
       <div class="owl-home-seven__title-wrapper">{{ title }}</div>
       <div class="owl-home-seven__button-wrapper">
-        <v-btn class="owl-home-seven--more" elevation="0">
+        <v-btn
+          class="owl-home-seven--more"
+          elevation="0"
+          @click="$router.push('/franchise')"
+        >
           more
           <v-icon class="owl-home-seven__icon">$plus</v-icon>
         </v-btn>

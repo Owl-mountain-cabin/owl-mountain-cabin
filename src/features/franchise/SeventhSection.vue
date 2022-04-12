@@ -1,0 +1,194 @@
+<template>
+  <div class="owl-franchise-seventh-wrapper">
+    <Dimmed :height="'100%'" />
+    <v-img
+      cover
+      width="100%"
+      height="100%"
+      class="owl-franchise-seventh__image"
+      :lazy-src="require(`@/assets/images/franchise-seventh1.png`)"
+      :src="require(`@/assets/images/franchise-seventh1.png`)"
+    />
+    <div class="owl-franchise-seventh__contents-wrapper">
+      <div class="owl-franchise-seventh__title-wrapper">
+        <div class="owl-franchise-seventh__title" v-html="checkN(title)" />
+        <div class="owl-franchise-seventh__desc" v-html="checkN(desc)" />
+      </div>
+      <div class="owl-franchise-seventh__diagram-wrapper">
+        <div class="owl-franchise-seventh__diagram-image-wrapper"></div>
+        <div class="owl-franchise-seventh__diagram-contents-wrapper db1">
+          <div
+            class="owl-franchise-seventh__diagram-contents-name"
+            v-html="checkN(db1.name)"
+          />
+          <div
+            class="owl-franchise-seventh__diagram-contents-desc"
+            v-html="checkN(db1.desc)"
+          />
+        </div>
+        <div class="owl-franchise-seventh__diagram-contents-wrapper db2">
+          <div
+            class="owl-franchise-seventh__diagram-contents-name"
+            v-html="checkN(db2.name)"
+          />
+          <div
+            class="owl-franchise-seventh__diagram-contents-desc"
+            v-html="checkN(db2.desc)"
+          />
+        </div>
+        <div class="owl-franchise-seventh__diagram-contents-wrapper db3">
+          <div
+            class="owl-franchise-seventh__diagram-contents-name"
+            v-html="checkN(db3.name)"
+          />
+          <div
+            class="owl-franchise-seventh__diagram-contents-desc"
+            v-html="checkN(db3.desc)"
+          />
+        </div>
+        <div class="owl-franchise-seventh__diagram-contents-wrapper db4">
+          <div
+            class="owl-franchise-seventh__diagram-contents-name"
+            v-html="checkN(db4.name)"
+          />
+          <div
+            class="owl-franchise-seventh__diagram-contents-desc"
+            v-html="checkN(db4.desc)"
+          />
+        </div>
+        <div class="owl-franchise-seventh__diagram-contents-wrapper db5">
+          <div
+            class="owl-franchise-seventh__diagram-contents-name"
+            v-html="checkN(db5.name)"
+          />
+          <div
+            class="owl-franchise-seventh__diagram-contents-desc"
+            v-html="checkN(db5.desc)"
+          />
+        </div>
+        <!-- <div class="owl-franchise-seventh__diagram" v-html="checkN(db2)" />
+        <div class="owl-franchise-seventh__diagram" v-html="checkN(db3)" />
+        <div class="owl-franchise-seventh__diagram" v-html="checkN(db4)" />
+        <div class="owl-franchise-seventh__diagram" v-html="checkN(db5)" /> -->
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import contents from "@/constants/franchise/seventh.json";
+import Dimmed from "@/components/Dimmed.vue";
+import { lineBreak } from "@/utils/helper";
+export default {
+  components: {
+    Dimmed,
+  },
+  computed: {
+    checkN() {
+      return (str) => lineBreak(str);
+    },
+  },
+  data() {
+    return {
+      title: contents.title,
+      desc: contents.desc,
+      db1: contents.db1,
+      db2: contents.db2,
+      db3: contents.db3,
+      db4: contents.db4,
+      db5: contents.db5,
+    };
+  },
+};
+</script>
+
+<style lang="scss">
+.owl-franchise-seventh-wrapper {
+  $this: "owl-franchise-seventh";
+  width: 100%;
+
+  position: relative;
+  @include flex-center-column;
+  .#{$this}__image {
+    height: 100%;
+    @include cover-background;
+  }
+
+  .#{$this}__contents-wrapper {
+    @include flex-center-vert;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 700;
+    .#{$this}__title-wrapper {
+      width: 40%;
+      padding-left: 81px;
+      .#{$this}__title {
+        @include set-text(bold, 35, rgba($color: $color-white, $alpha: 1));
+        text-align: center;
+        margin-bottom: 25px;
+      }
+      .#{$this}__desc {
+        text-align: center;
+        @include set-text(400, 22, rgba($color: $color-white, $alpha: 1));
+      }
+    }
+    .#{$this}__diagram-wrapper {
+      width: 60%;
+      height: 100%;
+      position: relative;
+      @include flex-center;
+
+      .#{$this}__diagram-image-wrapper {
+        width: 436px;
+        height: 415px;
+        border: 1px solid pink;
+        text-align: center;
+      }
+      .#{$this}__diagram-contents-wrapper {
+        position: absolute;
+
+        &.db1 {
+          top: 13%;
+          left: 50%;
+          transform: translate(-50%, 0);
+        }
+        &.db2 {
+          top: 37%;
+          right: 10%;
+          transform: translate(-50%, 0);
+        }
+        &.db3 {
+          bottom: 13%;
+          right: 15%;
+          transform: translate(-50%, 0);
+        }
+        &.db4 {
+          bottom: 13%;
+          left: 25%;
+          transform: translate(-50%, 0);
+        }
+        &.db5 {
+          top: 37%;
+          left: 20%;
+          transform: translate(-50%, 0);
+        }
+        .#{$this}__diagram-contents-name {
+          @include set-text(
+            bold,
+            30,
+            rgba($color: $color-white, $alpha: 1),
+            false,
+            ture
+          );
+          text-align: center;
+        }
+        .#{$this}__diagram-contents-desc {
+          text-align: center;
+          @include set-text(400, 22, rgba($color: #d6d6d6, $alpha: 1));
+        }
+      }
+    }
+  }
+}
+</style>
