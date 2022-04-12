@@ -40,6 +40,9 @@ export default {
     FifthSection,
     Banner,
   },
+  mounted() {
+    window.scrollTo(0, 0);
+  },
   data() {
     return {
       title: contents.bannerTitle,

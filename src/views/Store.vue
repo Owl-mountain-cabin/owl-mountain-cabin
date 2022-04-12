@@ -35,6 +35,9 @@ export default {
     ForthSection,
     Banner,
   },
+  mounted() {
+    window.scrollTo(0, 0);
+  },
   data() {
     return {
       title: contents.bannerTitle,

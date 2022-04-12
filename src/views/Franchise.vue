@@ -31,7 +31,12 @@
         :subTitle="costSubTitle"
       />
     </div>
-    <div class="owl-franchise__sixth-section"></div>
+    <div class="owl-franchise__sixth-section">
+      <SixthSection />
+    </div>
+    <div class="owl-franchise__seventh-section">
+      <SeventhSection />
+    </div>
     <Banner :title="title" :desc="desc" />
   </div>
 </template>
@@ -44,6 +49,8 @@ import contents from "@/constants/common/index.json";
 import SecondSection from "@/features/franchise/SecondSection.vue";
 import ThirdSection from "@/features/franchise/ThirdSection.vue";
 import ForthSection from "@/features/franchise/ForthSection.vue";
+import SixthSection from "@/features/franchise/SixthSection.vue";
+import SeventhSection from "@/features/franchise/SeventhSection.vue";
 import profit from "@/constants/franchise/table/profit.js";
 import cost from "@/constants/franchise/table/cost.js";
 import profitContents from "@/constants/franchise/forth.json";
@@ -57,6 +64,11 @@ export default {
     SecondSection,
     ThirdSection,
     ForthSection,
+    SixthSection,
+    SeventhSection,
+  },
+  mounted() {
+    window.scrollTo(0, 0);
   },
   data() {
     return {
@@ -110,6 +122,9 @@ export default {
   }
   .#{$this}__sixth-section {
     padding: 175px 160px 0 160px;
+  }
+  .#{$this}__seventh-section {
+    padding-top: 190px;
   }
 }
 </style>
