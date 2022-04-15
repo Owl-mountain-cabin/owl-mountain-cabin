@@ -15,7 +15,14 @@
         <div class="owl-franchise-seventh__desc" v-html="checkN(desc)" />
       </div>
       <div class="owl-franchise-seventh__diagram-wrapper">
-        <div class="owl-franchise-seventh__diagram-image-wrapper"></div>
+        <div class="owl-franchise-seventh__diagram-image-wrapper">
+          <v-img
+            cover
+            class="owl-franchise-seventh__image"
+            :lazy-src="require(`@/assets/images/franchise-seven1.svg`)"
+            :src="require(`@/assets/images/franchise-seven1.svg`)"
+          />
+        </div>
         <div class="owl-franchise-seventh__diagram-contents-wrapper db1">
           <div
             class="owl-franchise-seventh__diagram-contents-name"
@@ -66,10 +73,6 @@
             v-html="checkN(db5.desc)"
           />
         </div>
-        <!-- <div class="owl-franchise-seventh__diagram" v-html="checkN(db2)" />
-        <div class="owl-franchise-seventh__diagram" v-html="checkN(db3)" />
-        <div class="owl-franchise-seventh__diagram" v-html="checkN(db4)" />
-        <div class="owl-franchise-seventh__diagram" v-html="checkN(db5)" /> -->
       </div>
     </div>
   </div>
@@ -140,10 +143,7 @@ export default {
       @include flex-center;
 
       .#{$this}__diagram-image-wrapper {
-        width: 436px;
-        height: 415px;
-        border: 1px solid pink;
-        text-align: center;
+        width: 40%;
       }
       .#{$this}__diagram-contents-wrapper {
         position: absolute;
@@ -154,22 +154,22 @@ export default {
           transform: translate(-50%, 0);
         }
         &.db2 {
-          top: 37%;
-          right: 10%;
+          top: 41%;
+          right: 12%;
           transform: translate(-50%, 0);
         }
         &.db3 {
-          bottom: 13%;
-          right: 15%;
+          bottom: 15%;
+          right: 20%;
           transform: translate(-50%, 0);
         }
         &.db4 {
-          bottom: 13%;
-          left: 25%;
+          bottom: 15%;
+          left: 30%;
           transform: translate(-50%, 0);
         }
         &.db5 {
-          top: 37%;
+          top: 41%;
           left: 20%;
           transform: translate(-50%, 0);
         }
