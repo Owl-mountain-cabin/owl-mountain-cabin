@@ -4,16 +4,16 @@
       <Dimmed height="100vh" />
       <FirstSection />
     </div>
-    <div class="owl-home__section owl-home__second-section">
+    <div class="owl-home__second-section">
       <SecondSection />
     </div>
-    <div class="owl-home__section owl-home__third-section">
+    <div class="owl-home__third-section">
       <ThirdSection />
     </div>
     <div class="owl-home__forth-section">
       <ForthSection />
     </div>
-    <div class="owl-home__section owl-home__fifth-section">
+    <div class="owl-home__fifth-section">
       <FifthSection />
     </div>
     <div class="owl-home__sixth-section">
@@ -73,20 +73,25 @@ export default {
   }
   .#{$this}__second-section {
     padding: 0 172px;
+    padding-bottom: 128px;
   }
   .#{$this}__third-section {
+    padding-top: 53px;
+    padding-bottom: 80px;
+    background: rgba($color: #faf9f7, $alpha: 0.7);
   }
   .#{$this}__forth-section {
-    padding-top: 60px;
   }
   .#{$this}__fifth-section {
-    padding: 55px 254px 0;
+    padding: 79px 254px 79px 254px;
+    margin-bottom: 200px;
   }
   .#{$this}__sixth-section {
-    padding: 322px 140px 0;
+    padding: 166px 140px 165px 140px;
+    background: rgba($color: #f5f4ef, $alpha: 0.5);
   }
   .#{$this}__seven-section {
-    padding-top: 247px;
+    padding-top: 82px;
     padding-bottom: 91px;
   }
 }
