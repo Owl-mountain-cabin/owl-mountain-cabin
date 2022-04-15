@@ -74,7 +74,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-top: 35px;
+    margin-top: 64px;
     .#{$this}__summury-title-wrapper {
       display: flex;
       flex-direction: column;

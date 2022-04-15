@@ -48,12 +48,12 @@ export default {
   z-index: 999;
 
   .#{$this}__title-wrapper {
-    @include set-text(400, 20, rgba($color: $color-white, $alpha: 1));
+    @include set-text(400, 22, rgba($color: $color-white, $alpha: 1));
     text-align: center;
   }
   .#{$this}__desc-wrapper {
     margin-top: 10px;
-    @include set-text(400, 16, rgba($color: $color-white, $alpha: 1));
+    @include set-text(400, 18, rgba($color: $color-white, $alpha: 1));
     text-align: center;
   }
 }

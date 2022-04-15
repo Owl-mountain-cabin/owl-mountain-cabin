@@ -4,10 +4,10 @@
       <Dimmed :height="'100%'" />
       <ImageWrapper :imageSrc="'store-header-image.png'" title="STORE" />
     </div>
-    <div class="owl-store__section owl-store__second-section">
+    <div class="owl-store__second-section">
       <SecondSection />
     </div>
-    <div class="owl-store__section owl-store__third-section">
+    <div class="owl-store__third-section">
       <ThirdSection />
     </div>
     <div class="owl-store__forth-section">
@@ -61,10 +61,12 @@ export default {
   }
   .#{$this}__third-section {
     padding-top: 266px;
+    padding-bottom: 99px;
   }
   .#{$this}__forth-section {
     padding-top: 155px;
-    padding-bottom: 100px;
+    padding-bottom: 155px;
+    background: rgba($color: #edede5, $alpha: 0.4);
   }
 }
 </style>

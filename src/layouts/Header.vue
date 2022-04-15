@@ -9,12 +9,6 @@
     </div>
     <div class="owl-header__link-wrapper">
       <router-link to="/home">Home</router-link>
-      <a
-        href="https://www.datanews.co.kr/news/article.html?no=120626"
-        target="_blank"
-      >
-        News
-      </a>
       <router-link to="/menu">Menu</router-link>
       <router-link to="/store">Store</router-link>
       <router-link to="/franchise">Franchise</router-link>
@@ -29,7 +23,16 @@
           />
         </div>
       </a>
-      <div class="owl-header__phone">02-6080-4251</div>
+      <div class="owl-header__phone">
+        <v-img
+          class="owl-header__phone-image"
+          contain
+          width="12px"
+          :lazy-src="require(`@/assets/images/header-call.svg`)"
+          :src="require(`@/assets/images/header-call.svg`)"
+        />
+        02-6080-4251
+      </div>
     </div>
   </header>
 </template>
@@ -91,7 +94,11 @@ export default {
     }
 
     .#{$this}__phone {
+      @include flex-center-vert();
       @include set-text(400, 15, rgba($color: #fff, $alpha: 1));
+      .#{$this}__phone-image {
+        margin-right: 8px;
+      }
     }
   }
 }

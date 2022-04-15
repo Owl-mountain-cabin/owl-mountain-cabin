@@ -45,9 +45,9 @@ export default {
   }
   .#{$this}__image-wrapper {
     position: absolute;
-    right: 140px;
-    top: 0;
-    width: 290px;
+    right: 130px;
+    top: 70px;
+    width: 265px;
     height: auto;
     .#{$this}__image {
       height: 100%;
