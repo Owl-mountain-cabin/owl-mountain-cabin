@@ -103,8 +103,15 @@ export default {
     padding-top: 175px;
   }
   .#{$this}__forth-section {
-    padding: 142px 140px 0 140px;
+    padding: 142px 140px 99px 140px;
     .v-data-table__wrapper {
+      thead {
+        tr {
+          th {
+            background: rgba($color: #b2b2b2, $alpha: 0.1);
+          }
+        }
+      }
       tbody {
         tr {
           &:nth-last-child(2) {
@@ -118,10 +125,28 @@ export default {
     }
   }
   .#{$this}__fifth-section {
-    padding: 202px 140px 0 140px;
+    padding: 103px 140px 67px 140px;
+    background: rgba($color: #f8f8f5, $alpha: 1);
+    thead {
+      tr {
+        th {
+          background: rgba($color: #f8f8f5, $alpha: 1);
+          &.cost {
+            text-align: center !important;
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          background: rgba($color: #f8f8f5, $alpha: 1);
+        }
+      }
+    }
   }
   .#{$this}__sixth-section {
-    padding: 175px 160px 0 160px;
+    padding: 108px 160px 0 160px;
   }
   .#{$this}__seventh-section {
     padding-top: 190px;
