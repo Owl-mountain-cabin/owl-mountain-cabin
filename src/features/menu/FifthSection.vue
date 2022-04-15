@@ -53,6 +53,10 @@ export default {
     }
     .#{$this}__image-wrapper {
       width: 100%;
+      margin-top: 23px;
+      background: #f8f8f5;
+      @include rounded(10px);
+      padding: 33px 20px;
     }
   }
 }

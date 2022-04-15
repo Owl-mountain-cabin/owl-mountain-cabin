@@ -47,8 +47,10 @@ export default {
   .#{$this}__contents-wrapper {
     display: flex;
     align-items: center;
+    background: rgba($color: #edede5, $alpha: 0.5);
     &.reverse {
       flex-direction: row-reverse;
+      background: rgba($color: #edede5, $alpha: 0.5);
     }
 
     .#{$this}__image-wrapper {
@@ -62,6 +64,7 @@ export default {
       justify-content: center;
       width: 100%;
       align-items: center;
+
       .#{$this}__title {
         @include set-text(
           400,

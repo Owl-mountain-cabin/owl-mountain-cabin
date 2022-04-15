@@ -8,8 +8,25 @@
         :key="index"
         :class="{ center: index === 1 }"
       >
-        <div class="owl-home-fifth__image-wrapper">
+        <div
+          class="owl-home-fifth__image-wrapper"
+          @mouseover="onMouseOverImage(index)"
+        >
+          <a v-if="item.herf" :href="item.herf" target="_blank">
+            <Dimmed
+              class="owl-home-fifth--dimmed"
+              :class="isHover === index && 'isActive'"
+              height="100%"
+            />
+            <v-img
+              class="owl-home-fifth__image"
+              cover
+              :lazy-src="require(`@/assets/images/${item.src}.png`)"
+              :src="require(`@/assets/images/${item.src}.png`)"
+            />
+          </a>
           <v-img
+            v-if="!item.herf"
             class="owl-home-fifth__image"
             cover
             :lazy-src="require(`@/assets/images/${item.src}.png`)"
@@ -26,9 +43,10 @@
 <script>
 import contents from "@/constants/home/fifth.json";
 import { lineBreak } from "@/utils/helper";
+import Dimmed from "@/components/Dimmed.vue";
 
 export default {
-  components: {},
+  components: { Dimmed },
   computed: {
     checkN() {
       return (str) => lineBreak(str);
@@ -38,7 +56,13 @@ export default {
     return {
       title: contents.title,
       data: contents.data,
+      isHover: -1,
     };
+  },
+  methods: {
+    onMouseOverImage(index) {
+      this.isHover = index;
+    },
   },
 };
 </script>
@@ -70,6 +94,13 @@ export default {
       .#{$this}__image-wrapper {
         width: 100%;
         height: 100%;
+        position: relative;
+        .#{$this}--dimmed {
+          visibility: hidden;
+          &.isActive {
+            visibility: visible;
+          }
+        }
         .#{$this}__image {
           @include cover-background;
         }

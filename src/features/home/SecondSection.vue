@@ -52,9 +52,13 @@ export default {
   $this: "owl-home-second";
   height: 100%;
   display: flex;
+  align-items: center;
   .#{$this}__image-wrapper {
-    width: 31%;
+    width: 40%;
     height: 80%;
+    background: #f7f4ee;
+    padding: 33px;
+    padding-top: 0;
     position: relative;
     .#{$this}__background {
       width: 100%;
@@ -64,21 +68,22 @@ export default {
     .#{$this}__image-owl {
       @include cover-background;
       position: absolute;
-      width: 100%;
-      top: 20%;
-      padding: 0 50px;
+      top: 15%;
+      width: 400px;
+      left: 50%;
+      transform: translate(-50%, 0);
     }
     .#{$this}__image-title {
       @include cover-background;
       position: absolute;
-      width: 100%;
-      top: 75%;
-      padding: 0 80px;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, 0);
     }
   }
 
   .#{$this}__contents-wrapper {
-    width: 69%;
+    width: 60%;
     height: 80%;
     display: flex;
     flex-direction: column;

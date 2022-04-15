@@ -41,6 +41,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+
   .#{$this}__image-wrapper {
     width: 50%;
     height: 100%;
