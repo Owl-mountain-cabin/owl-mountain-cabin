@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap");
+@import url("https://webfontworld.github.io/sebang/SebangGothic.css");
+/* font-standard-size: */
+/* Screen-size: */
+* {
+  font-family: "Noto Sans KR", "Do Hyeon", sans-serif;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+.container {
+  width: 100%;
+  background-color: #FFFFFF;
+}
+/*# sourceMappingURL=common.css.map */
