@@ -70,7 +70,7 @@ export default {
 
   .#{$this}__contents-wrapper {
     position: absolute;
-    //width: calc(100% - 15% - 15%);
+    width: calc(100% - 15% - 15%);
     top: 40%;
     left: 15%;
     z-index: 501;
