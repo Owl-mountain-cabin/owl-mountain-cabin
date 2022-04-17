@@ -97,13 +97,24 @@ export default {
     position: relative;
   }
   .#{$this}__second-section {
-    padding: 160px 273px 0 273px;
+    //padding: 160px 273px 0 273px;
+    padding: 5% 273px;
+
+    @include desktop-medium {
+      padding: 3% 173px;
+    }
   }
   .#{$this}__third-section {
-    padding-top: 175px;
+    //padding-top: 175px;
+    //padding: 5% 0;
   }
   .#{$this}__forth-section {
-    padding: 142px 140px 99px 140px;
+    //padding: 142px 140px 99px 140px;
+    padding: 5% 140px;
+
+    @include desktop-medium {
+      padding: 3% 100px;
+    }
     .v-data-table__wrapper {
       thead {
         tr {
@@ -125,7 +136,11 @@ export default {
     }
   }
   .#{$this}__fifth-section {
-    padding: 103px 140px 67px 140px;
+    //padding: 103px 140px 67px 140px;
+    padding: 5% 140px;
+    @include desktop-medium {
+      padding: 3% 100px;
+    }
     background: rgba($color: #f8f8f5, $alpha: 1);
     thead {
       tr {
@@ -146,10 +161,13 @@ export default {
     }
   }
   .#{$this}__sixth-section {
-    padding: 108px 160px 0 160px;
+    padding: 5% 160px;
+    @include desktop-medium {
+      padding: 3% 100px;
+    }
   }
   .#{$this}__seventh-section {
-    padding-top: 190px;
+    //padding-top: 190px;
   }
 }
 </style>

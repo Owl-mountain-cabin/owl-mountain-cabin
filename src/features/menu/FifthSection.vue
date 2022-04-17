@@ -35,7 +35,6 @@ export default {
   $this: "owl-menu-fifth";
   width: 100%;
   .#{$this}__contents-wrapper {
-    width: 100%;
     display: flex;
     flex-direction: column;
     margin-top: 47px;
@@ -50,6 +49,16 @@ export default {
         false,
         true
       );
+      width: 1600px;
+      margin: 0 auto;
+      @include desktop-medium {
+        width: 100%;
+        padding: 0 40px;
+      }
+      @include desktop-small {
+        width: 100%;
+        padding: 0 40px;
+      }
     }
     .#{$this}__image-wrapper {
       width: 100%;

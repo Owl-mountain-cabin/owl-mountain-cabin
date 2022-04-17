@@ -40,8 +40,11 @@ export default {
   width: 100%;
   @include flex-center-column;
   .#{$this}__title-wrapper {
-    padding-top: 80px;
+    //padding-top: 80px;
     padding-bottom: 178px;
+    @include desktop-medium {
+      padding-bottom: 50px;
+    }
     @include set-text(400, 70, rgba($color: $color-title, $alpha: 1));
     text-align: center;
   }
@@ -53,6 +56,9 @@ export default {
   .#{$this}__desc-wrapper {
     min-width: 900px;
     padding-top: 122px;
+    @include desktop-medium {
+      padding-top: 50px;
+    }
     .#{$this}__sub {
       @include set-text(bold, 40, rgba($color: $color-title, $alpha: 1));
       text-align: center;
@@ -79,7 +85,7 @@ export default {
       }
     }
     .#{$this}__desc {
-      padding-top: 68px;
+      //padding-top: 68px;
       @include set-text(400, 30, rgba($color: $color-title, $alpha: 1));
       text-align: center;
     }

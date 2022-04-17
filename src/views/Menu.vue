@@ -59,16 +59,16 @@ export default {
     position: relative;
   }
   .#{$this}__second-section {
-    padding: 184px 140px 0 140px;
+    padding: 184px 0 0 0;
   }
   .#{$this}__third-section {
-    padding: 364px 140px 0 140px;
+    padding: 364px 0 0 0;
   }
   .#{$this}__forth-section {
-    padding: 423px 140px 0 140px;
+    padding: 423px 0 0 0;
   }
   .#{$this}__fifth-section {
-    padding: 171px 140px 135px 140px;
+    padding: 171px 0 135px 0;
   }
 }
 </style>
