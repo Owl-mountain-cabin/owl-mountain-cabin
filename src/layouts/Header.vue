@@ -1,37 +1,39 @@
 <template>
   <header class="owl-header-wrapper">
-    <div class="owl-header__logo-wrapper">
-      <v-img
-        contain
-        :lazy-src="require(`@/assets/images/main-logo.svg`)"
-        :src="require(`@/assets/images/main-logo.svg`)"
-      />
-    </div>
-    <div class="owl-header__link-wrapper">
-      <router-link to="/home">Home</router-link>
-      <router-link to="/menu">Menu</router-link>
-      <router-link to="/store">Store</router-link>
-      <router-link to="/franchise">Franchise</router-link>
-      <router-link to="/company">Company</router-link>
-      <a href="https://www.naver.com" target="_blank">
-        <div class="owl-header__image-wrapper">
-          <v-img
-            contain
-            class="owl-header__image"
-            :lazy-src="require(`@/assets/images/insta.svg`)"
-            :src="require(`@/assets/images/insta.svg`)"
-          />
-        </div>
-      </a>
-      <div class="owl-header__phone">
+    <div class="owl-center-wrapper owl-flex-wrapper">
+      <div class="owl-header__logo-wrapper">
         <v-img
-          class="owl-header__phone-image"
           contain
-          width="12px"
-          :lazy-src="require(`@/assets/images/header-call.svg`)"
-          :src="require(`@/assets/images/header-call.svg`)"
+          :lazy-src="require(`@/assets/images/main-logo.svg`)"
+          :src="require(`@/assets/images/main-logo.svg`)"
         />
-        02-6080-4251
+      </div>
+      <div class="owl-header__link-wrapper">
+        <router-link to="/home">Home</router-link>
+        <router-link to="/menu">Menu</router-link>
+        <router-link to="/store">Store</router-link>
+        <router-link to="/franchise">Franchise</router-link>
+        <router-link to="/company">Company</router-link>
+        <a href="https://www.naver.com" target="_blank">
+          <div class="owl-header__image-wrapper">
+            <v-img
+              contain
+              class="owl-header__image"
+              :lazy-src="require(`@/assets/images/insta.svg`)"
+              :src="require(`@/assets/images/insta.svg`)"
+            />
+          </div>
+        </a>
+        <div class="owl-header__phone">
+          <v-img
+            class="owl-header__phone-image"
+            contain
+            width="12px"
+            :lazy-src="require(`@/assets/images/header-call.svg`)"
+            :src="require(`@/assets/images/header-call.svg`)"
+          />
+          02-6080-4251
+        </div>
       </div>
     </div>
   </header>
@@ -50,7 +52,7 @@ export default {
   width: 100%;
   @include flex-center-vert();
   justify-content: space-between;
-  padding: 0 140px;
+  //padding: 0 140px;
   padding-top: 34px;
   z-index: 501;
   .#{$this}__logo-wrapper {
@@ -100,6 +102,10 @@ export default {
         margin-right: 8px;
       }
     }
+  }
+
+  .owl-flex-wrapper {
+    justify-content: space-between;
   }
 }
 </style>

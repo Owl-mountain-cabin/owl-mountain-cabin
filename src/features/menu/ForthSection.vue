@@ -56,6 +56,16 @@ export default {
 .owl-menu-forth-wrapper {
   $this: "owl-menu-forth";
   display: flex;
+  width: 1600px;
+  margin: 0 auto;
+  @include desktop-medium {
+    width: 100%;
+    padding: 0 40px;
+  }
+  @include desktop-small {
+    width: 100%;
+    padding: 0 40px;
+  }
   .#{$this}__contents-wrapper {
     width: 30%;
     display: flex;
@@ -71,6 +81,12 @@ export default {
     }
     .#{$this}__sub-title-wrapper {
       @include set-text(400, 28, rgba($color: $color-title, $alpha: 1));
+      @include desktop-medium {
+        font-size: 1.9rem;
+      }
+      @include desktop-small {
+        font-size: 1.8rem;
+      }
     }
     .#{$this}__desc-wrapper {
       margin-top: 93px;
@@ -85,10 +101,29 @@ export default {
     .#{$this}__image-box {
       padding-right: 48px;
       padding-bottom: 48px;
+      @include desktop-medium {
+        width: 45%;
+      }
+      @include desktop-small {
+        width: 45%;
+        padding-right: 0;
+        padding-left: 28px;
+        padding-bottom: 28px;
+      }
       &:nth-child(2) {
         position: relative;
         top: calc(680px / 4);
         padding-bottom: 0;
+        @include desktop-medium {
+          padding-bottom: 28px;
+          width: 40%;
+          top: 10%;
+        }
+        @include desktop-small {
+          padding-bottom: 28px;
+          top: 10%;
+          width: 40%;
+        }
       }
       &:nth-child(3) {
         padding-bottom: 0;
@@ -96,6 +131,12 @@ export default {
       &:last-child {
         align-self: flex-end;
         padding-bottom: 0;
+        @include desktop-medium {
+          width: 40%;
+        }
+        @include desktop-small {
+          width: 40%;
+        }
       }
       .#{$this}__image {
         width: 100%;

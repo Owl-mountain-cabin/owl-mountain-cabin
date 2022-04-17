@@ -46,12 +46,28 @@ export default {
 .owl-menu-second-wrapper {
   $this: "owl-menu-second";
   display: flex;
+  width: 1600px;
+  margin: 0 auto;
+  @include desktop-medium {
+    width: 100%;
+    padding: 0 40px;
+  }
+  @include desktop-small {
+    width: 100%;
+    padding: 0 40px;
+  }
   .#{$this}__contents-wrapper {
     width: 30%;
     display: flex;
     flex-direction: column;
     .#{$this}__title-wrapper {
       @include set-text(400, 33, rgba($color: $color-title, $alpha: 1));
+      @include desktop-medium {
+        font-size: 1.9rem;
+      }
+      @include desktop-small {
+        font-size: 1.8rem;
+      }
     }
     .#{$this}__desc-wrapper {
       margin-top: 63px;
@@ -66,6 +82,15 @@ export default {
     .#{$this}__image-box {
       padding-right: 48px;
       padding-bottom: 48px;
+      @include desktop-medium {
+        width: 45%;
+      }
+      @include desktop-small {
+        width: 45%;
+        padding-right: 0;
+        padding-left: 28px;
+        padding-bottom: 28px;
+      }
       &:nth-child(2) {
         position: relative;
         top: calc(680px / 2);

@@ -51,6 +51,16 @@ export default {
 .owl-menu-third-wrapper {
   $this: "owl-menu-third";
   display: flex;
+  width: 1600px;
+  margin: 0 auto;
+  @include desktop-medium {
+    width: 100%;
+    padding: 0 40px;
+  }
+  @include desktop-small {
+    width: 100%;
+    padding: 0 40px;
+  }
   .#{$this}__contents-wrapper {
     width: 30%;
     display: flex;
@@ -66,11 +76,21 @@ export default {
     }
     .#{$this}__sub-title-wrapper {
       @include set-text(400, 28, rgba($color: $color-title, $alpha: 1));
+      @include desktop-medium {
+        font-size: 1.9rem;
+      }
+      @include desktop-small {
+        font-size: 1.8rem;
+      }
     }
     .#{$this}__desc-wrapper {
       margin-top: 93px;
       @include set-text(400, 20, rgba($color: $color-desc, $alpha: 1));
       line-height: 1.7;
+      @include desktop-small {
+        margin-top: 53px;
+        line-height: 1.6;
+      }
     }
   }
   .#{$this}__image-wrapper {
@@ -79,6 +99,17 @@ export default {
     flex-wrap: wrap;
     .#{$this}__image-box {
       padding-right: 58px;
+      @include desktop-medium {
+        width: 45%;
+        height: 100%;
+      }
+      @include desktop-small {
+        width: 45%;
+        height: 100%;
+        padding-right: 0;
+        padding-left: 28px;
+        padding-bottom: 28px;
+      }
       .#{$this}__image {
         width: 100%;
         height: 100%;

@@ -3,6 +3,11 @@
 @import url("https://webfontworld.github.io/sebang/SebangGothic.css");
 /* font-standard-size: */
 /* Screen-size: */
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap");
+@import url("https://webfontworld.github.io/sebang/SebangGothic.css");
+/* font-standard-size: */
+/* Screen-size: */
 * {
   font-family: "Noto Sans KR", "Do Hyeon", sans-serif;
 }
@@ -14,5 +19,30 @@ body {
 .container {
   width: 100%;
   background-color: #FFFFFF;
+}
+
+.owl-center-wrapper {
+  width: 1600px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1601px) and (max-width: 1920px) {
+  .owl-center-wrapper {
+    width: 100%;
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 580px) and (max-width: 1600px) {
+  .owl-center-wrapper {
+    width: 100%;
+    padding: 0 40px;
+  }
+}
+
+.owl-flex-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=common.css.map */

@@ -11,13 +11,15 @@
     />
     <div class="owl-franchise-third__merits-wrapper">
       <div class="owl-franchise-third__title-wrapper" v-html="checkN(title)" />
-      <div
-        class="owl-franchise-third__merit-wrapper"
-        v-for="(item, index) in merits"
-        :key="index"
-      >
-        <div class="owl-franchise-third__sub" v-html="checkN(item.name)" />
-        <div class="owl-franchise-third__desc" v-html="checkN(item.desc)" />
+      <div class="owl-franchise-third__merits-list-wrapper">
+        <div
+          class="owl-franchise-third__merit-wrapper"
+          v-for="(item, index) in merits"
+          :key="index"
+        >
+          <div class="owl-franchise-third__sub" v-html="checkN(item.name)" />
+          <div class="owl-franchise-third__desc" v-html="checkN(item.desc)" />
+        </div>
       </div>
     </div>
   </div>
@@ -57,22 +59,47 @@ export default {
     @include cover-background;
   }
 
+  .#{$this}__merits-list-wrapper {
+    margin-top: auto;
+  }
+
   .#{$this}__merits-wrapper {
     @include flex-center-column;
     position: absolute;
     min-width: 70%;
     height: 100%;
     z-index: 700;
+    padding: 5% 0;
+    @include desktop-medium {
+      padding: 4% 0;
+    }
+
+    br {
+      @include desktop-medium {
+        display: none;
+      }
+    }
     .#{$this}__title-wrapper {
       @include set-text(bold, 50, rgba($color: $color-white, $alpha: 1));
       text-align: center;
-      margin-bottom: 71px;
+      //margin-bottom: 71px;
     }
 
     .#{$this}__merit-wrapper {
       display: flex;
-      margin-bottom: 71px;
-      width: 100%;
+      //margin-bottom: 71px;
+      //width: 100%;
+      width: 1280px;
+      margin-top: 70px;
+
+      @include desktop-medium {
+        width: 100%;
+        margin-top: 30px;
+        padding: 0 40px;
+      }
+      &:first-child {
+        margin-top: 0;
+      }
 
       .#{$this}__sub {
         width: 20%;
