@@ -19,10 +19,8 @@ export default {
         "store-slide-image3",
       ],
       swiperOptions: {
-        autoplay: false,
         slidesPerView: 3,
         centeredSlides: true,
-        loop: true,
         initialSlide: 1,
       },
     };
