@@ -55,8 +55,10 @@ export default {
       swiperOption: {
         slidesPerView: 1,
         spaceBetween: 0,
-        loop: false,
-        autoplay: true,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+        },
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
