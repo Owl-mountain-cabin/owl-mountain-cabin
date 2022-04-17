@@ -61,7 +61,7 @@ export default {
   }
   .#{$this}__third-section {
     padding-top: 266px;
-    padding-bottom: 99px;
+    padding-bottom: 199px;
   }
   .#{$this}__forth-section {
     padding-top: 155px;
