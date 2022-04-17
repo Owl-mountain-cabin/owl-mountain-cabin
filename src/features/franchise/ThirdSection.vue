@@ -72,6 +72,7 @@ export default {
     padding: 5% 0;
     @include desktop-medium {
       padding: 4% 0;
+      width: 1280px;
     }
 
     br {
@@ -93,9 +94,13 @@ export default {
       margin-top: 70px;
 
       @include desktop-medium {
+        width: 1600px;
+        margin-top: 50px;
+        padding: 0 40px;
+      }
+      @include desktop-small {
         width: 100%;
         margin-top: 30px;
-        padding: 0 40px;
       }
       &:first-child {
         margin-top: 0;
