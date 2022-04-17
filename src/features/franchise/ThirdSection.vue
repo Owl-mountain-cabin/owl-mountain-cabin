@@ -71,8 +71,10 @@ export default {
     z-index: 700;
     padding: 5% 0;
     @include desktop-medium {
-      padding: 4% 0;
       width: 1280px;
+    }
+    @include desktop-small {
+      padding: 4% 0;
     }
 
     br {
@@ -80,10 +82,19 @@ export default {
         display: none;
       }
     }
+    br {
+      @include desktop-small {
+        display: none;
+      }
+    }
     .#{$this}__title-wrapper {
       @include set-text(bold, 50, rgba($color: $color-white, $alpha: 1));
       text-align: center;
       //margin-bottom: 71px;
+      @include desktop-small {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+      }
     }
 
     .#{$this}__merit-wrapper {
@@ -101,6 +112,7 @@ export default {
       @include desktop-small {
         width: 100%;
         margin-top: 30px;
+        padding: 0 40px;
       }
       &:first-child {
         margin-top: 0;
@@ -109,10 +121,16 @@ export default {
       .#{$this}__sub {
         width: 20%;
         @include set-text(400, 24, rgba($color: $color-white, $alpha: 1));
+        @include desktop-small {
+          font-size: 1.2rem;
+        }
       }
       .#{$this}__desc {
         width: 80%;
         @include set-text(400, 21, rgba($color: $color-white, $alpha: 1));
+        @include desktop-small {
+          font-size: 1rem;
+        }
       }
     }
   }
