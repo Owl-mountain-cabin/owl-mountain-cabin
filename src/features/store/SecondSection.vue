@@ -17,21 +17,30 @@
 </template>
 
 <script>
-import contents from "@/constants/store/second.json";
 import { lineBreak } from "@/utils/helper";
 
 export default {
+  props: {
+    title: {
+      type: String,
+      default: "",
+      description: "title",
+    },
+    desc: {
+      type: String,
+      default: "",
+      description: "desc",
+    },
+    address: {
+      type: String,
+      default: "",
+      description: "address",
+    },
+  },
   computed: {
     checkN() {
       return (str) => lineBreak(str);
     },
-  },
-  data() {
-    return {
-      title: contents.title,
-      desc: contents.desc,
-      address: contents.address,
-    };
   },
 };
 </script>

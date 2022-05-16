@@ -5,27 +5,32 @@
         "images":[{
             "src": "menu-fifth1.png",
             "title": "곱도리탕",
+            "desc": "소곱창/대창과 닭도리탕의 녹진한 조합의 음식",
             "width": "w-20"
             },
             {
             "src": "menu-fifth2.png",
             "title": "김치도리탕",
-              "width": "w-20"
+            "desc":"묵은지가 들어가 개운한 국물맛이 일품인 음식",
+            "width": "w-20"
             },
             {
             "src": "menu-fifth3.png",
             "title": "꽃도리탕",
-              "width": "w-20"
+            "desc":"닭도리탕에 꽃게가 추가되어 꽃게 특유의\n 시원한 국물맛을 끌어올린 음식",
+            "width": "w-20"
             },
             {
             "src": "menu-fifth4.png",
             "title": "삼겹김치전골",
-              "width": "w-20"
+            "desc":"듀록삼겹살과 묵은지가 들어가고\n 특제소스로 국물맛을 끌어올린 음식",
+            "width": "w-20"
             },
             {
             "src": "menu-fifth5.png",
             "title": "통골뱅이탕",
-              "width": "w-20"
+            "desc":"통통한 골뱅이살과 시원한 국물로\n 소주안주로 제격인 음식",
+            "width": "w-20"
             }
         ]
       },
@@ -35,33 +40,38 @@
            {
             "src": "menu-fifth6.png",
             "title": "모듬전",
-              "width": "w-40"
-            
+            "desc": "야채전, 고기가 들어간 7가지 전들이\n 노릇노릇하게 부쳐져 나오는 음식",
+            "width": "w-40"
             },
             {
             "src": "menu-fifth7.png",
-            "title": "감자채전",
-              "width": "w-20"
+            "title": "치즈감자채전",
+            "desc": "겉바속촉의 공식을 지켜냈으며, 고소한 감자전안에\n 모짜렐라 치즈가 듬뿍 들어간 음식",
+            "width": "w-20"
             },
             {
             "src": "menu-fifth8.png",
             "title": "육새전",
-              "width": "w-20"
+            "desc": "탱글한 새우와 고소한 소고기육전의 콜라보",
+            "width": "w-20"
             },
             {
             "src": "menu-fifth9.png",
             "title": "반반전(해물+김치)",
-              "width": "w-20"
+            "desc": "해물파전과 김치전을 동시에 즐길 수 있는\n 가성비 음식",
+            "width": "w-20"
             },
             {
             "src": "menu-fifth10.png",
             "title": "해물파전",
-              "width": "w-20"
+            "desc": "오징어, 새우, 다양한 채소가 가미된\n 영양만점 음식", 
+            "width": "w-20"
             },
              {
             "src": "menu-fifth11.png",
             "title": "김치전",
-              "width": "w-20"
+            "desc": "얇게, 넓게, 바삭하게 3박자가\n 잘 어우러지는 음식", 
+            "width": "w-20"
             }           
         ]
       },
@@ -70,17 +80,20 @@
         "images":[{
             "src": "menu-fifth12.png",
             "title": "고추장육회",
-              "width": "w-20"
+            "desc":"쫄깃한 한우육회에 매콤달콤 특제 양념장을\n 버무린 음식",  
+            "width": "w-20"
             },
             {
             "src": "menu-fifth13.png",
             "title": "항정수육",
-              "width": "w-20"
+            "desc":"꼬들하고 부드러운 항정살을\n 부엉이산장 스타일로 삶은 수육",  
+            "width": "w-20"
             },
             {
             "src": "menu-fifth14.png",
             "title": "제육두부김치",
-              "width": "w-20"
+            "desc":"두부와 불향이 어우러지는 김치제육볶음의\n 콜라보가 훌륭한 음식",  
+            "width": "w-20"
             }
         ]
       },
@@ -89,22 +102,26 @@
         "images":[{
             "src": "menu-fifth15.png",
             "title": "참지마요주먹밥",
-              "width": "w-20"
+            "desc":"참치, 마요네즈가 만나\n 어디에도 잘 어울리는 음식",    
+            "width": "w-20"
             },
             {
             "src": "menu-fifth16.png",
             "title": "떡구이",
-              "width": "w-20"
+            "desc":"쌀떡을 바삭하게 구워 꿀에 버무린 음식",  
+            "width": "w-20"
             },
             {
             "src": "menu-fifth17.png",
             "title": "묵사발",
-              "width": "w-20"
+            "desc":"시원한 동치미 육수에 묵과 채소의\n 콜라보가 훌륭한 음식",  
+            "width": "w-20"
             },
             {
             "src": "menu-fifth18.png",
             "title": "칼비빔면",
-              "width": "w-20"
+            "desc":"쫄깃탱탱한 칼국수에 특제양념이 콜라보된 음식",  
+            "width": "w-20"
             }
         ]
       }

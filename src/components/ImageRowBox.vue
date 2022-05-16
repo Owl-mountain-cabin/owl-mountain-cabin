@@ -15,17 +15,24 @@
         />
       </div>
       <div class="owl-image-row__title">{{ item.title }}</div>
+      <div class="owl-image-row__desc" v-html="checkN(item.desc)" />
     </div>
   </div>
 </template>
 
 <script>
+import { lineBreak } from "@/utils/helper";
 export default {
   props: {
     images: {
       type: Array,
       default: () => [],
       description: "images",
+    },
+  },
+  computed: {
+    checkN() {
+      return (str) => lineBreak(str);
     },
   },
 };
@@ -56,6 +63,12 @@ export default {
     }
     .#{$this}__title {
       @include set-text(400, 20, rgba($color: $color-title, $alpha: 1));
+      margin-bottom: 10px;
+    }
+    .#{$this}__desc {
+      text-align: center;
+
+      @include set-text(400, 13, rgba($color: $color-desc, $alpha: 1));
     }
   }
 }
