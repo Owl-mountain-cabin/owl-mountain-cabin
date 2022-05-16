@@ -7,14 +7,15 @@
     <div class="owl-menu-second__image-wrapper">
       <div
         class="owl-menu-second__image-box"
-        v-for="(src, index) in images"
+        v-for="(item, index) in images"
+        :class="item.name"
         :key="index"
       >
         <v-img
           class="owl-menu-second__image"
           cover
-          :lazy-src="require(`@/assets/images/${src}`)"
-          :src="require(`@/assets/images/${src}`)"
+          :lazy-src="require(`@/assets/images/${item.src}`)"
+          :src="require(`@/assets/images/${item.src}`)"
         />
       </div>
     </div>
@@ -36,7 +37,11 @@ export default {
     return {
       title: contents.title,
       desc: contents.desc,
-      images: ["menu-second1.png", "menu-second3.png", "menu-second2.png"],
+      images: [
+        { src: "menu-second1.png", name: "second1" },
+        { src: "menu-second3.png", name: "second3" },
+        { src: "menu-second2.png", name: "second2" },
+      ],
     };
   },
 };
@@ -82,6 +87,50 @@ export default {
     .#{$this}__image-box {
       padding-right: 48px;
       padding-bottom: 48px;
+      position: relative;
+      &.second1 {
+        &:hover {
+          .#{$this}__image:before {
+            height: 100%;
+          }
+          &:after {
+            content: "곱도리탕";
+            position: absolute;
+            top: 5%;
+            right: 15%;
+            @include set-text(400, 22, rgba($color: $color-white, $alpha: 1));
+          }
+        }
+      }
+      &.second2 {
+        &:hover {
+          .#{$this}__image:before {
+            height: 100%;
+          }
+          &:after {
+            content: "치즈감자채전";
+            position: absolute;
+            top: 5%;
+            right: 15%;
+            @include set-text(400, 22, rgba($color: $color-white, $alpha: 1));
+          }
+        }
+      }
+      &.second3 {
+        &:hover {
+          .#{$this}__image:before {
+            height: 100%;
+          }
+          &:after {
+            content: "고추장육회";
+            position: absolute;
+            top: 5%;
+            right: 15%;
+            @include set-text(400, 22, rgba($color: $color-white, $alpha: 1));
+          }
+        }
+      }
+
       @include desktop-medium {
         width: 45%;
       }
@@ -103,6 +152,16 @@ export default {
         width: 100%;
         height: 100%;
         @include cover-background;
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          height: 0%;
+          width: 100%;
+          top: 0;
+          transition: height 0.5s ease-out;
+          background: linear-gradient(to top, transparent 5%, black 100%);
+        }
       }
     }
   }

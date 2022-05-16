@@ -11,14 +11,15 @@
     <div class="owl-menu-forth__image-wrapper">
       <div
         class="owl-menu-forth__image-box"
-        v-for="(src, index) in images"
+        v-for="(item, index) in images"
+        :class="item.name"
         :key="index"
       >
         <v-img
           class="owl-menu-forth__image"
           cover
-          :lazy-src="require(`@/assets/images/${src}`)"
-          :src="require(`@/assets/images/${src}`)"
+          :lazy-src="require(`@/assets/images/${item.src}`)"
+          :src="require(`@/assets/images/${item.src}`)"
         />
       </div>
     </div>
@@ -42,10 +43,10 @@ export default {
       subTitle: contents.subTitle,
       desc: contents.desc,
       images: [
-        "menu-forth2.png",
-        "menu-forth4.png",
-        "menu-forth1.png",
-        "menu-forth3.png",
+        { src: "menu-forth2.png", name: "forth2" },
+        { src: "menu-forth4.png", name: "forth4" },
+        { src: "menu-forth1.png", name: "forth1" },
+        { src: "menu-forth3.png", name: "forth3" },
       ],
     };
   },
@@ -101,6 +102,63 @@ export default {
     .#{$this}__image-box {
       padding-right: 48px;
       padding-bottom: 48px;
+      position: relative;
+      &.forth1 {
+        &:hover {
+          .#{$this}__image:before {
+            height: 100%;
+          }
+          &:after {
+            content: "삼겹김치전골";
+            position: absolute;
+            top: 5%;
+            right: 15%;
+            @include set-text(400, 22, rgba($color: $color-white, $alpha: 1));
+          }
+        }
+      }
+      &.forth2 {
+        &:hover {
+          .#{$this}__image:before {
+            height: 100%;
+          }
+          &:after {
+            content: "꽃도리탕";
+            position: absolute;
+            top: 5%;
+            right: 15%;
+            @include set-text(400, 22, rgba($color: $color-white, $alpha: 1));
+          }
+        }
+      }
+      &.forth3 {
+        &:hover {
+          .#{$this}__image:before {
+            height: 100%;
+          }
+          &:after {
+            content: "제육두부김치";
+            position: absolute;
+            top: 5%;
+            right: 15%;
+            @include set-text(400, 22, rgba($color: $color-white, $alpha: 1));
+          }
+        }
+      }
+      &.forth4 {
+        &:hover {
+          .#{$this}__image:before {
+            height: 100%;
+          }
+          &:after {
+            content: "고추장육회";
+            position: absolute;
+            top: 5%;
+            right: 15%;
+            @include set-text(400, 22, rgba($color: $color-white, $alpha: 1));
+          }
+        }
+      }
       @include desktop-medium {
         width: 45%;
       }
@@ -142,6 +200,16 @@ export default {
         width: 100%;
         height: 100%;
         @include cover-background;
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          height: 0%;
+          width: 100%;
+          top: 0;
+          transition: height 0.5s ease-out;
+          background: linear-gradient(to top, transparent 5%, black 100%);
+        }
       }
     }
   }
