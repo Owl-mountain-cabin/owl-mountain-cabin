@@ -4,16 +4,47 @@
       <Dimmed :height="'100%'" />
       <ImageWrapper :imageSrc="'store-header-image.png'" title="STORE" />
     </div>
-    <div class="owl-store__second-section">
-      <SecondSection />
+    <div class="owl-store__tab-section">
+      <v-tabs v-model="tab" fixed-tabs center-active color="#F0A30F">
+        <v-tabs-slider color="#F0A30F"></v-tabs-slider>
+        <v-tab> 연신내점 </v-tab>
+        <v-tab> 강남점 </v-tab>
+      </v-tabs>
     </div>
-    <div class="owl-store__third-section">
-      <ThirdSection />
-    </div>
-    <div class="owl-store__forth-section">
-      <ForthSection />
-    </div>
-    <Banner :title="title" :desc="desc" />
+    <v-tabs-items v-model="tab">
+      <v-tab-item>
+        <div class="owl-store__second-section">
+          <SecondSection
+            :title="yeonsinnae.second.title"
+            :desc="yeonsinnae.second.desc"
+            :address="yeonsinnae.second.address"
+          />
+        </div>
+        <div class="owl-store__third-section">
+          <ThirdSection />
+        </div>
+        <div class="owl-store__forth-section">
+          <ForthSection :title="yeonsinnae.forth.title" />
+        </div>
+        <Banner :title="title" :desc="desc" />
+      </v-tab-item>
+      <v-tab-item>
+        <div class="owl-store__second-section">
+          <SecondSection
+            :title="gangnam.second.title"
+            :desc="gangnam.second.desc"
+            :address="gangnam.second.address"
+          />
+        </div>
+        <div class="owl-store__third-section">
+          <ThirdSection />
+        </div>
+        <div class="owl-store__forth-section">
+          <ForthSection :title="gangnam.forth.title" />
+        </div>
+        <Banner :title="title" :desc="desc" />
+      </v-tab-item>
+    </v-tabs-items>
   </div>
 </template>
 
@@ -25,6 +56,8 @@ import ThirdSection from "@/features/store/ThirdSection.vue";
 import ForthSection from "@/features/store/ForthSection.vue";
 import Banner from "@/components/Banner.vue";
 import contents from "@/constants/common/index.json";
+import secondContents from "@/constants/store/second.json";
+import forthContents from "@/constants/store/forth.json";
 
 export default {
   components: {
@@ -42,6 +75,27 @@ export default {
     return {
       title: contents.bannerTitle,
       desc: contents.phone,
+      tab: "연신내점",
+      gangnam: {
+        second: {
+          title: secondContents["GANGNAM"].title,
+          desc: secondContents["GANGNAM"].desc,
+          address: secondContents["GANGNAM"].address,
+        },
+        forth: {
+          title: forthContents["GANGNAM"].title,
+        },
+      },
+      yeonsinnae: {
+        second: {
+          title: secondContents["YEONSINNAE"].title,
+          desc: secondContents["YEONSINNAE"].desc,
+          address: secondContents["YEONSINNAE"].address,
+        },
+        forth: {
+          title: forthContents["YEONSINNAE"].title,
+        },
+      },
     };
   },
 };
@@ -50,6 +104,16 @@ export default {
 <style lang="scss">
 .owl-store {
   $this: "owl-store";
+
+  .#{$this}__tab-section {
+    padding: 122px 0;
+    .v-tab {
+      @include set-text(400, 16, rgba($color: $color-footer, $alpha: 1));
+      &.v-tab--active {
+        color: $color-accent;
+      }
+    }
+  }
   .#{$this}__section {
     height: 100vh;
   }
@@ -57,7 +121,7 @@ export default {
     position: relative;
   }
   .#{$this}__second-section {
-    padding: 159px 233px 0 329px;
+    padding: 0 233px 0 329px;
   }
   .#{$this}__third-section {
     padding-top: 266px;
