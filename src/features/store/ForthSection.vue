@@ -15,18 +15,19 @@
 </template>
 
 <script>
-import contents from "@/constants/store/forth.json";
 import { lineBreak } from "@/utils/helper";
 export default {
+  props: {
+    title: {
+      type: String,
+      default: "",
+      description: "title",
+    },
+  },
   computed: {
     checkN() {
       return (str) => lineBreak(str);
     },
-  },
-  data() {
-    return {
-      title: contents.title,
-    };
   },
 };
 </script>
