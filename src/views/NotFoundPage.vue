@@ -10,6 +10,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-  // responsive
-</style>
+<style lang="scss"></style>
