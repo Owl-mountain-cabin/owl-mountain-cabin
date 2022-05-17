@@ -47,14 +47,38 @@ export default {
   background-color: $color-accent;
   z-index: 999;
 
+  @include mobile {
+    width: 100px;
+    height: 100px;
+    right: 20px;
+    bottom: 13%;
+  }
+  @include mobile-small {
+    width: 90px;
+    height: 90px;
+  }
+
   .#{$this}__title-wrapper {
     @include set-text(400, 22, rgba($color: $color-white, $alpha: 1));
     text-align: center;
+    @include mobile {
+      @include set-text(400, 16, rgba($color: $color-white, $alpha: 1));
+    }
+    @include mobile-small {
+      @include set-text(400, 15, rgba($color: $color-white, $alpha: 1));
+    }
   }
   .#{$this}__desc-wrapper {
     margin-top: 10px;
     @include set-text(400, 18, rgba($color: $color-white, $alpha: 1));
     text-align: center;
+    @include mobile {
+      margin-top: 0;
+      @include set-text(400, 12, rgba($color: $color-white, $alpha: 1));
+    }
+    @include mobile-small {
+      @include set-text(400, 11, rgba($color: $color-white, $alpha: 1));
+    }
   }
 }
 </style>
