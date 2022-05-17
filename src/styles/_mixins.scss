@@ -199,3 +199,21 @@
     @content;
   }
 }
+
+@mixin tablet {
+  @media (max-width: #{$breakpoint-tablet + 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$breakpoint-mobile + 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile-small {
+  @media (max-width: #{$breakpoint-mobile-small + 1px}) {
+    @content;
+  }
+}
