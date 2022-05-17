@@ -37,6 +37,12 @@
           :lazy-src="require(`@/assets/images/home-scroll.svg`)"
           :src="require(`@/assets/images/home-scroll.svg`)"
         />
+        <v-img
+          class="owl-home-first__scroll-image-mobile"
+          contain
+          :lazy-src="require(`@/assets/images/owl-main-arrow-down.png`)"
+          :src="require(`@/assets/images/owl-main-arrow-down.png`)"
+        />
       </div>
     </div>
   </div>
@@ -66,6 +72,11 @@ export default {
       @include cover-background;
       height: 100%;
     }
+    .v-image__image {
+      @include mobile {
+        background-position: 62% center !important;
+      }
+    }
   }
 
   .#{$this}__contents-wrapper {
@@ -77,16 +88,51 @@ export default {
     @include desktop-small {
       top: 340px;
     }
+    @include mobile {
+      width: calc(100% - 40px);
+      top: auto;
+      bottom: 28%;
+      left: 20px;
+      transform: translateY(50%);
+    }
+    @include mobile-small {
+      bottom: 30%;
+    }
     .#{$this}__title-wrapper {
       width: 455px;
       margin-bottom: 76px;
+      @include mobile {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      @include mobile-small {
+        width: 180px;
+        margin-bottom: 10px;
+      }
+      .v-image {
+        @include mobile {
+          width: 200px;
+        }
+        @include mobile-small {
+          width: 180px;
+        }
+      }
     }
     .#{$this}__desc {
       @include set-text(300, 20, rgba($color: $color-white, $alpha: 1));
       line-height: 1.7;
       margin-bottom: 42px;
+      @include mobile {
+        @include set-text(300, 13, rgba($color: $color-white, $alpha: 1));
+      }
+      @include mobile-small {
+        @include set-text(300, 12, rgba($color: $color-white, $alpha: 1));
+      }
     }
     .#{$this}__button-wrapper {
+      @include mobile {
+        display: none;
+      }
       .#{$this}--more {
         width: 113px;
         height: 35px;
@@ -104,8 +150,20 @@ export default {
       position: absolute;
       left: 50%;
       margin-top: 147px;
+      @include mobile {
+        margin-top: 80px;
+      }
       .#{$this}__scroll-image {
         width: 20px;
+        @include mobile {
+          display: none;
+        }
+      }
+      .#{$this}__scroll-image-mobile {
+        display: none;
+        @include mobile {
+          display: block;
+        }
       }
     }
   }
