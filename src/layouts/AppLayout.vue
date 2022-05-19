@@ -2,7 +2,12 @@
   <v-app class="owl-app-layout">
     <template v-slot:default>
       <slot name="default"></slot>
-      <v-navigation-drawer class="owl-navi-wrapper" v-model="drawer" absolute>
+      <v-navigation-drawer
+        class="owl-navi-wrapper"
+        v-model="drawer"
+        absolute
+        right
+      >
         <v-list nav>
           <v-list-item-group>
             <v-list-item class="owl-navi__list-item owl-navi__button-wrapper">
