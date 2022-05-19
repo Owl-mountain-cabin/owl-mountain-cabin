@@ -9,12 +9,12 @@
         />
       </div>
       <div class="owl-header__link-wrapper">
-        <router-link to="/home">Home</router-link>
-        <router-link to="/menu">Menu</router-link>
-        <router-link to="/store">Store</router-link>
-        <router-link to="/franchise">Franchise</router-link>
-        <router-link to="/company">Company</router-link>
-        <a href="https://www.naver.com" target="_blank">
+        <router-link class="desktop" to="/home">Home</router-link>
+        <router-link class="desktop" to="/menu">Menu</router-link>
+        <router-link class="desktop" to="/store">Store</router-link>
+        <router-link class="desktop" to="/franchise">Franchise</router-link>
+        <router-link class="desktop" to="/company">Company</router-link>
+        <a class="mobile" href="https://www.naver.com" target="_blank">
           <div class="owl-header__image-wrapper">
             <v-img
               contain
@@ -24,7 +24,10 @@
             />
           </div>
         </a>
-        <div class="owl-header__phone">
+        <v-btn class="mobile" plain elevation="0" @click="onClickDrawer">
+          <v-icon color="#fff">$menu</v-icon>
+        </v-btn>
+        <div class="owl-header__phone desktop">
           <v-img
             class="owl-header__phone-image"
             contain
@@ -42,6 +45,12 @@
 <script>
 export default {
   props: {},
+  inject: ["my"],
+  methods: {
+    onClickDrawer() {
+      this.my.drawer = true;
+    },
+  },
 };
 </script>
 <style lang="scss">
@@ -60,6 +69,10 @@ export default {
   }
   .#{$this}__link-wrapper {
     @include flex-center-vert();
+    .mobile {
+      display: none;
+    }
+
     .router-link-exact-active {
       border-bottom: solid 3px $color-accent;
       @include set-text(400, 20, rgba($color: $color-accent, $alpha: 1));
@@ -67,6 +80,9 @@ export default {
     a {
       text-decoration: none;
       margin-right: 45px;
+      @include is-mobile {
+        margin-right: 0;
+      }
       @include set-text(400, 20, rgba($color: #fff, $alpha: 1));
       @include transition(color 0.5s ease-in);
       &:after {
@@ -100,6 +116,15 @@ export default {
       @include set-text(400, 15, rgba($color: #fff, $alpha: 1));
       .#{$this}__phone-image {
         margin-right: 8px;
+      }
+    }
+    // 모바일인 경우
+    @include is-mobile {
+      .desktop {
+        display: none;
+      }
+      .mobile {
+        display: block;
       }
     }
   }
