@@ -53,6 +53,10 @@ export default {
   height: 100%;
   display: flex;
   align-items: center;
+  @include mobile {
+    flex-direction: column;
+    padding: 65px 50px 50px 50px;
+  }
   .#{$this}__image-wrapper {
     width: 40%;
     height: 80%;
@@ -60,6 +64,10 @@ export default {
     padding: 33px;
     padding-top: 0;
     position: relative;
+    @include mobile {
+      padding: 0 20px;
+      width: 100%;
+    }
     .#{$this}__background {
       width: 100%;
       height: 100%;
@@ -72,6 +80,9 @@ export default {
       width: 400px;
       left: 50%;
       transform: translate(-50%, 0);
+      @include mobile {
+        width: 60%;
+      }
     }
     .#{$this}__image-title {
       @include cover-background;
@@ -79,6 +90,9 @@ export default {
       top: 70%;
       left: 50%;
       transform: translate(-50%, 0);
+      @include mobile {
+        width: 60%;
+      }
     }
   }
 
@@ -90,6 +104,10 @@ export default {
     margin-left: 228px;
     max-width: 652px;
     justify-content: center;
+    @include mobile {
+      width: 100%;
+      margin: 0;
+    }
     .#{$this}__title-wrapper {
       padding-bottom: 14px;
       @include set-text(
@@ -100,12 +118,24 @@ export default {
         true
       );
       border-bottom: 1px solid rgba($color: $color-border, $alpha: 1);
+      @include mobile {
+        @include set-text(
+          400,
+          23,
+          rgba($color: $color-title, $alpha: 1),
+          false,
+          true
+        );
+      }
     }
     .#{$this}__desc-wrapper {
       margin-top: 43px;
       @include set-text(400, 18, rgba($color: $color-desc, $alpha: 1));
       justify-self: flex-start;
       line-height: 1.7;
+      @include mobile {
+        @include set-text(400, 11, rgba($color: $color-desc, $alpha: 1));
+      }
     }
   }
 }
