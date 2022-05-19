@@ -80,7 +80,7 @@ export default {
     a {
       text-decoration: none;
       margin-right: 45px;
-      @include is-mobile {
+      @include mobile {
         margin-right: 0;
       }
       @include set-text(400, 20, rgba($color: #fff, $alpha: 1));
@@ -119,7 +119,7 @@ export default {
       }
     }
     // 모바일인 경우
-    @include is-mobile {
+    @include mobile {
       .desktop {
         display: none;
       }

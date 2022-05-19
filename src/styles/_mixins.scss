@@ -182,32 +182,6 @@
 }
 
 // 미디어 쿼리 
-// mobile: cell-phone, tablet
-// desktop: desktop 
-@mixin mobile-small{
-  @media (min-width: #{$breakpoint-mobile-xs}) and (max-width: #{$breakpoint-mobile-sm}) {
-    @content;
-  }
-}
-
-@mixin mobile-medium {
-  @media (min-width: #{$breakpoint-mobile-sm + 1px }) and (max-width: #{$breakpoint-mobile-lg}) {
-    @content;
-  }
-}
-
-@mixin mobile-large {
-  @media (min-width: #{$breakpoint-mobile-lg + 1px }) and (max-width: #{$breakpoint-mobile-xl}) {
-    @content;
-  }
-}
-
-@mixin is-mobile {
-  @media only screen and (max-width: $breakpoint-mobile-xl) {
-     @content;
-  }
-}
-
 @mixin desktop-small($small:$breakpoint-small, $medium:$breakpoint-medium) {
   @media (min-width: #{$small}) and (max-width: #{$medium}) {
     @content;
