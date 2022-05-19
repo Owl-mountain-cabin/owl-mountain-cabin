@@ -48,8 +48,7 @@ export default {
   inject: ["my"],
   methods: {
     onClickDrawer() {
-      console.log(this.my, "drawer");
-      this.my.drawer = !this.my.drawer;
+      this.my.drawer = true;
     },
   },
 };
