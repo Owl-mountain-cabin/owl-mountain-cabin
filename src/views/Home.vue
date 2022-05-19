@@ -74,6 +74,9 @@ export default {
   .#{$this}__second-section {
     padding: 0 172px;
     padding-bottom: 128px;
+    @include mobile {
+      padding: 0;
+    }
   }
   .#{$this}__third-section {
     padding-top: 53px;
