@@ -11,6 +11,12 @@ $menu-font-family: 'SebangGothic','Do Hyeon', 'Noto Sans KR', sans-serif;
 $font-standard-size: 16px;
 
 /* Screen-size: */
+
+$breakpoint-mobile-xs: 320px;
+$breakpoint-mobile-sm: 480px;
+$breakpoint-mobile-lg: 767px;
+$breakpoint-mobile-xl: 1024px;
+
 $breakpoint-small :580px;
 $breakpoint-medium : 1600px;
 $breakpoint-large :1920px;
