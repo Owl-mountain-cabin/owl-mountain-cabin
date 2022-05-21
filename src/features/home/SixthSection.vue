@@ -41,12 +41,18 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  @include mobile {
+    flex-direction: column;
+  }
 
   .#{$this}__image-wrapper {
     width: 50%;
     height: 100%;
     .#{$this}__image {
       @include cover-background;
+    }
+    @include mobile {
+      width: 100%;
     }
   }
 
@@ -57,6 +63,11 @@ export default {
     flex-direction: column;
     margin-left: 84px;
     justify-content: center;
+    @include mobile {
+      width: 100%;
+      padding: 20px 0;
+      margin-left: 0;
+    }
     .#{$this}__title-wrapper {
       padding-bottom: 40px;
       justify-self: flex-start;
@@ -67,10 +78,30 @@ export default {
         false,
         true
       );
+      @include mobile {
+        padding: 20px 0;
+        text-align: center;
+        @include set-text(
+          400,
+          24,
+          rgba($color: $color-title, $alpha: 1),
+          false,
+          true
+        );
+      }
     }
     .#{$this}__desc-wrapper {
       @include set-text(400, 20, rgba($color: $color-desc, $alpha: 1));
       justify-self: flex-start;
+      @include mobile {
+        @include set-text(400, 14, rgba($color: $color-desc, $alpha: 1));
+        text-align: center;
+      }
+      br {
+        @include mobile {
+          display: none;
+        }
+      }
     }
   }
 }
