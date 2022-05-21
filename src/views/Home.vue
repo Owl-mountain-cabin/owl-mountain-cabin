@@ -93,15 +93,23 @@ export default {
     margin-bottom: 200px;
     @include mobile {
       padding: 53px 20px;
+      margin-bottom: 0;
     }
   }
   .#{$this}__sixth-section {
     padding: 166px 140px 165px 140px;
     background: rgba($color: #f5f4ef, $alpha: 0.5);
+    @include mobile {
+      padding: 0 20px 80px 20px;
+      background: rgba($color: #fff, $alpha: 1);
+    }
   }
   .#{$this}__seven-section {
     padding-top: 82px;
     padding-bottom: 91px;
+    @include mobile {
+      display: none;
+    }
   }
 }
 </style>
