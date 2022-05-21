@@ -97,6 +97,11 @@ export default {
     border-radius: 50%;
     border: 1px solid $color-white !important;
     opacity: 1;
+    @include mobile {
+      width: 8px;
+      height: 8px;
+      margin: 0 5px !important;
+    }
   }
   .swiper-pagination-bullet-active {
     background-color: $color-white !important;
@@ -107,6 +112,10 @@ export default {
     background-size: 100% auto;
     background-position: center;
     margin-left: 30px;
+    @include mobile {
+      margin-left: 0;
+      background-size: 85% auto;
+    }
   }
 
   .swiper-button-next {
@@ -114,6 +123,10 @@ export default {
     background-size: 100% auto;
     background-position: center;
     margin-right: 30px;
+    @include mobile {
+      margin-right: 0;
+      background-size: 85% auto;
+    }
   }
   .swiper-button-next::after,
   .swiper-button-prev::after {
