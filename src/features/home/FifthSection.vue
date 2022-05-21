@@ -73,7 +73,7 @@ export default {
   height: 100%;
   .#{$this}__title {
     text-align: center;
-    padding-bottom: 55px;
+    padding: 30px 0 53px;
     @include set-text(
       500,
       45,
@@ -81,15 +81,35 @@ export default {
       false,
       ture
     );
+    @include mobile {
+      @include set-text(
+        500,
+        32,
+        rgba($color: $color-title, $alpha: 1),
+        false,
+        ture
+      );
+      letter-spacing: -0.4px;
+    }
   }
   .#{$this}__contents-wrapper {
     @include flex-center;
+    @include mobile {
+      flex-direction: column;
+    }
     .#{$this}__content {
       @include flex-column;
+      @include mobile {
+        width: 100%;
+      }
       &.center {
         margin: 0 90px;
         position: relative;
         top: 140px;
+        @include mobile {
+          margin: 0;
+          position: static;
+        }
       }
       .#{$this}__image-wrapper {
         width: 100%;
@@ -103,6 +123,9 @@ export default {
         }
         .#{$this}__image {
           @include cover-background;
+          @include mobile {
+            width: 100%;
+          }
         }
       }
       .#{$this}__content-title {
@@ -115,9 +138,22 @@ export default {
           false,
           ture
         );
+        @include mobile {
+          @include set-text(
+            500,
+            22,
+            rgba($color: $color-title, $alpha: 1),
+            false,
+            ture
+          );
+        }
       }
       .#{$this}__content-desc {
         @include set-text(400, 18, rgba($color: $color-desc, $alpha: 1));
+        @include mobile {
+          margin: 0 0 52px 0;
+          @include set-text(400, 12, rgba($color: $color-desc, $alpha: 0.7));
+        }
       }
     }
   }

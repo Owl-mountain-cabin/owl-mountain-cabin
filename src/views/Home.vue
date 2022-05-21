@@ -91,6 +91,9 @@ export default {
   .#{$this}__fifth-section {
     padding: 79px 254px 79px 254px;
     margin-bottom: 200px;
+    @include mobile {
+      padding: 53px 20px;
+    }
   }
   .#{$this}__sixth-section {
     padding: 166px 140px 165px 140px;
