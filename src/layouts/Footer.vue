@@ -68,17 +68,41 @@ export default {
   height: 230px;
   border-top: 1px $scroll-border-color solid;
   padding: 0 283px 0 140px;
+  @include mobile {
+    padding: 50px 20px 20px 20px;
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+  }
   .#{$this}__logo-wrapper {
     width: 149px;
+    @include mobile {
+      margin: 0 0 30px 0;
+    }
   }
   .#{$this}__contents-wrapper {
     min-height: 90px;
     max-height: 90px;
     @include flex-column;
+    @include mobile {
+      max-height: 100%;
+      min-height: 1px;
+      margin: 0 0 20px 0;
+    }
     .#{$this}__desc-wrapper {
       @include set-text(400, 14, rgba($color: $color-footer, $alpha: 1));
+      @include mobile {
+        text-align: center;
+      }
       &.desc {
         margin-top: 25px;
+        @include mobile {
+          margin: 0;
+        }
+      }
+      .v-image {
+        margin: 0 auto;
       }
     }
   }
