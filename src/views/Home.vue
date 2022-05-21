@@ -82,6 +82,9 @@ export default {
     padding-top: 53px;
     padding-bottom: 80px;
     background: rgba($color: #faf9f7, $alpha: 0.7);
+    @include mobile {
+      padding-top: 0;
+    }
   }
   .#{$this}__forth-section {
   }
