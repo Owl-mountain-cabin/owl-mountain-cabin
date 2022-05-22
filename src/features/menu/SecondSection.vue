@@ -61,10 +61,17 @@ export default {
     width: 100%;
     padding: 0 40px;
   }
+  @include mobile {
+    width: 100%;
+    flex-direction: column;
+  }
   .#{$this}__contents-wrapper {
     width: 30%;
     display: flex;
     flex-direction: column;
+    @include mobile {
+      width: 100%;
+    }
     .#{$this}__title-wrapper {
       @include set-text(400, 33, rgba($color: $color-title, $alpha: 1));
       @include desktop-medium {
@@ -73,21 +80,46 @@ export default {
       @include desktop-small {
         font-size: 1.8rem;
       }
+      @include mobile {
+        font-size: 1.5rem;
+      }
     }
     .#{$this}__desc-wrapper {
       margin-top: 63px;
       @include set-text(400, 20, rgba($color: $color-desc, $alpha: 1));
       line-height: 1.7;
+      @include mobile {
+        margin: 20px 0;
+        font-size: 0.9rem;
+      }
+      br {
+        @include mobile {
+          display: none;
+        }
+      }
     }
   }
   .#{$this}__image-wrapper {
     width: 70%;
     @include flex-center-vert;
     flex-wrap: wrap;
+    @include mobile {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      width: 100%;
+      padding: 20px 0 0 0;
+      overflow: hidden;
+    }
     .#{$this}__image-box {
       padding-right: 48px;
       padding-bottom: 48px;
       position: relative;
+      @include mobile {
+        padding: 0;
+        width: 100%;
+        margin: 0 0 20px 0;
+        top: 0 !important;
+      }
       &.second1 {
         &:hover {
           .#{$this}__image:before {
