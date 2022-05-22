@@ -52,9 +52,18 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  @include mobile {
+    width: 100%;
+    flex-direction: column;
+  }
   .#{$this}__image-wrapper {
     width: 50%;
     height: 100%;
+    @include mobile {
+      width: 100%;
+      padding: 0;
+      margin-bottom: 30px;
+    }
     .#{$this}__image {
       height: 100%;
       @include cover-background;
@@ -68,16 +77,37 @@ export default {
     flex-direction: column;
     margin-left: 84px;
     justify-content: center;
+    @include mobile {
+      margin: 0;
+      width: 100%;
+    }
     .#{$this}__title-wrapper {
       padding-bottom: 40px;
       @include set-text(400, 40, rgba($color: $color-title, $alpha: 1));
+      @include mobile {
+        padding-bottom: 20px;
+        font-size: 1.6rem;
+        letter-spacing: -0.5px;
+      }
     }
     .#{$this}__desc-wrapper {
       @include set-text(400, 20, rgba($color: $color-desc, $alpha: 1));
+      @include mobile {
+        font-size: 0.9rem;
+      }
+      br {
+        @include mobile {
+          display: none;
+        }
+      }
     }
     .#{$this}__address-wrapper {
       padding-top: 81px;
       @include set-text(400, 20, rgba($color: $color-title, $alpha: 1));
+      @include mobile {
+        padding-top: 30px;
+        font-size: 0.9rem;
+      }
     }
   }
 }
