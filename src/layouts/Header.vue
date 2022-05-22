@@ -64,6 +64,10 @@ export default {
   //padding: 0 140px;
   padding-top: 34px;
   z-index: 501;
+  @include mobile {
+    width: 100%;
+    padding: 30px 20px 0;
+  }
   .#{$this}__logo-wrapper {
     width: 149px;
   }
@@ -102,6 +106,10 @@ export default {
       &:hover:after {
         transform: scaleX(1);
       }
+    }
+    button.v-btn {
+      padding-right: 0;
+      min-width: 1px;
     }
     .#{$this}__image-wrapper {
       .#{$this}__image {

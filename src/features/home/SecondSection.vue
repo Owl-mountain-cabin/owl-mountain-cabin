@@ -55,7 +55,7 @@ export default {
   align-items: center;
   @include mobile {
     flex-direction: column;
-    padding: 65px 50px 50px 50px;
+    padding: 65px 20px 50px 20px;
   }
   .#{$this}__image-wrapper {
     width: 40%;
@@ -66,7 +66,7 @@ export default {
     position: relative;
     @include mobile {
       padding: 0 20px;
-      width: 100%;
+      width: 90%;
     }
     .#{$this}__background {
       width: 100%;
@@ -106,7 +106,7 @@ export default {
     justify-content: center;
     @include mobile {
       width: 100%;
-      margin: 0;
+      margin: 40px 0 0 0;
     }
     .#{$this}__title-wrapper {
       padding-bottom: 14px;
@@ -119,6 +119,7 @@ export default {
       );
       border-bottom: 1px solid rgba($color: $color-border, $alpha: 1);
       @include mobile {
+        padding-bottom: 0;
         @include set-text(
           400,
           23,
@@ -134,7 +135,13 @@ export default {
       justify-self: flex-start;
       line-height: 1.7;
       @include mobile {
-        @include set-text(400, 11, rgba($color: $color-desc, $alpha: 1));
+        @include set-text(400, 14, rgba($color: $color-desc, $alpha: 1));
+        margin-top: 14px;
+      }
+      br {
+        @include mobile {
+          display: none;
+        }
       }
     }
   }

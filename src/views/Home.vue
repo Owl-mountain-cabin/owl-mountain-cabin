@@ -82,20 +82,34 @@ export default {
     padding-top: 53px;
     padding-bottom: 80px;
     background: rgba($color: #faf9f7, $alpha: 0.7);
+    @include mobile {
+      padding-top: 0;
+    }
   }
   .#{$this}__forth-section {
   }
   .#{$this}__fifth-section {
     padding: 79px 254px 79px 254px;
     margin-bottom: 200px;
+    @include mobile {
+      padding: 53px 20px;
+      margin-bottom: 0;
+    }
   }
   .#{$this}__sixth-section {
     padding: 166px 140px 165px 140px;
     background: rgba($color: #f5f4ef, $alpha: 0.5);
+    @include mobile {
+      padding: 0 20px 80px 20px;
+      background: rgba($color: #fff, $alpha: 1);
+    }
   }
   .#{$this}__seven-section {
     padding-top: 82px;
     padding-bottom: 91px;
+    @include mobile {
+      display: none;
+    }
   }
 }
 </style>
