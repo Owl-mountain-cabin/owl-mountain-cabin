@@ -22,6 +22,13 @@ export default {
         slidesPerView: 3,
         centeredSlides: true,
         initialSlide: 1,
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            centeredSlides: false,
+          },
+        },
       },
     };
   },
@@ -32,8 +39,15 @@ export default {
 .owl-store-third-wrapper {
   $this: "owl-store-third";
   width: 100%;
+  @include mobile {
+    overflow: hidden;
+    padding: 0;
+  }
   .swiper-wrapper {
     left: -150px;
+    @include mobile {
+      left: 0;
+    }
   }
   .swiper-container {
     overflow: visible;
@@ -41,11 +55,20 @@ export default {
   .swiper-slide {
     opacity: 0.5;
     transform: scale(0.9);
+    @include mobile {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
   .swiper-slide-active {
     opacity: 1;
     transform: scale(1.1);
     margin: 0 150px;
+    @include mobile {
+      margin: 0;
+      transform: scale(1);
+      width: 100%;
+    }
   }
   .swiper-button-prev {
     background: url("@/assets/images/owl-store-slide-btn-prev.svg") no-repeat;
@@ -53,6 +76,10 @@ export default {
     background-position: center;
     margin-left: 0;
     left: calc(30% - 40px);
+    @include mobile {
+      left: 0;
+      background-size: 50% auto;
+    }
   }
   .swiper-button-next {
     background: url("@/assets/images/owl-store-slide-btn-next.svg") no-repeat;
@@ -60,6 +87,10 @@ export default {
     background-position: center;
     margin-right: 0;
     right: calc(30% - 40px);
+    @include mobile {
+      right: 0;
+      background-size: 50% auto;
+    }
   }
   .swiper-pagination-bullets {
     bottom: -70px;
