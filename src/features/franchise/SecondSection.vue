@@ -47,6 +47,10 @@ export default {
     }
     @include set-text(400, 70, rgba($color: $color-title, $alpha: 1));
     text-align: center;
+    @include mobile {
+      padding: 50px 0;
+      font-size: 1.4rem;
+    }
   }
   .#{$this}__image {
     height: 100%;
@@ -59,12 +63,21 @@ export default {
     @include desktop-medium {
       padding-top: 50px;
     }
+    @include mobile {
+      min-width: 1px;
+      padding-top: 50px;
+    }
     .#{$this}__sub {
       @include set-text(bold, 40, rgba($color: $color-title, $alpha: 1));
       text-align: center;
       display: flex;
       flex-basis: 100%;
       align-items: center;
+      @include mobile {
+        width: 80%;
+        font-size: 1.2rem;
+        margin: 0 auto;
+      }
       &:after {
         content: "";
         flex-grow: 1;
@@ -73,6 +86,9 @@ export default {
         line-height: 0px;
         background-color: rgba($color: $scroll-border-color, $alpha: 1);
         margin-left: 50px;
+        @include mobile {
+          margin-left: 20px;
+        }
       }
       &:before {
         content: "";
@@ -82,12 +98,19 @@ export default {
         line-height: 0px;
         background-color: rgba($color: $scroll-border-color, $alpha: 1);
         margin-right: 50px;
+        @include mobile {
+          margin-right: 20px;
+        }
       }
     }
     .#{$this}__desc {
       //padding-top: 68px;
       @include set-text(400, 30, rgba($color: $color-title, $alpha: 1));
       text-align: center;
+      @include mobile {
+        font-size: 0.8rem;
+        padding-bottom: 50px;
+      }
     }
   }
 }

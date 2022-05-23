@@ -57,6 +57,9 @@ export default {
   .#{$this}__image {
     height: 100%;
     @include cover-background;
+    @include mobile {
+      min-height: 650px;
+    }
   }
 
   .#{$this}__merits-list-wrapper {
@@ -76,6 +79,9 @@ export default {
     @include desktop-small {
       padding: 4% 0;
     }
+    @include mobile {
+      padding: 50px 20px;
+    }
 
     br {
       @include desktop-medium {
@@ -86,6 +92,9 @@ export default {
       @include desktop-small {
         display: none;
       }
+      @include mobile {
+        display: none;
+      }
     }
     .#{$this}__title-wrapper {
       @include set-text(bold, 50, rgba($color: $color-white, $alpha: 1));
@@ -94,6 +103,10 @@ export default {
       @include desktop-small {
         font-size: 2.5rem;
         margin-bottom: 30px;
+      }
+      @include mobile {
+        font-size: 1.2rem;
+        font-weight: 400;
       }
     }
 
@@ -114,6 +127,10 @@ export default {
         margin-top: 30px;
         padding: 0 40px;
       }
+      @include mobile {
+        width: 100%;
+        margin-top: 15px;
+      }
       &:first-child {
         margin-top: 0;
       }
@@ -124,12 +141,19 @@ export default {
         @include desktop-small {
           font-size: 1.2rem;
         }
+        @include mobile {
+          font-size: 0.9rem;
+          padding: 0 5px 0 0;
+        }
       }
       .#{$this}__desc {
         width: 80%;
         @include set-text(400, 21, rgba($color: $color-white, $alpha: 1));
         @include desktop-small {
           font-size: 1rem;
+        }
+        @include mobile {
+          font-size: 0.8rem;
         }
       }
     }
