@@ -47,28 +47,28 @@ export default {
     @include flex-center-column;
     &.w-40 {
       width: 40%;
-      @include mobile {
+      @include tablet {
         width: 50%;
       }
     }
     &.w-20 {
       width: 20%;
-      @include mobile {
+      @include tablet {
         width: 50%;
       }
     }
-    @include mobile {
+    @include tablet {
       padding: 10px 5px 0 5px;
     }
     br {
-      @include mobile {
+      @include tablet {
         display: none;
       }
     }
     .#{$this}__image-box {
       width: 100%;
       height: 259px;
-      @include mobile {
+      @include tablet {
         height: auto;
       }
       .#{$this}__image {
@@ -80,7 +80,7 @@ export default {
     .#{$this}__title {
       @include set-text(400, 20, rgba($color: $color-title, $alpha: 1));
       margin-bottom: 10px;
-      @include mobile {
+      @include tablet {
         font-size: 1.1rem;
       }
     }
@@ -88,7 +88,7 @@ export default {
       text-align: center;
 
       @include set-text(400, 13, rgba($color: $color-desc, $alpha: 1));
-      @include mobile {
+      @include tablet {
         font-size: 0.8rem;
       }
     }

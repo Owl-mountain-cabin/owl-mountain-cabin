@@ -61,7 +61,7 @@ export default {
     width: 100%;
     padding: 0 40px;
   }
-  @include mobile {
+  @include tablet {
     width: 100%;
     flex-direction: column;
   }
@@ -69,7 +69,7 @@ export default {
     width: 30%;
     display: flex;
     flex-direction: column;
-    @include mobile {
+    @include tablet {
       width: 100%;
     }
     .#{$this}__title-wrapper {
@@ -80,7 +80,7 @@ export default {
       @include desktop-small {
         font-size: 1.8rem;
       }
-      @include mobile {
+      @include tablet {
         font-size: 1.5rem;
       }
     }
@@ -88,12 +88,12 @@ export default {
       margin-top: 63px;
       @include set-text(400, 20, rgba($color: $color-desc, $alpha: 1));
       line-height: 1.7;
-      @include mobile {
+      @include tablet {
         margin: 20px 0;
         font-size: 0.9rem;
       }
       br {
-        @include mobile {
+        @include tablet {
           display: none;
         }
       }
@@ -103,7 +103,7 @@ export default {
     width: 70%;
     @include flex-center-vert;
     flex-wrap: wrap;
-    @include mobile {
+    @include tablet {
       flex-wrap: nowrap;
       flex-direction: column;
       width: 100%;
@@ -114,7 +114,7 @@ export default {
       padding-right: 48px;
       padding-bottom: 48px;
       position: relative;
-      @include mobile {
+      @include tablet {
         padding: 0;
         width: 100%;
         margin: 0 0 20px 0;
@@ -171,6 +171,10 @@ export default {
         padding-right: 0;
         padding-left: 28px;
         padding-bottom: 28px;
+      }
+      @include tablet {
+        width: 100%;
+        padding: 0;
       }
       &:nth-child(2) {
         position: relative;

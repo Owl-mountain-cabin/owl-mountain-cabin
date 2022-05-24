@@ -54,7 +54,7 @@ export default {
 
 <style lang="scss">
 .v-application--wrap {
-  @include mobile {
+  @include tablet {
     overflow: hidden;
   }
 }
@@ -65,25 +65,25 @@ export default {
   }
   .#{$this}__second-section {
     padding: 184px 0 0 0;
-    @include mobile {
+    @include tablet {
       padding: 80px 20px 0 20px;
     }
   }
   .#{$this}__third-section {
     padding: 364px 0 0 0;
-    @include mobile {
+    @include tablet {
       padding: 80px 20px 0 20px;
     }
   }
   .#{$this}__forth-section {
     padding: 423px 0 0 0;
-    @include mobile {
+    @include tablet {
       padding: 80px 20px 0 20px;
     }
   }
   .#{$this}__fifth-section {
     padding: 171px 0 135px 0;
-    @include mobile {
+    @include tablet {
       padding: 80px 0 0 0;
     }
   }
