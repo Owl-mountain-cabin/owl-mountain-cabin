@@ -47,7 +47,7 @@ export default {
     }
     @include set-text(400, 70, rgba($color: $color-title, $alpha: 1));
     text-align: center;
-    @include mobile {
+    @include tablet {
       padding: 50px 0;
       font-size: 1.4rem;
     }
@@ -63,7 +63,7 @@ export default {
     @include desktop-medium {
       padding-top: 50px;
     }
-    @include mobile {
+    @include tablet {
       min-width: 1px;
       padding-top: 50px;
     }
@@ -73,7 +73,7 @@ export default {
       display: flex;
       flex-basis: 100%;
       align-items: center;
-      @include mobile {
+      @include tablet {
         width: 80%;
         font-size: 1.2rem;
         margin: 0 auto;
@@ -86,7 +86,7 @@ export default {
         line-height: 0px;
         background-color: rgba($color: $scroll-border-color, $alpha: 1);
         margin-left: 50px;
-        @include mobile {
+        @include tablet {
           margin-left: 20px;
         }
       }
@@ -98,7 +98,7 @@ export default {
         line-height: 0px;
         background-color: rgba($color: $scroll-border-color, $alpha: 1);
         margin-right: 50px;
-        @include mobile {
+        @include tablet {
           margin-right: 20px;
         }
       }
@@ -107,7 +107,7 @@ export default {
       //padding-top: 68px;
       @include set-text(400, 30, rgba($color: $color-title, $alpha: 1));
       text-align: center;
-      @include mobile {
+      @include tablet {
         font-size: 0.8rem;
         padding-bottom: 50px;
       }
