@@ -38,8 +38,8 @@ export default {
 .owl-franchise-third-wrapper {
   $this: "owl-franchise-third";
   width: 100%;
-  background: url(@/assets/images/franchise-third1.png) no-repeat center center;
-  position: relative;
+  //position: relative;
+  background: url(@/assets/images/franchise-third1.png) no-repeat center;
   @include flex-center-column;
   .#{$this}__merits-list-wrapper {
     margin-top: auto;
@@ -47,9 +47,8 @@ export default {
 
   .#{$this}__merits-wrapper {
     @include flex-center-column;
-    //position: absolute;
-    //min-width: 70%;
-    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    min-width: 70%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 700;

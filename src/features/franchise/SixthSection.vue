@@ -83,8 +83,8 @@ export default {
   @include flex-center-column;
   .#{$this}__title-wrapper {
     padding-bottom: 148px;
-    @include mobile {
-      padding-bottom: 50px;
+    @include tablet {
+      padding: 0 0 80px 0;
     }
     .#{$this}__title {
       @include set-text(
@@ -128,6 +128,9 @@ export default {
         position: relative;
       }
       @include flex-center-vert;
+      @include tablet {
+        width: 100%;
+      }
       .#{$this}__contents {
         width: 90%;
         height: 300px;
