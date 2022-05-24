@@ -240,9 +240,11 @@ export default {
           .#{$this}__desc {
             @include set-text(400, 16, rgba($color: $color-desc, $alpha: 1));
             text-align: center;
+            @include tablet {
+              text-align: left;
+            }
             @include mobile {
               font-size: 0.8rem;
-              text-align: left;
             }
           }
         }
@@ -260,7 +262,9 @@ export default {
           width: 100%;
           height: auto;
           @include cover-background;
-          transform: rotate(90deg);
+          @include tablet {
+            transform: rotate(90deg);
+          }
         }
       }
     }
