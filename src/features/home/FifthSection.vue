@@ -81,7 +81,7 @@ export default {
       false,
       ture
     );
-    @include mobile {
+    @include tablet {
       @include set-text(
         500,
         32,
@@ -94,19 +94,19 @@ export default {
   }
   .#{$this}__contents-wrapper {
     @include flex-center;
-    @include mobile {
+    @include tablet {
       flex-direction: column;
     }
     .#{$this}__content {
       @include flex-column;
-      @include mobile {
+      @include tablet {
         width: 100%;
       }
       &.center {
         margin: 0 90px;
         position: relative;
         top: 140px;
-        @include mobile {
+        @include tablet {
           margin: 0;
           position: static;
         }
@@ -123,7 +123,7 @@ export default {
         }
         .#{$this}__image {
           @include cover-background;
-          @include mobile {
+          @include tablet {
             width: 100%;
           }
         }
@@ -138,7 +138,7 @@ export default {
           false,
           ture
         );
-        @include mobile {
+        @include tablet {
           @include set-text(
             500,
             22,
@@ -150,7 +150,7 @@ export default {
       }
       .#{$this}__content-desc {
         @include set-text(400, 18, rgba($color: $color-desc, $alpha: 1));
-        @include mobile {
+        @include tablet {
           margin: 0 0 52px 0;
           @include set-text(400, 12, rgba($color: $color-desc, $alpha: 0.7));
         }

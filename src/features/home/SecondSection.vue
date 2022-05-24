@@ -53,7 +53,7 @@ export default {
   height: 100%;
   display: flex;
   align-items: center;
-  @include mobile {
+  @include tablet {
     flex-direction: column;
     padding: 65px 20px 50px 20px;
   }
@@ -64,7 +64,7 @@ export default {
     padding: 33px;
     padding-top: 0;
     position: relative;
-    @include mobile {
+    @include tablet {
       padding: 0 20px;
       width: 90%;
     }
@@ -80,7 +80,7 @@ export default {
       width: 400px;
       left: 50%;
       transform: translate(-50%, 0);
-      @include mobile {
+      @include tablet {
         width: 60%;
       }
     }
@@ -90,7 +90,7 @@ export default {
       top: 70%;
       left: 50%;
       transform: translate(-50%, 0);
-      @include mobile {
+      @include tablet {
         width: 60%;
       }
     }
@@ -104,7 +104,10 @@ export default {
     margin-left: 228px;
     max-width: 652px;
     justify-content: center;
-    @include mobile {
+    @include desktop-small {
+      margin-left: 100px;
+    }
+    @include tablet {
       width: 100%;
       margin: 40px 0 0 0;
     }
@@ -118,7 +121,10 @@ export default {
         true
       );
       border-bottom: 1px solid rgba($color: $color-border, $alpha: 1);
-      @include mobile {
+      @include desktop-small {
+        font-size: 3rem;
+      }
+      @include tablet {
         padding-bottom: 0;
         @include set-text(
           400,
@@ -134,12 +140,15 @@ export default {
       @include set-text(400, 18, rgba($color: $color-desc, $alpha: 1));
       justify-self: flex-start;
       line-height: 1.7;
-      @include mobile {
+      @include tablet {
         @include set-text(400, 14, rgba($color: $color-desc, $alpha: 1));
         margin-top: 14px;
       }
       br {
-        @include mobile {
+        @include desktop-small {
+          display: none;
+        }
+        @include tablet {
           display: none;
         }
       }

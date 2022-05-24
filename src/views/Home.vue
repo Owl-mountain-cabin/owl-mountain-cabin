@@ -74,6 +74,10 @@ export default {
   .#{$this}__second-section {
     padding: 0 172px;
     padding-bottom: 128px;
+    @include desktop-small {
+      padding: 0 120px;
+      padding-bottom: 100px;
+    }
     @include mobile {
       padding: 0;
     }
