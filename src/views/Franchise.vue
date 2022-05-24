@@ -155,7 +155,7 @@ export default {
       padding: 3% 100px;
     }
     @include mobile {
-      padding: 0 20px;
+      padding: 50px 20px;
     }
     background: rgba($color: #f8f8f5, $alpha: 1);
     thead {

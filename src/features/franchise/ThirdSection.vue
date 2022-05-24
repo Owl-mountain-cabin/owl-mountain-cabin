@@ -1,14 +1,5 @@
 <template>
   <div class="owl-franchise-third-wrapper">
-    <Dimmed :height="'100%'" />
-    <v-img
-      cover
-      width="100%"
-      height="100%"
-      class="owl-franchise-third__image"
-      :lazy-src="require(`@/assets/images/franchise-third1.png`)"
-      :src="require(`@/assets/images/franchise-third1.png`)"
-    />
     <div class="owl-franchise-third__merits-wrapper">
       <div class="owl-franchise-third__title-wrapper" v-html="checkN(title)" />
       <div class="owl-franchise-third__merits-list-wrapper">
@@ -27,12 +18,8 @@
 
 <script>
 import contents from "@/constants/franchise/third.json";
-import Dimmed from "@/components/Dimmed.vue";
 import { lineBreak } from "@/utils/helper";
 export default {
-  components: {
-    Dimmed,
-  },
   computed: {
     checkN() {
       return (str) => lineBreak(str);
@@ -51,31 +38,22 @@ export default {
 .owl-franchise-third-wrapper {
   $this: "owl-franchise-third";
   width: 100%;
-
+  background: url(@/assets/images/franchise-third1.png) no-repeat center center;
   position: relative;
   @include flex-center-column;
-  .#{$this}__image {
-    height: 100%;
-    @include cover-background;
-    @include mobile {
-      min-height: 650px;
-    }
-  }
-
   .#{$this}__merits-list-wrapper {
     margin-top: auto;
   }
 
   .#{$this}__merits-wrapper {
     @include flex-center-column;
-    position: absolute;
-    min-width: 70%;
+    //position: absolute;
+    //min-width: 70%;
+    width: 100%;
     height: 100%;
+    background: rgba(0, 0, 0, 0.5);
     z-index: 700;
     padding: 5% 0;
-    @include desktop-medium {
-      width: 1280px;
-    }
     @include desktop-small {
       padding: 4% 0;
     }
