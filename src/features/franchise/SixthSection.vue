@@ -30,6 +30,13 @@
             </div>
           </div>
           <div class="owl-franchise-sixth__desc-wrapper">
+            <div class="owl-franchise-sixth__name-wrapper">
+              <div class="owl-franchise-sixth__step">{{ item.step }}</div>
+              <div
+                class="owl-franchise-sixth__name"
+                v-html="checkN(item.name)"
+              />
+            </div>
             <div class="owl-franchise-sixth__desc" v-html="checkN(item.desc)" />
           </div>
         </div>
@@ -88,11 +95,18 @@ export default {
         ture
       );
       text-align: center;
+      @include mobile {
+        font-size: 1.4rem;
+      }
     }
     .#{$this}__sub {
       padding-top: 19px;
       @include set-text(400, 22, rgba($color: $color-title, $alpha: 1));
       text-align: center;
+      @include mobile {
+        padding-top: 0;
+        font-size: 0.9rem;
+      }
     }
   }
   .#{$this}__image {
@@ -108,6 +122,11 @@ export default {
     }
     .#{$this}__contents-box {
       width: 20%;
+      @include tablet {
+        width: 100%;
+        padding-bottom: 80px;
+        position: relative;
+      }
       @include flex-center-vert;
       @include tablet {
         width: 100%;
@@ -116,10 +135,19 @@ export default {
         width: 90%;
         height: 300px;
         @include flex-column;
+        @include tablet {
+          flex-direction: row;
+          align-items: center;
+          width: 100%;
+          height: auto;
+        }
         .#{$this}__step-wrapper {
           max-height: 200px;
           @include flex-center-column;
           justify-content: space-between;
+          @include tablet {
+            width: 40%;
+          }
           .#{$this}__image-wrapper {
             padding-bottom: 10px;
             .#{$this}__image {
@@ -130,6 +158,9 @@ export default {
           }
           .#{$this}__name-wrapper {
             padding-bottom: 30px;
+            @include tablet {
+              display: none !important;
+            }
             .#{$this}__step {
               @include set-text(
                 400,
@@ -162,18 +193,78 @@ export default {
           }
         }
         .#{$this}__desc-wrapper {
+          @include tablet {
+            width: 60%;
+            padding-left: 20px;
+          }
+          .#{$this}__name-wrapper {
+            padding-bottom: 30px;
+            @include mobile {
+              padding-bottom: 10px;
+            }
+            @include tablet {
+              display: none;
+            }
+            .#{$this}__step {
+              @include set-text(
+                400,
+                16,
+                rgba($color: $color-accent, $alpha: 1),
+                false,
+                ture
+              );
+            }
+            .#{$this}__name {
+              @include set-text(
+                400,
+                22,
+                rgba($color: $color-title, $alpha: 1),
+                false,
+                ture
+              );
+              .small {
+                @include set-text(
+                  400,
+                  14,
+                  rgba($color: $color-title, $alpha: 1),
+                  false,
+                  ture
+                );
+              }
+            }
+            display: none;
+            @include tablet {
+              display: block;
+            }
+          }
           .#{$this}__desc {
             @include set-text(400, 16, rgba($color: $color-desc, $alpha: 1));
             text-align: center;
+            @include tablet {
+              text-align: left;
+            }
+            @include mobile {
+              font-size: 0.8rem;
+            }
           }
         }
       }
       .#{$this}__image-pass-wrapper {
         width: 10%;
+        @include tablet {
+          width: 16px;
+          position: absolute;
+          bottom: 30px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
         .#{$this}__image-pass {
           width: 100%;
           height: auto;
           @include cover-background;
+          @include tablet {
+            transform: rotate(90deg);
+          }
         }
       }
     }

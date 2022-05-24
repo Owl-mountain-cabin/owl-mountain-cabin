@@ -109,9 +109,11 @@ export default {
 .owl-franchise-seventh-wrapper {
   $this: "owl-franchise-seventh";
   width: 100%;
-
   position: relative;
   @include flex-center-column;
+  @include tablet {
+    min-height: 600px;
+  }
   .#{$this}__image {
     height: 100%;
     @include cover-background;
@@ -123,17 +125,37 @@ export default {
     width: 100%;
     height: 100%;
     z-index: 700;
+    @include tablet {
+      flex-direction: column;
+      padding: 50px 0;
+    }
     .#{$this}__title-wrapper {
       width: 40%;
       padding-left: 81px;
+      @include tablet {
+        width: 100%;
+        padding: 0;
+      }
       .#{$this}__title {
         @include set-text(bold, 35, rgba($color: $color-white, $alpha: 1));
         text-align: center;
         margin-bottom: 25px;
+        @include tablet {
+          font-size: 1.5rem;
+        }
+        @include mobile {
+          font-size: 1.2rem;
+        }
       }
       .#{$this}__desc {
         text-align: center;
         @include set-text(400, 22, rgba($color: $color-white, $alpha: 1));
+        @include tablet {
+          font-size: 1.1rem;
+        }
+        @include mobile {
+          font-size: 0.9rem;
+        }
       }
     }
     .#{$this}__diagram-wrapper {
@@ -141,9 +163,18 @@ export default {
       height: 100%;
       position: relative;
       @include flex-center;
-
+      @include tablet {
+        padding: 0;
+        width: 100%;
+      }
       .#{$this}__diagram-image-wrapper {
         width: 40%;
+        @include tablet {
+          width: 180px;
+        }
+        @include mobile {
+          width: 120px;
+        }
       }
       .#{$this}__diagram-contents-wrapper {
         position: absolute;
@@ -152,26 +183,60 @@ export default {
           top: 13%;
           left: 50%;
           transform: translate(-50%, 0);
+          @include tablet {
+            top: 10%;
+          }
+          @include mobile {
+            top: 20%;
+          }
         }
         &.db2 {
           top: 41%;
           right: 12%;
           transform: translate(-50%, 0);
+          @include tablet {
+            right: 23%;
+          }
+          @include mobile {
+            right: 0;
+          }
         }
         &.db3 {
           bottom: 15%;
           right: 20%;
           transform: translate(-50%, 0);
+          @include tablet {
+            right: 28%;
+          }
+          @include mobile {
+            bottom: 20%;
+            right: 40px;
+          }
         }
         &.db4 {
           bottom: 15%;
           left: 30%;
           transform: translate(-50%, 0);
+          @include tablet {
+            left: 28%;
+            transform: translate(50%, 0);
+          }
+          @include mobile {
+            bottom: 20%;
+            left: 20px;
+          }
         }
         &.db5 {
           top: 41%;
           left: 20%;
           transform: translate(-50%, 0);
+          @include tablet {
+            transform: translate(50%, 0);
+            left: 22%;
+          }
+          @include mobile {
+            left: 0;
+          }
         }
         .#{$this}__diagram-contents-name {
           @include set-text(
@@ -182,10 +247,16 @@ export default {
             ture
           );
           text-align: center;
+          @include tablet {
+            font-size: 1.2rem;
+          }
         }
         .#{$this}__diagram-contents-desc {
           text-align: center;
           @include set-text(400, 22, rgba($color: #d6d6d6, $alpha: 1));
+          @include tablet {
+            font-size: 0.8rem;
+          }
         }
       }
     }

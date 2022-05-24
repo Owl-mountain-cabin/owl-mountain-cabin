@@ -18,12 +18,8 @@
 
 <script>
 import contents from "@/constants/franchise/third.json";
-// import Dimmed from "@/components/Dimmed.vue";
 import { lineBreak } from "@/utils/helper";
 export default {
-  components: {
-    //Dimmed,
-  },
   computed: {
     checkN() {
       return (str) => lineBreak(str);
@@ -45,14 +41,6 @@ export default {
   //position: relative;
   background: url(@/assets/images/franchise-third1.png) no-repeat center;
   @include flex-center-column;
-  .#{$this}__image {
-    height: 100%;
-    @include cover-background;
-    @include mobile {
-      min-height: 650px;
-    }
-  }
-
   .#{$this}__merits-list-wrapper {
     margin-top: auto;
   }
@@ -62,11 +50,9 @@ export default {
     background-color: rgba(0, 0, 0, 0.5);
     min-width: 70%;
     height: 100%;
+    background: rgba(0, 0, 0, 0.5);
     z-index: 700;
     padding: 5% 0;
-    @include desktop-medium {
-      width: 1280px;
-    }
     @include desktop-small {
       padding: 4% 0;
     }
