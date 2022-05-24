@@ -64,7 +64,6 @@ export default {
   @include tablet {
     width: 100%;
     flex-direction: column;
-    padding: 0 40px;
   }
   .#{$this}__contents-wrapper {
     width: 30%;
