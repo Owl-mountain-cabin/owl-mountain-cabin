@@ -64,7 +64,7 @@ export default {
   $this: "owl-franchise-forth";
   display: flex;
   justify-content: center;
-  @include mobile {
+  @include tablet {
     flex-direction: column;
   }
   .#{$this}__contents-wrapper {
@@ -73,7 +73,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    @include mobile {
+    @include tablet {
       width: 100% !important;
     }
     &.w-35 {
@@ -94,7 +94,7 @@ export default {
         false,
         ture
       );
-      @include mobile {
+      @include tablet {
         font-size: 1.5rem;
         margin: 0;
         line-height: 1;
@@ -102,19 +102,19 @@ export default {
     }
     .#{$this}__desc-wrapper {
       @include set-text(400, 30, rgba($color: $color-title, $alpha: 1));
-      @include mobile {
+      @include tablet {
         font-size: 0.9rem;
       }
     }
     .#{$this}__address-wrapper {
       padding-top: 93px;
       @include set-text(400, 20, rgba($color: $color-desc, $alpha: 1));
-      @include mobile {
+      @include tablet {
         padding: 20px 0;
         font-size: 0.8rem;
       }
       br {
-        @include mobile {
+        @include tablet {
           display: none;
         }
       }
@@ -123,7 +123,7 @@ export default {
   .#{$this}__table-wrapper {
     width: 50%;
     height: 100%;
-    @include mobile {
+    @include tablet {
       width: 100% !important;
     }
     &.w-35 {
