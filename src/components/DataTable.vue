@@ -8,6 +8,7 @@
     :item-key="optionsProp['item-key']"
     :headers="headers"
     :items="datas"
+    :mobile-breakpoint="0"
   >
     <template
       v-for="info in customSlotInfo"
