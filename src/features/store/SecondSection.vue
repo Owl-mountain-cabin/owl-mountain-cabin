@@ -52,14 +52,14 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  @include mobile {
+  @include tablet {
     width: 100%;
     flex-direction: column;
   }
   .#{$this}__image-wrapper {
     width: 50%;
     height: 100%;
-    @include mobile {
+    @include tablet {
       width: 100%;
       padding: 0;
       margin-bottom: 30px;
@@ -77,14 +77,20 @@ export default {
     flex-direction: column;
     margin-left: 84px;
     justify-content: center;
-    @include mobile {
+    @include desktop-small {
+      margin-left: 30px;
+    }
+    @include tablet {
       margin: 0;
       width: 100%;
     }
     .#{$this}__title-wrapper {
       padding-bottom: 40px;
       @include set-text(400, 40, rgba($color: $color-title, $alpha: 1));
-      @include mobile {
+      @include desktop-small {
+        font-size: 1.8rem;
+      }
+      @include tablet {
         padding-bottom: 20px;
         font-size: 1.6rem;
         letter-spacing: -0.5px;
@@ -92,11 +98,17 @@ export default {
     }
     .#{$this}__desc-wrapper {
       @include set-text(400, 20, rgba($color: $color-desc, $alpha: 1));
-      @include mobile {
+      @include desktop-small {
+        font-size: 1rem;
+      }
+      @include tablet {
         font-size: 0.9rem;
       }
       br {
-        @include mobile {
+        @include tablet {
+          display: none;
+        }
+        @include desktop-small {
           display: none;
         }
       }
@@ -104,7 +116,10 @@ export default {
     .#{$this}__address-wrapper {
       padding-top: 81px;
       @include set-text(400, 20, rgba($color: $color-title, $alpha: 1));
-      @include mobile {
+      @include desktop-small {
+        padding-top: 45px;
+      }
+      @include tablet {
         padding-top: 30px;
         font-size: 0.9rem;
       }

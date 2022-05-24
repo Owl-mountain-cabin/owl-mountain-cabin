@@ -23,10 +23,14 @@ export default {
         centeredSlides: true,
         initialSlide: 1,
         breakpoints: {
-          640: {
+          412: {
             slidesPerView: 1,
-            spaceBetween: 20,
-            centeredSlides: false,
+          },
+          767: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 3,
           },
         },
       },
@@ -55,9 +59,9 @@ export default {
   .swiper-slide {
     opacity: 0.5;
     transform: scale(0.9);
-    @include mobile {
+    @include tablet {
       opacity: 1;
-      transform: scale(1);
+      transform: scale(0.8);
     }
   }
   .swiper-slide-active {
@@ -66,8 +70,9 @@ export default {
     margin: 0 150px;
     @include mobile {
       margin: 0;
-      transform: scale(1);
+      transform: scale(0.8);
       width: 100%;
+      min-height: 200px;
     }
   }
   .swiper-button-prev {
@@ -94,6 +99,12 @@ export default {
   }
   .swiper-pagination-bullets {
     bottom: -70px;
+    @include desktop-small {
+      bottom: -80px;
+    }
+    @include tablet {
+      bottom: 0;
+    }
   }
   .swiper-pagination-bullet {
     border-color: #444 !important;
