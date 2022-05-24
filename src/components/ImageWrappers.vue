@@ -45,26 +45,26 @@ export default {
 .owl-about-image-wrapper {
   $this: "owl-about-image";
   position: relative;
-  @include mobile {
+  @include tablet {
     height: 400px;
   }
   .#{$this}__background-wrapper {
-    @include mobile {
+    @include tablet {
       height: 400px;
     }
     .v-image {
-      @include mobile {
+      @include tablet {
         height: 400px;
       }
       .v-image__image {
-        @include mobile {
+        @include tablet {
           background-size: cover;
         }
       }
     }
     .#{$this}__background {
       @include cover-background;
-      @include mobile {
+      @include tablet {
         height: 400px;
       }
     }
@@ -85,14 +85,14 @@ export default {
       left: 0;
       padding: 0 40px;
     }
-    @include mobile {
+    @include tablet {
       width: 100%;
       bottom: 50px;
       left: 20px;
     }
     .#{$this}__title-wrapper {
       width: 271px;
-      @include mobile {
+      @include tablet {
         width: 140px;
       }
     }
@@ -104,7 +104,7 @@ export default {
         margin-top: 10px;
         font-size: 4.3rem;
       }
-      @include mobile {
+      @include tablet {
         width: 100%;
         font-size: 2.4rem;
         margin: 0;
