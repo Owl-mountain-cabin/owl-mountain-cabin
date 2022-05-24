@@ -53,11 +53,14 @@ export default {
     top: 70px;
     width: 265px;
     height: auto;
+<<<<<<< HEAD
     @include desktop-small {
       position: static;
       margin: 0 auto;
       padding-top: 30px;
     }
+=======
+>>>>>>> feature/mobile/store
     @include tablet {
       position: static;
       margin: 0 auto;
