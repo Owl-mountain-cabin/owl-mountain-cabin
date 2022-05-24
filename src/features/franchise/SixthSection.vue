@@ -76,6 +76,9 @@ export default {
   @include flex-center-column;
   .#{$this}__title-wrapper {
     padding-bottom: 148px;
+    @include tablet {
+      padding: 0 0 80px 0;
+    }
     .#{$this}__title {
       @include set-text(
         400,
@@ -100,9 +103,15 @@ export default {
   .#{$this}__contents-wrapper {
     width: 100%;
     @include flex-center-vert;
+    @include tablet {
+      flex-direction: column;
+    }
     .#{$this}__contents-box {
       width: 20%;
       @include flex-center-vert;
+      @include tablet {
+        width: 100%;
+      }
       .#{$this}__contents {
         width: 90%;
         height: 300px;
