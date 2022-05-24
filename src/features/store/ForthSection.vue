@@ -42,7 +42,7 @@ export default {
     .#{$this}__title-wrapper {
       @include set-text(400, 40, rgba($color: $color-title, $alpha: 1));
       text-align: center;
-      @include mobile {
+      @include tablet {
         font-size: 1.4rem;
       }
     }
@@ -53,7 +53,12 @@ export default {
     top: 70px;
     width: 265px;
     height: auto;
-    @include mobile {
+    @include desktop-small {
+      position: static;
+      margin: 0 auto;
+      padding-top: 30px;
+    }
+    @include tablet {
       position: static;
       margin: 0 auto;
       padding-top: 30px;
