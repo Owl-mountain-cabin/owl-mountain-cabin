@@ -34,7 +34,7 @@ export default {
 .owl-menu-fifth-wrapper {
   $this: "owl-menu-fifth";
   width: 100%;
-  @include mobile {
+  @include tablet {
     margin-bottom: 80px;
   }
   .#{$this}__contents-wrapper {
@@ -62,7 +62,7 @@ export default {
         width: 100%;
         padding: 0 40px;
       }
-      @include mobile {
+      @include tablet {
         width: 100%;
         padding: 0 20px;
       }
@@ -73,7 +73,7 @@ export default {
       background: #f8f8f5;
       @include rounded(10px);
       padding: 33px 20px;
-      @include mobile {
+      @include tablet {
         padding: 20px 20px 50px 20px;
       }
     }

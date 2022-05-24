@@ -61,15 +61,16 @@ export default {
     width: 100%;
     padding: 0 40px;
   }
-  @include mobile {
+  @include tablet {
     width: 100%;
     flex-direction: column;
+    padding: 0 40px;
   }
   .#{$this}__contents-wrapper {
     width: 30%;
     display: flex;
     flex-direction: column;
-    @include mobile {
+    @include tablet {
       width: 100%;
     }
     .#{$this}__title-wrapper {
@@ -80,7 +81,7 @@ export default {
         false,
         true
       );
-      @include mobile {
+      @include tablet {
         font-size: 1.5rem;
       }
     }
@@ -92,7 +93,7 @@ export default {
       @include desktop-small {
         font-size: 1.8rem;
       }
-      @include mobile {
+      @include tablet {
         font-size: 1.2rem;
       }
     }
@@ -104,14 +105,14 @@ export default {
         margin-top: 53px;
         line-height: 1.6;
       }
-      @include mobile {
+      @include tablet {
         margin-top: 20px;
         font-size: 0.8rem;
         line-height: 1.5;
         margin-bottom: 50px;
       }
       br {
-        @include mobile {
+        @include tablet {
           display: none;
         }
       }
@@ -121,7 +122,7 @@ export default {
     width: 70%;
     @include flex-center-vert;
     flex-wrap: wrap;
-    @include mobile {
+    @include tablet {
       flex-wrap: nowrap;
       flex-direction: column;
       width: 100%;
@@ -141,9 +142,9 @@ export default {
         padding-left: 28px;
         padding-bottom: 28px;
       }
-      @include mobile {
+      @include tablet {
         padding: 0;
-        width: 100%;
+        width: 100% !important;
         margin: 0 0 20px 0;
         top: 0 !important;
       }

@@ -67,7 +67,7 @@ export default {
     width: 100%;
     padding: 0 40px;
   }
-  @include mobile {
+  @include tablet {
     width: 100%;
     flex-direction: column;
   }
@@ -75,7 +75,7 @@ export default {
     width: 30%;
     display: flex;
     flex-direction: column;
-    @include mobile {
+    @include tablet {
       width: 100%;
     }
     .#{$this}__title-wrapper {
@@ -86,7 +86,7 @@ export default {
         false,
         true
       );
-      @include mobile {
+      @include tablet {
         font-size: 1.5rem;
       }
     }
@@ -98,7 +98,7 @@ export default {
       @include desktop-small {
         font-size: 1.8rem;
       }
-      @include mobile {
+      @include tablet {
         font-size: 1.2rem;
       }
     }
@@ -106,14 +106,14 @@ export default {
       margin-top: 93px;
       @include set-text(400, 20, rgba($color: $color-desc, $alpha: 1));
       line-height: 1.7;
-      @include mobile {
+      @include tablet {
         margin-top: 20px;
         font-size: 0.8rem;
         line-height: 1.5;
         margin-bottom: 50px;
       }
       br {
-        @include mobile {
+        @include tablet {
           display: none;
         }
       }
@@ -123,7 +123,7 @@ export default {
     width: 70%;
     @include flex-center-vert;
     flex-wrap: wrap;
-    @include mobile {
+    @include tablet {
       flex-wrap: nowrap;
       flex-direction: column;
       width: 100%;
@@ -134,7 +134,7 @@ export default {
       padding-right: 48px;
       padding-bottom: 48px;
       position: relative;
-      @include mobile {
+      @include tablet {
         padding: 0;
         width: 100%;
         margin: 0 0 20px 0;
@@ -205,6 +205,10 @@ export default {
         padding-left: 28px;
         padding-bottom: 28px;
       }
+      @include tablet {
+        width: 100%;
+        padding: 0;
+      }
       &:nth-child(2) {
         position: relative;
         top: calc(680px / 4);
@@ -219,6 +223,10 @@ export default {
           top: 10%;
           width: 40%;
         }
+        @include tablet {
+          width: 100%;
+          padding: 0;
+        }
       }
       &:nth-child(3) {
         padding-bottom: 0;
@@ -231,6 +239,10 @@ export default {
         }
         @include desktop-small {
           width: 40%;
+        }
+        @include tablet {
+          width: 100%;
+          padding: 0;
         }
       }
       .#{$this}__image {
