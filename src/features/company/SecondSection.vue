@@ -43,6 +43,9 @@ export default {
     .#{$this}__image-wrapper {
       width: 290px;
       height: auto;
+      @include tablet {
+        width: 200px;
+      }
       .#{$this}__image {
         height: 100%;
         @include cover-background;
@@ -58,6 +61,10 @@ export default {
         ture
       );
       text-align: center;
+      @include tablet {
+        font-size: 2rem;
+        margin-top: 50px;
+      }
       .stressed {
         @include set-text(
           400,
@@ -66,12 +73,18 @@ export default {
           false,
           ture
         );
+        @include tablet {
+          font-size: 2rem;
+        }
       }
     }
     .#{$this}__desc-wrapper {
       margin-top: 10px;
       @include set-text(400, 25, rgba($color: $color-desc, $alpha: 1));
       text-align: center;
+      @include tablet {
+        font-size: 1rem;
+      }
     }
   }
 }
