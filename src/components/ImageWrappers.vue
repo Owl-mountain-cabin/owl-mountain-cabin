@@ -80,7 +80,7 @@ export default {
       bottom: 50px;
     }
     @include desktop-small {
-      width: 100%;
+      width: auto;
       bottom: 40px;
       left: 0;
       padding: 0 40px;
@@ -92,6 +92,9 @@ export default {
     }
     .#{$this}__title-wrapper {
       width: 271px;
+      @include desktop-small {
+        width: 200px;
+      }
       @include tablet {
         width: 140px;
       }
@@ -102,7 +105,7 @@ export default {
       margin-top: 32px;
       @include desktop-small {
         margin-top: 10px;
-        font-size: 4.3rem;
+        font-size: 4rem;
       }
       @include tablet {
         width: 100%;
