@@ -42,6 +42,9 @@ export default {
     .#{$this}__title-wrapper {
       @include set-text(400, 40, rgba($color: $color-title, $alpha: 1));
       text-align: center;
+      @include tablet {
+        font-size: 1.4rem;
+      }
     }
   }
   .#{$this}__image-wrapper {
@@ -50,6 +53,17 @@ export default {
     top: 70px;
     width: 265px;
     height: auto;
+    @include desktop-small {
+      position: static;
+      margin: 0 auto;
+      padding-top: 30px;
+    }
+    @include tablet {
+      position: static;
+      margin: 0 auto;
+      padding-top: 30px;
+      width: 145px;
+    }
     .#{$this}__image {
       height: 100%;
       @include cover-background;

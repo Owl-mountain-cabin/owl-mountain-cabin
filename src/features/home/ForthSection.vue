@@ -48,13 +48,13 @@ export default {
     display: flex;
     align-items: center;
     background: rgba($color: #edede5, $alpha: 0.5);
-    @include mobile {
+    @include tablet {
       flex-direction: column;
     }
     &.reverse {
       flex-direction: row-reverse;
       background: rgba($color: #edede5, $alpha: 0.5);
-      @include mobile {
+      @include tablet {
         flex-direction: column;
       }
     }
@@ -63,7 +63,7 @@ export default {
       width: 50%;
       height: 100%;
       @include cover-background;
-      @include mobile {
+      @include tablet {
         width: 100%;
       }
     }
@@ -74,7 +74,7 @@ export default {
       width: 100%;
       align-items: center;
 
-      @include mobile {
+      @include tablet {
         margin: 53px 0;
       }
 
@@ -87,7 +87,7 @@ export default {
           true
         );
 
-        @include mobile {
+        @include tablet {
           @include set-text(
             400,
             30,
@@ -101,7 +101,7 @@ export default {
       .#{$this}__sub-title {
         margin-bottom: 43px;
         @include set-text(400, 25, rgba($color: $color-title, $alpha: 1));
-        @include mobile {
+        @include tablet {
           margin-bottom: 0;
           @include set-text(400, 13, rgba($color: $color-title, $alpha: 1));
         }
@@ -109,14 +109,14 @@ export default {
       .#{$this}__desc {
         line-height: 1.7;
         @include set-text(400, 20, rgba($color: $color-desc, $alpha: 1));
-        @include mobile {
+        @include tablet {
           margin: 20px 0;
           padding: 0 30px;
           text-align: center;
           @include set-text(400, 16, rgba($color: $color-desc, $alpha: 1));
         }
         br {
-          @include mobile {
+          @include tablet {
             display: none;
           }
         }

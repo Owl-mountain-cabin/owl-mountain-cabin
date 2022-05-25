@@ -1,14 +1,5 @@
 <template>
   <div class="owl-franchise-third-wrapper">
-    <Dimmed :height="'100%'" />
-    <v-img
-      cover
-      width="100%"
-      height="100%"
-      class="owl-franchise-third__image"
-      :lazy-src="require(`@/assets/images/franchise-third1.png`)"
-      :src="require(`@/assets/images/franchise-third1.png`)"
-    />
     <div class="owl-franchise-third__merits-wrapper">
       <div class="owl-franchise-third__title-wrapper" v-html="checkN(title)" />
       <div class="owl-franchise-third__merits-list-wrapper">
@@ -27,12 +18,8 @@
 
 <script>
 import contents from "@/constants/franchise/third.json";
-import Dimmed from "@/components/Dimmed.vue";
 import { lineBreak } from "@/utils/helper";
 export default {
-  components: {
-    Dimmed,
-  },
   computed: {
     checkN() {
       return (str) => lineBreak(str);
@@ -51,30 +38,26 @@ export default {
 .owl-franchise-third-wrapper {
   $this: "owl-franchise-third";
   width: 100%;
-
-  position: relative;
+  //position: relative;
+  background: url(@/assets/images/franchise-third1.png) no-repeat center;
   @include flex-center-column;
-  .#{$this}__image {
-    height: 100%;
-    @include cover-background;
-  }
-
   .#{$this}__merits-list-wrapper {
     margin-top: auto;
   }
 
   .#{$this}__merits-wrapper {
     @include flex-center-column;
-    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
     min-width: 70%;
     height: 100%;
+    background: rgba(0, 0, 0, 0.5);
     z-index: 700;
     padding: 5% 0;
-    @include desktop-medium {
-      width: 1280px;
-    }
     @include desktop-small {
       padding: 4% 0;
+    }
+    @include mobile {
+      padding: 50px 20px;
     }
 
     br {
@@ -86,6 +69,9 @@ export default {
       @include desktop-small {
         display: none;
       }
+      @include mobile {
+        display: none;
+      }
     }
     .#{$this}__title-wrapper {
       @include set-text(bold, 50, rgba($color: $color-white, $alpha: 1));
@@ -94,6 +80,10 @@ export default {
       @include desktop-small {
         font-size: 2.5rem;
         margin-bottom: 30px;
+      }
+      @include mobile {
+        font-size: 1.2rem;
+        font-weight: 400;
       }
     }
 
@@ -114,6 +104,10 @@ export default {
         margin-top: 30px;
         padding: 0 40px;
       }
+      @include mobile {
+        width: 100%;
+        margin-top: 15px;
+      }
       &:first-child {
         margin-top: 0;
       }
@@ -124,12 +118,19 @@ export default {
         @include desktop-small {
           font-size: 1.2rem;
         }
+        @include mobile {
+          font-size: 0.9rem;
+          padding: 0 5px 0 0;
+        }
       }
       .#{$this}__desc {
         width: 80%;
         @include set-text(400, 21, rgba($color: $color-white, $alpha: 1));
         @include desktop-small {
           font-size: 1rem;
+        }
+        @include mobile {
+          font-size: 0.8rem;
         }
       }
     }

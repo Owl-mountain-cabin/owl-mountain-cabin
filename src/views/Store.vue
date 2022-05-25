@@ -107,8 +107,18 @@ export default {
 
   .#{$this}__tab-section {
     padding: 122px 0;
+    @include desktop-small {
+      padding: 100px 0;
+    }
+    @include tablet {
+      padding: 80px 20px;
+    }
     .v-tab {
       @include set-text(400, 16, rgba($color: $color-footer, $alpha: 1));
+      @include tablet {
+        border-bottom: 2px solid #ddd;
+        font-size: 0.8rem;
+      }
       &.v-tab--active {
         color: $color-accent;
       }
@@ -122,15 +132,30 @@ export default {
   }
   .#{$this}__second-section {
     padding: 0 233px 0 329px;
+    @include desktop-small {
+      padding: 0 120px;
+    }
+    @include tablet {
+      padding: 0 20px;
+    }
   }
   .#{$this}__third-section {
     padding-top: 266px;
     padding-bottom: 199px;
+    @include tablet {
+      padding: 80px 0;
+    }
   }
   .#{$this}__forth-section {
     padding-top: 155px;
     padding-bottom: 155px;
     background: rgba($color: #edede5, $alpha: 0.4);
+    @include desktop-small {
+      padding: 155px 0 200px 0;
+    }
+    @include tablet {
+      padding: 50px 0;
+    }
   }
 }
 </style>

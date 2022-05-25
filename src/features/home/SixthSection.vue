@@ -41,7 +41,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  @include mobile {
+  @include tablet {
     flex-direction: column;
   }
 
@@ -51,7 +51,7 @@ export default {
     .#{$this}__image {
       @include cover-background;
     }
-    @include mobile {
+    @include tablet {
       width: 100%;
     }
   }
@@ -63,7 +63,7 @@ export default {
     flex-direction: column;
     margin-left: 84px;
     justify-content: center;
-    @include mobile {
+    @include tablet {
       width: 100%;
       padding: 20px 0;
       margin-left: 0;
@@ -78,7 +78,7 @@ export default {
         false,
         true
       );
-      @include mobile {
+      @include tablet {
         padding: 20px 0;
         text-align: center;
         @include set-text(
@@ -93,12 +93,12 @@ export default {
     .#{$this}__desc-wrapper {
       @include set-text(400, 20, rgba($color: $color-desc, $alpha: 1));
       justify-self: flex-start;
-      @include mobile {
+      @include tablet {
         @include set-text(400, 14, rgba($color: $color-desc, $alpha: 1));
         text-align: center;
       }
       br {
-        @include mobile {
+        @include tablet {
           display: none;
         }
       }

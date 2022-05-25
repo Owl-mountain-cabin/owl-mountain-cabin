@@ -88,6 +88,9 @@ export default {
 </script>
 
 <style lang="scss">
+.v-application--wrap {
+  overflow: hidden;
+}
 .owl-franchise {
   $this: "owl-franchise";
   .#{$this}__section {
@@ -103,6 +106,9 @@ export default {
     @include desktop-medium {
       padding: 3% 173px;
     }
+    @include mobile {
+      padding: 0 20px;
+    }
   }
   .#{$this}__third-section {
     //padding-top: 175px;
@@ -115,7 +121,14 @@ export default {
     @include desktop-medium {
       padding: 3% 100px;
     }
+    @include mobile {
+      padding: 80px 20px;
+    }
     .v-data-table__wrapper {
+      @include mobile {
+        width: 100%;
+        min-width: 260px;
+      }
       thead {
         tr {
           th {
@@ -141,6 +154,9 @@ export default {
     @include desktop-medium {
       padding: 3% 100px;
     }
+    @include mobile {
+      padding: 50px 20px;
+    }
     background: rgba($color: #f8f8f5, $alpha: 1);
     thead {
       tr {
@@ -164,6 +180,9 @@ export default {
     padding: 5% 160px;
     @include desktop-medium {
       padding: 3% 100px;
+    }
+    @include mobile {
+      padding: 50px 20px;
     }
   }
   .#{$this}__seventh-section {

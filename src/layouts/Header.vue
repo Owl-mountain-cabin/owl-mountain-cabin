@@ -64,7 +64,7 @@ export default {
   //padding: 0 140px;
   padding-top: 34px;
   z-index: 501;
-  @include mobile {
+  @include tablet {
     width: 100%;
     padding: 30px 20px 0;
   }
@@ -84,7 +84,7 @@ export default {
     a {
       text-decoration: none;
       margin-right: 45px;
-      @include mobile {
+      @include tablet {
         margin-right: 0;
       }
       @include set-text(400, 20, rgba($color: #fff, $alpha: 1));
@@ -127,7 +127,7 @@ export default {
       }
     }
     // 모바일인 경우
-    @include mobile {
+    @include tablet {
       .desktop {
         display: none;
       }

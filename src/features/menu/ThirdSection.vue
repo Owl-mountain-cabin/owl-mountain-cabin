@@ -61,10 +61,17 @@ export default {
     width: 100%;
     padding: 0 40px;
   }
+  @include tablet {
+    width: 100%;
+    flex-direction: column;
+  }
   .#{$this}__contents-wrapper {
     width: 30%;
     display: flex;
     flex-direction: column;
+    @include tablet {
+      width: 100%;
+    }
     .#{$this}__title-wrapper {
       @include set-text(
         400,
@@ -73,6 +80,9 @@ export default {
         false,
         true
       );
+      @include tablet {
+        font-size: 1.5rem;
+      }
     }
     .#{$this}__sub-title-wrapper {
       @include set-text(400, 28, rgba($color: $color-title, $alpha: 1));
@@ -81,6 +91,9 @@ export default {
       }
       @include desktop-small {
         font-size: 1.8rem;
+      }
+      @include tablet {
+        font-size: 1.2rem;
       }
     }
     .#{$this}__desc-wrapper {
@@ -91,12 +104,30 @@ export default {
         margin-top: 53px;
         line-height: 1.6;
       }
+      @include tablet {
+        margin-top: 20px;
+        font-size: 0.8rem;
+        line-height: 1.5;
+        margin-bottom: 50px;
+      }
+      br {
+        @include tablet {
+          display: none;
+        }
+      }
     }
   }
   .#{$this}__image-wrapper {
     width: 70%;
     @include flex-center-vert;
     flex-wrap: wrap;
+    @include tablet {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      width: 100%;
+      padding: 20px 0 0 0;
+      overflow: hidden;
+    }
     .#{$this}__image-box {
       padding-right: 58px;
       @include desktop-medium {
@@ -109,6 +140,12 @@ export default {
         padding-right: 0;
         padding-left: 28px;
         padding-bottom: 28px;
+      }
+      @include tablet {
+        padding: 0;
+        width: 100% !important;
+        margin: 0 0 20px 0;
+        top: 0 !important;
       }
       .#{$this}__image {
         width: 100%;

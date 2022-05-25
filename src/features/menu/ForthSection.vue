@@ -67,10 +67,17 @@ export default {
     width: 100%;
     padding: 0 40px;
   }
+  @include tablet {
+    width: 100%;
+    flex-direction: column;
+  }
   .#{$this}__contents-wrapper {
     width: 30%;
     display: flex;
     flex-direction: column;
+    @include tablet {
+      width: 100%;
+    }
     .#{$this}__title-wrapper {
       @include set-text(
         400,
@@ -79,6 +86,9 @@ export default {
         false,
         true
       );
+      @include tablet {
+        font-size: 1.5rem;
+      }
     }
     .#{$this}__sub-title-wrapper {
       @include set-text(400, 28, rgba($color: $color-title, $alpha: 1));
@@ -88,21 +98,48 @@ export default {
       @include desktop-small {
         font-size: 1.8rem;
       }
+      @include tablet {
+        font-size: 1.2rem;
+      }
     }
     .#{$this}__desc-wrapper {
       margin-top: 93px;
       @include set-text(400, 20, rgba($color: $color-desc, $alpha: 1));
       line-height: 1.7;
+      @include tablet {
+        margin-top: 20px;
+        font-size: 0.8rem;
+        line-height: 1.5;
+        margin-bottom: 50px;
+      }
+      br {
+        @include tablet {
+          display: none;
+        }
+      }
     }
   }
   .#{$this}__image-wrapper {
     width: 70%;
     @include flex-center-vert;
     flex-wrap: wrap;
+    @include tablet {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      width: 100%;
+      padding: 20px 0 0 0;
+      overflow: hidden;
+    }
     .#{$this}__image-box {
       padding-right: 48px;
       padding-bottom: 48px;
       position: relative;
+      @include tablet {
+        padding: 0;
+        width: 100%;
+        margin: 0 0 20px 0;
+        top: 0 !important;
+      }
       &.forth1 {
         &:hover {
           .#{$this}__image:before {
@@ -168,6 +205,10 @@ export default {
         padding-left: 28px;
         padding-bottom: 28px;
       }
+      @include tablet {
+        width: 100%;
+        padding: 0;
+      }
       &:nth-child(2) {
         position: relative;
         top: calc(680px / 4);
@@ -182,6 +223,10 @@ export default {
           top: 10%;
           width: 40%;
         }
+        @include tablet {
+          width: 100%;
+          padding: 0;
+        }
       }
       &:nth-child(3) {
         padding-bottom: 0;
@@ -194,6 +239,10 @@ export default {
         }
         @include desktop-small {
           width: 40%;
+        }
+        @include tablet {
+          width: 100%;
+          padding: 0;
         }
       }
       .#{$this}__image {

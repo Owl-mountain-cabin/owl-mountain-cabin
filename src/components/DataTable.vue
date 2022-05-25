@@ -8,6 +8,7 @@
     :item-key="optionsProp['item-key']"
     :headers="headers"
     :items="datas"
+    :mobile-breakpoint="0"
   >
     <template
       v-for="info in customSlotInfo"
@@ -163,6 +164,10 @@ export default {
           &:last-child {
             border-right: none !important;
           }
+          @include mobile {
+            padding: 0 10px !important;
+            text-align: center !important;
+          }
         }
       }
     }
@@ -194,6 +199,10 @@ export default {
           padding: 0 30px !important;
           &:last-child {
             border-right: none !important;
+          }
+          @include mobile {
+            padding: 0 10px !important;
+            font-size: 0.8rem !important;
           }
         }
       }

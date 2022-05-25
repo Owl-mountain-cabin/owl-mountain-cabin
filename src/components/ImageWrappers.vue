@@ -1,6 +1,6 @@
 <template>
   <div class="owl-about-image-wrapper">
-    <div class="owl-about-image__backgrond-wrapper">
+    <div class="owl-about-image__background-wrapper">
       <v-img
         class="owl-about-image__backgrond"
         contain
@@ -45,9 +45,28 @@ export default {
 .owl-about-image-wrapper {
   $this: "owl-about-image";
   position: relative;
+  @include tablet {
+    height: 400px;
+  }
   .#{$this}__background-wrapper {
+    @include tablet {
+      height: 400px;
+    }
+    .v-image {
+      @include tablet {
+        height: 400px;
+      }
+      .v-image__image {
+        @include tablet {
+          background-size: cover;
+        }
+      }
+    }
     .#{$this}__background {
       @include cover-background;
+      @include tablet {
+        height: 400px;
+      }
     }
   }
 
@@ -61,13 +80,24 @@ export default {
       bottom: 50px;
     }
     @include desktop-small {
-      width: 100%;
-      bottom: 20px;
+      width: auto;
+      bottom: 40px;
       left: 0;
       padding: 0 40px;
     }
+    @include tablet {
+      width: 100%;
+      bottom: 50px;
+      left: 20px;
+    }
     .#{$this}__title-wrapper {
       width: 271px;
+      @include desktop-small {
+        width: 200px;
+      }
+      @include tablet {
+        width: 140px;
+      }
     }
     .#{$this}__desc {
       @include set-text(300, 80, rgba($color: $color-white, $alpha: 1));
@@ -75,7 +105,12 @@ export default {
       margin-top: 32px;
       @include desktop-small {
         margin-top: 10px;
-        font-size: 4.3rem;
+        font-size: 4rem;
+      }
+      @include tablet {
+        width: 100%;
+        font-size: 2.4rem;
+        margin: 0;
       }
     }
   }
