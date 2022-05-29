@@ -14,7 +14,11 @@
         <router-link class="desktop" to="/store">Store</router-link>
         <router-link class="desktop" to="/franchise">Franchise</router-link>
         <router-link class="desktop" to="/company">Company</router-link>
-        <a class="mobile" href="https://www.naver.com" target="_blank">
+        <a
+          class="mobile"
+          href="www.instargram.com/owl_mt_cabin"
+          target="_blank"
+        >
           <div class="owl-header__image-wrapper">
             <v-img
               contain
