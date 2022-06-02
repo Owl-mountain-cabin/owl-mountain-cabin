@@ -121,6 +121,7 @@ export default {
       }
       &.v-tab--active {
         color: $color-accent;
+        font-weight: 600;
       }
     }
   }

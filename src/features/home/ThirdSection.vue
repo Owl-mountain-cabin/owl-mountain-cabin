@@ -113,7 +113,7 @@ export default {
     justify-content: space-around;
     margin-top: 64px;
     @include tablet {
-      margin-top: 53px;
+      margin-top: 80px;
     }
     .#{$this}__summury-title-wrapper {
       display: flex;

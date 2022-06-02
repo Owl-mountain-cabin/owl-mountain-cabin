@@ -124,6 +124,7 @@ export default {
       margin-bottom: 42px;
       @include mobile {
         @include set-text(300, 13, rgba($color: $color-white, $alpha: 1));
+        margin-top: 3.5vh;
       }
       @include mobile-small {
         @include set-text(300, 12, rgba($color: $color-white, $alpha: 1));
