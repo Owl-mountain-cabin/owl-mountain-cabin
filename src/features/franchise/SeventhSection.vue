@@ -173,7 +173,7 @@ export default {
           width: 180px;
         }
         @include mobile {
-          width: 120px;
+          width: 140px;
         }
       }
       .#{$this}__diagram-contents-wrapper {
@@ -198,7 +198,7 @@ export default {
             right: 23%;
           }
           @include mobile {
-            right: 0;
+            right: 20px;
           }
         }
         &.db3 {
@@ -223,7 +223,7 @@ export default {
           }
           @include mobile {
             bottom: 20%;
-            left: 20px;
+            left: 30px;
           }
         }
         &.db5 {
@@ -235,7 +235,7 @@ export default {
             left: 22%;
           }
           @include mobile {
-            left: 0;
+            left: -10px;
           }
         }
         .#{$this}__diagram-contents-name {
@@ -250,12 +250,19 @@ export default {
           @include tablet {
             font-size: 1.2rem;
           }
+          @include mobile {
+            font-size: 0.9rem;
+            font-weight: 500;
+          }
         }
         .#{$this}__diagram-contents-desc {
           text-align: center;
           @include set-text(400, 22, rgba($color: #d6d6d6, $alpha: 1));
           @include tablet {
             font-size: 0.8rem;
+          }
+          @include mobile {
+            font-size: 0.7rem;
           }
         }
       }

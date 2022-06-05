@@ -23,7 +23,7 @@ export default {
         centeredSlides: true,
         initialSlide: 1,
         breakpoints: {
-          412: {
+          320: {
             slidesPerView: 1,
           },
           767: {

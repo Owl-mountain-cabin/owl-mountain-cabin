@@ -84,6 +84,7 @@ export default {
       @include mobile {
         font-size: 1.2rem;
         font-weight: 400;
+        padding-bottom: 20px;
       }
     }
 
@@ -113,24 +114,27 @@ export default {
       }
 
       .#{$this}__sub {
-        width: 20%;
+        width: 22%;
         @include set-text(400, 24, rgba($color: $color-white, $alpha: 1));
         @include desktop-small {
           font-size: 1.2rem;
         }
         @include mobile {
-          font-size: 0.9rem;
-          padding: 0 5px 0 0;
+          font-size: 0.8rem;
+          padding: 0;
         }
       }
       .#{$this}__desc {
-        width: 80%;
+        width: 78%;
         @include set-text(400, 21, rgba($color: $color-white, $alpha: 1));
         @include desktop-small {
           font-size: 1rem;
+          padding: 0 0 0 5px;
         }
         @include mobile {
-          font-size: 0.8rem;
+          font-size: 0.7rem;
+          padding: 0 0 0 5px;
+          line-height: 1.7;
         }
       }
     }
