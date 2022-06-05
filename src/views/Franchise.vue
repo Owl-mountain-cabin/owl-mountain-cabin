@@ -175,6 +175,30 @@ export default {
         }
       }
     }
+    .owl-franchise-forth__address-wrapper {
+      br {
+        &:nth-child(4) {
+          @include tablet {
+            display: block !important;
+          }
+        }
+        &:nth-child(8) {
+          @include tablet {
+            display: block !important;
+          }
+        }
+        &:nth-child(10) {
+          @include tablet {
+            display: block !important;
+          }
+        }
+        &:nth-child(12) {
+          @include tablet {
+            display: block !important;
+          }
+        }
+      }
+    }
   }
   .#{$this}__sixth-section {
     padding: 5% 160px;
