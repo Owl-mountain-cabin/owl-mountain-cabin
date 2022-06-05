@@ -112,6 +112,7 @@ export default {
       @include tablet {
         padding: 20px 0;
         font-size: 0.8rem;
+        line-height: 1.7;
       }
       br {
         @include tablet {
