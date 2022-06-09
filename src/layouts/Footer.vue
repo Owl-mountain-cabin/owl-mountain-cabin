@@ -24,7 +24,7 @@
       <div class="owl-footer__desc-wrapper">SNS</div>
       <a
         class="owl-footer__desc-wrapper desc"
-        href="www.instargram.com/owl_mt_cabin"
+        href="https://www.instargram.com/owl_mt_cabin"
         target="_blank"
       >
         <v-img

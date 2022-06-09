@@ -16,7 +16,7 @@
         <router-link class="desktop" to="/company">Company</router-link>
         <a
           class="mobile"
-          href="www.instargram.com/owl_mt_cabin"
+          href="https://www.instargram.com/owl_mt_cabin"
           target="_blank"
         >
           <div class="owl-header__image-wrapper">
