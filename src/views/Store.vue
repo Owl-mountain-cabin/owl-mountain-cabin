@@ -58,8 +58,11 @@ import Banner from "@/components/Banner.vue";
 import contents from "@/constants/common/index.json";
 import secondContents from "@/constants/store/second.json";
 import forthContents from "@/constants/store/forth.json";
+import { storeMeta } from "@/utils/meta/store";
 
 export default {
+  name: "Store",
+  metaInfo: storeMeta,
   components: {
     Dimmed,
     ImageWrapper,
