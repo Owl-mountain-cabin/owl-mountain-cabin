@@ -1,6 +1,6 @@
 export const storeMeta = {
   title: "부엉이 산장 | Store",
-  titleTemplate: "%s | 부엉이 산장",
+  titleTemplate: "%s",
   meta: [
     {
       vmid: "description",
