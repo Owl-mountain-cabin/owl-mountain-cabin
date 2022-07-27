@@ -1,6 +1,6 @@
 export const companyMeta = {
   title: "부엉이 산장 | 회사소개",
-  titleTemplate: "%s | 부엉이 산장",
+  titleTemplate: "%s",
   meta: [
     {
       vmid: "description",
