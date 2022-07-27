@@ -11,6 +11,6 @@ Vue.use(Meta, {
 });
 new Vue({
   render: (h) => h(App),
-  vuetify,
   router,
+  vuetify,
 }).$mount("#app");
