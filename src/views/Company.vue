@@ -17,8 +17,11 @@ import ImageWrapper from "@/components/ImageWrappers.vue";
 import SecondSection from "@/features/company/SecondSection.vue";
 import Banner from "@/components/Banner.vue";
 import contents from "@/constants/common/index.json";
+import { companyMeta } from "@/utils/meta/company";
 
 export default {
+  name: "Company",
+  metaInfo: companyMeta,
   components: {
     Dimmed,
     ImageWrapper,
