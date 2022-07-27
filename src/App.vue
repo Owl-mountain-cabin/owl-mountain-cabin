@@ -12,11 +12,14 @@
 import AppLayout from "@/layouts/AppLayout.vue";
 import CHeader from "@/layouts/Header.vue";
 import CFooter from "@/layouts/Footer.vue";
-
+import { defaultMeta } from "@/utils/meta/default";
 import contents from "@/constants/common/index.json";
 
 export default {
   name: "App",
+  metaInfo: {
+    meta: defaultMeta,
+  },
   components: {
     AppLayout,
     CHeader,

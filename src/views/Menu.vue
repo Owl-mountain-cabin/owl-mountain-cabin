@@ -29,8 +29,11 @@ import ForthSection from "@/features/menu/ForthSection.vue";
 import FifthSection from "@/features/menu/FifthSection.vue";
 import Banner from "@/components/Banner.vue";
 import contents from "@/constants/common/index.json";
+import { menuMeta } from "@/utils/meta/menu";
 
 export default {
+  name: "Menu",
+  metaInfo: menuMeta,
   components: {
     Dimmed,
     ImageWrapper,

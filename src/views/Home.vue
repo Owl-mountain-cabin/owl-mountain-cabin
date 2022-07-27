@@ -37,8 +37,11 @@ import SixthSection from "@/features/home/SixthSection.vue";
 import SevenSection from "@/features/home/SevenSection.vue";
 import Banner from "@/components/Banner.vue";
 import contents from "@/constants/common/index.json";
+import { homeMeta } from "@/utils/meta/home";
 
 export default {
+  name: "Home",
+  metaInfo: homeMeta,
   components: {
     Dimmed,
     FirstSection,

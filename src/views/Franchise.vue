@@ -55,8 +55,11 @@ import profit from "@/constants/franchise/table/profit.js";
 import cost from "@/constants/franchise/table/cost.js";
 import profitContents from "@/constants/franchise/forth.json";
 import costContents from "@/constants/franchise/fifth.json";
+import { franchiseMeta } from "@/utils/meta/franchise";
 
 export default {
+  name: "Franchise",
+  metaInfo: franchiseMeta,
   components: {
     Dimmed,
     ImageWrapper,
