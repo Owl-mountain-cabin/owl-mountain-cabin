@@ -61,7 +61,7 @@ const Cost = {
     {
       category: "인테리어",
       history: "목공, 바닥, 천정, 벽면, 조명 등 내/외부 공사 일체",
-      price: "4000",
+      price: "5000",
       etc: "평당 170만원",
     },
     {
@@ -73,7 +73,7 @@ const Cost = {
     {
       category: "사인 및 소품",
       history: "갈바간판, 원목간판, 고가구 소품",
-      price: "300",
+      price: "400",
       etc: "",
     },
     {
@@ -91,13 +91,13 @@ const Cost = {
     {
       category: "오픈초도비용",
       history: "유니폼 • 메뉴판 • 호출벨 등 홀 비품",
-      price: "200",
+      price: "500",
       etc: "",
     },
     {
       category: "합계",
       history: "",
-      price: "7100",
+      price: "8500",
       etc: "",
     },
   ],
