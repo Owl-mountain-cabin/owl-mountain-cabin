@@ -39,7 +39,7 @@
             :lazy-src="require(`@/assets/images/header-call.svg`)"
             :src="require(`@/assets/images/header-call.svg`)"
           />
-          02-6080-4251
+          1566-8107
         </div>
       </div>
     </div>
