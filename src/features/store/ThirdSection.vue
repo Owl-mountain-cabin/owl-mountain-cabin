@@ -11,13 +11,15 @@ export default {
   components: {
     Swiper,
   },
+  props: {
+    images: {
+      type: Array,
+      default: () => [],
+      description: "slide-images",
+    },
+  },
   data() {
     return {
-      images: [
-        "store-slide-image1",
-        "store-slide-image2",
-        "store-slide-image3",
-      ],
       swiperOptions: {
         slidesPerView: 3,
         centeredSlides: true,

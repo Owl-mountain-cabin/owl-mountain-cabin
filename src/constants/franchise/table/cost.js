@@ -62,7 +62,7 @@ const Cost = {
       category: "인테리어",
       history: "목공, 바닥, 천정, 벽면, 조명 등 내/외부 공사 일체",
       price: "5000",
-      etc: "평당 170만원",
+      etc: "평당 220만원",
     },
     {
       category: "주방기물/기릇",
