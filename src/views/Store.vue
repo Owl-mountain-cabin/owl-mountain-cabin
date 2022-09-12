@@ -9,6 +9,7 @@
         <v-tabs-slider color="#F0A30F"></v-tabs-slider>
         <v-tab> 연신내점 </v-tab>
         <v-tab> 강남점 </v-tab>
+        <v-tab> 의정부점 </v-tab>
       </v-tabs>
     </div>
     <v-tabs-items v-model="tab">
@@ -18,10 +19,11 @@
             :title="yeonsinnae.second.title"
             :desc="yeonsinnae.second.desc"
             :address="yeonsinnae.second.address"
+            :image="yeonsinnae.second.image"
           />
         </div>
         <div class="owl-store__third-section">
-          <ThirdSection />
+          <ThirdSection :images="yeonsinnae.third.images" />
         </div>
         <div class="owl-store__forth-section">
           <ForthSection :title="yeonsinnae.forth.title" />
@@ -34,13 +36,31 @@
             :title="gangnam.second.title"
             :desc="gangnam.second.desc"
             :address="gangnam.second.address"
+            :image="gangnam.second.image"
           />
         </div>
         <div class="owl-store__third-section">
-          <ThirdSection />
+          <ThirdSection :images="gangnam.third.images" />
         </div>
         <div class="owl-store__forth-section">
           <ForthSection :title="gangnam.forth.title" />
+        </div>
+        <Banner :title="title" :desc="desc" />
+      </v-tab-item>
+      <v-tab-item>
+        <div class="owl-store__second-section">
+          <SecondSection
+            :title="uijeongbu.second.title"
+            :desc="uijeongbu.second.desc"
+            :address="uijeongbu.second.address"
+            :image="uijeongbu.second.image"
+          />
+        </div>
+        <div class="owl-store__third-section">
+          <ThirdSection :images="uijeongbu.third.images" />
+        </div>
+        <div class="owl-store__forth-section">
+          <ForthSection :title="uijeongbu.forth.title" />
         </div>
         <Banner :title="title" :desc="desc" />
       </v-tab-item>
@@ -84,6 +104,17 @@ export default {
           title: secondContents["GANGNAM"].title,
           desc: secondContents["GANGNAM"].desc,
           address: secondContents["GANGNAM"].address,
+          image: "store-gangnam-second1.jpg",
+        },
+        third: {
+          images: [
+            "store-gangnam-slide1.jpg",
+            "store-gangnam-slide2.jpg",
+            "store-gangnam-slide3.jpg",
+            "store-gangnam-slide4.jpg",
+            "store-gangnam-slide5.jpg",
+            "store-gangnam-slide6.jpg",
+          ],
         },
         forth: {
           title: forthContents["GANGNAM"].title,
@@ -94,9 +125,37 @@ export default {
           title: secondContents["YEONSINNAE"].title,
           desc: secondContents["YEONSINNAE"].desc,
           address: secondContents["YEONSINNAE"].address,
+          image: "store-yeonsin-second1.png",
+        },
+        third: {
+          images: [
+            "store-yeonsin-slide1.png",
+            "store-yeonsin-slide2.png",
+            "store-yeonsin-slide3.png",
+          ],
         },
         forth: {
           title: forthContents["YEONSINNAE"].title,
+        },
+      },
+      uijeongbu: {
+        second: {
+          title: secondContents["UIJEONGBU"].title,
+          desc: secondContents["UIJEONGBU"].desc,
+          address: secondContents["UIJEONGBU"].address,
+          image: "store-uijeongbu-second1.jpg",
+        },
+        third: {
+          images: [
+            "store-uijeongbu-slide1.jpg",
+            "store-uijeongbu-slide2.jpg",
+            "store-uijeongbu-slide3.jpg",
+            "store-uijeongbu-slide4.jpg",
+            "store-uijeongbu-slide5.jpg",
+          ],
+        },
+        forth: {
+          title: forthContents["UIJEONGBU"].title,
         },
       },
     };

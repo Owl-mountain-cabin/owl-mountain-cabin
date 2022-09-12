@@ -9,8 +9,8 @@
       <v-img
         contain
         class="owl-swiper__slide-image"
-        :lazy-src="require(`@/assets/images/${src}.png`)"
-        :src="require(`@/assets/images/${src}.png`)"
+        :lazy-src="require(`@/assets/images/${src}`)"
+        :src="require(`@/assets/images/${src}`)"
       />
     </swiperSlide>
     <div class="swiper-pagination" slot="pagination"></div>
