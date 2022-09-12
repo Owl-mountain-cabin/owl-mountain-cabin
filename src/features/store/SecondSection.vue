@@ -4,8 +4,8 @@
       <v-img
         class="owl-store-second__image"
         contain
-        :lazy-src="require(`@/assets/images/store-second1.png`)"
-        :src="require(`@/assets/images/store-second1.png`)"
+        :lazy-src="require(`@/assets/images/${image}`)"
+        :src="require(`@/assets/images/${image}`)"
       />
     </div>
     <div class="owl-store-second__contents-wrapper">
@@ -35,6 +35,11 @@ export default {
       type: String,
       default: "",
       description: "address",
+    },
+    image: {
+      type: String,
+      default: "",
+      description: "image",
     },
   },
   computed: {
