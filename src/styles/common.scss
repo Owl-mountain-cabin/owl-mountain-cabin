@@ -7,6 +7,9 @@
 }
 body {
     background-color: #FFFFFF;
+    @include tablet {
+        overflow-x: hidden;
+    }
 }
 .container { width: 100%; background-color: #FFFFFF; }
 .owl-center-wrapper {
