@@ -38,9 +38,9 @@ export default {
       title: contents.title,
       desc: contents.desc,
       images: [
-        { src: "menu-second1.png", name: "second1" },
-        { src: "menu-second3.png", name: "second3" },
-        { src: "menu-second2.png", name: "second2" },
+        { src: "menu-second1.webp", name: "second1" },
+        { src: "menu-second3.webp", name: "second3" },
+        { src: "menu-second2.webp", name: "second2" },
       ],
     };
   },

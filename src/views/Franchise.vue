@@ -3,7 +3,7 @@
     <div class="owl-franchise__first-section">
       <Dimmed :height="'100%'" />
       <ImageWrapper
-        :imageSrc="'franchise-header-image.png'"
+        :imageSrc="'franchise-header-image.webp'"
         title="FRANCHISE"
       />
     </div>

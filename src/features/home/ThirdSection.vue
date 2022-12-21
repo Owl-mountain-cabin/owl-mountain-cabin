@@ -40,11 +40,11 @@ export default {
       desc: contents.desc,
       summaries: contents.summaries,
       images: [
-        "home-slide-image1.png",
-        "home-slide-image2.png",
-        "home-slide-image3.png",
-        "home-slide-image4.png",
-        "home-slide-image5.png",
+        "home-slide-image1.webp",
+        "home-slide-image2.webp",
+        "home-slide-image3.webp",
+        "home-slide-image4.webp",
+        "home-slide-image5.webp",
       ],
     };
   },

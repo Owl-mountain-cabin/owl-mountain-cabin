@@ -5,8 +5,8 @@
       cover
       width="100%"
       class="owl-franchise-second__image"
-      :lazy-src="require(`@/assets/images/franchise-second1.png`)"
-      :src="require(`@/assets/images/franchise-second1.png`)"
+      :lazy-src="require(`@/assets/images/franchise-second1.webp`)"
+      :src="require(`@/assets/images/franchise-second1.webp`)"
     />
     <div class="owl-franchise-second__desc-wrapper">
       <div class="owl-franchise-second__sub" v-html="checkN(subTitle)" />

@@ -4,8 +4,8 @@
       <v-img
         class="owl-home-second__background"
         cover
-        :lazy-src="require(`@/assets/images/home-second-background.png`)"
-        :src="require(`@/assets/images/home-second-background.png`)"
+        :lazy-src="require(`@/assets/images/home-second-background.webp`)"
+        :src="require(`@/assets/images/home-second-background.webp`)"
       />
       <v-img
         class="owl-home-second__image-owl"

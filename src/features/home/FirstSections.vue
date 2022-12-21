@@ -4,8 +4,8 @@
       <v-img
         class="owl-home-first__background"
         cover
-        :lazy-src="require(`@/assets/images/home-first-section.png`)"
-        :src="require(`@/assets/images/home-first-section.png`)"
+        :lazy-src="require(`@/assets/images/home-first-section.webp`)"
+        :src="require(`@/assets/images/home-first-section.webp`)"
       />
     </div>
     <div class="owl-home-first__contents-wrapper">
@@ -40,8 +40,8 @@
         <v-img
           class="owl-home-first__scroll-image-mobile"
           contain
-          :lazy-src="require(`@/assets/images/owl-main-arrow-down.png`)"
-          :src="require(`@/assets/images/owl-main-arrow-down.png`)"
+          :lazy-src="require(`@/assets/images/owl-main-arrow-down.webp`)"
+          :src="require(`@/assets/images/owl-main-arrow-down.webp`)"
         />
       </div>
     </div>

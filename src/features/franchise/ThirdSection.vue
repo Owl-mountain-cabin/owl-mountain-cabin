@@ -39,7 +39,7 @@ export default {
   $this: "owl-franchise-third";
   width: 100%;
   //position: relative;
-  background: url(@/assets/images/franchise-third1.png) no-repeat center;
+  background: url(@/assets/images/franchise-third1.webp) no-repeat center;
   @include flex-center-column;
   .#{$this}__merits-list-wrapper {
     margin-top: auto;
