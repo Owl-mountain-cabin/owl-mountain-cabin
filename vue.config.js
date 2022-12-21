@@ -45,13 +45,6 @@ const paths = [
   },
 ];
 const productionPlugins = [
-  // new PrerenderSPAPlugin({
-  //   staticDir: path.join(__dirname, "dist"),
-  //   routes,
-  //   renderer: new Renderer({
-  //     renderAfterElementExists: "#app",
-  //   }),
-  // }),
   new SitemapPlugin({
     base: "https://www.owlmtcabin-official.com",
     paths,

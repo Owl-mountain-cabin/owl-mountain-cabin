@@ -41,7 +41,7 @@ export default {
       title: contents.title,
       subTitle: contents.subTitle,
       desc: contents.desc,
-      images: ["menu-third2.png", "menu-third1.png"],
+      images: ["menu-third2.webp", "menu-third1.webp"],
     };
   },
 };
