@@ -14,8 +14,8 @@
           <v-img
             class="owl-about-image__title"
             contain
-            lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708925/about-title_twj4y6.svg"
-            src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708925/about-title_twj4y6.svg"
+            lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708925/about-title_twj4y6.svg"
+            src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708925/about-title_twj4y6.svg"
           />
         </div>
         <div class="owl-about-image__desc">{{ title }}</div>

@@ -5,37 +5,37 @@
         {
             "step":"Step1",
             "name": "창업상담",
-            "src": "dexj7izei/image/upload/v1671708926/franchise-sixth1_yoikp1.svg",
+            "src": "dexj7izei/image/upload/q_auto/v1671708926/franchise-sixth1_yoikp1.svg",
             "desc":"창업목적, 사업자금,\n 운영계획 컨설팅"
         },
          {
             "step":"Step2",
             "name": "상권분석",
-            "src": "dexj7izei/image/upload/v1671708926/franchise-sixth2_vave44.svg",
+            "src": "dexj7izei/image/upload/q_auto/v1671708926/franchise-sixth2_vave44.svg",
             "desc":"매출분석, 업종분석, 유사업종분석\n 유동인구분석, 부동산정보 분석 등\n 단계를 거쳐 창업목적별 최적 점제안"
         },
          {
             "step":"Step3",
             "name": "가맹계약 체결",
-            "src": "dexj7izei/image/upload/v1671708927/franchise-sixth3_mifd1o.svg",
+            "src": "dexj7izei/image/upload/q_auto/v1671708927/franchise-sixth3_mifd1o.svg",
             "desc":"본사 가맹 계약,\n 진행 일정 협의"
         },
          {
             "step":"Step4",
             "name": "오픈",
-            "src": "dexj7izei/image/upload/v1671708927/franchise-sixth4_mqb7sr.svg",
+            "src": "dexj7izei/image/upload/q_auto/v1671708927/franchise-sixth4_mqb7sr.svg",
             "desc":"품질, 메뉴, 슈퍼바이저\n 오픈 지원 및 점검"
         },
          {
             "step":"Step5",
             "name": "오픈교육",
-            "src": "dexj7izei/image/upload/v1671708928/franchise-sixth5_j9zy5k.svg",
+            "src": "dexj7izei/image/upload/q_auto/v1671708928/franchise-sixth5_j9zy5k.svg",
             "desc":"본사 및 직영점에서\n 2주간 실시"
         },
          {
             "step":"Step6",
             "name": "점포준비\n <div class='small'>(인테리어 및 시설)</div>",
-            "src": "dexj7izei/image/upload/v1671708929/franchise-sixth6_hk53rf.svg",
+            "src": "dexj7izei/image/upload/q_auto/v1671708929/franchise-sixth6_hk53rf.svg",
             "desc":"점포 실측 및 설계 후\n 공사 소요시간은 공사\n 착공일로부터 약 25일 소요"
         }
     ]

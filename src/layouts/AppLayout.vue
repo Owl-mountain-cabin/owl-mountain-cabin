@@ -12,6 +12,7 @@
           <v-list-item-group>
             <v-list-item class="owl-navi__list-item owl-navi__button-wrapper">
               <v-btn
+                type="button"
                 class="owl-navi--close"
                 plain
                 elevation="0"

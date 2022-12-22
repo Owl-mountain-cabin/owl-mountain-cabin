@@ -48,8 +48,8 @@
             cover
             width="12px"
             class="owl-franchise-sixth__image-pass"
-            lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708927/franchise-sixth-pass_oedix4.svg"
-            src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708927/franchise-sixth-pass_oedix4.svg"
+            lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708927/franchise-sixth-pass_oedix4.svg"
+            src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708927/franchise-sixth-pass_oedix4.svg"
           />
         </div>
       </div>

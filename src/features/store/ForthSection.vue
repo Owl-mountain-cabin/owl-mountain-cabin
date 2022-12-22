@@ -7,8 +7,8 @@
       <v-img
         cover
         class="owl-store-forth__image"
-        lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708947/store-owl_nhmt5b.svg"
-        src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708947/store-owl_nhmt5b.svg"
+        lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708947/store-owl_nhmt5b.svg"
+        src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708947/store-owl_nhmt5b.svg"
       />
     </div>
   </div>

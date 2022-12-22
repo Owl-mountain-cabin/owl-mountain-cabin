@@ -1,10 +1,10 @@
 const { defineConfig } = require("@vue/cli-service");
 const SitemapPlugin = require("sitemap-webpack-plugin").default;
-// const path = require("path");
-// const PrerenderSPAPlugin = require("prerender-spa-plugin");
-// const paths = require("@/routes/paths");
-// const Renderer = PrerenderSPAPlugin.PuppeteerRenderer;
-// const routes = paths.map((path) => `${path.path}`);
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+const TerserPlugin = require("terser-webpack-plugin");
+// const HtmlWebpackPlugin = require("html-webpack-plugin");
+// const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const paths = [
   {
@@ -44,7 +44,7 @@ const paths = [
     changefreq: "hourly",
   },
 ];
-const productionPlugins = [
+const sitemapPlugin = [
   new SitemapPlugin({
     base: "https://www.owlmtcabin-official.com",
     paths,
@@ -54,6 +54,32 @@ const productionPlugins = [
       priority: 0.8,
       changefreq: "hourly",
     },
+  }),
+];
+
+const bundleAnalyzerPlugin = [
+  new BundleAnalyzerPlugin({
+    openAnalyzer: false,
+    analyzerMode: "static",
+    reportFilename: "owl-bundle-report.html",
+  }),
+];
+
+// const htmlWebpackPlugin = [
+//   new HtmlWebpackPlugin({
+//     // hash: true,
+//     template: "./public/index.html",
+//     minify: {
+//       collapseWhitespace: true,
+//       removeComments: true,
+//     },
+//   }),
+// ];
+
+// const cleanWebpackPlugin = [new CleanWebpackPlugin()];
+const miniCssExtractPlugin = [
+  new MiniCssExtractPlugin({
+    filename: "css/[name].css",
   }),
 ];
 
@@ -73,7 +99,40 @@ module.exports = defineConfig({
   },
   configureWebpack: (config) => {
     if (process.env.NODE_ENV === "production") {
-      config.plugins.push(...productionPlugins);
+      config.module.rules.push({
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+      });
+      config.optimization = {
+        usedExports: true,
+        splitChunks: {
+          cacheGroups: {
+            commons: {
+              test: /[\\/]node_modules[\\/]/,
+              name: "vendors",
+              chunks: "all",
+            },
+          },
+        },
+        minimize: true,
+        minimizer: [
+          new TerserPlugin({
+            terserOptions: {
+              compress: {
+                drop_console: true,
+              },
+            },
+          }),
+        ],
+        concatenateModules: true,
+      };
+      config.plugins.push(
+        ...sitemapPlugin,
+        ...bundleAnalyzerPlugin,
+        // ...htmlWebpackPlugin,
+        // ...cleanWebpackPlugin,
+        ...miniCssExtractPlugin
+      );
     }
   },
 });

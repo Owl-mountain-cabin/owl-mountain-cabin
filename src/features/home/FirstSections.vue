@@ -4,8 +4,8 @@
       <v-img
         class="owl-home-first__background"
         cover
-        lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708969/home-first-section_jubx4l.png"
-        src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708969/home-first-section_jubx4l.png"
+        lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708969/home-first-section_jubx4l.png"
+        src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708969/home-first-section_jubx4l.png"
       />
     </div>
     <div class="owl-home-first__contents-wrapper">
@@ -13,8 +13,8 @@
         <v-img
           class="owl-home-first__title"
           contain
-          lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708932/home-title_ie4c9f.svg"
-          src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708932/home-title_ie4c9f.svg"
+          lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708932/home-title_ie4c9f.svg"
+          src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708932/home-title_ie4c9f.svg"
         />
       </div>
       <div class="owl-home-first__desc">
@@ -25,7 +25,11 @@
         {{ desc3 }}
       </div>
       <div class="owl-home-first__button-wrapper">
-        <v-btn class="owl-home-first--more" @click="$router.push('/company')">
+        <v-btn
+          type="button"
+          class="owl-home-first--more"
+          @click="$router.push('/company')"
+        >
           more
           <v-icon class="owl-home-first__icon">$plus</v-icon>
         </v-btn>
@@ -34,14 +38,14 @@
         <v-img
           class="owl-home-first__scroll-image"
           contain
-          lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708931/home-scroll_awnylv.svg"
-          src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708931/home-scroll_awnylv.svg"
+          lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708931/home-scroll_awnylv.svg"
+          src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708931/home-scroll_awnylv.svg"
         />
         <v-img
           class="owl-home-first__scroll-image-mobile"
           contain
-          lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708940/owl-main-arrow-down_ah6iub.png"
-          src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708940/owl-main-arrow-down_ah6iub.png"
+          lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708940/owl-main-arrow-down_ah6iub.png"
+          src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708940/owl-main-arrow-down_ah6iub.png"
         />
       </div>
     </div>

@@ -4,8 +4,8 @@
       <div class="owl-header__logo-wrapper">
         <v-img
           contain
-          lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708933/main-logo_jplvvr.svg"
-          src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708933/main-logo_jplvvr.svg"
+          lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708933/main-logo_jplvvr.svg"
+          src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708933/main-logo_jplvvr.svg"
         />
       </div>
       <div class="owl-header__link-wrapper">
@@ -15,6 +15,7 @@
         <router-link class="desktop" to="/franchise">Franchise</router-link>
         <router-link class="desktop" to="/company">Company</router-link>
         <a
+          title="mobile"
           class="mobile"
           href="https://www.instargram.com/owl_mt_cabin"
           target="_blank"
@@ -23,12 +24,18 @@
             <v-img
               contain
               class="owl-header__image"
-              lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708931/insta_irpwlj.svg"
-              src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708931/insta_irpwlj.svg"
+              lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708931/insta_irpwlj.svg"
+              src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708931/insta_irpwlj.svg"
             />
           </div>
         </a>
-        <v-btn class="mobile" plain elevation="0" @click="onClickDrawer">
+        <v-btn
+          type="button"
+          class="mobile"
+          plain
+          elevation="0"
+          @click="onClickDrawer"
+        >
           <v-icon color="#fff">$menu</v-icon>
         </v-btn>
         <div class="owl-header__phone desktop">
@@ -36,8 +43,8 @@
             class="owl-header__phone-image"
             contain
             width="12px"
-            lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708928/header-call_n6epuy.svg"
-            src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708928/header-call_n6epuy.svg"
+            lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708928/header-call_n6epuy.svg"
+            src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708928/header-call_n6epuy.svg"
           />
           1566-8107
         </div>
