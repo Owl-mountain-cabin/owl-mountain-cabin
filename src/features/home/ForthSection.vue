@@ -10,8 +10,8 @@
         <v-img
           class="owl-home-forth__iamge"
           cover
-          :lazy-src="require(`@/assets/images/${item.src}.webp`)"
-          :src="require(`@/assets/images/${item.src}.webp`)"
+          :lazy-src="`https://res.cloudinary.com/${item.src}`"
+          :src="`https://res.cloudinary.com/${item.src}`"
         />
       </div>
       <div class="owl-home-forth__title-wrapper">

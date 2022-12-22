@@ -17,8 +17,8 @@
                 cover
                 width="101px"
                 class="owl-franchise-sixth__image"
-                :lazy-src="require(`@/assets/images/${item.src}.svg`)"
-                :src="require(`@/assets/images/${item.src}.svg`)"
+                :lazy-src="`https://res.cloudinary.com/${item.src}`"
+                :src="`https://res.cloudinary.com/${item.src}`"
               />
             </div>
             <div class="owl-franchise-sixth__name-wrapper">
@@ -42,14 +42,14 @@
         </div>
         <div
           class="owl-franchise-sixth__image-pass-wrapper"
-          v-if="item.src !== 'franchise-sixth6'"
+          v-if="index !== process.length - 1"
         >
           <v-img
             cover
             width="12px"
             class="owl-franchise-sixth__image-pass"
-            :lazy-src="require(`@/assets/images/franchise-sixth-pass.svg`)"
-            :src="require(`@/assets/images/franchise-sixth-pass.svg`)"
+            lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708927/franchise-sixth-pass_oedix4.svg"
+            src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708927/franchise-sixth-pass_oedix4.svg"
           />
         </div>
       </div>

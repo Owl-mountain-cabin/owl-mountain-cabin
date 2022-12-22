@@ -4,8 +4,8 @@
       <v-img
         class="owl-about-image__backgrond"
         contain
-        :lazy-src="require(`@/assets/images/${imageSrc}`)"
-        :src="require(`@/assets/images/${imageSrc}`)"
+        :lazy-src="`https://res.cloudinary.com/${imageSrc}`"
+        :src="`https://res.cloudinary.com/${imageSrc}`"
       />
     </div>
     <div class="owl-center-wrapper">
@@ -14,8 +14,8 @@
           <v-img
             class="owl-about-image__title"
             contain
-            :lazy-src="require(`@/assets/images/about-title.svg`)"
-            :src="require(`@/assets/images/about-title.svg`)"
+            lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708925/about-title_twj4y6.svg"
+            src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708925/about-title_twj4y6.svg"
           />
         </div>
         <div class="owl-about-image__desc">{{ title }}</div>
