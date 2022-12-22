@@ -4,8 +4,8 @@
       <v-img
         class="owl-home-sixth__image"
         contain
-        lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708956/team-member_n8gzrj.png"
-        src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708956/team-member_n8gzrj.png"
+        lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708956/team-member_n8gzrj.png"
+        src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708956/team-member_n8gzrj.png"
       />
     </div>
     <div class="owl-home-sixth__contents-wrapper">

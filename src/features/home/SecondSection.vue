@@ -4,20 +4,20 @@
       <v-img
         class="owl-home-second__background"
         cover
-        lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708932/home-second-background_gdhbju.png"
-        src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708932/home-second-background_gdhbju.png"
+        lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708932/home-second-background_gdhbju.png"
+        src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708932/home-second-background_gdhbju.png"
       />
       <v-img
         class="owl-home-second__image-owl"
         contain
-        lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708932/home-second-owl_s8ayfq.svg"
-        src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708932/home-second-owl_s8ayfq.svg"
+        lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708932/home-second-owl_s8ayfq.svg"
+        src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708932/home-second-owl_s8ayfq.svg"
       />
       <v-img
         class="owl-home-second__image-title"
         contain
-        lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708932/home-second-title_j5q8qg.svg"
-        src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708932/home-second-title_j5q8qg.svg"
+        lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708932/home-second-title_j5q8qg.svg"
+        src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708932/home-second-title_j5q8qg.svg"
       />
     </div>
     <div class="owl-home-second__contents-wrapper">

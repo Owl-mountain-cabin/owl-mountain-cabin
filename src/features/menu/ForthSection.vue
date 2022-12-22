@@ -44,19 +44,19 @@ export default {
       desc: contents.desc,
       images: [
         {
-          src: "dexj7izei/image/upload/v1671708938/menu-forth2_htgmnv.png",
+          src: "dexj7izei/image/upload/q_auto/v1671708938/menu-forth2_htgmnv.png",
           name: "forth2",
         },
         {
-          src: "dexj7izei/image/upload/v1671708940/menu-forth4_jm5wev.png",
+          src: "dexj7izei/image/upload/q_auto/v1671708940/menu-forth4_jm5wev.png",
           name: "forth4",
         },
         {
-          src: "dexj7izei/image/upload/v1671708939/menu-forth1_qcc8ii.png",
+          src: "dexj7izei/image/upload/q_auto/v1671708939/menu-forth1_qcc8ii.png",
           name: "forth1",
         },
         {
-          src: "dexj7izei/image/upload/v1671708939/menu-forth3_q1zfwn.png",
+          src: "dexj7izei/image/upload/q_auto/v1671708939/menu-forth3_q1zfwn.png",
           name: "forth3",
         },
       ],

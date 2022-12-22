@@ -108,7 +108,7 @@ export default {
   }
 
   .swiper-button-prev {
-    background: url("https://res.cloudinary.com/dexj7izei/image/upload/v1671708951/swiper-left_sdlksa.svg")
+    background: url("https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708951/swiper-left_sdlksa.svg")
       no-repeat;
     background-size: 100% auto;
     background-position: center;
@@ -120,7 +120,7 @@ export default {
   }
 
   .swiper-button-next {
-    background: url("https://res.cloudinary.com/dexj7izei/image/upload/v1671708953/swiper-right_ihyrz4.svg")
+    background: url("https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708953/swiper-right_ihyrz4.svg")
       no-repeat;
     background-size: 100% auto;
     background-position: center;

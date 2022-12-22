@@ -39,15 +39,15 @@ export default {
       desc: contents.desc,
       images: [
         {
-          src: "dexj7izei/image/upload/v1671708939/menu-second1_sfeexv.png",
+          src: "dexj7izei/image/upload/q_auto/v1671708939/menu-second1_sfeexv.png",
           name: "second1",
         },
         {
-          src: "dexj7izei/image/upload/v1671708940/menu-second3_uejzn9.png",
+          src: "dexj7izei/image/upload/q_auto/v1671708940/menu-second3_uejzn9.png",
           name: "second3",
         },
         {
-          src: "dexj7izei/image/upload/v1671708940/menu-second2_bkijn7.png",
+          src: "dexj7izei/image/upload/q_auto/v1671708940/menu-second2_bkijn7.png",
           name: "second2",
         },
       ],

@@ -4,8 +4,8 @@
       <div class="owl-header__logo-wrapper">
         <v-img
           contain
-          lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708933/main-logo_jplvvr.svg"
-          src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708933/main-logo_jplvvr.svg"
+          lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708933/main-logo_jplvvr.svg"
+          src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708933/main-logo_jplvvr.svg"
         />
       </div>
       <div class="owl-header__link-wrapper">
@@ -24,8 +24,8 @@
             <v-img
               contain
               class="owl-header__image"
-              lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708931/insta_irpwlj.svg"
-              src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708931/insta_irpwlj.svg"
+              lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708931/insta_irpwlj.svg"
+              src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708931/insta_irpwlj.svg"
             />
           </div>
         </a>
@@ -43,8 +43,8 @@
             class="owl-header__phone-image"
             contain
             width="12px"
-            lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708928/header-call_n6epuy.svg"
-            src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708928/header-call_n6epuy.svg"
+            lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708928/header-call_n6epuy.svg"
+            src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708928/header-call_n6epuy.svg"
           />
           1566-8107
         </div>
