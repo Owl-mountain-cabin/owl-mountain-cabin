@@ -15,6 +15,7 @@
         <router-link class="desktop" to="/franchise">Franchise</router-link>
         <router-link class="desktop" to="/company">Company</router-link>
         <a
+          title="mobile"
           class="mobile"
           href="https://www.instargram.com/owl_mt_cabin"
           target="_blank"
@@ -28,7 +29,13 @@
             />
           </div>
         </a>
-        <v-btn class="mobile" plain elevation="0" @click="onClickDrawer">
+        <v-btn
+          type="button"
+          class="mobile"
+          plain
+          elevation="0"
+          @click="onClickDrawer"
+        >
           <v-icon color="#fff">$menu</v-icon>
         </v-btn>
         <div class="owl-header__phone desktop">

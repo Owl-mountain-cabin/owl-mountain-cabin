@@ -25,7 +25,11 @@
         {{ desc3 }}
       </div>
       <div class="owl-home-first__button-wrapper">
-        <v-btn class="owl-home-first--more" @click="$router.push('/company')">
+        <v-btn
+          type="button"
+          class="owl-home-first--more"
+          @click="$router.push('/company')"
+        >
           more
           <v-icon class="owl-home-first__icon">$plus</v-icon>
         </v-btn>
