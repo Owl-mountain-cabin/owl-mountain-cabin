@@ -21,16 +21,16 @@
             <v-img
               class="owl-home-fifth__image"
               cover
-              :lazy-src="require(`@/assets/images/${item.src}.webp`)"
-              :src="require(`@/assets/images/${item.src}.webp`)"
+              :lazy-src="`https://res.cloudinary.com/${item.src}`"
+              :src="`https://res.cloudinary.com/${item.src}`"
             />
           </a>
           <v-img
             v-if="!item.herf"
             class="owl-home-fifth__image"
             cover
-            :lazy-src="require(`@/assets/images/${item.src}.webp`)"
-            :src="require(`@/assets/images/${item.src}.webp`)"
+            :lazy-src="`https://res.cloudinary.com/${item.src}`"
+            :src="`https://res.cloudinary.com/${item.src}`"
           />
         </div>
         <div class="owl-home-fifth__content-title">{{ item.title }}</div>

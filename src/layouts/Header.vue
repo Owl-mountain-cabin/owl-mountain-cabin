@@ -4,8 +4,8 @@
       <div class="owl-header__logo-wrapper">
         <v-img
           contain
-          :lazy-src="require(`@/assets/images/main-logo.svg`)"
-          :src="require(`@/assets/images/main-logo.svg`)"
+          lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708933/main-logo_jplvvr.svg"
+          src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708933/main-logo_jplvvr.svg"
         />
       </div>
       <div class="owl-header__link-wrapper">
@@ -23,8 +23,8 @@
             <v-img
               contain
               class="owl-header__image"
-              :lazy-src="require(`@/assets/images/insta.svg`)"
-              :src="require(`@/assets/images/insta.svg`)"
+              lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708931/insta_irpwlj.svg"
+              src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708931/insta_irpwlj.svg"
             />
           </div>
         </a>
@@ -36,8 +36,8 @@
             class="owl-header__phone-image"
             contain
             width="12px"
-            :lazy-src="require(`@/assets/images/header-call.svg`)"
-            :src="require(`@/assets/images/header-call.svg`)"
+            lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708928/header-call_n6epuy.svg"
+            src="https://res.cloudinary.com/dexj7izei/image/upload/v1671708928/header-call_n6epuy.svg"
           />
           1566-8107
         </div>

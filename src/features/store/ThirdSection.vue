@@ -78,7 +78,8 @@ export default {
     }
   }
   .swiper-button-prev {
-    background: url("@/assets/images/owl-store-slide-btn-prev.svg") no-repeat;
+    background: url("https://res.cloudinary.com/dexj7izei/image/upload/v1671708941/owl-store-slide-btn-prev_ukzxvh.svg")
+      no-repeat;
     background-size: 100% auto;
     background-position: center;
     margin-left: 0;
@@ -89,7 +90,8 @@ export default {
     }
   }
   .swiper-button-next {
-    background: url("@/assets/images/owl-store-slide-btn-next.svg") no-repeat;
+    background: url("https://res.cloudinary.com/dexj7izei/image/upload/v1671708940/owl-store-slide-btn-next_o5cmni.svg")
+      no-repeat;
     background-size: 100% auto;
     background-position: center;
     margin-right: 0;

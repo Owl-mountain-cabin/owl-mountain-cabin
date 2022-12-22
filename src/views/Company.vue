@@ -2,7 +2,10 @@
   <div class="owl-company">
     <div class="owl-company__first-section">
       <Dimmed :height="'100%'" />
-      <ImageWrapper :imageSrc="'franchise-header-image.webp'" title="Company" />
+      <ImageWrapper
+        imageSrc="dexj7izei/image/upload/v1671708945/franchise-header-image_flhv5p.png"
+        title="Company"
+      />
     </div>
     <div class="owl-company__section owl-company__second-section">
       <SecondSection />

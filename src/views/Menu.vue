@@ -2,7 +2,10 @@
   <div class="owl-menu">
     <div class="owl-menu__first-section">
       <Dimmed :height="'100%'" />
-      <ImageWrapper :imageSrc="'about-header-image.webp'" title="MENU" />
+      <ImageWrapper
+        imageSrc="dexj7izei/image/upload/v1671708947/about-header-image_twkqto.png"
+        title="MENU"
+      />
     </div>
     <div class="owl-menu__second-section">
       <SecondSection />

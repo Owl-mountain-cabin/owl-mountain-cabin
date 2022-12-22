@@ -9,8 +9,8 @@
       <v-img
         contain
         class="owl-swiper__slide-image"
-        :lazy-src="require(`@/assets/images/${src}`)"
-        :src="require(`@/assets/images/${src}`)"
+        :lazy-src="`https://res.cloudinary.com/${src}`"
+        :src="`https://res.cloudinary.com/${src}`"
       />
     </swiperSlide>
     <div class="swiper-pagination" slot="pagination"></div>
@@ -108,7 +108,8 @@ export default {
   }
 
   .swiper-button-prev {
-    background: url("@/assets/images/swiper-left.svg") no-repeat;
+    background: url("https://res.cloudinary.com/dexj7izei/image/upload/v1671708951/swiper-left_sdlksa.svg")
+      no-repeat;
     background-size: 100% auto;
     background-position: center;
     margin-left: 30px;
@@ -119,7 +120,8 @@ export default {
   }
 
   .swiper-button-next {
-    background: url("@/assets/images/swiper-right.svg") no-repeat;
+    background: url("https://res.cloudinary.com/dexj7izei/image/upload/v1671708953/swiper-right_ihyrz4.svg")
+      no-repeat;
     background-size: 100% auto;
     background-position: center;
     margin-right: 30px;
