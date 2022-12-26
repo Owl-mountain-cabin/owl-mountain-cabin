@@ -25,10 +25,17 @@
     <meta name="keywords" content="부엉이산장,강남점,연신내점,신사점,의정부점,음식,맛집,먹방,food,요리,맛있는,안주,술,주말,회식,데이트,프랜차이즈,주막,한식주점,술집">
     <title><%= htmlWebpackPlugin.options.title %></title>
     <link rel="icon" href="<%= require('./image/company-owl.png') %>">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+    <link rel="stylesheet" media="screen" id="first_style" disabled href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+    <link rel="stylesheet" media="screen" id="second_style" disabled href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
   </head>
   <body>
+     <script defer type="text/javascript">
+            window.onload = function()
+            {
+                document.getElementById('first_style').removeAttribute('disabled');
+                document.getElementById('second_style').removeAttribute('disabled');
+            }
+      </script>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
