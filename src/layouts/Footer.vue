@@ -3,8 +3,8 @@
     <div class="owl-footer__logo-wrapper">
       <v-img
         contain
-        lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708925/footer-logo_o2j7rh.svg"
-        src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708925/footer-logo_o2j7rh.svg"
+        :lazy-src="require(`@/assets/images/footer-logo.svg`)"
+        :src="require(`@/assets/images/footer-logo.svg`)"
       />
     </div>
     <div class="owl-footer__contents-wrapper">
@@ -31,8 +31,8 @@
           width="18px"
           height="auto"
           contain
-          lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708925/footer-insta_dwgyhx.svg"
-          src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708925/footer-insta_dwgyhx.svg"
+          :lazy-src="require(`@/assets/images/footer-insta.svg`)"
+          :src="require(`@/assets/images/footer-insta.svg`)"
         />
       </a>
     </div>

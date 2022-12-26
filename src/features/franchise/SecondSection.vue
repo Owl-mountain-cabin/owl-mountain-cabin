@@ -5,8 +5,8 @@
       cover
       width="100%"
       class="owl-franchise-second__image"
-      lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708928/franchise-second1_ilmnnl.png"
-      src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708928/franchise-second1_ilmnnl.png"
+      :lazy-src="require(`@/assets/images/franchise-second1.webp`)"
+      :src="require(`@/assets/images/franchise-second1.webp`)"
     />
     <div class="owl-franchise-second__desc-wrapper">
       <div class="owl-franchise-second__sub" v-html="checkN(subTitle)" />
@@ -40,7 +40,6 @@ export default {
   width: 100%;
   @include flex-center-column;
   .#{$this}__title-wrapper {
-    //padding-top: 80px;
     padding-bottom: 178px;
     @include desktop-medium {
       padding-bottom: 50px;

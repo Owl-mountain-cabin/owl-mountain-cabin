@@ -10,8 +10,8 @@
         <v-img
           class="owl-image-row__image"
           cover
-          :lazy-src="`https://res.cloudinary.com/${item.src}`"
-          :src="`https://res.cloudinary.com/${item.src}`"
+          :lazy-src="require(`@/assets/images/${item.src}`)"
+          :src="require(`@/assets/images/${item.src}`)"
         />
       </div>
       <div class="owl-image-row__title">{{ item.title }}</div>

@@ -4,7 +4,6 @@
       <div class="owl-home-seven__title-wrapper">{{ title }}</div>
       <div class="owl-home-seven__button-wrapper">
         <v-btn
-          type="button"
           class="owl-home-seven--more"
           elevation="0"
           @click="$router.push('/franchise')"

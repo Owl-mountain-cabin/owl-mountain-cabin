@@ -5,8 +5,8 @@
         <v-img
           cover
           class="owl-company-second__image"
-          lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708925/company-owl_lutxpr.svg"
-          src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708925/company-owl_lutxpr.svg"
+          :lazy-src="require(`@/assets/images/company-owl.svg`)"
+          :src="require(`@/assets/images/company-owl.svg`)"
         />
       </div>
       <div class="owl-company-second__title-wrapper" v-html="checkN(title)" />

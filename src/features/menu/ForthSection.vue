@@ -18,8 +18,8 @@
         <v-img
           class="owl-menu-forth__image"
           cover
-          :lazy-src="`https://res.cloudinary.com/${item.src}`"
-          :src="`https://res.cloudinary.com/${item.src}`"
+          :lazy-src="require(`@/assets/images/${item.src}`)"
+          :src="require(`@/assets/images/${item.src}`)"
         />
       </div>
     </div>
@@ -43,22 +43,10 @@ export default {
       subTitle: contents.subTitle,
       desc: contents.desc,
       images: [
-        {
-          src: "dexj7izei/image/upload/q_auto/v1671708938/menu-forth2_htgmnv.png",
-          name: "forth2",
-        },
-        {
-          src: "dexj7izei/image/upload/q_auto/v1671708940/menu-forth4_jm5wev.png",
-          name: "forth4",
-        },
-        {
-          src: "dexj7izei/image/upload/q_auto/v1671708939/menu-forth1_qcc8ii.png",
-          name: "forth1",
-        },
-        {
-          src: "dexj7izei/image/upload/q_auto/v1671708939/menu-forth3_q1zfwn.png",
-          name: "forth3",
-        },
+        { src: "menu-forth2.webp", name: "forth2" },
+        { src: "menu-forth4.webp", name: "forth4" },
+        { src: "menu-forth1.webp", name: "forth1" },
+        { src: "menu-forth3.webp", name: "forth3" },
       ],
     };
   },

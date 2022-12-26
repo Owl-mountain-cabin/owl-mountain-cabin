@@ -40,11 +40,11 @@ export default {
       desc: contents.desc,
       summaries: contents.summaries,
       images: [
-        "dexj7izei/image/upload/q_auto/v1671708960/home-slide-image1_w1bna2.png",
-        "dexj7izei/image/upload/q_auto/v1671708967/home-slide-image2_g7407r.png",
-        "dexj7izei/image/upload/q_auto/v1671708970/home-slide-image3_dv4zuc.png",
-        "dexj7izei/image/upload/q_auto/v1671708970/home-slide-image4_tr6ttj.png",
-        "dexj7izei/image/upload/q_auto/v1671708968/home-slide-image5_rukelk.png",
+        "home-slide-image1.webp",
+        "home-slide-image2.webp",
+        "home-slide-image3.webp",
+        "home-slide-image4.webp",
+        "home-slide-image5.webp",
       ],
     };
   },

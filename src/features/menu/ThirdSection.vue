@@ -17,8 +17,8 @@
         <v-img
           class="owl-menu-third__image"
           cover
-          :lazy-src="`https://res.cloudinary.com/${src}`"
-          :src="`https://res.cloudinary.com/${src}`"
+          :lazy-src="require(`@/assets/images/${src}`)"
+          :src="require(`@/assets/images/${src}`)"
         />
       </div>
     </div>
@@ -41,10 +41,7 @@ export default {
       title: contents.title,
       subTitle: contents.subTitle,
       desc: contents.desc,
-      images: [
-        "dexj7izei/image/upload/q_auto/v1671708942/menu-third2_wsjll8.png",
-        "dexj7izei/image/upload/q_auto/v1671708941/menu-third1_by2xp0.png",
-      ],
+      images: ["menu-third2.webp", "menu-third1.webp"],
     };
   },
 };

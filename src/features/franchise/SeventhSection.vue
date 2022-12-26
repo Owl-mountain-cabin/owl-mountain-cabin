@@ -6,8 +6,8 @@
       width="100%"
       height="100%"
       class="owl-franchise-seventh__image"
-      lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708959/franchise-seventh1_uuo8zv.png"
-      src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708959/franchise-seventh1_uuo8zv.png"
+      :lazy-src="require(`@/assets/images/franchise-seventh1.webp`)"
+      :src="require(`@/assets/images/franchise-seventh1.webp`)"
     />
     <div class="owl-franchise-seventh__contents-wrapper">
       <div class="owl-franchise-seventh__title-wrapper">
@@ -19,8 +19,8 @@
           <v-img
             cover
             class="owl-franchise-seventh__image"
-            lazy-src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708925/franchise-seven1_gvcgy2.svg"
-            src="https://res.cloudinary.com/dexj7izei/image/upload/q_auto/v1671708925/franchise-seven1_gvcgy2.svg"
+            :lazy-src="require(`@/assets/images/franchise-seven1.svg`)"
+            :src="require(`@/assets/images/franchise-seven1.svg`)"
           />
         </div>
         <div class="owl-franchise-seventh__diagram-contents-wrapper db1">

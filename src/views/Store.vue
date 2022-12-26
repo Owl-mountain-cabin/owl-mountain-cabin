@@ -2,10 +2,7 @@
   <div class="owl-store">
     <div class="owl-store__first-section">
       <Dimmed :height="'100%'" />
-      <ImageWrapper
-        imageSrc="dexj7izei/image/upload/q_auto/v1671708950/store-header-image_hp2gq6.png"
-        title="STORE"
-      />
+      <ImageWrapper :imageSrc="'store-header-image.webp'" title="STORE" />
     </div>
     <div class="owl-store__tab-section">
       <v-tabs v-model="tab" fixed-tabs center-active color="#F0A30F">
@@ -107,17 +104,16 @@ export default {
           title: secondContents["GANGNAM"].title,
           desc: secondContents["GANGNAM"].desc,
           address: secondContents["GANGNAM"].address,
-          image:
-            "dexj7izei/image/upload/q_auto/v1671708943/store-gangnam-second1_aqsj93.jpg",
+          image: "store-gangnam-second1.jpg",
         },
         third: {
           images: [
-            "dexj7izei/image/upload/q_auto/v1671708943/store-gangnam-slide1_hkp6d3.jpg",
-            "dexj7izei/image/upload/q_auto/v1671708943/store-gangnam-slide2_upcbvh.jpg",
-            "dexj7izei/image/upload/q_auto/v1671708947/store-gangnam-slide3_rsbiqz.jpg",
-            "dexj7izei/image/upload/q_auto/v1671708946/store-gangnam-slide4_volo5m.jpg",
-            "dexj7izei/image/upload/q_auto/v1671708950/store-gangnam-slide5_ep2i9f.jpg",
-            "dexj7izei/image/upload/q_auto/v1671708950/store-gangnam-slide6_srjfek.jpg",
+            "store-gangnam-slide1.jpg",
+            "store-gangnam-slide2.jpg",
+            "store-gangnam-slide3.jpg",
+            "store-gangnam-slide4.jpg",
+            "store-gangnam-slide5.jpg",
+            "store-gangnam-slide6.jpg",
           ],
         },
         forth: {
@@ -129,14 +125,13 @@ export default {
           title: secondContents["YEONSINNAE"].title,
           desc: secondContents["YEONSINNAE"].desc,
           address: secondContents["YEONSINNAE"].address,
-          image:
-            "dexj7izei/image/upload/q_auto/v1671708952/store-yeonsin-second1_at7s5n.png",
+          image: "store-yeonsin-second1.webp",
         },
         third: {
           images: [
-            "dexj7izei/image/upload/q_auto/v1671708952/store-yeonsin-slide1_sgaj12.png",
-            "dexj7izei/image/upload/q_auto/v1671708952/store-yeonsin-slide2_smulhe.png",
-            "dexj7izei/image/upload/q_auto/v1671708953/store-yeonsin-slide3_pvwnwh.png",
+            "store-yeonsin-slide1.webp",
+            "store-yeonsin-slide2.webp",
+            "store-yeonsin-slide3.webp",
           ],
         },
         forth: {
@@ -148,16 +143,15 @@ export default {
           title: secondContents["UIJEONGBU"].title,
           desc: secondContents["UIJEONGBU"].desc,
           address: secondContents["UIJEONGBU"].address,
-          image:
-            "dexj7izei/image/upload/q_auto/v1671708950/store-uijeongbu-second1_vg7lna.jpg",
+          image: "store-uijeongbu-second1.jpg",
         },
         third: {
           images: [
-            "dexj7izei/image/upload/q_auto/v1671708948/store-uijeongbu-slide1_tamhzm.jpg",
-            "dexj7izei/image/upload/q_auto/v1671708949/store-uijeongbu-slide2_pznkbx.jpg",
-            "dexj7izei/image/upload/q_auto/v1671708951/store-uijeongbu-slide3_a0l6md.jpg",
-            "dexj7izei/image/upload/q_auto/v1671708953/store-uijeongbu-slide4_hcee7l.jpg",
-            "dexj7izei/image/upload/q_auto/v1671708950/store-uijeongbu-slide5_lphqjs.jpg",
+            "store-uijeongbu-slide1.jpg",
+            "store-uijeongbu-slide2.jpg",
+            "store-uijeongbu-slide3.jpg",
+            "store-uijeongbu-slide4.jpg",
+            "store-uijeongbu-slide5.jpg",
           ],
         },
         forth: {

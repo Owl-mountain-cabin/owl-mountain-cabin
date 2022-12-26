@@ -4,8 +4,8 @@
       <v-img
         class="owl-store-second__image"
         contain
-        :lazy-src="`https://res.cloudinary.com/${image}`"
-        :src="`https://res.cloudinary.com/${image}`"
+        :lazy-src="require(`@/assets/images/${image}`)"
+        :src="require(`@/assets/images/${image}`)"
       />
     </div>
     <div class="owl-store-second__contents-wrapper">
