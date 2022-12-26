@@ -39,7 +39,7 @@ const paths = [
     changefreq: "hourly",
   },
 ];
-const sitemapPlugin = [
+const productionPlugins = [
   new SitemapPlugin({
     base: "https://www.owlmtcabin-official.com",
     paths,
@@ -68,15 +68,7 @@ module.exports = defineConfig({
   },
   configureWebpack: (config) => {
     if (process.env.NODE_ENV === "production") {
-      config.optimization = {
-        usedExports: true,
-        splitChunks: {
-          chunks: "all",
-        },
-        minimize: true,
-        concatenateModules: true,
-      };
-      config.plugins.push(...sitemapPlugin);
+      config.plugins.push(...productionPlugins);
     }
   },
 });
