@@ -40,7 +40,6 @@ export default {
   width: 100%;
   @include flex-center-column;
   .#{$this}__title-wrapper {
-    //padding-top: 80px;
     padding-bottom: 178px;
     @include desktop-medium {
       padding-bottom: 50px;
