@@ -1,5 +1,10 @@
 const { defineConfig } = require("@vue/cli-service");
 const SitemapPlugin = require("sitemap-webpack-plugin").default;
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+const TerserPlugin = require("terser-webpack-plugin");
+// const HtmlWebpackPlugin = require("html-webpack-plugin");
+// const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const paths = [
   {
@@ -52,6 +57,32 @@ const sitemapPlugin = [
   }),
 ];
 
+const bundleAnalyzerPlugin = [
+  new BundleAnalyzerPlugin({
+    openAnalyzer: false,
+    analyzerMode: "static",
+    reportFilename: "owl-bundle-report.html",
+  }),
+];
+
+// const htmlWebpackPlugin = [
+//   new HtmlWebpackPlugin({
+//     // hash: true,
+//     template: "./public/index.html",
+//     minify: {
+//       collapseWhitespace: true,
+//       removeComments: true,
+//     },
+//   }),
+// ];
+
+// const cleanWebpackPlugin = [new CleanWebpackPlugin()];
+const miniCssExtractPlugin = [
+  new MiniCssExtractPlugin({
+    filename: "css/[name].css",
+  }),
+];
+
 module.exports = defineConfig({
   transpileDependencies: ["vuetify"],
   devServer: {
@@ -68,15 +99,34 @@ module.exports = defineConfig({
   },
   configureWebpack: (config) => {
     if (process.env.NODE_ENV === "production") {
+      config.module.rules.push({
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+      });
       config.optimization = {
         usedExports: true,
         splitChunks: {
           chunks: "all",
         },
         minimize: true,
+        minimizer: [
+          new TerserPlugin({
+            terserOptions: {
+              compress: {
+                drop_console: true,
+              },
+            },
+          }),
+        ],
         concatenateModules: true,
       };
-      config.plugins.push(...sitemapPlugin);
+      config.plugins.push(
+        ...sitemapPlugin,
+        ...bundleAnalyzerPlugin,
+        // ...htmlWebpackPlugin,
+        // ...cleanWebpackPlugin,
+        ...miniCssExtractPlugin
+      );
     }
   },
 });
