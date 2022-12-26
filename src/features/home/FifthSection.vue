@@ -21,16 +21,16 @@
             <v-img
               class="owl-home-fifth__image"
               cover
-              :lazy-src="require(`@/assets/images/${item.src}.png`)"
-              :src="require(`@/assets/images/${item.src}.png`)"
+              :lazy-src="require(`@/assets/images/${item.src}.webp`)"
+              :src="require(`@/assets/images/${item.src}.webp`)"
             />
           </a>
           <v-img
             v-if="!item.herf"
             class="owl-home-fifth__image"
             cover
-            :lazy-src="require(`@/assets/images/${item.src}.png`)"
-            :src="require(`@/assets/images/${item.src}.png`)"
+            :lazy-src="require(`@/assets/images/${item.src}.webp`)"
+            :src="require(`@/assets/images/${item.src}.webp`)"
           />
         </div>
         <div class="owl-home-fifth__content-title">{{ item.title }}</div>

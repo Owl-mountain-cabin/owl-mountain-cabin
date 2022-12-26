@@ -43,10 +43,10 @@ export default {
       subTitle: contents.subTitle,
       desc: contents.desc,
       images: [
-        { src: "menu-forth2.png", name: "forth2" },
-        { src: "menu-forth4.png", name: "forth4" },
-        { src: "menu-forth1.png", name: "forth1" },
-        { src: "menu-forth3.png", name: "forth3" },
+        { src: "menu-forth2.webp", name: "forth2" },
+        { src: "menu-forth4.webp", name: "forth4" },
+        { src: "menu-forth1.webp", name: "forth1" },
+        { src: "menu-forth3.webp", name: "forth3" },
       ],
     };
   },

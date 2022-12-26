@@ -10,8 +10,8 @@
         <v-img
           class="owl-home-forth__iamge"
           cover
-          :lazy-src="require(`@/assets/images/${item.src}.png`)"
-          :src="require(`@/assets/images/${item.src}.png`)"
+          :lazy-src="require(`@/assets/images/${item.src}.webp`)"
+          :src="require(`@/assets/images/${item.src}.webp`)"
         />
       </div>
       <div class="owl-home-forth__title-wrapper">

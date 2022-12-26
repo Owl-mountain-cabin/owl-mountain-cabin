@@ -6,8 +6,8 @@
       width="100%"
       height="100%"
       class="owl-franchise-seventh__image"
-      :lazy-src="require(`@/assets/images/franchise-seventh1.png`)"
-      :src="require(`@/assets/images/franchise-seventh1.png`)"
+      :lazy-src="require(`@/assets/images/franchise-seventh1.webp`)"
+      :src="require(`@/assets/images/franchise-seventh1.webp`)"
     />
     <div class="owl-franchise-seventh__contents-wrapper">
       <div class="owl-franchise-seventh__title-wrapper">

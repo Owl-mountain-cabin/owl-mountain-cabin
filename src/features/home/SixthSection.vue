@@ -4,8 +4,8 @@
       <v-img
         class="owl-home-sixth__image"
         contain
-        :lazy-src="require(`@/assets/images/team-member.png`)"
-        :src="require(`@/assets/images/team-member.png`)"
+        :lazy-src="require(`@/assets/images/team-member.webp`)"
+        :src="require(`@/assets/images/team-member.webp`)"
       />
     </div>
     <div class="owl-home-sixth__contents-wrapper">

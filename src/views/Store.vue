@@ -2,7 +2,7 @@
   <div class="owl-store">
     <div class="owl-store__first-section">
       <Dimmed :height="'100%'" />
-      <ImageWrapper :imageSrc="'store-header-image.png'" title="STORE" />
+      <ImageWrapper :imageSrc="'store-header-image.webp'" title="STORE" />
     </div>
     <div class="owl-store__tab-section">
       <v-tabs v-model="tab" fixed-tabs center-active color="#F0A30F">
@@ -125,13 +125,13 @@ export default {
           title: secondContents["YEONSINNAE"].title,
           desc: secondContents["YEONSINNAE"].desc,
           address: secondContents["YEONSINNAE"].address,
-          image: "store-yeonsin-second1.png",
+          image: "store-yeonsin-second1.webp",
         },
         third: {
           images: [
-            "store-yeonsin-slide1.png",
-            "store-yeonsin-slide2.png",
-            "store-yeonsin-slide3.png",
+            "store-yeonsin-slide1.webp",
+            "store-yeonsin-slide2.webp",
+            "store-yeonsin-slide3.webp",
           ],
         },
         forth: {
