@@ -1,10 +1,5 @@
 const { defineConfig } = require("@vue/cli-service");
 const SitemapPlugin = require("sitemap-webpack-plugin").default;
-// const path = require("path");
-// const PrerenderSPAPlugin = require("prerender-spa-plugin");
-// const paths = require("@/routes/paths");
-// const Renderer = PrerenderSPAPlugin.PuppeteerRenderer;
-// const routes = paths.map((path) => `${path.path}`);
 
 const paths = [
   {
@@ -45,13 +40,6 @@ const paths = [
   },
 ];
 const productionPlugins = [
-  // new PrerenderSPAPlugin({
-  //   staticDir: path.join(__dirname, "dist"),
-  //   routes,
-  //   renderer: new Renderer({
-  //     renderAfterElementExists: "#app",
-  //   }),
-  // }),
   new SitemapPlugin({
     base: "https://www.owlmtcabin-official.com",
     paths,
