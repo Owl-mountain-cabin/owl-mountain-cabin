@@ -71,7 +71,13 @@ module.exports = defineConfig({
       config.optimization = {
         usedExports: true,
         splitChunks: {
-          chunks: "all",
+          cacheGroups: {
+            commons: {
+              test: /[\\/]node_modules[\\/]/,
+              name: "vendors",
+              chunks: "all",
+            },
+          },
         },
         minimize: true,
         concatenateModules: true,
