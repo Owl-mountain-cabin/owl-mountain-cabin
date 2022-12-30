@@ -22,7 +22,7 @@ export const homeMeta = {
     {
       vmid: "og:title",
       property: "og:title",
-      content: "부엉이 산장 | Home",
+      content: "부엉이 산장",
     },
     {
       vmid: "og:url",
