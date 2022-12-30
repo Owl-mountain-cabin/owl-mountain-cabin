@@ -1,5 +1,5 @@
 export const menuMeta = {
-  title: "부엉이 산장 | Menu",
+  title: "부엉이 산장 - Menu",
   titleTemplate: "%s",
   meta: [
     {

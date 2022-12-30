@@ -1,5 +1,5 @@
 export const franchiseMeta = {
-  title: "부엉이 산장 | Franchise",
+  title: "부엉이 산장 - Franchise",
   titleTemplate: "%s",
   meta: [
     {
