@@ -1,5 +1,5 @@
 export const homeMeta = {
-  title: "부엉이 산장 | Home",
+  title: "부엉이 산장",
   titleTemplate: "%s",
   meta: [
     {
