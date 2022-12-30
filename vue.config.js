@@ -54,6 +54,13 @@ const productionPlugins = [
 
 module.exports = defineConfig({
   transpileDependencies: ["vuetify"],
+  pages: {
+    index: {
+      entry: "src/main.js",
+      template: "public/index.html",
+      title: "부엉이 산장",
+    },
+  },
   devServer: {
     client: {
       overlay: false,

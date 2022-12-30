@@ -1,6 +1,6 @@
 {
-  "name": "부엉이 산장",
-  "version": "0.1.0",
+  "name": "owl-mountain-cabin",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
