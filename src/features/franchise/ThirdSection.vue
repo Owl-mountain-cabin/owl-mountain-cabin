@@ -76,7 +76,7 @@ export default {
     .#{$this}__title-wrapper {
       @include set-text(bold, 50, rgba($color: $color-white, $alpha: 1));
       text-align: center;
-      //margin-bottom: 71px;
+      margin-bottom: 71px;
       @include desktop-small {
         font-size: 2.5rem;
         margin-bottom: 30px;
@@ -91,12 +91,12 @@ export default {
     .#{$this}__merit-wrapper {
       display: flex;
       //margin-bottom: 71px;
-      //width: 100%;
+      // width: 100%;
       width: 1280px;
       margin-top: 70px;
 
       @include desktop-medium {
-        width: 1600px;
+        width: 100%;
         margin-top: 50px;
         padding: 0 40px;
       }
