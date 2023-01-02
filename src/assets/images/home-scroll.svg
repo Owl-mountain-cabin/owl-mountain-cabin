@@ -1,7 +1,1 @@
-<svg id="구성_요소_1_1" data-name="구성 요소 1 – 1" xmlns="http://www.w3.org/2000/svg" width="31" height="57" viewBox="0 0 31 57">
-  <g id="사각형_5496" data-name="사각형 5496" fill="none" stroke="#fff" stroke-width="1.5">
-    <rect width="31" height="57" rx="15.5" stroke="none"/>
-    <rect x="0.75" y="0.75" width="29.5" height="55.5" rx="14.75" fill="none"/>
-  </g>
-  <circle id="타원_58" data-name="타원 58" cx="2.5" cy="2.5" r="2.5" transform="translate(13 12)" fill="#fff"/>
-</svg>
+<svg data-name="구성 요소 1 – 1" xmlns="http://www.w3.org/2000/svg" width="31" height="57"><g data-name="사각형 5496" fill="none" stroke="#fff" stroke-width="1.5"><rect width="31" height="57" rx="15.5" stroke="none"/><rect x=".75" y=".75" width="29.5" height="55.5" rx="14.75"/></g><circle data-name="타원 58" cx="2.5" cy="2.5" r="2.5" transform="translate(13 12)" fill="#fff"/></svg>
