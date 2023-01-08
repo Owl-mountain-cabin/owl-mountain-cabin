@@ -5,7 +5,14 @@
       <ImageWrapper :imageSrc="'store-header-image.webp'" title="STORE" />
     </div>
     <div class="owl-store__tab-section">
-      <v-tabs v-model="tab" fixed-tabs center-active color="#F0A30F">
+      <v-tabs
+        show-arrows
+        v-model="tab"
+        fixed-tabs
+        center-active
+        centered
+        color="#F0A30F"
+      >
         <v-tabs-slider color="#F0A30F"></v-tabs-slider>
         <v-tab> 연신내점 </v-tab>
         <v-tab> 강남점 </v-tab>
@@ -210,7 +217,7 @@ export default {
       padding: 100px 0;
     }
     @include tablet {
-      padding: 80px 20px;
+      padding: 80px 0;
     }
     .v-tab {
       @include set-text(400, 16, rgba($color: $color-footer, $alpha: 1));
