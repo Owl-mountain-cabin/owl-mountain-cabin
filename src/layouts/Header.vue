@@ -31,7 +31,7 @@
         <v-btn class="mobile" plain elevation="0" @click="onClickDrawer">
           <v-icon color="#fff">$menu</v-icon>
         </v-btn>
-        <div class="owl-header__phone desktop">
+        <div class="owl-header__phone desktop" @click="handleCall">
           <v-img
             class="owl-header__phone-image"
             contain
@@ -39,7 +39,7 @@
             :lazy-src="require(`@/assets/images/header-call.svg`)"
             :src="require(`@/assets/images/header-call.svg`)"
           />
-          1566-8107
+          {{ desc }}
         </div>
       </div>
     </div>
@@ -47,12 +47,21 @@
 </template>
 
 <script>
+import contents from "@/constants/common/index.json";
 export default {
   props: {},
   inject: ["my"],
+  data() {
+    return {
+      desc: contents.phone,
+    };
+  },
   methods: {
     onClickDrawer() {
       this.my.drawer = true;
+    },
+    handleCall() {
+      document.location.href = "tel:1566-8107";
     },
   },
 };

@@ -1,5 +1,5 @@
 <template>
-  <div class="owl-banner" data-aos="fade-left">
+  <div class="owl-banner" data-aos="fade-left" @click="handleCall">
     <div class="owl-banner__title-wrapper">{{ title }}</div>
     <div class="owl-banner__desc-wrapper">{{ desc }}</div>
   </div>
@@ -29,6 +29,11 @@ export default {
   },
   destroyed() {
     AOS.refreshHard();
+  },
+  methods: {
+    handleCall() {
+      document.location.href = "tel:1566-8107";
+    },
   },
 };
 </script>
