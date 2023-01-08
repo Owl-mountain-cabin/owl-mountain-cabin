@@ -3,6 +3,7 @@ import Vuetify from "vuetify/lib/framework";
 import "@/styles/_index.scss";
 
 import { mdiPlus } from "@mdi/js";
+import { mdiPhone } from "@mdi/js";
 
 Vue.use(Vuetify);
 
@@ -11,6 +12,7 @@ export default new Vuetify({
     iconfont: "mdiSvg",
     values: {
       plus: mdiPlus,
+      phone: mdiPhone,
     },
   },
 });

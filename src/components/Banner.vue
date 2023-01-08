@@ -1,6 +1,9 @@
 <template>
   <div class="owl-banner" data-aos="fade-left" @click="handleCall">
-    <div class="owl-banner__title-wrapper">{{ title }}</div>
+    <div class="owl-banner__title-wrapper">
+      <v-icon class="">$phone</v-icon>
+      {{ title }}
+    </div>
     <div class="owl-banner__desc-wrapper">{{ desc }}</div>
   </div>
 </template>
@@ -48,6 +51,13 @@ export default {
   position: fixed;
   right: 40px;
   bottom: 40px;
+  @include box-shadow(
+    5px,
+    5px,
+    10px,
+    2px,
+    rgba($color: $color-black, $alpha: 0.5)
+  );
   @include rounded(150px);
   background-color: $color-accent;
   z-index: 999;
