@@ -10,6 +10,7 @@
         <v-tab> 연신내점 </v-tab>
         <v-tab> 강남점 </v-tab>
         <v-tab> 의정부점 </v-tab>
+        <v-tab> 신사점 </v-tab>
       </v-tabs>
     </div>
     <v-tabs-items v-model="tab">
@@ -61,6 +62,23 @@
         </div>
         <div class="owl-store__forth-section">
           <ForthSection :title="uijeongbu.forth.title" />
+        </div>
+        <Banner :title="title" :desc="desc" />
+      </v-tab-item>
+      <v-tab-item>
+        <div class="owl-store__second-section">
+          <SecondSection
+            :title="sinsa.second.title"
+            :desc="sinsa.second.desc"
+            :address="sinsa.second.address"
+            :image="sinsa.second.image"
+          />
+        </div>
+        <div class="owl-store__third-section">
+          <ThirdSection :images="sinsa.third.images" />
+        </div>
+        <div class="owl-store__forth-section">
+          <ForthSection :title="sinsa.forth.title" />
         </div>
         <Banner :title="title" :desc="desc" />
       </v-tab-item>
@@ -156,6 +174,25 @@ export default {
         },
         forth: {
           title: forthContents["UIJEONGBU"].title,
+        },
+      },
+      sinsa: {
+        second: {
+          title: secondContents["SINSA"].title,
+          desc: secondContents["SINSA"].desc,
+          address: secondContents["SINSA"].address,
+          image: "store-sinsa-second1.webp",
+        },
+        third: {
+          images: [
+            "store-sinsa-slide1.webp",
+            "store-sinsa-slide2.webp",
+            "store-sinsa-slide3.webp",
+            "store-sinsa-slide4.webp",
+          ],
+        },
+        forth: {
+          title: forthContents["SINSA"].title,
         },
       },
     };
