@@ -56,11 +56,12 @@ export default {
     width: 100px;
     height: 100px;
     right: 20px;
-    bottom: 13%;
+    bottom: 9%;
   }
   @include mobile-small {
     width: 90px;
     height: 90px;
+    bottom: 5%;
   }
 
   .#{$this}__title-wrapper {
