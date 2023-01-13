@@ -45,6 +45,7 @@ export default {
         "home-slide-image3.webp",
         "home-slide-image4.webp",
         "home-slide-image5.webp",
+        "home-slide-image6.webp",
       ],
     };
   },
