@@ -47,13 +47,13 @@ const Cost = {
   },
   data: [
     {
-      category: "가맹비",
+      category: "가맹비 (VAT별도)",
       history: "상표사용 허가권",
       price: "700",
       etc: "",
     },
     {
-      category: "교육비",
+      category: "교육비 (VAT별도)",
       history: "오픈전 본사교육 • 직영교육 노하우 전수",
       price: "500",
       etc: "본사자체 교육장소 제공",
@@ -61,8 +61,8 @@ const Cost = {
     {
       category: "인테리어",
       history: "목공, 바닥, 천정, 벽면, 조명 등 내/외부 공사 일체",
-      price: "5000",
-      etc: "평당 220만원",
+      price: "4200",
+      etc: "평당 200만원 (자체시공가능)",
     },
     {
       category: "주방기물/기릇",
