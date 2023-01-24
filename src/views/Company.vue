@@ -5,7 +5,7 @@
       <ImageWrapper :imageSrc="'franchise-header-image.webp'" title="Company" />
     </div>
     <div class="owl-company__section owl-company__second-section">
-      <SecondSection :title="secondTitle" :desc="secondDesc" />
+      <SecondSection />
     </div>
     <Banner :title="title" :desc="desc" />
   </div>
@@ -18,7 +18,6 @@ import SecondSection from "@/features/company/SecondSection.vue";
 import Banner from "@/components/Banner.vue";
 import contents from "@/constants/common/index.json";
 import { companyMeta } from "@/utils/meta/company";
-import secondContents from "@/constants/company/second.json";
 
 export default {
   name: "Company",
@@ -36,8 +35,6 @@ export default {
     return {
       title: contents.bannerTitle,
       desc: contents.phone,
-      secondTitle: secondContents.title,
-      secondDesc: secondContents.desc,
     };
   },
 };
