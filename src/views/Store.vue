@@ -5,64 +5,91 @@
       <ImageWrapper :imageSrc="'store-header-image.webp'" title="STORE" />
     </div>
     <div class="owl-store__tab-section">
-      <v-item-group :value="this.current">
-        <v-row>
-          <v-col
-            v-for="(item, idx) in list"
-            :key="item.name"
-            cols="6"
-            md="2"
-            sm="2"
-            lg="2"
-          >
-            <v-item v-slot="{ active, toggle }">
-              <v-card
-                :color="active ? '#F0A30F' : ''"
-                class="d-flex align-center"
-                dark
-                height="50"
-                @click="handleTab(toggle, item.name)"
-              >
-                <v-scroll-y-transition>
-                  <div
-                    v-if="idx === 0 && index !== 0"
-                    class="flex-grow-1 text-center"
-                  >
-                    뒤로
-                  </div>
-                  <div class="flex-grow-1 text-center">
-                    {{ item.name }}
-                  </div>
-                </v-scroll-y-transition>
-              </v-card>
-            </v-item>
-          </v-col>
-        </v-row>
-      </v-item-group>
+      <v-tabs
+        show-arrows
+        v-model="tab"
+        fixed-tabs
+        center-active
+        centered
+        color="#F0A30F"
+      >
+        <v-tabs-slider color="#F0A30F"></v-tabs-slider>
+        <v-tab> 연신내점 </v-tab>
+        <v-tab> 강남점 </v-tab>
+        <v-tab> 의정부점 </v-tab>
+        <v-tab> 신사점 </v-tab>
+      </v-tabs>
     </div>
-    <div v-if="Object.keys(content).length !== 0">
-      <div class="owl-store__second-section">
-        <SecondSection
-          :title="content.second.title"
-          :desc="content.second.desc"
-          :address="content.second.address"
-          :image="content.second.image"
-        />
-      </div>
-      <div class="owl-store__third-section">
-        <ThirdSection :images="content.third.images" />
-      </div>
-      <div class="owl-store__forth-section">
-        <ForthSection :title="content.forth.title" />
-      </div>
-      <Banner :title="title" :desc="desc" />
-    </div>
-    <div
-      v-if="Object.keys(content).length === 0"
-      class="owl-store__second-empty-section"
-    >
-      <SecondEmptySection :title="emptyTitle" :desc="emptyDesc" />
-    </div>
+    <v-tabs-items v-model="tab">
+      <v-tab-item>
+        <div class="owl-store__second-section">
+          <SecondSection
+            :title="yeonsinnae.second.title"
+            :desc="yeonsinnae.second.desc"
+            :address="yeonsinnae.second.address"
+            :image="yeonsinnae.second.image"
+          />
+        </div>
+        <div class="owl-store__third-section">
+          <ThirdSection :images="yeonsinnae.third.images" />
+        </div>
+        <div class="owl-store__forth-section">
+          <ForthSection :title="yeonsinnae.forth.title" />
+        </div>
+        <Banner :title="title" :desc="desc" />
+      </v-tab-item>
+      <v-tab-item>
+        <div class="owl-store__second-section">
+          <SecondSection
+            :title="gangnam.second.title"
+            :desc="gangnam.second.desc"
+            :address="gangnam.second.address"
+            :image="gangnam.second.image"
+          />
+        </div>
+        <div class="owl-store__third-section">
+          <ThirdSection :images="gangnam.third.images" />
+        </div>
+        <div class="owl-store__forth-section">
+          <ForthSection :title="gangnam.forth.title" />
+        </div>
+        <Banner :title="title" :desc="desc" />
+      </v-tab-item>
+      <v-tab-item>
+        <div class="owl-store__second-section">
+          <SecondSection
+            :title="uijeongbu.second.title"
+            :desc="uijeongbu.second.desc"
+            :address="uijeongbu.second.address"
+            :image="uijeongbu.second.image"
+          />
+        </div>
+        <div class="owl-store__third-section">
+          <ThirdSection :images="uijeongbu.third.images" />
+        </div>
+        <div class="owl-store__forth-section">
+          <ForthSection :title="uijeongbu.forth.title" />
+        </div>
+        <Banner :title="title" :desc="desc" />
+      </v-tab-item>
+      <v-tab-item>
+        <div class="owl-store__second-section">
+          <SecondSection
+            :title="sinsa.second.title"
+            :desc="sinsa.second.desc"
+            :address="sinsa.second.address"
+            :image="sinsa.second.image"
+          />
+        </div>
+        <div class="owl-store__third-section">
+          <ThirdSection :images="sinsa.third.images" />
+        </div>
+        <div class="owl-store__forth-section">
+          <ForthSection :title="sinsa.forth.title" />
+        </div>
+        <Banner :title="title" :desc="desc" />
+      </v-tab-item>
+    </v-tabs-items>
   </div>
 </template>
 
@@ -70,12 +97,12 @@
 import Dimmed from "@/components/Dimmed.vue";
 import ImageWrapper from "@/components/ImageWrappers.vue";
 import SecondSection from "@/features/store/SecondSection.vue";
-import SecondEmptySection from "@/features/company/SecondSection.vue";
 import ThirdSection from "@/features/store/ThirdSection.vue";
 import ForthSection from "@/features/store/ForthSection.vue";
 import Banner from "@/components/Banner.vue";
 import contents from "@/constants/common/index.json";
 import secondContents from "@/constants/store/second.json";
+import forthContents from "@/constants/store/forth.json";
 import { storeMeta } from "@/utils/meta/store";
 
 export default {
@@ -85,93 +112,97 @@ export default {
     Dimmed,
     ImageWrapper,
     SecondSection,
-    SecondEmptySection,
     ThirdSection,
     ForthSection,
     Banner,
   },
   mounted() {
     window.scrollTo(0, 0);
-    this.init();
   },
   data() {
     return {
       title: contents.bannerTitle,
       desc: contents.phone,
-      current: "",
-      location: "",
-      originalList: [],
-      list: [],
-      content: {},
-      index: 0,
-      emptyTitle: "지역을 <span class='stressed'>선택</span>해주세요.",
+      tab: "연신내점",
+      gangnam: {
+        second: {
+          title: secondContents["GANGNAM"].title,
+          desc: secondContents["GANGNAM"].desc,
+          address: secondContents["GANGNAM"].address,
+          image: "store-gangnam-second1.webp",
+        },
+        third: {
+          images: [
+            "store-gangnam-slide1.webp",
+            "store-gangnam-slide2.webp",
+            "store-gangnam-slide3.webp",
+            "store-gangnam-slide4.webp",
+            "store-gangnam-slide5.webp",
+            "store-gangnam-slide6.webp",
+          ],
+        },
+        forth: {
+          title: forthContents["GANGNAM"].title,
+        },
+      },
+      yeonsinnae: {
+        second: {
+          title: secondContents["YEONSINNAE"].title,
+          desc: secondContents["YEONSINNAE"].desc,
+          address: secondContents["YEONSINNAE"].address,
+          image: "store-yeonsin-second1.webp",
+        },
+        third: {
+          images: [
+            "store-yeonsin-slide1.webp",
+            "store-yeonsin-slide2.webp",
+            "store-yeonsin-slide3.webp",
+          ],
+        },
+        forth: {
+          title: forthContents["YEONSINNAE"].title,
+        },
+      },
+      uijeongbu: {
+        second: {
+          title: secondContents["UIJEONGBU"].title,
+          desc: secondContents["UIJEONGBU"].desc,
+          address: secondContents["UIJEONGBU"].address,
+          image: "store-uijeongbu-second1.webp",
+        },
+        third: {
+          images: [
+            "store-uijeongbu-slide1.webp",
+            "store-uijeongbu-slide2.webp",
+            "store-uijeongbu-slide3.webp",
+            "store-uijeongbu-slide4.webp",
+            "store-uijeongbu-slide5.webp",
+          ],
+        },
+        forth: {
+          title: forthContents["UIJEONGBU"].title,
+        },
+      },
+      sinsa: {
+        second: {
+          title: secondContents["SINSA"].title,
+          desc: secondContents["SINSA"].desc,
+          address: secondContents["SINSA"].address,
+          image: "store-sinsa-second1.webp",
+        },
+        third: {
+          images: [
+            "store-sinsa-slide1.webp",
+            "store-sinsa-slide2.webp",
+            "store-sinsa-slide3.webp",
+            "store-sinsa-slide4.webp",
+          ],
+        },
+        forth: {
+          title: forthContents["SINSA"].title,
+        },
+      },
     };
-  },
-  methods: {
-    init() {
-      const result = [...secondContents.data];
-      this.originalList = [...result];
-      this.list = [
-        { name: "뒤로" },
-        ...new Set(result.filter((item) => item.location === "서울")),
-      ];
-      this.current = result.findIndex((item) => item.name === "연신내") + 1;
-      this.location = "서울";
-      this.content = result.find((item) => item.name === "연신내");
-      this.index = 1;
-    },
-    handleTab(toggle, name) {
-      toggle && toggle();
-
-      if (name === "뒤로") {
-        this.handleBack();
-        return;
-      }
-
-      if (this.index === 0) {
-        this.handleTabFirstChange(name);
-        return;
-      }
-
-      if (this.index === 1) {
-        this.handleTabSecondChange(name);
-        return;
-      }
-    },
-    handleBack() {
-      this.index -= 1;
-      const result = [
-        ...new Set(this.originalList.map((item) => item.location)),
-      ];
-      this.current = 0;
-      this.list = [...result.map((item) => ({ name: item }))];
-      this.location = "";
-      this.content = {};
-    },
-    handleTabFirstChange(name) {
-      this.index += 1;
-      this.location = name;
-      this.list = [
-        { name: "뒤로" },
-        ...this.originalList.filter((item) => item.location === name),
-      ];
-      this.handleTabSecondChange(this.list[1].name);
-    },
-    handleTabSecondChange(name) {
-      console.log(name);
-      const compare = this.originalList.filter(
-        (item) => item.location === this.location
-      );
-      let current = compare.findIndex((item) => item.name === name);
-      if (current === compare.length) {
-        current = current - 1;
-      } else {
-        current = current + 1;
-      }
-
-      this.current = current;
-      this.content = this.originalList.find((item) => item.name === name);
-    },
   },
 };
 </script>
@@ -181,12 +212,12 @@ export default {
   $this: "owl-store";
 
   .#{$this}__tab-section {
-    padding: 122px;
+    padding: 122px 0;
     @include desktop-small {
-      padding: 100px 25px;
+      padding: 100px 0;
     }
     @include tablet {
-      padding: 80px 25px;
+      padding: 80px 0;
     }
     .v-tab {
       @include set-text(400, 16, rgba($color: $color-footer, $alpha: 1));
@@ -214,9 +245,6 @@ export default {
     @include tablet {
       padding: 0 20px;
     }
-  }
-  .#{$this}__second-empty-section {
-    padding-bottom: 122px;
   }
   .#{$this}__third-section {
     padding-top: 266px;
