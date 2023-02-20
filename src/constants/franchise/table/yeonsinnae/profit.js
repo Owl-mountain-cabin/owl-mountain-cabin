@@ -84,7 +84,7 @@ const Profit = {
     },
     {
       category: "지출총액",
-      price: "116,033,430원",
+      price: "52,824,967원",
       percentage: "64%",
       etc: "",
     },
