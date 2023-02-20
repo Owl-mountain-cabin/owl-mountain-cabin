@@ -16,10 +16,19 @@
     <div class="owl-franchise__forth-section">
       <ForthSection
         width="w-45"
-        :data="profit"
-        :desc="profitDesc"
-        :title="profitTitle"
-        :subTitle="profitSubTitle"
+        :data="gangnamProfit"
+        :desc="gangnamProfitDesc"
+        :title="gangnamProfitTitle"
+        :subTitle="gangnamProfitSubTitle"
+      />
+    </div>
+    <div class="owl-franchise__forth-section">
+      <ForthSection
+        width="w-45"
+        :data="yeonsinnaeProfit"
+        :desc="yeonsinnaeProfitDesc"
+        :title="yeonsinnaeProfitTitle"
+        :subTitle="yeonsinnaeProfitSubTitle"
       />
     </div>
     <div class="owl-franchise__fifth-section">
@@ -51,7 +60,8 @@ import ThirdSection from "@/features/franchise/ThirdSection.vue";
 import ForthSection from "@/features/franchise/ForthSection.vue";
 import SixthSection from "@/features/franchise/SixthSection.vue";
 import SeventhSection from "@/features/franchise/SeventhSection.vue";
-import profit from "@/constants/franchise/table/profit.js";
+import gangnamProfit from "@/constants/franchise/table/gangnam/profit.js";
+import yeonsinnaeProfit from "@/constants/franchise/table/yeonsinnae/profit.js";
 import cost from "@/constants/franchise/table/cost.js";
 import profitContents from "@/constants/franchise/forth.json";
 import costContents from "@/constants/franchise/fifth.json";
@@ -77,11 +87,15 @@ export default {
     return {
       title: contents.bannerTitle,
       desc: contents.phone,
-      profit,
+      yeonsinnaeProfit,
+      gangnamProfit,
       cost,
-      profitTitle: profitContents.title,
-      profitSubTitle: profitContents.subTitle,
-      profitDesc: profitContents.desc,
+      yeonsinnaeProfitTitle: profitContents.yeonsinnae.title,
+      yeonsinnaeProfitSubTitle: profitContents.yeonsinnae.subTitle,
+      yeonsinnaeProfitDesc: profitContents.yeonsinnae.desc,
+      gangnamProfitTitle: profitContents.gangnam.title,
+      gangnamProfitSubTitle: profitContents.gangnam.subTitle,
+      gangnamProfitDesc: profitContents.gangnam.desc,
       costTitle: costContents.title,
       costSubTitle: costContents.subTitle,
       costDesc: costContents.desc,
