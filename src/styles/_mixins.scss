@@ -12,7 +12,7 @@
    font-size: toRem($fontSize);
    color: $fontColor;
    @if $fontShadowColor {
-     text-shadow: 0 0 1px $fontShadowColor;
+     text-shadow: 0 0 2px $fontShadowColor;
   }
   @if $subFont {
     font-family: $sub-font-family;
@@ -37,6 +37,11 @@
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
   border-radius: $radius;
+}
+
+// 텍스트 그림자
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
+    text-shadow: $x $y $blur $color;
 }
 
 // 스크롤 
@@ -99,6 +104,11 @@
     font-weight: $weight;
     font-style: $style;
   }
+}
+
+// 라인 높이
+@mixin line-height($fontSizePx, $lineHeightPx) {
+  line-height: $lineHeightPx / $fontSizePx;
 }
 
 // 백그라운드 커버

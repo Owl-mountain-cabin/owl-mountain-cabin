@@ -7,6 +7,9 @@
     <div class="owl-company__section owl-company__second-section">
       <SecondSection />
     </div>
+    <div class="owl-company__section owl-company__third-section">
+      <ThirdSection />
+    </div>
     <Banner :title="title" :desc="desc" />
   </div>
 </template>
@@ -15,6 +18,7 @@
 import Dimmed from "@/components/Dimmed.vue";
 import ImageWrapper from "@/components/ImageWrappers.vue";
 import SecondSection from "@/features/company/SecondSection.vue";
+import ThirdSection from "@/features/company/ThirdSection.vue";
 import Banner from "@/components/Banner.vue";
 import contents from "@/constants/common/index.json";
 import { companyMeta } from "@/utils/meta/company";
@@ -26,6 +30,7 @@ export default {
     Dimmed,
     ImageWrapper,
     SecondSection,
+    ThirdSection,
     Banner,
   },
   mounted() {
@@ -50,8 +55,15 @@ export default {
     position: relative;
   }
   .#{$this}__second-section {
-    padding-top: 207px;
-    padding-bottom: 207px;
+    padding: 0 180px;
+    background-color: rgba($color: #fffdf8, $alpha: 1);
+    height: 619px;
+    @include flex-center;
+  }
+  .#{$this}__third-section {
+    padding: 0 180px;
+    height: 619px;
+    @include flex-center;
   }
 }
 </style>
