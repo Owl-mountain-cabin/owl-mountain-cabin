@@ -1,0 +1,18 @@
+{
+    "yeonsinnae":{
+        "latitude":37.617333,
+        "longitude":126.918505
+    },
+    "gangnam":{
+        "latitude":37.500518,
+        "longitude":127.028227
+    },
+    "uijeongbu":{
+        "latitude":37.737471,
+        "longitude":127.048283
+    },
+    "sinsa":{
+        "latitude":37.519481,
+        "longitude":127.021961
+    }
+}

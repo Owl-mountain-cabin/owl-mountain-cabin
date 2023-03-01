@@ -90,12 +90,17 @@
         <Banner :title="title" :desc="desc" />
       </v-tab-item>
     </v-tabs-items>
+    <Map
+      :latitude="getCordinate['latitude']"
+      :longitude="getCordinate['longitude']"
+    />
   </div>
 </template>
 
 <script>
 import Dimmed from "@/components/Dimmed.vue";
 import ImageWrapper from "@/components/ImageWrappers.vue";
+import Map from "@/components/Map.vue";
 import SecondSection from "@/features/store/SecondSection.vue";
 import ThirdSection from "@/features/store/ThirdSection.vue";
 import ForthSection from "@/features/store/ForthSection.vue";
@@ -104,6 +109,7 @@ import contents from "@/constants/common/index.json";
 import secondContents from "@/constants/store/second.json";
 import forthContents from "@/constants/store/forth.json";
 import { storeMeta } from "@/utils/meta/store";
+import info from "@/constants/common/map.json";
 
 export default {
   name: "Store",
@@ -115,6 +121,7 @@ export default {
     ThirdSection,
     ForthSection,
     Banner,
+    Map,
   },
   mounted() {
     window.scrollTo(0, 0);
@@ -203,6 +210,37 @@ export default {
         },
       },
     };
+  },
+  computed: {
+    getCordinate() {
+      switch (this.tab) {
+        case 0:
+          return {
+            latitude: info.yeonsinnae.latitude,
+            longitude: info.yeonsinnae.longitude,
+          };
+        case 1:
+          return {
+            latitude: info.gangnam.latitude,
+            longitude: info.gangnam.longitude,
+          };
+        case 2:
+          return {
+            latitude: info.uijeongbu.latitude,
+            longitude: info.uijeongbu.longitude,
+          };
+        case 3:
+          return {
+            latitude: info.sinsa.latitude,
+            longitude: info.sinsa.longitude,
+          };
+        default:
+          return {
+            latitude: info.yeonsinnae.latitude,
+            longitude: info.yeonsinnae.longitude,
+          };
+      }
+    },
   },
 };
 </script>
