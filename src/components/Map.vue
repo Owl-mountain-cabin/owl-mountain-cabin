@@ -116,50 +116,5 @@ export default {
       }
     }
   }
-
-  .#{$this}__contents-wrapper {
-    position: absolute;
-    width: 1350px;
-    left: auto;
-    z-index: 501;
-    @include desktop-medium {
-      top: auto;
-      bottom: 50px;
-    }
-    @include desktop-small {
-      width: auto;
-      bottom: 40px;
-      left: 0;
-      padding: 0 40px;
-    }
-    @include tablet {
-      width: 100%;
-      bottom: 50px;
-      left: 20px;
-    }
-    .#{$this}__title-wrapper {
-      width: 271px;
-      @include desktop-small {
-        width: 200px;
-      }
-      @include tablet {
-        width: 140px;
-      }
-    }
-    .#{$this}__desc {
-      @include set-text(300, 80, rgba($color: $color-white, $alpha: 1));
-      font-family: $menu-font-family;
-      margin-top: 32px;
-      @include desktop-small {
-        margin-top: 10px;
-        font-size: 4rem;
-      }
-      @include tablet {
-        width: 100%;
-        font-size: 2.4rem;
-        margin: 0;
-      }
-    }
-  }
 }
 </style>
