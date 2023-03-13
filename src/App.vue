@@ -29,7 +29,54 @@ export default {
     return {
       title: contents.bannerTitle,
       desc: contents.phone,
+      popup: null,
     };
+  },
+  mounted() {
+    if (!this.isMobile()) {
+      this.getNoticePopup();
+    }
+  },
+  methods: {
+    isMobile() {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      );
+    },
+    getNoticePopup() {
+      const width = 700;
+      const height = 1000;
+      const top = 0;
+      const left = 0;
+
+      console.log(this.isMobile());
+      window.open(
+        "https://www.owlmtcabin-official.com/image/income.webp",
+        "_blank",
+        `width=${width}, height=${height}, top=${top}, left=${left}`
+      );
+
+      // const loop = setInterval(
+      //   (function () {
+      //     if (popup.closed) {
+      //       clearInterval(loop);
+
+      //       this.setStorage("popup", "true", 3000);
+      //     }
+      //   })(this),
+      //   500
+      // );
+    },
+    // setStorage(keyName, keyValue, tts) {
+    //   console.log("setStorage");
+    //   const obj = {
+    //     value: keyValue,
+    //     expire: Date.now() + tts,
+    //   };
+
+    //   const objString = JSON.stringify(obj);
+    //   window.localStorage.setItem(keyName, objString);
+    // },
   },
 };
 </script>
