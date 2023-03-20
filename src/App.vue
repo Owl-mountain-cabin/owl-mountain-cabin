@@ -44,7 +44,7 @@ export default {
       );
     },
     getNoticePopup() {
-      const width = 700;
+      const width = 300;
       const height = 1000;
       const top = 0;
       const left = 0;
