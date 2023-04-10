@@ -5,7 +5,7 @@
       <ImageWrapper :imageSrc="'store-header-image.webp'" title="STORE" />
     </div>
     <div class="owl-store__map-section">
-      <Map :cordinate="getCordinate" />
+      <Map :cordinate="getCordinate" @click="showStoreInfo" />
       <div class="owl-store__search-section">
         <div class="owl-store__tab-section">
           <v-tabs
@@ -155,9 +155,11 @@ export default {
       this.content = result.find((item) => item.name === "강남");
       this.index = 1;
     },
-
+    showStoreInfo(name) {
+      console.log("showStoreInfo", name);
+    },
     handleTab(toggle, name) {
-      toggle && toggle();
+      // toggle && toggle();
       if (name === "뒤로") {
         this.handleBack();
         this.name = name;

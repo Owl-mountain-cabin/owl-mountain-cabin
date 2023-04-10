@@ -65,6 +65,28 @@
             "title": "어두운 골목을 환하게 비춰주어 아늑한 술자리를 느낄 수 있는 \n<strong>부엉이산장 의정부점</strong>에 방문해보세요."
             }
         },
+        {    
+            "location": "경기도",
+            "name": "강남",
+            "second":{
+                "title": "부엉이산장 <strong>의정부점</strong>",
+                "desc": "의정부 메인상권 이면지역 조용한 골목길에 위치해 있으며,\n 따듯한 느낌을 내는 원목과 식물로 인테리어 하여,\n 매장에 은은한 조명과 어우러져 저녁이 되면 더욱 빛을 발하는\n 아늑한 산장컨셉 매장입니다.\n 조용한 거리에 위치해 있어 친구, 연인, 회식자리 같은 자리에서\n 편안하게 즐기실 수 있습니다.",
+                "address":"Site. 경기도 의정부시 시민로122번길 20",
+                "image": "store-uijeongbu-second1.webp"
+            },
+            "third":{
+                "images": [
+                    "store-uijeongbu-slide1.webp",
+                    "store-uijeongbu-slide2.webp",
+                    "store-uijeongbu-slide3.webp",
+                    "store-uijeongbu-slide4.webp",
+                    "store-uijeongbu-slide5.webp"
+                ]
+            },
+            "forth": {
+            "title": "어두운 골목을 환하게 비춰주어 아늑한 술자리를 느낄 수 있는 \n<strong>부엉이산장 의정부점</strong>에 방문해보세요."
+            }
+        },
         {
             "location": "서울",
             "name": "신사",

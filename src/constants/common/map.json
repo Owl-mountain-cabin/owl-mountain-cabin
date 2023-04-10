@@ -1,32 +1,36 @@
 {
     "뒤로":[
-        {"name":"연신내","latitude":37.617333,"longitude":126.918505},
-        {"name":"강남","latitude":37.500518,"longitude":127.028227},
-        {"name":"신사","latitude":37.519481,"longitude":127.021961},
-        {"name": "의정부", "latitude": 37.737471, "longitude": 127.048283 }
+        {"title":"연신내","latitude":37.617333,"longitude":126.918505},
+        {"title":"강남","latitude":37.500518,"longitude":127.028227},
+        {"title":"신사","latitude":37.519481,"longitude":127.021961},
+        {"title": "의정부", "latitude": 37.737471, "longitude": 127.048283 }
     ],
     "서울":[
-        {"name":"연신내","latitude":37.617333,"longitude":126.918505},
-        {"name":"강남","latitude":37.500518,"longitude":127.028227},
-        {"name":"신사","latitude":37.519481,"longitude":127.021961}
+        {"title":"연신내","latitude":37.617333,"longitude":126.918505},
+        {"title":"강남","latitude":37.500518,"longitude":127.028227},
+        {"title":"신사","latitude":37.519481,"longitude":127.021961}
     ],
-    "경기도":[{
-        "latitude":37.737471,
-        "longitude":127.048283
-    }],
+    "경기도":[
+        {"title": "의정부", "latitude":37.737471, "longitude":127.048283},
+        {"title":"강남","latitude":37.500518,"longitude":127.028227}
+    ],
     "연신내":[{
+        "title":"연신내",
         "latitude":37.617333,
         "longitude":126.918505
     }],
     "강남":[{
+        "title":"강남",
         "latitude":37.500518,
         "longitude":127.028227
     }],
     "의정부":[{
+        "title": "의정부",
         "latitude":37.737471,
         "longitude":127.048283
     }],
     "신사":[{
+        "title":"신사",
         "latitude":37.519481,
         "longitude":127.021961
     }]
