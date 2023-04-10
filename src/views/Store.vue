@@ -4,96 +4,93 @@
       <Dimmed :height="'100%'" />
       <ImageWrapper :imageSrc="'store-header-image.webp'" title="STORE" />
     </div>
-    <div class="owl-store__tab-section">
-      <v-tabs
-        show-arrows
-        v-model="tab"
-        fixed-tabs
-        center-active
-        centered
-        color="#F0A30F"
+    <div class="owl-store__map-section">
+      <Map
+        :latitude="getCordinate.latitude"
+        :longitude="getCordinate.longitude"
+      />
+      <div class="owl-store__search-section">
+        <div class="owl-store__tab-section">
+          <v-tabs
+            show-arrows
+            v-model="tab"
+            fixed-tabs
+            center-active
+            centered
+            color="#F0A30F"
+          >
+            <v-tabs-slider color="#F0A30F"></v-tabs-slider>
+            <v-tab> 지역검색 </v-tab>
+            <v-tab> 매장찾기 </v-tab>
+          </v-tabs>
+        </div>
+        <v-tabs-items v-model="tab">
+          <v-tab-item>
+            <div class="owl-store__tab-contents2-title">지역검색</div>
+            <div class="owl-store__tab-contents2">
+              <v-item-group :value="this.current">
+                <v-row>
+                  <v-col
+                    v-for="(item, idx) in list"
+                    :key="item.name"
+                    cols="6"
+                    md="2"
+                    sm="2"
+                    lg="6"
+                  >
+                    <v-item v-slot="{ active, toggle }">
+                      <v-card
+                        :color="active ? '#F0A30F' : ''"
+                        class="d-flex align-center"
+                        dark
+                        height="50"
+                        @click="handleTab(toggle, item.name)"
+                      >
+                        <v-scroll-y-transition>
+                          <div
+                            v-if="idx === 0 && index !== 0"
+                            class="flex-grow-1 text-center"
+                          >
+                            뒤로
+                          </div>
+                          <div class="flex-grow-1 text-center">
+                            {{ item.name }}
+                          </div>
+                        </v-scroll-y-transition>
+                      </v-card>
+                    </v-item>
+                  </v-col>
+                </v-row>
+              </v-item-group>
+            </div>
+          </v-tab-item>
+        </v-tabs-items>
+        <v-tab-item>1 </v-tab-item>
+      </div>
+      <div v-if="Object.keys(content).length !== 0">
+        <div class="owl-store__second-section">
+          <SecondSection
+            :title="content.second.title"
+            :desc="content.second.desc"
+            :address="content.second.address"
+            :image="content.second.image"
+          />
+        </div>
+        <div class="owl-store__third-section">
+          <ThirdSection :images="content.third.images" />
+        </div>
+        <div class="owl-store__forth-section">
+          <ForthSection :title="content.forth.title" />
+        </div>
+        <Banner :title="title" :desc="desc" />
+      </div>
+      <div
+        v-if="Object.keys(content).length === 0"
+        class="owl-store__second-empty-section"
       >
-        <v-tabs-slider color="#F0A30F"></v-tabs-slider>
-        <v-tab> 연신내점 </v-tab>
-        <v-tab> 강남점 </v-tab>
-        <v-tab> 의정부점 </v-tab>
-        <v-tab> 신사점 </v-tab>
-      </v-tabs>
+        <SecondEmptySection :title="emptyTitle" />
+      </div>
     </div>
-    <v-tabs-items v-model="tab">
-      <v-tab-item>
-        <div class="owl-store__second-section">
-          <SecondSection
-            :title="yeonsinnae.second.title"
-            :desc="yeonsinnae.second.desc"
-            :address="yeonsinnae.second.address"
-            :image="yeonsinnae.second.image"
-          />
-        </div>
-        <div class="owl-store__third-section">
-          <ThirdSection :images="yeonsinnae.third.images" />
-        </div>
-        <div class="owl-store__forth-section">
-          <ForthSection :title="yeonsinnae.forth.title" />
-        </div>
-        <Banner :title="title" :desc="desc" />
-      </v-tab-item>
-      <v-tab-item>
-        <div class="owl-store__second-section">
-          <SecondSection
-            :title="gangnam.second.title"
-            :desc="gangnam.second.desc"
-            :address="gangnam.second.address"
-            :image="gangnam.second.image"
-          />
-        </div>
-        <div class="owl-store__third-section">
-          <ThirdSection :images="gangnam.third.images" />
-        </div>
-        <div class="owl-store__forth-section">
-          <ForthSection :title="gangnam.forth.title" />
-        </div>
-        <Banner :title="title" :desc="desc" />
-      </v-tab-item>
-      <v-tab-item>
-        <div class="owl-store__second-section">
-          <SecondSection
-            :title="uijeongbu.second.title"
-            :desc="uijeongbu.second.desc"
-            :address="uijeongbu.second.address"
-            :image="uijeongbu.second.image"
-          />
-        </div>
-        <div class="owl-store__third-section">
-          <ThirdSection :images="uijeongbu.third.images" />
-        </div>
-        <div class="owl-store__forth-section">
-          <ForthSection :title="uijeongbu.forth.title" />
-        </div>
-        <Banner :title="title" :desc="desc" />
-      </v-tab-item>
-      <v-tab-item>
-        <div class="owl-store__second-section">
-          <SecondSection
-            :title="sinsa.second.title"
-            :desc="sinsa.second.desc"
-            :address="sinsa.second.address"
-            :image="sinsa.second.image"
-          />
-        </div>
-        <div class="owl-store__third-section">
-          <ThirdSection :images="sinsa.third.images" />
-        </div>
-        <div class="owl-store__forth-section">
-          <ForthSection :title="sinsa.forth.title" />
-        </div>
-        <Banner :title="title" :desc="desc" />
-      </v-tab-item>
-    </v-tabs-items>
-    <Map
-      :latitude="getCordinate['latitude']"
-      :longitude="getCordinate['longitude']"
-    />
   </div>
 </template>
 
@@ -102,12 +99,12 @@ import Dimmed from "@/components/Dimmed.vue";
 import ImageWrapper from "@/components/ImageWrappers.vue";
 import Map from "@/components/Map.vue";
 import SecondSection from "@/features/store/SecondSection.vue";
+import SecondEmptySection from "@/features/company/SecondSection.vue";
 import ThirdSection from "@/features/store/ThirdSection.vue";
 import ForthSection from "@/features/store/ForthSection.vue";
 import Banner from "@/components/Banner.vue";
 import contents from "@/constants/common/index.json";
 import secondContents from "@/constants/store/second.json";
-import forthContents from "@/constants/store/forth.json";
 import { storeMeta } from "@/utils/meta/store";
 import info from "@/constants/common/map.json";
 
@@ -118,6 +115,7 @@ export default {
     Dimmed,
     ImageWrapper,
     SecondSection,
+    SecondEmptySection,
     ThirdSection,
     ForthSection,
     Banner,
@@ -125,95 +123,25 @@ export default {
   },
   mounted() {
     window.scrollTo(0, 0);
+    this.init();
   },
   data() {
     return {
       title: contents.bannerTitle,
       desc: contents.phone,
-      tab: "연신내점",
-      gangnam: {
-        second: {
-          title: secondContents["GANGNAM"].title,
-          desc: secondContents["GANGNAM"].desc,
-          address: secondContents["GANGNAM"].address,
-          image: "store-gangnam-second1.webp",
-        },
-        third: {
-          images: [
-            "store-gangnam-slide1.webp",
-            "store-gangnam-slide2.webp",
-            "store-gangnam-slide3.webp",
-            "store-gangnam-slide4.webp",
-            "store-gangnam-slide5.webp",
-            "store-gangnam-slide6.webp",
-          ],
-        },
-        forth: {
-          title: forthContents["GANGNAM"].title,
-        },
-      },
-      yeonsinnae: {
-        second: {
-          title: secondContents["YEONSINNAE"].title,
-          desc: secondContents["YEONSINNAE"].desc,
-          address: secondContents["YEONSINNAE"].address,
-          image: "store-yeonsin-second1.webp",
-        },
-        third: {
-          images: [
-            "store-yeonsin-slide1.webp",
-            "store-yeonsin-slide2.webp",
-            "store-yeonsin-slide3.webp",
-          ],
-        },
-        forth: {
-          title: forthContents["YEONSINNAE"].title,
-        },
-      },
-      uijeongbu: {
-        second: {
-          title: secondContents["UIJEONGBU"].title,
-          desc: secondContents["UIJEONGBU"].desc,
-          address: secondContents["UIJEONGBU"].address,
-          image: "store-uijeongbu-second1.webp",
-        },
-        third: {
-          images: [
-            "store-uijeongbu-slide1.webp",
-            "store-uijeongbu-slide2.webp",
-            "store-uijeongbu-slide3.webp",
-            "store-uijeongbu-slide4.webp",
-            "store-uijeongbu-slide5.webp",
-          ],
-        },
-        forth: {
-          title: forthContents["UIJEONGBU"].title,
-        },
-      },
-      sinsa: {
-        second: {
-          title: secondContents["SINSA"].title,
-          desc: secondContents["SINSA"].desc,
-          address: secondContents["SINSA"].address,
-          image: "store-sinsa-second1.webp",
-        },
-        third: {
-          images: [
-            "store-sinsa-slide1.webp",
-            "store-sinsa-slide2.webp",
-            "store-sinsa-slide3.webp",
-            "store-sinsa-slide4.webp",
-          ],
-        },
-        forth: {
-          title: forthContents["SINSA"].title,
-        },
-      },
+      tab: "지역검색",
+      current: "",
+      location: "",
+      originalList: [],
+      list: [],
+      content: {},
+      index: 0,
+      emptyTitle: "지역을 <span class='stressed'>선택</span>해주세요.",
     };
   },
   computed: {
     getCordinate() {
-      switch (this.tab) {
+      switch (this.index) {
         case 0:
           return {
             latitude: info.yeonsinnae.latitude,
@@ -242,33 +170,80 @@ export default {
       }
     },
   },
+  methods: {
+    init() {
+      const result = [...secondContents.data];
+      this.originalList = [...result];
+      this.list = [
+        { name: "뒤로" },
+        ...new Set(result.filter((item) => item.location === "서울")),
+      ];
+      this.current = result.findIndex((item) => item.name === "강남") + 1;
+      this.location = "서울";
+      this.content = result.find((item) => item.name === "강남");
+      this.index = 1;
+    },
+    handleTab(toggle, name) {
+      toggle && toggle();
+
+      if (name === "뒤로") {
+        this.handleBack();
+        return;
+      }
+
+      if (this.index === 0) {
+        this.handleTabFirstChange(name);
+        return;
+      }
+
+      if (this.index === 1) {
+        this.handleTabSecondChange(name);
+        return;
+      }
+    },
+    handleBack() {
+      this.index -= 1;
+      const result = [
+        ...new Set(this.originalList.map((item) => item.location)),
+      ];
+      this.current = 0;
+      this.list = [...result.map((item) => ({ name: item }))];
+      this.location = "";
+      this.content = {};
+    },
+    handleTabFirstChange(name) {
+      this.index += 1;
+      this.location = name;
+      this.list = [
+        { name: "뒤로" },
+        ...this.originalList.filter((item) => item.location === name),
+      ];
+      this.handleTabSecondChange(this.list[1].name);
+    },
+    handleTabSecondChange(name) {
+      console.log(name);
+      const compare = this.originalList.filter(
+        (item) => item.location === this.location
+      );
+      let current = compare.findIndex((item) => item.name === name);
+      if (current === compare.length) {
+        current = current - 1;
+      } else {
+        current = current + 1;
+      }
+
+      this.current = current;
+      this.content = this.originalList.find((item) => item.name === name);
+    },
+  },
 };
 </script>
 
 <style lang="scss">
 .owl-store {
   $this: "owl-store";
+  background: rgba($color: $color-primary, $alpha: 0.4);
 
-  .#{$this}__tab-section {
-    padding: 122px 0;
-    @include desktop-small {
-      padding: 100px 0;
-    }
-    @include tablet {
-      padding: 80px 0;
-    }
-    .v-tab {
-      @include set-text(400, 16, rgba($color: $color-footer, $alpha: 1));
-      @include tablet {
-        border-bottom: 2px solid #ddd;
-        font-size: 0.8rem;
-      }
-      &.v-tab--active {
-        color: $color-accent;
-        font-weight: 600;
-      }
-    }
-  }
   .#{$this}__section {
     height: 100vh;
   }
@@ -283,6 +258,9 @@ export default {
     @include tablet {
       padding: 0 20px;
     }
+  }
+  .#{$this}__second-empty-section {
+    padding-bottom: 122px;
   }
   .#{$this}__third-section {
     padding-top: 266px;
@@ -300,6 +278,70 @@ export default {
     }
     @include tablet {
       padding: 50px 0;
+    }
+  }
+  .#{$this}__map-section {
+    padding-top: 20px;
+    position: relative;
+    .#{$this}__search-section {
+      position: absolute;
+      left: 80px;
+      top: 80px;
+      width: 400px;
+      height: 700px;
+      background: rgba($color: #ffffff, $alpha: 1);
+      z-index: 100;
+      @include box-shadow(0, 0, 10px, 0, rgba($color: black, $alpha: 0.4));
+
+      .#{$this}__tab-section {
+        padding: 0;
+        @include desktop-small {
+          padding: 100px 0;
+        }
+        @include tablet {
+          padding: 80px 20px;
+        }
+
+        .v-tab {
+          @include set-text(400, 16, rgba($color: $color-footer, $alpha: 1));
+          @include tablet {
+            border-bottom: 2px solid #ddd;
+            font-size: 0.8rem;
+          }
+          &.v-tab--active {
+            color: $color-accent;
+            font-weight: 600;
+          }
+        }
+      }
+      .#{$this}__tab-contents2-title {
+        width: 100%;
+        padding: 40px 25px;
+        margin-top: 5px;
+        text-align: center;
+        @include set-text(bold, 26, rgba($color: $color-title, $alpha: 0.7));
+        background: rgba($color: $color-accent, $alpha: 1);
+      }
+      .#{$this}__tab-contents2 {
+        padding: 25px;
+        @include desktop-small {
+          padding: 100px 25px;
+        }
+        @include tablet {
+          padding: 80px 25px;
+        }
+        .v-tab {
+          @include set-text(400, 16, rgba($color: $color-footer, $alpha: 1));
+          @include tablet {
+            border-bottom: 2px solid #ddd;
+            font-size: 0.8rem;
+          }
+          &.v-tab--active {
+            color: $color-accent;
+            font-weight: 600;
+          }
+        }
+      }
     }
   }
 }

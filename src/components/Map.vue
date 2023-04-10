@@ -90,7 +90,7 @@ export default {
 <style lang="scss">
 .owl-map-wrapper {
   width: 100%;
-  height: 400px;
+  height: 800px;
   $this: "owl-map";
   @include tablet {
     height: 400px;
