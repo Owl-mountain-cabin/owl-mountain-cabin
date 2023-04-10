@@ -5,10 +5,7 @@
       <ImageWrapper :imageSrc="'store-header-image.webp'" title="STORE" />
     </div>
     <div class="owl-store__map-section">
-      <Map
-        :latitude="getCordinate.latitude"
-        :longitude="getCordinate.longitude"
-      />
+      <Map :cordinate="getCordinate" />
       <div class="owl-store__search-section">
         <div class="owl-store__tab-section">
           <v-tabs
@@ -134,6 +131,7 @@ export default {
       location: "",
       originalList: [],
       list: [],
+      name: "강남",
       content: {},
       index: 0,
       emptyTitle: "지역을 <span class='stressed'>선택</span>해주세요.",
@@ -141,33 +139,7 @@ export default {
   },
   computed: {
     getCordinate() {
-      switch (this.index) {
-        case 0:
-          return {
-            latitude: info.yeonsinnae.latitude,
-            longitude: info.yeonsinnae.longitude,
-          };
-        case 1:
-          return {
-            latitude: info.gangnam.latitude,
-            longitude: info.gangnam.longitude,
-          };
-        case 2:
-          return {
-            latitude: info.uijeongbu.latitude,
-            longitude: info.uijeongbu.longitude,
-          };
-        case 3:
-          return {
-            latitude: info.sinsa.latitude,
-            longitude: info.sinsa.longitude,
-          };
-        default:
-          return {
-            latitude: info.yeonsinnae.latitude,
-            longitude: info.yeonsinnae.longitude,
-          };
-      }
+      return info[this.name];
     },
   },
   methods: {
@@ -183,21 +155,25 @@ export default {
       this.content = result.find((item) => item.name === "강남");
       this.index = 1;
     },
+
     handleTab(toggle, name) {
       toggle && toggle();
-
       if (name === "뒤로") {
         this.handleBack();
+        this.name = name;
         return;
       }
 
       if (this.index === 0) {
+        console.log(name);
         this.handleTabFirstChange(name);
+        this.name = name;
         return;
       }
 
       if (this.index === 1) {
         this.handleTabSecondChange(name);
+        this.name = name;
         return;
       }
     },
@@ -218,10 +194,8 @@ export default {
         { name: "뒤로" },
         ...this.originalList.filter((item) => item.location === name),
       ];
-      this.handleTabSecondChange(this.list[1].name);
     },
     handleTabSecondChange(name) {
-      console.log(name);
       const compare = this.originalList.filter(
         (item) => item.location === this.location
       );
