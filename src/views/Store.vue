@@ -61,9 +61,17 @@
               </v-item-group>
             </div>
           </v-tab-item>
+          <v-tab-item>
+            <div class="owl-store__tab-contents2-title">매장찾기</div>
+          </v-tab-item>
         </v-tabs-items>
-        <v-tab-item>1 </v-tab-item>
       </div>
+    </div>
+    <v-dialog
+      v-model="dialog"
+      :scrim="false"
+      transition="dialog-bottom-transition"
+    >
       <div v-if="Object.keys(content).length !== 0">
         <div class="owl-store__second-section">
           <SecondSection
@@ -87,7 +95,7 @@
       >
         <SecondEmptySection :title="emptyTitle" />
       </div>
-    </div>
+    </v-dialog>
   </div>
 </template>
 
@@ -134,6 +142,7 @@ export default {
       name: "강남",
       content: {},
       index: 0,
+      dialog: false,
       emptyTitle: "지역을 <span class='stressed'>선택</span>해주세요.",
     };
   },
@@ -156,6 +165,9 @@ export default {
       this.index = 1;
     },
     showStoreInfo(name) {
+      setTimeout(() => {
+        this.dialog = true;
+      }, 1000);
       console.log("showStoreInfo", name);
     },
     handleTab(toggle, name) {
@@ -226,36 +238,7 @@ export default {
   .#{$this}__first-section {
     position: relative;
   }
-  .#{$this}__second-section {
-    padding: 0 233px 0 329px;
-    @include desktop-small {
-      padding: 0 120px;
-    }
-    @include tablet {
-      padding: 0 20px;
-    }
-  }
-  .#{$this}__second-empty-section {
-    padding-bottom: 122px;
-  }
-  .#{$this}__third-section {
-    padding-top: 266px;
-    padding-bottom: 199px;
-    @include tablet {
-      padding: 80px 0;
-    }
-  }
-  .#{$this}__forth-section {
-    padding-top: 155px;
-    padding-bottom: 155px;
-    background: rgba($color: #edede5, $alpha: 0.4);
-    @include desktop-small {
-      padding: 155px 0 200px 0;
-    }
-    @include tablet {
-      padding: 50px 0;
-    }
-  }
+
   .#{$this}__map-section {
     padding-top: 20px;
     position: relative;
@@ -319,6 +302,48 @@ export default {
         }
       }
     }
+  }
+}
+
+.v-dialog__content {
+  z-index: 800 !important;
+}
+
+.v-dialog {
+  background: rgba($color: #fff, $alpha: 1);
+  max-width: 90%;
+}
+
+.owl-store__second-section {
+  padding: 0 233px 0 329px;
+  @include desktop-small {
+    padding: 0 120px;
+  }
+  @include tablet {
+    padding: 0 20px;
+  }
+}
+.owl-store__second-empty-section {
+  padding-bottom: 122px;
+}
+
+.owl-store__third-section {
+  padding-top: 266px;
+  padding-bottom: 199px;
+  width: 500px;
+  @include tablet {
+    padding: 80px 0;
+  }
+}
+.owl-store__forth-section {
+  padding-top: 155px;
+  padding-bottom: 155px;
+  background: rgba($color: #edede5, $alpha: 0.4);
+  @include desktop-small {
+    padding: 155px 0 200px 0;
+  }
+  @include tablet {
+    padding: 50px 0;
   }
 }
 </style>

@@ -21,6 +21,6 @@ export default {
   left: 0;
   width: 100%;
   background-color: rgba($color: $color-black, $alpha: 0.5);
-  z-index: 500;
+  z-index: 300;
 }
 </style>
