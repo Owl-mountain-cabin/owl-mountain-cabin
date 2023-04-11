@@ -65,28 +65,6 @@
             "title": "어두운 골목을 환하게 비춰주어 아늑한 술자리를 느낄 수 있는 \n<strong>부엉이산장 의정부점</strong>에 방문해보세요."
             }
         },
-        {    
-            "location": "경기도",
-            "name": "강남",
-            "second":{
-                "title": "부엉이산장 <strong>의정부점</strong>",
-                "desc": "의정부 메인상권 이면지역 조용한 골목길에 위치해 있으며,\n 따듯한 느낌을 내는 원목과 식물로 인테리어 하여,\n 매장에 은은한 조명과 어우러져 저녁이 되면 더욱 빛을 발하는\n 아늑한 산장컨셉 매장입니다.\n 조용한 거리에 위치해 있어 친구, 연인, 회식자리 같은 자리에서\n 편안하게 즐기실 수 있습니다.",
-                "address":"Site. 경기도 의정부시 시민로122번길 20",
-                "image": "store-uijeongbu-second1.webp"
-            },
-            "third":{
-                "images": [
-                    "store-uijeongbu-slide1.webp",
-                    "store-uijeongbu-slide2.webp",
-                    "store-uijeongbu-slide3.webp",
-                    "store-uijeongbu-slide4.webp",
-                    "store-uijeongbu-slide5.webp"
-                ]
-            },
-            "forth": {
-            "title": "어두운 골목을 환하게 비춰주어 아늑한 술자리를 느낄 수 있는 \n<strong>부엉이산장 의정부점</strong>에 방문해보세요."
-            }
-        },
         {
             "location": "서울",
             "name": "신사",
@@ -107,6 +85,138 @@
             "forth": {
             "title": "어두운 골목을 환하게 비춰주어 아늑한 술자리를 느낄 수 있는 \n<strong>부엉이산장 신사점</strong>에 방문해보세요."
             }
+        },
+        {    
+            "location": "서울",
+            "name": "한양대",
+            "second":{
+                "title": "부엉이산장 <strong>한양대점</strong>",
+                "desc": "부엉이산장 한양대점은 다양한 상권(오피스, 주택, 대학교)이 공존하는 곳에\n 위치한 매장으로, 도심속 현대인들의 아늑한 아지트라는 부엉이산장의 컨셉이\n 더욱이 돋보이는 매장입니다.\n 한양대 정문 먹거리상권 초입에서, 멀리서도 한눈에 보이는 부엉이산장만의\n 확실한 컨셉의 익스테리어를 통하여 쉽게 찾아올 수 있도록 조성되어 있습니다.\n 매장 내 인테리어는 부엉이와 앤틱한 소품들로 부엉이산장만의 분위기를 더욱 살려내었으며,\n다양한 음식과 함께 즐길 수 있는 주류구성도 누구나 부담없이 즐길수 있는 매장으로\n운영중에 있습니다.",
+                "address":"Site. 서울 성동구 마조로 14",
+                "image": "store-hanyang-second1.webp"
+            },
+            "third":{
+                "images": [
+                    "store-hanyang-slide1.webp",
+                    "store-hanyang-slide2.webp",
+                    "store-hanyang-slide3.webp",
+                    "store-hanyang-slide4.webp"
+                ]
+            },
+            "forth": {
+            "title": "어두운 골목을 환하게 비춰주어 아늑한 술자리를 느낄 수 있는 \n<strong>부엉이산장 한양대점</strong>에 방문해보세요."
+            }
+        },
+         {    
+            "location": "전라남도",
+            "name": "광주첨단",
+            "second":{
+                "title": "부엉이산장 <strong>광주첨단점</strong>",
+                "desc": "광주첨단 메인상권 이면지역 조용한 골목길에 위치해 있으며,\n 따듯한 느낌을 내는 원목과 식물로 인테리어 하여,\n 매장에 은은한 조명과 어우러져 저녁이 되면 더욱 빛을 발하는\n 아늑한 산장컨셉 매장입니다.\n 조용한 거리에 위치해 있어 친구, 연인, 회식자리 같은 자리에서\n 편안하게 즐기실 수 있습니다.",
+                "address":"Site. 광주 광산구 임방울대로826번길 30 103, 104호",
+                "image": "store-uijeongbu-second1.webp"
+            },
+            "third":{
+                "images": [
+                    "store-uijeongbu-slide1.webp",
+                    "store-uijeongbu-slide2.webp",
+                    "store-uijeongbu-slide3.webp",
+                    "store-uijeongbu-slide4.webp",
+                    "store-uijeongbu-slide5.webp"
+                ]
+            },
+            "forth": {
+            "title": "어두운 골목을 환하게 비춰주어 아늑한 술자리를 느낄 수 있는 \n<strong>부엉이산장 광주첨단점</strong>에 방문해보세요."
+            }
+        },
+        {    
+            "location": "서울",
+            "name": "강남지오다노",
+            "second":{
+                "title": "부엉이산장 <strong> 강남지오다노점</strong>",
+                "desc": " 강남지오다노 메인상권 이면지역 조용한 골목길에 위치해 있으며,\n 따듯한 느낌을 내는 원목과 식물로 인테리어 하여,\n 매장에 은은한 조명과 어우러져 저녁이 되면 더욱 빛을 발하는\n 아늑한 산장컨셉 매장입니다.\n 조용한 거리에 위치해 있어 친구, 연인, 회식자리 같은 자리에서\n 편안하게 즐기실 수 있습니다.",
+                "address":"Site. 서울 서초구 강남대로65길 7, 1층",
+                "image": "store-uijeongbu-second1.webp"
+            },
+            "third":{
+                "images": [
+                    "store-uijeongbu-slide1.webp",
+                    "store-uijeongbu-slide2.webp",
+                    "store-uijeongbu-slide3.webp",
+                    "store-uijeongbu-slide4.webp",
+                    "store-uijeongbu-slide5.webp"
+                ]
+            },
+            "forth": {
+            "title": "어두운 골목을 환하게 비춰주어 아늑한 술자리를 느낄 수 있는 \n<strong>부엉이산장  강남지오다노점</strong>에 방문해보세요."
+            }
+        },
+        {    
+            "location": "경기도",
+            "name": "송도",
+            "second":{
+                "title": "부엉이산장 <strong>송도점</strong>",
+                "desc": "송도 메인상권 이면지역 조용한 골목길에 위치해 있으며,\n 따듯한 느낌을 내는 원목과 식물로 인테리어 하여,\n 매장에 은은한 조명과 어우러져 저녁이 되면 더욱 빛을 발하는\n 아늑한 산장컨셉 매장입니다.\n 조용한 거리에 위치해 있어 친구, 연인, 회식자리 같은 자리에서\n 편안하게 즐기실 수 있습니다.",
+                "address":"Site. 인천광역시 연수구 하모니로 158 (송도타임스페이스) C동 101호, 102호",
+                "image": "store-uijeongbu-second1.webp"
+            },
+            "third":{
+                "images": [
+                    "store-uijeongbu-slide1.webp",
+                    "store-uijeongbu-slide2.webp",
+                    "store-uijeongbu-slide3.webp",
+                    "store-uijeongbu-slide4.webp",
+                    "store-uijeongbu-slide5.webp"
+                ]
+            },
+            "forth": {
+            "title": "어두운 골목을 환하게 비춰주어 아늑한 술자리를 느낄 수 있는 \n<strong>부엉이산장 송도점</strong>에 방문해보세요."
+            }
+        },
+        {    
+            "location": "경기도",
+            "name": "인하대",
+            "second":{
+                "title": "부엉이산장 <strong>인하대점</strong>",
+                "desc": "인하대 메인상권 이면지역 조용한 골목길에 위치해 있으며,\n 따듯한 느낌을 내는 원목과 식물로 인테리어 하여,\n 매장에 은은한 조명과 어우러져 저녁이 되면 더욱 빛을 발하는\n 아늑한 산장컨셉 매장입니다.\n 조용한 거리에 위치해 있어 친구, 연인, 회식자리 같은 자리에서\n 편안하게 즐기실 수 있습니다.",
+                "address":"Site. 인천광역시 미추홀구 용정공원로83번길 49 인하대역 헤리움메트로타워 130호,131호",
+                "image": "store-uijeongbu-second1.webp"
+            },
+            "third":{
+                "images": [
+                    "store-uijeongbu-slide1.webp",
+                    "store-uijeongbu-slide2.webp",
+                    "store-uijeongbu-slide3.webp",
+                    "store-uijeongbu-slide4.webp",
+                    "store-uijeongbu-slide5.webp"
+                ]
+            },
+            "forth": {
+            "title": "어두운 골목을 환하게 비춰주어 아늑한 술자리를 느낄 수 있는 \n<strong>부엉이산장 인하대점</strong>에 방문해보세요."
+            }
+        },
+        {    
+            "location": "경기도",
+            "name": "서현",
+            "second":{
+                "title": "부엉이산장 <strong>서현점</strong>",
+                "desc": "서현 메인상권 이면지역 조용한 골목길에 위치해 있으며,\n 따듯한 느낌을 내는 원목과 식물로 인테리어 하여,\n 매장에 은은한 조명과 어우러져 저녁이 되면 더욱 빛을 발하는\n 아늑한 산장컨셉 매장입니다.\n 조용한 거리에 위치해 있어 친구, 연인, 회식자리 같은 자리에서\n 편안하게 즐기실 수 있습니다.",
+                "address":"Site. 성남시 분당구 서현로 210번길 17 광림프라자 203,204호",
+                "image": "store-uijeongbu-second1.webp"
+            },
+            "third":{
+                "images": [
+                    "store-uijeongbu-slide1.webp",
+                    "store-uijeongbu-slide2.webp",
+                    "store-uijeongbu-slide3.webp",
+                    "store-uijeongbu-slide4.webp",
+                    "store-uijeongbu-slide5.webp"
+                ]
+            },
+            "forth": {
+            "title": "어두운 골목을 환하게 비춰주어 아늑한 술자리를 느낄 수 있는 \n<strong>부엉이산장 서현점</strong>에 방문해보세요."
+            }
         }
+         
     ]
 }
