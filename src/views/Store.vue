@@ -63,6 +63,25 @@
           </v-tab-item>
           <v-tab-item>
             <div class="owl-store__tab-contents2-title">매장찾기</div>
+            <v-autocomplete
+              autofocus
+              class="owl-store__search"
+              aria-placeholder="매장명을 입력해주세요."
+              label="매장명을 입력해주세요."
+              :items="[
+                '연신내',
+                '강남',
+                '신사',
+                '한양대',
+                '강남지오다노',
+                '의정부',
+                '송도',
+                '인하대',
+                '서현',
+                '광주첨단',
+              ]"
+              :search-input.sync="searchStore"
+            ></v-autocomplete>
           </v-tab-item>
         </v-tabs-items>
       </div>
@@ -72,6 +91,16 @@
       :scrim="false"
       transition="dialog-bottom-transition"
     >
+      <v-toolbar dark color="#F6F4EE">
+        <v-btn
+          class="owl-store__dialog-close-btn"
+          icon
+          dark
+          @click="dialog = false"
+        >
+          <v-icon color="#000000">mdi-close</v-icon>
+        </v-btn>
+      </v-toolbar>
       <div v-if="Object.keys(content).length !== 0">
         <div class="owl-store__second-section">
           <SecondSection
@@ -89,12 +118,6 @@
         </div>
         <Banner :title="title" :desc="desc" />
       </div>
-      <div
-        v-if="Object.keys(content).length === 0"
-        class="owl-store__second-empty-section"
-      >
-        <SecondEmptySection :title="emptyTitle" />
-      </div>
     </v-dialog>
   </div>
 </template>
@@ -104,7 +127,6 @@ import Dimmed from "@/components/Dimmed.vue";
 import ImageWrapper from "@/components/ImageWrappers.vue";
 import Map from "@/components/Map.vue";
 import SecondSection from "@/features/store/SecondSection.vue";
-import SecondEmptySection from "@/features/company/SecondSection.vue";
 import ThirdSection from "@/features/store/ThirdSection.vue";
 import ForthSection from "@/features/store/ForthSection.vue";
 import Banner from "@/components/Banner.vue";
@@ -120,7 +142,6 @@ export default {
     Dimmed,
     ImageWrapper,
     SecondSection,
-    SecondEmptySection,
     ThirdSection,
     ForthSection,
     Banner,
@@ -223,6 +244,9 @@ export default {
       this.current = current;
       this.content = this.originalList.find((item) => item.name === name);
     },
+    searchStore() {
+      console.log("searchStore");
+    },
   },
 };
 </script>
@@ -301,6 +325,9 @@ export default {
           }
         }
       }
+      .#{$this}__search {
+        padding: 30px 15px;
+      }
     }
   }
 }
@@ -312,10 +339,15 @@ export default {
 .v-dialog {
   background: rgba($color: #fff, $alpha: 1);
   max-width: 90%;
+
+  .v-toolbar__content {
+    justify-content: flex-end;
+    align-items: center;
+  }
 }
 
 .owl-store__second-section {
-  padding: 0 233px 0 329px;
+  padding: 100px 233px 0 329px;
   @include desktop-small {
     padding: 0 120px;
   }
@@ -328,9 +360,8 @@ export default {
 }
 
 .owl-store__third-section {
-  padding-top: 266px;
-  padding-bottom: 199px;
-  width: 500px;
+  padding: 150px 0;
+  width: 100%;
   @include tablet {
     padding: 80px 0;
   }

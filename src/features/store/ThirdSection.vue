@@ -21,9 +21,14 @@ export default {
   data() {
     return {
       swiperOptions: {
+        variableWidth: true,
         slidesPerView: 3,
         centeredSlides: true,
         initialSlide: 1,
+        spaceBetween: 50,
+        effect: "coverflow",
+        observer: true,
+        observeParents: true,
         breakpoints: {
           320: {
             slidesPerView: 1,
@@ -113,6 +118,9 @@ export default {
   }
   .swiper-pagination-bullet-active {
     background-color: #444 !important;
+  }
+  .v-image {
+    height: 500px !important;
   }
 }
 </style>
