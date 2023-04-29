@@ -13,9 +13,9 @@ export default {
   data() {
     return {
       map: null,
+      geocoder: null,
       markers: [],
-      imageSrc:
-        "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png",
+      imageSrc: "http://localhost:8080/image/icon-spot.png",
     };
   },
 
@@ -85,7 +85,7 @@ export default {
     },
     loadScript() {
       const script = document.createElement("script");
-      script.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.VUE_APP_KAKAO_MAP}&autoload=false`; // &autoload=false api를 로드한 후 맵을 그리는 함수가 실행되도록 구현
+      script.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.VUE_APP_KAKAO_MAP}&autoload=false&libraries=services`; // &autoload=false api를 로드한 후 맵을 그리는 함수가 실행되도록 구현
       script.onload = () => window.kakao.maps.load(this.loadMap); // 스크립트 로드가 끝나면 지도를 실행될 준비가 되어 있다면 지도가 실행되도록 구현
       document.head.appendChild(script); // html>head 안에 스크립트 소스를 추가
     },
@@ -127,6 +127,7 @@ export default {
         this.map = new window.kakao.maps.Map(container, options); // 지도 생성 및 객체 리턴
         this.loadMaker(item.latitude, item.longitude, item.title); // 지도가 로드되면서 마커가 생성되도록 함수 추가
       });
+      this.geocoder = new window.kakao.maps.services.Geocoder();
     },
   },
 };

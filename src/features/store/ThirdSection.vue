@@ -17,6 +17,10 @@ export default {
       default: () => [],
       description: "slide-images",
     },
+    effect: {
+      type: String,
+      default: "",
+    },
   },
   data() {
     return {
@@ -26,7 +30,7 @@ export default {
         centeredSlides: true,
         initialSlide: 1,
         spaceBetween: 50,
-        effect: "coverflow",
+        effect: this.effect,
         observer: true,
         observeParents: true,
         breakpoints: {
