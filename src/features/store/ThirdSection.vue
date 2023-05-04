@@ -17,13 +17,22 @@ export default {
       default: () => [],
       description: "slide-images",
     },
+    effect: {
+      type: String,
+      default: "",
+    },
   },
   data() {
     return {
       swiperOptions: {
+        variableWidth: true,
         slidesPerView: 3,
         centeredSlides: true,
         initialSlide: 1,
+        spaceBetween: 50,
+        effect: this.effect,
+        observer: true,
+        observeParents: true,
         breakpoints: {
           320: {
             slidesPerView: 1,
@@ -32,7 +41,7 @@ export default {
             slidesPerView: 1,
           },
           768: {
-            slidesPerView: 3,
+            slidesPerView: 1,
           },
         },
       },
@@ -113,6 +122,9 @@ export default {
   }
   .swiper-pagination-bullet-active {
     background-color: #444 !important;
+  }
+  .v-image {
+    height: 500px !important;
   }
 }
 </style>

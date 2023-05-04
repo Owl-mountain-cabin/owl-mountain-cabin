@@ -9,6 +9,9 @@ node_modules
 .env.development
 .env.production
 .env.*.local
+.env
+.env.development
+.env.production
 
 # Log files
 npm-debug.log*
