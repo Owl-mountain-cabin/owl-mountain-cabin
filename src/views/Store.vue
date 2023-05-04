@@ -125,9 +125,9 @@
         <div class="owl-store__forth-section">
           <ForthSection :title="content.forth.title" />
         </div>
-        <Banner :title="title" :desc="desc" />
       </div>
     </v-dialog>
+    <Banner :title="title" :desc="desc" v-if="!dialog" />
   </div>
 </template>
 
@@ -142,7 +142,8 @@ import Banner from "@/components/Banner.vue";
 import contents from "@/constants/common/index.json";
 import secondContents from "@/constants/store/second.json";
 import { storeMeta } from "@/utils/meta/store";
-import info from "@/constants/common/map.json";
+import mapInfo from "@/constants/common/map.json";
+import branches from "@/constants/common/branches.json";
 
 export default {
   name: "Store",
@@ -178,11 +179,12 @@ export default {
       search: null,
       select: null,
       images: [],
+      branches: branches.branches,
     };
   },
   computed: {
     getCordinate() {
-      return info[this.name];
+      return mapInfo[this.name];
     },
   },
   watch: {
@@ -403,6 +405,7 @@ export default {
   .v-toolbar__content {
     justify-content: flex-end;
     align-items: center;
+    background: rgba($color: $color-accent, $alpha: 1);
   }
 }
 
