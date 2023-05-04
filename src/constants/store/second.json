@@ -120,15 +120,14 @@
                 "title": "부엉이산장 <strong>광주첨단점</strong>",
                 "desc": "광주첨단 메인상권 이면지역 조용한 골목길에 위치해 있으며,\n 따듯한 느낌을 내는 원목과 식물로 인테리어 하여,\n 매장에 은은한 조명과 어우러져 저녁이 되면 더욱 빛을 발하는\n 아늑한 산장컨셉 매장입니다.\n 조용한 거리에 위치해 있어 친구, 연인, 회식자리 같은 자리에서\n 편안하게 즐기실 수 있습니다.",
                 "address":"Site. 광주 광산구 임방울대로826번길 30 103, 104호",
-                "image": "store-uijeongbu-second1.webp"
+                "image": "store-gangju-chumdan-second1.webp"
             },
             "third":{
                 "images": [
-                    "store-uijeongbu-slide1.webp",
-                    "store-uijeongbu-slide2.webp",
-                    "store-uijeongbu-slide3.webp",
-                    "store-uijeongbu-slide4.webp",
-                    "store-uijeongbu-slide5.webp"
+                    "store-gangju-chumdan-slide1.webp",
+                    "store-gangju-chumdan-slide2.webp",
+                    "store-gangju-chumdan-slide3.webp",
+                    "store-gangju-chumdan-slide4.webp"
                 ]
             },
             "forth": {
@@ -143,15 +142,14 @@
                 "title": "부엉이산장 <strong> 강남지오다노점</strong>",
                 "desc": " 강남지오다노 메인상권 이면지역 조용한 골목길에 위치해 있으며,\n 따듯한 느낌을 내는 원목과 식물로 인테리어 하여,\n 매장에 은은한 조명과 어우러져 저녁이 되면 더욱 빛을 발하는\n 아늑한 산장컨셉 매장입니다.\n 조용한 거리에 위치해 있어 친구, 연인, 회식자리 같은 자리에서\n 편안하게 즐기실 수 있습니다.",
                 "address":"Site. 서울 서초구 강남대로65길 7, 1층",
-                "image": "store-uijeongbu-second1.webp"
+                 "image": "store-gangnam-j-second1.webp"
             },
             "third":{
                 "images": [
-                    "store-uijeongbu-slide1.webp",
-                    "store-uijeongbu-slide2.webp",
-                    "store-uijeongbu-slide3.webp",
-                    "store-uijeongbu-slide4.webp",
-                    "store-uijeongbu-slide5.webp"
+                    "store-gangnam-j-slide1.webp",
+                    "store-gangnam-j-slide2.webp",
+                    "store-gangnam-j-slide3.webp",
+                    "store-gangnam-j-slide4.webp"
                 ]
             },
             "forth": {
