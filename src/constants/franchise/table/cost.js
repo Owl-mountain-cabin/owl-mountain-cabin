@@ -61,13 +61,13 @@ const Cost = {
     {
       category: "인테리어",
       history: "목공, 바닥, 천정, 벽면, 조명 등 내/외부 공사 일체",
-      price: "4140",
-      etc: "평당 180만원 (자체시공가능)",
+      price: "13,500",
+      etc: "평당 180만원",
     },
     {
       category: "주방기물/기릇",
       history: "냉장고 • 전판 • 간택기 외 홀 기물들",
-      price: "800",
+      price: "2,500",
       etc: "선택적 중고가능",
     },
     {
@@ -78,26 +78,32 @@ const Cost = {
     },
     {
       category: "의탁자",
-      history: "테이블, 의자",
-      price: "600",
+      history: "테이블, 의자 (30 Table)",
+      price: "1,500",
       etc: "4인 1조 50만원",
     },
     {
       category: "온라인마케팅비",
       history: "전문가와의 1:1 마케팅 진행",
-      price: "월 60",
+      price: "월 70",
       etc: "6개월 권장사항",
     },
     {
       category: "오픈초도비용",
       history: "유니폼 • 메뉴판 • 호출벨 등 홀 비품",
+      price: "800",
+      etc: "",
+    },
+    {
+      category: "초도물류비용",
+      history: "식자재",
       price: "500",
       etc: "",
     },
     {
       category: "합계",
       history: "",
-      price: "8500",
+      price: "20,460",
       etc: "",
     },
   ],
