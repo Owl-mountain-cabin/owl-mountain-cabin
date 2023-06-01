@@ -16,19 +16,22 @@
 </template>
 
 <script>
-import contents from "@/constants/company/second.json";
 import { lineBreak } from "@/utils/helper";
 export default {
+  props: {
+    title: {
+      type: String,
+      default: "",
+    },
+    desc: {
+      type: String,
+      default: "",
+    },
+  },
   computed: {
     checkN() {
       return (str) => lineBreak(str);
     },
-  },
-  data() {
-    return {
-      title: contents.title,
-      desc: contents.desc,
-    };
   },
 };
 </script>

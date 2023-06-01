@@ -22,7 +22,7 @@
         :subTitle="gangnamProfitSubTitle"
       />
     </div>
-    <div class="owl-franchise__forth-section">
+    <!-- <div class="owl-franchise__forth-section">
       <ForthSection
         width="w-45"
         :data="yeonsinnaeProfit"
@@ -30,7 +30,7 @@
         :title="yeonsinnaeProfitTitle"
         :subTitle="yeonsinnaeProfitSubTitle"
       />
-    </div>
+    </div> -->
     <div class="owl-franchise__fifth-section">
       <ForthSection
         width="w-35"
