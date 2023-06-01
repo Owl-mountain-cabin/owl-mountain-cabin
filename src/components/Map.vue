@@ -15,7 +15,9 @@ export default {
       map: null,
       geocoder: null,
       markers: [],
-      imageSrc: "http://localhost:8080/image/icon-spot.png",
+      baseUrl: "https://www.owlmtcabin-official.com/image/",
+      // baseUrl: "http://localhost:8080/image/",
+      imageSrc: `gangnam-spot.webp`,
     };
   },
 
@@ -62,9 +64,9 @@ export default {
           item.longitude
         );
 
-        const imageSize = new window.kakao.maps.Size(24, 35);
+        const imageSize = new window.kakao.maps.Size(162, 56);
         const markerImage = new window.kakao.maps.MarkerImage(
-          this.imageSrc,
+          `${this.baseUrl}${item.imageSrc}`,
           imageSize
         );
 
@@ -93,9 +95,9 @@ export default {
       // 마커가 표시 위치
       const markerPosition = new window.kakao.maps.LatLng(latitude, longitude);
 
-      const imageSize = new window.kakao.maps.Size(24, 35);
+      const imageSize = new window.kakao.maps.Size(162, 56);
       const markerImage = new window.kakao.maps.MarkerImage(
-        this.imageSrc,
+        this.baseUrl + this.imageSrc,
         imageSize
       );
       // 마커 생성

@@ -1,80 +1,80 @@
 {
     "뒤로":[
-        {"title":"연신내","latitude":37.617333,"longitude":126.918505},
-        {"title":"강남","latitude":37.500518,"longitude":127.028227},
-        {"title":"신사","latitude":37.519481,"longitude":127.021961},
-        {"title":"한양대","latitude":37.559030,"longitude":127.041171},
-        {"title":"강남지오다노","latitude":37.500190,"longitude":127.025348},
-        {"title": "의정부", "latitude":37.737471, "longitude":127.048283},
-        {"title":"송도","latitude":37.384267,"longitude":126.641910},
-        {"title":"인하대","latitude":37.447422,"longitude":126.648761},
-        {"title":"서현","latitude":37.385457,"longitude":127.124530},
-        {"title":"광주첨단","latitude":35.216060,"longitude":126.848306}
+        {"title":"연신내","latitude":37.617333,"longitude":126.918505,"imageSrc":"yeonsin-spot.webp" },
+        {"title":"강남","latitude":37.500518,"longitude":127.028227 ,"imageSrc":"gangnam-spot.webp"},
+        {"title":"신사","latitude":37.519481,"longitude":127.021961,"imageSrc":"sinsa-spot.webp"},
+        {"title":"한양대","latitude":37.559030,"longitude":127.041171,"imageSrc":"hanyang-spot.webp"},
+        {"title":"강남지오다노","latitude":37.500190,"longitude":127.025348,"imageSrc":"gangnam-j-spot.webp"},
+        {"title":"의정부", "latitude":37.737471, "longitude":127.048283,"imageSrc":"uijeongbu-spot.webp"},
+        {"title":"송도","latitude":37.384267,"longitude":126.641910,"imageSrc":"songdo-spot.webp"},
+        {"title":"인하대","latitude":37.447422,"longitude":126.648761,"imageSrc":"inhadae-spot.webp"},
+        {"title":"서현","latitude":37.385457,"longitude":127.124530,"imageSrc":"sehyeon-spot.webp"},
+        {"title":"광주첨단","latitude":35.216060,"longitude":126.848306,"imageSrc":"gangju-chumdan-spot.webp"}
     ],
     "서울":[
-        {"title":"연신내","latitude":37.617333,"longitude":126.918505},
-        {"title":"강남","latitude":37.500518,"longitude":127.028227},
-        {"title":"신사","latitude":37.519481,"longitude":127.021961},
-        {"title":"한양대","latitude":37.559030,"longitude":127.041171},
-        {"title":"강남지오다노","latitude":37.500190,"longitude":127.025348}
+        {"title":"연신내","latitude":37.617333,"longitude":126.918505,"imageSrc":"yeonsin-spot.webp" },
+        {"title":"강남","latitude":37.500518,"longitude":127.028227 ,"imageSrc":"gangnam-spot.webp"},
+        {"title":"신사","latitude":37.519481,"longitude":127.021961,"imageSrc":"sinsa-spot.webp"},
+        {"title":"한양대","latitude":37.559030,"longitude":127.041171,"imageSrc":"hanyang-spot.webp"},
+        {"title":"강남지오다노","latitude":37.500190,"longitude":127.025348,"imageSrc":"gangnam-j-spot.webp"}
     ],
     "경기도":[
-        {"title":"의정부", "latitude":37.737471, "longitude":127.048283},
-        {"title":"송도","latitude":37.384267,"longitude":126.641910},
-        {"title":"인하대","latitude":37.447422,"longitude":126.648761},
-        {"title":"서현","latitude":37.385457,"longitude":127.124530}
+        {"title":"의정부", "latitude":37.737471, "longitude":127.048283,"imageSrc":"uijeongbu-spot.webp"},
+        {"title":"송도","latitude":37.384267,"longitude":126.641910,"imageSrc":"songdo-spot.webp"},
+        {"title":"인하대","latitude":37.447422,"longitude":126.648761,"imageSrc":"inhadae-spot.webp"},
+        {"title":"서현","latitude":37.385457,"longitude":127.124530,"imageSrc":"sehyeon-spot.webp"}
     ],
      "전라남도":[
-        {"title": "광주첨단", "latitude":35.21606, "longitude":126.848306}
+        {"title":"광주첨단","latitude":35.216060,"longitude":126.848306,"imageSrc":"gangju-chumdan-spot.webp"}
     ],
     "연신내":[{
         "title":"연신내",
         "latitude":37.617333,
-        "longitude":126.918505
-    }],
+        "longitude":126.918505 ,
+        "imageSrc":"yeonsin-spot.webp"}],
     "강남":[{
         "title":"강남",
         "latitude":37.500518,
-        "longitude":127.028227
-    }],
+        "longitude":127.028227 ,
+        "imageSrc":"gangnam-spot.webp"}],
     "의정부":[{
         "title": "의정부",
         "latitude":37.737471,
-        "longitude":127.048283
-    }],
+        "longitude":127.048283 ,
+        "imageSrc":"uijeongbu-spot.webp"}],
     "신사":[{
         "title":"신사",
         "latitude":37.519481,
-        "longitude":127.021961
-    }],
+        "longitude":127.021961 ,
+        "imageSrc":"sinsa-spot.webp"}],
     "송도":[{
         "title":"송도",
         "latitude":37.384267,
-        "longitude":126.64191
-    }],
+        "longitude":126.64191 ,
+        "imageSrc":"songdo-spot.webp"}],
      "인하대":[{
         "title":"인하대",
         "latitude":37.447422,
-        "longitude":126.648761
-    }], 
+        "longitude":126.648761 ,
+        "imageSrc":"inhadae-spot.webp"}], 
     "서현":[{
         "title":"서현",
         "latitude":37.385457,
-        "longitude":127.12453
-    }],
+        "longitude":127.12453 ,
+        "imageSrc":"sehyeon-spot.webp"}],
     "한양대":[{
         "title":"한양대",
         "latitude":37.559030,
-        "longitude":127.041171
-    }],
+        "longitude":127.041171 ,
+        "imageSrc":"hanyang-spot.webp"}],
     "광주첨단":[{
         "title":"광주첨단",
         "latitude":35.216060,
-        "longitude":126.848306
-    }],
+        "longitude":126.848306 ,
+        "imageSrc":"gangju-chumdan-spot.webp"}],
      "강남지오다노":[{
         "title":"강남지오다노",
         "latitude":37.500190,
-        "longitude":127.025348
-    }]
+        "longitude":127.025348 ,
+        "imageSrc":"gangnam-j-spot.webp"}]
 }
