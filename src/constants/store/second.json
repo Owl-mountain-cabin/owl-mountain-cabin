@@ -164,15 +164,14 @@
                 "title": "부엉이산장 <strong>송도점</strong>",
                 "desc": "송도국제도시에 산업단지와 밀접한 위치에 있는 송도타임스페이스에 자리매김한 매장입니다.\n 대한민국 주요 산업단지와 주택층이 주가 되는 상권이며,\n 다양한 소비가 이루어지는 문화공간속에서 부엉이산장만의 독특한 감성을 자아내 많은 손님들을 이끌어,\n 오픈 첫 날 이후 계속된 웨이팅을 이루어내고 있는 매장입니다.",
                 "address":"Site. 인천광역시 연수구 하모니로 158 (송도타임스페이스) C동 101호, 102호",
-                "image": "store-uijeongbu-second1.webp"
+                "image": "store-songdo-second1.webp"
             },
             "third":{
                 "images": [
-                    "store-uijeongbu-slide1.webp",
-                    "store-uijeongbu-slide2.webp",
-                    "store-uijeongbu-slide3.webp",
-                    "store-uijeongbu-slide4.webp",
-                    "store-uijeongbu-slide5.webp"
+                    "store-songdo-slide1.webp",
+                    "store-songdo-slide2.webp",
+                    "store-songdo-slide3.webp",
+                    "store-songdo-slide4.webp"
                 ]
             },
             "forth": {
@@ -187,15 +186,11 @@
                 "title": "부엉이산장 <strong>인하대점</strong>",
                 "desc": "대학교와 주택, 오피스단지에 인접해 있는 오피스텔 상가에 위치해 있는 매장입니다.\n 부엉이산장만의 강점인 아늑한 색감의 전면 익스테리어와 측면의 개방감 있는 유리 폴딩으로,\n 사계절의 매력을 모두 느끼며 맛있는 음식과 술을 함께 즐길 수 있는 매장입니다.\n 실내에는 프라이빗한 공간과 개방감있는 공간을 따로 조성해놓아,\n 다양한 소비층을 이루는 상권의 장점을 잘 살린 매장으로,\n 현재 연일 만석과 웨이팅을 이루는 매장으로 성업중에 있습니다.",
                 "address":"Site. 인천광역시 미추홀구 용정공원로83번길 49 인하대역 헤리움메트로타워 130호,131호",
-                "image": "store-uijeongbu-second1.webp"
+                "image": "store-preparing-second1.webp"
             },
             "third":{
                 "images": [
-                    "store-uijeongbu-slide1.webp",
-                    "store-uijeongbu-slide2.webp",
-                    "store-uijeongbu-slide3.webp",
-                    "store-uijeongbu-slide4.webp",
-                    "store-uijeongbu-slide5.webp"
+                    "store-preparing-slide.webp"
                 ]
             },
             "forth": {
@@ -210,15 +205,11 @@
                 "title": "부엉이산장 <strong>서현점</strong>",
                 "desc": "서현 메인상권 이면지역 조용한 골목길에 위치해 있으며,\n 따듯한 느낌을 내는 원목과 식물로 인테리어 하여,\n 매장에 은은한 조명과 어우러져 저녁이 되면 더욱 빛을 발하는\n 아늑한 산장컨셉 매장입니다.\n 조용한 거리에 위치해 있어 친구, 연인, 회식자리 같은 자리에서\n 편안하게 즐기실 수 있습니다.",
                 "address":"Site. 성남시 분당구 서현로 210번길 17 광림프라자 203,204호",
-                "image": "store-uijeongbu-second1.webp"
+                "image": "store-preparing-second1.webp"
             },
             "third":{
                 "images": [
-                    "store-uijeongbu-slide1.webp",
-                    "store-uijeongbu-slide2.webp",
-                    "store-uijeongbu-slide3.webp",
-                    "store-uijeongbu-slide4.webp",
-                    "store-uijeongbu-slide5.webp"
+                    "store-preparing-slide.webp"
                 ]
             },
             "forth": {
