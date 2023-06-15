@@ -205,12 +205,10 @@
                 "title": "부엉이산장 <strong>서현점</strong>",
                 "desc": "서현 메인상권 이면지역 조용한 골목길에 위치해 있으며,\n 따듯한 느낌을 내는 원목과 식물로 인테리어 하여,\n 매장에 은은한 조명과 어우러져 저녁이 되면 더욱 빛을 발하는\n 아늑한 산장컨셉 매장입니다.\n 조용한 거리에 위치해 있어 친구, 연인, 회식자리 같은 자리에서\n 편안하게 즐기실 수 있습니다.",
                 "address":"Site. 성남시 분당구 서현로 210번길 17 광림프라자 203,204호",
-                "image": "store-preparing-second1.webp"
+                "image": "store-seohyen-second1.webp"
             },
             "third":{
-                "images": [
-                    "store-preparing-slide.webp"
-                ]
+                "images": [ "store-seohyen-slide1.webp","store-seohyen-slide2.webp","store-seohyen-slide3.webp","store-seohyen-slide4.webp","store-seohyen-slide5.webp"]
             },
             "forth": {
             "title": "어두운 골목을 환하게 비춰주어 아늑한 술자리를 느낄 수 있는 \n<strong>부엉이산장 서현점</strong>에 방문해보세요."
