@@ -36,6 +36,22 @@
         />
       </a>
     </div>
+    <div class="owl-footer__contents-wrapper">
+      <div class="owl-footer__desc-wrapper">Blog</div>
+      <a
+        class="owl-footer__desc-wrapper desc"
+        href="https://blog.naver.com/trinity_2020"
+        target="_blank"
+      >
+        <v-img
+          width="18px"
+          height="auto"
+          contain
+          :lazy-src="require(`@/assets/images/footer-blog.webp`)"
+          :src="require(`@/assets/images/footer-blog.webp`)"
+        />
+      </a>
+    </div>
   </footer>
 </template>
 

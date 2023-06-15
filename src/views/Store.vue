@@ -23,7 +23,12 @@
         </div>
         <v-tabs-items v-model="tab">
           <v-tab-item>
-            <div class="owl-store__tab-contents2-title">지역검색</div>
+            <div class="owl-store__tab-contents2-title">
+              지역검색
+              <div class="owl-store__tab-contents2-info">
+                부엉이 아이콘을 클릭 하시면 지점별 정보를 보실 수 있습니다.
+              </div>
+            </div>
             <div class="owl-store__tab-contents2">
               <v-item-group :value="this.current">
                 <v-row>
@@ -105,7 +110,7 @@
           class="owl-store__dialog-close-btn"
           icon
           dark
-          @click="dialog = false"
+          @click="closeModal"
         >
           <v-icon color="#000000">mdi-close</v-icon>
         </v-btn>
@@ -175,7 +180,6 @@ export default {
       index: 0,
       dialog: false,
       emptyTitle: "지역을 <span class='stressed'>선택</span>해주세요.",
-
       search: null,
       select: null,
       images: [],
@@ -198,6 +202,9 @@ export default {
     },
   },
   methods: {
+    closeModal() {
+      this.dialog = false;
+    },
     init() {
       const result = [...secondContents.data];
       this.originalList = [...result];
@@ -343,7 +350,14 @@ export default {
           }
         }
       }
+      .#{$this}__tab-contents2-info {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        @include set-text(bold, 11, rgba($color: $color-footer, $alpha: 1));
+      }
       .#{$this}__tab-contents2-title {
+        position: relative;
         width: 100%;
         padding: 40px 25px;
         margin-top: 5px;
@@ -394,6 +408,7 @@ export default {
 .v-dialog {
   background: rgba($color: #fff, $alpha: 1);
   max-width: 90%;
+  overflow-x: hidden;
   @include desktop-small {
     max-width: 80%;
   }
