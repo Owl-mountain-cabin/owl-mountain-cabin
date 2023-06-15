@@ -86,7 +86,7 @@ const Cost = {
       category: "온라인마케팅비",
       history: "전문가와의 1:1 마케팅 진행",
       price: "월 70",
-      etc: "6개월 권장사항",
+      etc: "6개월 필수진행",
     },
     {
       category: "오픈초도비용",
