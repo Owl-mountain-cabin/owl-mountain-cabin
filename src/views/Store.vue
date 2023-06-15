@@ -110,7 +110,7 @@
           class="owl-store__dialog-close-btn"
           icon
           dark
-          @click="dialog = false"
+          @click="closeModal"
         >
           <v-icon color="#000000">mdi-close</v-icon>
         </v-btn>
@@ -180,7 +180,6 @@ export default {
       index: 0,
       dialog: false,
       emptyTitle: "지역을 <span class='stressed'>선택</span>해주세요.",
-
       search: null,
       select: null,
       images: [],
@@ -203,6 +202,9 @@ export default {
     },
   },
   methods: {
+    closeModal() {
+      this.dialog = false;
+    },
     init() {
       const result = [...secondContents.data];
       this.originalList = [...result];
@@ -406,6 +408,7 @@ export default {
 .v-dialog {
   background: rgba($color: #fff, $alpha: 1);
   max-width: 90%;
+  overflow-x: hidden;
   @include desktop-small {
     max-width: 80%;
   }
