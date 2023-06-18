@@ -351,10 +351,8 @@ export default {
         }
       }
       .#{$this}__tab-contents2-info {
-        position: absolute;
-        bottom: 5px;
-        right: 5px;
-        @include set-text(bold, 11, rgba($color: $color-footer, $alpha: 1));
+        margin-top: 10px;
+        @include set-text(bold, 12, rgba($color: #c3c3c3, $alpha: 1));
       }
       .#{$this}__tab-contents2-title {
         position: relative;
