@@ -105,30 +105,32 @@
       :scrim="false"
       transition="dialog-bottom-transition"
     >
-      <v-toolbar dark color="#F6F4EE">
-        <v-btn
-          class="owl-store__dialog-close-btn"
-          icon
-          dark
-          @click="closeModal"
-        >
-          <v-icon color="#000000">mdi-close</v-icon>
-        </v-btn>
-      </v-toolbar>
-      <div v-if="Object.keys(content).length !== 0">
-        <div class="owl-store__second-section">
-          <SecondSection
-            :title="content.second.title"
-            :desc="content.second.desc"
-            :address="content.second.address"
-            :image="content.second.image"
-          />
-        </div>
-        <div class="owl-store__third-section">
-          <ThirdSection :images="content.third.images" effect="coverflow" />
-        </div>
-        <div class="owl-store__forth-section">
-          <ForthSection :title="content.forth.title" />
+      <div class="dialog-content" v-click-outside="closeModal">
+        <v-toolbar dark color="#F6F4EE">
+          <v-btn
+            class="owl-store__dialog-close-btn"
+            icon
+            dark
+            @click="closeModal"
+          >
+            <v-icon color="#000000">mdi-close</v-icon>
+          </v-btn>
+        </v-toolbar>
+        <div v-if="Object.keys(content).length !== 0">
+          <div class="owl-store__second-section">
+            <SecondSection
+              :title="content.second.title"
+              :desc="content.second.desc"
+              :address="content.second.address"
+              :image="content.second.image"
+            />
+          </div>
+          <div class="owl-store__third-section">
+            <ThirdSection :images="content.third.images" effect="coverflow" />
+          </div>
+          <div class="owl-store__forth-section">
+            <ForthSection :title="content.forth.title" />
+          </div>
         </div>
       </div>
     </v-dialog>
