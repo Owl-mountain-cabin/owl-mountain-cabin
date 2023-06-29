@@ -354,7 +354,7 @@ export default {
       }
       .#{$this}__tab-contents2-info {
         margin-top: 10px;
-        @include set-text(bold, 12, rgba($color: #c3c3c3, $alpha: 1));
+        @include set-text(normal, 15, rgba($color: #ffff, $alpha: 1));
       }
       .#{$this}__tab-contents2-title {
         position: relative;
