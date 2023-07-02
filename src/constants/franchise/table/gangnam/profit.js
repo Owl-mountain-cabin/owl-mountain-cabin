@@ -24,14 +24,6 @@ const Profit = {
       sortable: false,
       filterable: false,
     },
-    // {
-    //   text: "비고",
-    //   align: "",
-    //   value: "etc",
-    //   class: "w-30",
-    //   sortable: false,
-    //   filterable: false,
-    // },
   ],
   options: {
     hideFooter: true,
@@ -48,57 +40,46 @@ const Profit = {
   data: [
     {
       category: "총매출",
-      price: "186,973,500원",
+      price: "306,455,000원",
       percentage: "100%",
-      // etc: "메뉴매출 120,523,000원\n주류매출 66,450,500원",
     },
     {
       category: "식재료",
-      price: "36,156,900원",
-      percentage: "19%",
-      // etc: "식재료 코스트 30%",
+      price: "55,398,600원",
+      percentage: "18%",
     },
     {
       category: "주류비",
-      price: "18,606,140원",
-      percentage: "10%",
-      // etc: "주류 코스트 28%",
+      price: "35,288,540원",
+      percentage: "12%",
     },
     {
       category: "인건비",
-      price: "35,933,377원",
-      percentage: "19%",
-      // etc: "",
+      price: "61,291,000원",
+      percentage: "20%",
     },
     {
       category: "월세/공과금",
-      price: "18,792,940원",
-      percentage: "10%",
-      // etc: "월세 15,400,000원",
+      price: "39,839,150원",
+      percentage: "13%",
     },
     {
       category: "부가세",
-      price: "6,544,073원",
+      price: "10,725,925원",
       percentage: "3.5%",
-      // etc: "",
     },
     {
       category: "지출총액",
-      price: "116,033,430원",
-      percentage: "62%",
-      // etc: "",
+      price: "202,543,215원",
+      percentage: "66%",
     },
     {
       category: "순이익",
-      price: "70,940,071원",
-      percentage: "38%",
-      // etc: "",
+      price: "103,911,785원",
+      percentage: "34%",
     },
   ],
-  customSlotInfo: [
-    // { name: "status", slotName: "status" },
-    // { name: "management", slotName: "management" },
-  ],
+  customSlotInfo: [],
 };
 
 export default Profit;

@@ -22,15 +22,15 @@
         :subTitle="gangnamProfitSubTitle"
       />
     </div>
-    <!-- <div class="owl-franchise__forth-section">
+    <div class="owl-franchise__forth-section">
       <ForthSection
         width="w-45"
-        :data="yeonsinnaeProfit"
-        :desc="yeonsinnaeProfitDesc"
-        :title="yeonsinnaeProfitTitle"
-        :subTitle="yeonsinnaeProfitSubTitle"
+        :data="gangjuProfit"
+        :desc="gangjuProfitDesc"
+        :title="gangjuProfitTitle"
+        :subTitle="gangjuProfitSubTitle"
       />
-    </div> -->
+    </div>
     <div class="owl-franchise__fifth-section">
       <ForthSection
         width="w-35"
@@ -61,7 +61,7 @@ import ForthSection from "@/features/franchise/ForthSection.vue";
 import SixthSection from "@/features/franchise/SixthSection.vue";
 import SeventhSection from "@/features/franchise/SeventhSection.vue";
 import gangnamProfit from "@/constants/franchise/table/gangnam/profit.js";
-import yeonsinnaeProfit from "@/constants/franchise/table/yeonsinnae/profit.js";
+import gangjuProfit from "@/constants/franchise/table/gangju/profit.js";
 import cost from "@/constants/franchise/table/cost.js";
 import profitContents from "@/constants/franchise/forth.json";
 import costContents from "@/constants/franchise/fifth.json";
@@ -87,12 +87,12 @@ export default {
     return {
       title: contents.bannerTitle,
       desc: contents.phone,
-      yeonsinnaeProfit,
+      gangjuProfit,
       gangnamProfit,
       cost,
-      yeonsinnaeProfitTitle: profitContents.yeonsinnae.title,
-      yeonsinnaeProfitSubTitle: profitContents.yeonsinnae.subTitle,
-      yeonsinnaeProfitDesc: profitContents.yeonsinnae.desc,
+      gangjuProfitTitle: profitContents.gangju.title,
+      gangjuProfitSubTitle: profitContents.gangju.subTitle,
+      gangjuProfitDesc: profitContents.gangju.desc,
       gangnamProfitTitle: profitContents.gangnam.title,
       gangnamProfitSubTitle: profitContents.gangnam.subTitle,
       gangnamProfitDesc: profitContents.gangnam.desc,
