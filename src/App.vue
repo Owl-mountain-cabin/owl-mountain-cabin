@@ -44,12 +44,11 @@ export default {
       );
     },
     getNoticePopup() {
-      const width = 450;
-      const height = 650;
+      const width = 515;
+      const height = 737;
       const top = 0;
       const left = 0;
 
-      console.log(this.isMobile());
       window.open(
         "https://www.owlmtcabin-official.com/image/income.webp",
         "_blank",
