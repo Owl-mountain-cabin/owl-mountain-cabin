@@ -1,5 +1,5 @@
 <template>
-  <div v-if="popupVisible">
+  <div v-show="popupVisible">
     <div class="owl-popup-wrapper">
       <img src="https://www.owlmtcabin-official.com/image/income.webp" />
       <div style="width: 100%; display: flex">
@@ -65,6 +65,11 @@ export default {
       }
     }
   },
+  beforeDestroy() {
+    if (this.windowRef) {
+      this.closePopup();
+    }
+  },
   methods: {
     isMobile() {
       return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -88,20 +93,26 @@ export default {
       this.windowRef.addEventListener("beforeunload", this.closePopup);
     },
     closePopup() {
-      // 로컬 스토리지에서 팝업 상태 확인
-      const popupState = localStorage.getItem("popupState");
-      if (popupState === "closed") {
-        return; // 이미 닫혔으면 아무 작업도 하지 않음
+      if (this.windowRef) {
+        // 로컬 스토리지에서 팝업 상태 확인
+        const popupState = localStorage.getItem("popupState");
+        this.windowRef.close();
+        this.windowRef.removeEventListener("beforeunload", this.closePopup);
+        this.windowRef = null;
+
+        if (popupState === "closed") {
+          return; // 이미 닫혔으면 아무 작업도 하지 않음
+        }
+
+        // 팝업 열기
+        this.popupVisible = false;
+
+        // 로컬 스토리지에 팝업 상태 저장 (하루 동안 유지)
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        localStorage.setItem("popupState", "closed");
+        localStorage.setItem("popupExpiration", tomorrow.toISOString());
       }
-
-      // 팝업 열기
-      this.popupVisible = false;
-
-      // 로컬 스토리지에 팝업 상태 저장 (하루 동안 유지)
-      const tomorrow = new Date();
-      tomorrow.setDate(tomorrow.getDate() + 1);
-      localStorage.setItem("popupState", "closed");
-      localStorage.setItem("popupExpiration", tomorrow.toISOString());
     },
   },
 };
