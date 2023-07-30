@@ -10,7 +10,9 @@
         {"title":"인하대","latitude":37.447422,"longitude":126.648761,"imageSrc":"inhadae-spot.webp"},
         {"title":"서현","latitude":37.385457,"longitude":127.124530,"imageSrc":"sehyeon-spot.webp"},
         {"title":"광주첨단","latitude":35.216060,"longitude":126.848306,"imageSrc":"gangju-chumdan-spot.webp"},
-        {"title":"영등포","latitude":37.517785,"longitude":126.909215,"imageSrc":"yeongdpo-spot.webp"}
+        {"title":"영등포","latitude":37.517785,"longitude":126.909215,"imageSrc":"yeongdpo-spot.webp"},
+        {"title":"방이","latitude":37.514425,"longitude":127.108611,"imageSrc":"bangi-spot.webp"},
+        {"title":"건대입구","latitude":37.541619,"longitude":127.070568,"imageSrc":"gundae-spot.webp"}
     ],
     "서울":[
         {"title":"연신내","latitude":37.617333,"longitude":126.918505,"imageSrc":"yeonsin-spot.webp" },
@@ -18,7 +20,9 @@
         {"title":"신사","latitude":37.519481,"longitude":127.021961,"imageSrc":"sinsa-spot.webp"},
         {"title":"한양대","latitude":37.559030,"longitude":127.041171,"imageSrc":"hanyang-spot.webp"},
         {"title":"강남지오다노","latitude":37.500190,"longitude":127.025348,"imageSrc":"gangnam-j-spot.webp"},
-        {"title":"영등포","latitude":37.517785,"longitude":126.909215,"imageSrc":"yeongdpo-spot.webp"}
+        {"title":"영등포","latitude":37.517785,"longitude":126.909215,"imageSrc":"yeongdpo-spot.webp"},
+        {"title":"방이","latitude":37.514425,"longitude":127.108611,"imageSrc":"bangi-spot.webp"},
+        {"title":"건대입구","latitude":37.541619,"longitude":127.070568,"imageSrc":"gundae-spot.webp"}
     ],
     "경기도":[
         {"title":"의정부", "latitude":37.737471, "longitude":127.048283,"imageSrc":"uijeongbu-spot.webp"},
@@ -83,5 +87,7 @@
         "title":"영등포",
         "latitude":37.517785,
         "longitude":126.909215 ,
-        "imageSrc":"yeongdpo-spot.webp"}]
+        "imageSrc":"yeongdpo-spot.webp"}],
+    "방이":[{"title":"방이","latitude":37.514425,"longitude":127.108611,"imageSrc":"bangi-spot.webp"}],
+    "건대입구":[{"title":"건대입구","latitude":37.541619,"longitude":127.070568,"imageSrc":"gundae-spot.webp"}]
 }

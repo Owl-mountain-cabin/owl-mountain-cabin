@@ -139,6 +139,8 @@ export default {
 .owl-map-wrapper {
   width: 100%;
   height: 800px;
+  @include box-shadow(0, 0, 10px, 0, rgba($color: black, $alpha: 0.4));
+
   $this: "owl-map";
   @include tablet {
     height: 400px;
