@@ -311,7 +311,7 @@ export default {
     position: relative;
     .#{$this}__search-section {
       position: absolute;
-      left: 80px;
+      left: 120px;
       top: 80px;
       width: 400px;
       height: 80%;
