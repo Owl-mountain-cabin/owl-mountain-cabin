@@ -1,6 +1,6 @@
 <template>
   <div class="owl-home-first-wrapper">
-    <div class="owl-home-first__background-wrapper">
+    <div v-if="isMobile || isKakao" class="owl-home-first__background-wrapper">
       <v-img
         class="owl-home-first__background"
         cover
@@ -8,7 +8,7 @@
         :src="require(`@/assets/images/home-first-section.webp`)"
       />
     </div>
-    <div class="owl-home-first__contents-wrapper">
+    <div v-if="isMobile || isKakao" class="owl-home-first__contents-wrapper">
       <div class="owl-home-first__title-wrapper">
         <v-img
           class="owl-home-first__title"
@@ -45,18 +45,58 @@
         />
       </div>
     </div>
+    <video
+      id="main-video"
+      v-if="!isMobile && !isKakao"
+      width="auto"
+      height="100%"
+      :playsinline="playsinline"
+      :autoplay="autoplay"
+      :loop="loop"
+      :muted="muted"
+      src="https://res.cloudinary.com/dexj7izei/video/upload/v1690704873/main_es5md6.mp4"
+    />
   </div>
 </template>
 
 <script>
 import contents from "@/constants/home/first.json";
 export default {
+  name: "FirstSection",
+  props: {
+    isMobile: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data() {
     return {
       desc1: contents.desc1,
       desc2: contents.desc2,
       desc3: contents.desc3,
+      isKakao: false,
+      muted: true,
+      loop: true,
+      autoplay: true,
+      playsinline: true,
     };
+  },
+  mounted() {
+    window.scrollTo(0, 0);
+    this.isKakao = this.isKakaoBrowser();
+    if (this.isKakao) {
+      this.muted = false;
+      this.loop = false;
+      this.autoplay = false;
+      this.playsinline = false;
+      return;
+    }
+  },
+  methods: {
+    isKakaoBrowser() {
+      const isKakao = navigator.userAgent.match("KAKAOTALK");
+      return Boolean(isKakao);
+    },
   },
 };
 </script>
@@ -166,6 +206,17 @@ export default {
           display: block;
         }
       }
+    }
+  }
+  .#{$this}__image-box {
+    width: 30px;
+    height: auto;
+    position: absolute;
+    bottom: 30px;
+    left: 60px;
+    .#{$this}__image {
+      @include cover-background;
+      height: 100%;
     }
   }
 }

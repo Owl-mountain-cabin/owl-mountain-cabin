@@ -1,8 +1,8 @@
 <template>
   <div class="owl-home">
     <div class="owl-home__section owl-home__first-section">
-      <Dimmed height="100vh" />
-      <FirstSection />
+      <Dimmed v-if="isMobile" height="100vh" />
+      <FirstSection :isMobile="isMobile" />
     </div>
     <div class="owl-home__second-section">
       <SecondSection />
@@ -55,12 +55,26 @@ export default {
   },
   mounted() {
     window.scrollTo(0, 0);
+    window.addEventListener("resize", this.checkMobile);
+  },
+  unmounted() {
+    window.removeEventListener("resize", this.checkMobile);
   },
   data() {
     return {
       title: contents.bannerTitle,
       desc: contents.phone,
+      isMobile: false,
     };
+  },
+  methods: {
+    checkMobile() {
+      if (window.outerWidth < 768) {
+        this.isMobile = true;
+      } else {
+        this.isMobile = false;
+      }
+    },
   },
 };
 </script>
