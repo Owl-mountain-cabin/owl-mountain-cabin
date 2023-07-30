@@ -84,6 +84,8 @@
                 '한양대',
                 '강남지오다노',
                 '영등포',
+                '방이',
+                '건대입구',
                 '의정부',
                 '송도',
                 '인하대',
@@ -305,14 +307,23 @@ export default {
   }
 
   .#{$this}__map-section {
-    padding-top: 20px;
+    padding: 80px 120px;
     position: relative;
+
+    @include tablet {
+      padding: 0;
+      padding-top: 20px;
+    }
+    @include mobile {
+      padding: 0;
+      padding-top: 20px;
+    }
     .#{$this}__search-section {
       position: absolute;
-      left: 80px;
+      left: 120px;
       top: 80px;
       width: 400px;
-      height: 80%;
+      height: 83.4%;
       background: rgba($color: #ffffff, $alpha: 1);
       z-index: 100;
       overflow-y: auto;

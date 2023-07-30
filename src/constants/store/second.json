@@ -232,6 +232,48 @@
             "forth": {
             "title": "어두운 골목을 환하게 비춰주어 아늑한 술자리를 느낄 수 있는 \n<strong>부엉이산장 영등포점</strong>에 방문해보세요."
             }
+        },
+        {    
+            "location": "서울",
+            "name": "방이",
+            "address":"서울 송파구 오금로11길 12",
+            "second":{
+                "title": "부엉이산장 <strong>방이점</strong>",
+                "desc": "부엉이산장 영등포점은 잠실역 주변에 이뤄진 잠실 롯데타워, 롯데월드, 석촌호수와 같은 다양한 문화공간들과,\n 오피스의 중심지역으로부터 생겨난 서울내 대형상권 중 하나.\n 거칠지만 따듯한 느낌이 강한 원목을 외부에 둘러놓아 복잡한 도심속에서 \n 아늑하게 즐길 수 있는 매장으로 구성되어있습니다",
+                "address":"Site. 서울 송파구 오금로11길 12",
+                "image": "store-bangi-second1.webp"
+            },
+            "third":{
+                "images": [
+                    "store-bangi-slide1.webp",
+                    "store-bangi-slide2.webp",
+                    "store-bangi-slide3.webp",
+                    "store-bangi-slide4.webp",
+                    "store-bangi-slide5.webp"
+                ]
+            },
+            "forth": {
+            "title": "어두운 골목을 환하게 비춰주어 아늑한 술자리를 느낄 수 있는 \n<strong>부엉이산장 방이점</strong>에 방문해보세요."
+            }
+        },
+        {    
+            "location": "서울",
+            "name": "건대입구",
+            "address":"서울 광진구 아차산로33길 32",
+            "second":{
+                "title": "부엉이산장 <strong>건대입구점</strong>",
+                "desc": "서울내 대형상권에 위치한 부엉이산장 건대점입니다.\n 주변에는 건국대학교, 서울어린이대공원, 세종대학교 등 \n 대학생들과 젋은 세대층이 밀집한 공간입니다. \n매장 외부 인테리어는 굉장히 강한 인상을 줄 수 있도록, 건물 전체의 익스테리어가 구성되어 있고, \n 내부에는 1,2층을 통한 색다른 매력을 가진 인테리어가 구성되어 있습니다.",
+                "address":"Site. 서울 광진구 아차산로33길 32",
+                "image": "store-preparing-second1.webp"
+            },
+            "third":{
+                "images": [
+                    "store-preparing-slide.webp"
+                ]
+            },
+            "forth": {
+            "title": "어두운 골목을 환하게 비춰주어 아늑한 술자리를 느낄 수 있는 \n<strong>부엉이산장 건대입구점</strong>에 방문해보세요."
+            }
         }
          
     ]

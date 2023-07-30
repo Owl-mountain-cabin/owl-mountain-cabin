@@ -78,7 +78,7 @@ export default {
     },
     getNoticePopup() {
       const width = 515;
-      const height = 737;
+      const height = 760;
       const top = 0;
       const left = 0;
 
