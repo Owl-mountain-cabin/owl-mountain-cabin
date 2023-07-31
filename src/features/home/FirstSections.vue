@@ -46,6 +46,7 @@
       </div>
     </div>
     <video
+      class="owl-home-first__video"
       id="main-video"
       v-if="!isMobile && !isKakao"
       width="auto"
@@ -218,6 +219,10 @@ export default {
       @include cover-background;
       height: 100%;
     }
+  }
+  .#{$this}__video {
+    width: 100%;
+    object-fit: cover;
   }
 }
 </style>
