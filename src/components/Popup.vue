@@ -44,11 +44,12 @@ export default {
   name: "Popup",
   data() {
     return {
-      popupVisible: true,
+      popupVisible: false,
     };
   },
   mounted() {
-    if (!this.isMobile()) {
+    console.log(this.checkMobile());
+    if (!this.checkMobile()) {
       // 로컬 스토리지에서 팝업 상태 확인 및 만료 확인
       const popupState = localStorage.getItem("popupState");
       const expiration = localStorage.getItem("popupExpiration");
@@ -61,6 +62,7 @@ export default {
       } else if (popupState === "closed" && expiration && expiration > today) {
         this.popupVisible = false;
       } else {
+        this.popupVisible = true;
         this.getNoticePopup();
       }
     }
@@ -71,17 +73,19 @@ export default {
     }
   },
   methods: {
-    isMobile() {
-      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
-      );
+    checkMobile() {
+      if (window.outerWidth < 768) {
+        return true;
+      } else {
+        return false;
+      }
     },
     getNoticePopup() {
       const width = 515;
       const height = 760;
       const top = 0;
       const left = 0;
-
+      console.log("---");
       this.windowRef = window.open(
         "",
         "",
