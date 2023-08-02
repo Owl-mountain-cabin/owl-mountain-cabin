@@ -57,12 +57,11 @@
       v-if="!isMobile && !isKakao && !isSafari"
       width="auto"
       height="100%"
-      :playsinline="playsinline"
-      :autoplay="autoplay"
-      :loop="loop"
-      :muted="muted"
+      playsinline
+      autoplay
+      loop
+      muted
       preload="auto"
-      :poster="poster"
       src="https://res.cloudinary.com/dexj7izei/video/upload/v1690704873/main_es5md6.mp4"
     />
   </div>
@@ -70,7 +69,6 @@
 
 <script>
 import contents from "@/constants/home/first.json";
-import poster from "@/assets/images/home-first-section.webp";
 export default {
   name: "FirstSection",
   props: {
@@ -86,24 +84,12 @@ export default {
       desc3: contents.desc3,
       isKakao: false,
       isSafari: false,
-      muted: true,
-      loop: true,
-      autoplay: true,
-      playsinline: true,
-      poster,
     };
   },
   mounted() {
     window.scrollTo(0, 0);
     this.isKakao = this.isKakaoBrowser();
     this.isSafari = this.isSafariBrowser();
-    if (this.isKakao) {
-      this.muted = false;
-      this.loop = false;
-      this.autoplay = false;
-      this.playsinline = false;
-      return;
-    }
   },
   methods: {
     isKakaoBrowser() {
