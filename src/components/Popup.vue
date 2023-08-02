@@ -74,7 +74,7 @@ export default {
   },
   methods: {
     checkMobile() {
-      if (window.outerWidth < 768) {
+      if (window.outerWidth < 1024) {
         return true;
       } else {
         return false;
