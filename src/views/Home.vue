@@ -55,6 +55,7 @@ export default {
   },
   mounted() {
     window.scrollTo(0, 0);
+    this.checkMobile();
     window.addEventListener("resize", this.checkMobile);
   },
   unmounted() {
