@@ -1,6 +1,9 @@
 <template>
   <div class="owl-home-first-wrapper">
-    <div v-if="isMobile || isKakao" class="owl-home-first__background-wrapper">
+    <div
+      v-if="isMobile || isKakao || isSafari"
+      class="owl-home-first__background-wrapper"
+    >
       <v-img
         class="owl-home-first__background"
         cover
@@ -8,7 +11,10 @@
         :src="require(`@/assets/images/home-first-section.webp`)"
       />
     </div>
-    <div v-if="isMobile || isKakao" class="owl-home-first__contents-wrapper">
+    <div
+      v-if="isMobile || isKakao || isSafari"
+      class="owl-home-first__contents-wrapper"
+    >
       <div class="owl-home-first__title-wrapper">
         <v-img
           class="owl-home-first__title"
@@ -48,13 +54,15 @@
     <video
       class="owl-home-first__video"
       id="main-video"
-      v-if="!isMobile && !isKakao"
+      v-if="!isMobile && !isKakao && !isSafari"
       width="auto"
       height="100%"
       :playsinline="playsinline"
       :autoplay="autoplay"
       :loop="loop"
       :muted="muted"
+      preload="auto"
+      :poster="poster"
       src="https://res.cloudinary.com/dexj7izei/video/upload/v1690704873/main_es5md6.mp4"
     />
   </div>
@@ -62,6 +70,7 @@
 
 <script>
 import contents from "@/constants/home/first.json";
+import poster from "@/assets/images/home-first-section.webp";
 export default {
   name: "FirstSection",
   props: {
@@ -76,15 +85,18 @@ export default {
       desc2: contents.desc2,
       desc3: contents.desc3,
       isKakao: false,
+      isSafari: false,
       muted: true,
       loop: true,
       autoplay: true,
       playsinline: true,
+      poster,
     };
   },
   mounted() {
     window.scrollTo(0, 0);
     this.isKakao = this.isKakaoBrowser();
+    this.isSafari = this.isSafariBrowser();
     if (this.isKakao) {
       this.muted = false;
       this.loop = false;
@@ -97,6 +109,12 @@ export default {
     isKakaoBrowser() {
       const isKakao = navigator.userAgent.match("KAKAOTALK");
       return Boolean(isKakao);
+    },
+    isSafariBrowser() {
+      if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+        return true;
+      }
+      return false;
     },
   },
 };
