@@ -70,7 +70,7 @@ export default {
   },
   methods: {
     checkMobile() {
-      if (window.outerWidth < 768) {
+      if (window.outerWidth < 767) {
         this.isMobile = true;
       } else {
         this.isMobile = false;
