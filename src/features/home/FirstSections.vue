@@ -58,12 +58,17 @@
       width="auto"
       height="100%"
       playsinline
-      autoplay
-      loop
-      muted
+      autoplay="autoplay"
+      loop="loop"
+      muted="muted"
       preload="auto"
-      src="https://res.cloudinary.com/dexj7izei/video/upload/v1690704873/main_es5md6.mp4"
-    />
+    >
+      <source
+        type="video/mp4"
+        src="https://res.cloudinary.com/dexj7izei/video/upload/v1690704873/main_es5md6.mp4"
+      />
+      비디오를 지원하지 않는 브라우저입니다.
+    </video>
   </div>
 </template>
 
