@@ -1,9 +1,6 @@
 <template>
   <div class="owl-home-first-wrapper">
-    <div
-      v-if="isMobile || isKakao || isSafari"
-      class="owl-home-first__background-wrapper"
-    >
+    <div v-if="isMobile || isKakao" class="owl-home-first__background-wrapper">
       <v-img
         class="owl-home-first__background"
         cover
@@ -11,10 +8,7 @@
         :src="require(`@/assets/images/home-first-section.webp`)"
       />
     </div>
-    <div
-      v-if="isMobile || isKakao || isSafari"
-      class="owl-home-first__contents-wrapper"
-    >
+    <div v-if="isMobile || isKakao" class="owl-home-first__contents-wrapper">
       <div class="owl-home-first__title-wrapper">
         <v-img
           class="owl-home-first__title"
@@ -54,7 +48,7 @@
     <video
       class="owl-home-first__video"
       id="main-video"
-      v-if="!isMobile && !isKakao && !isSafari"
+      v-if="!isMobile && !isKakao"
       width="auto"
       height="100%"
       playsinline
@@ -62,6 +56,7 @@
       loop="loop"
       muted="muted"
       preload="auto"
+      :poster="require(`@/assets/images/home-first-section.webp`)"
     >
       <source
         type="video/mp4"
