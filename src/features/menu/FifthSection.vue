@@ -77,6 +77,12 @@ export default {
         padding: 20px 20px 50px 20px;
       }
     }
+    .v-responsive__sizer {
+      padding-bottom: 66.586% !important;
+    }
+    .v-image__image--cover {
+      background-size: contain;
+    }
   }
 }
 </style>
