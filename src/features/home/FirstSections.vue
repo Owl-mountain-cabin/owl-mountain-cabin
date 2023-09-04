@@ -1,9 +1,6 @@
 <template>
   <div class="owl-home-first-wrapper">
-    <div
-      v-if="isMobile || isKakao || isSafari"
-      class="owl-home-first__background-wrapper"
-    >
+    <div v-if="isKakao || isSafari" class="owl-home-first__background-wrapper">
       <v-img
         class="owl-home-first__background"
         cover
@@ -11,10 +8,7 @@
         :src="require(`@/assets/images/home-first-section.webp`)"
       />
     </div>
-    <div
-      v-if="isMobile || isKakao || isSafari"
-      class="owl-home-first__contents-wrapper"
-    >
+    <div v-if="isKakao || isSafari" class="owl-home-first__contents-wrapper">
       <div class="owl-home-first__title-wrapper">
         <v-img
           class="owl-home-first__title"
@@ -54,7 +48,7 @@
     <video
       class="owl-home-first__video"
       id="main-video"
-      v-if="!isMobile && !isKakao && !isSafari"
+      v-if="!isKakao && !isSafari"
       width="auto"
       height="100%"
       playsinline
@@ -63,10 +57,7 @@
       muted="muted"
       preload="auto"
     >
-      <source
-        type="video/mp4"
-        src="https://drive.google.com/uc?export=view&id=1CSihGArbV2xHzr5_W3YSsK5_zylClYOQ"
-      />
+      <source type="video/mp4" :src="src" />
       비디오를 지원하지 않는 브라우저입니다.
     </video>
   </div>
@@ -89,13 +80,24 @@ export default {
       desc3: contents.desc3,
       isKakao: false,
       isSafari: false,
+      src: "",
     };
+  },
+  watch: {
+    isMobile: function () {
+      console.log(this.isMobile);
+      this.src = this.isMobile
+        ? "https://drive.google.com/uc?export=view&id=18EKvuGIn2sYsCCFRJH69C5bPrAJtMZg4"
+        : "https://drive.google.com/uc?export=view&id=1CSihGArbV2xHzr5_W3YSsK5_zylClYOQ";
+    },
   },
   mounted() {
     window.scrollTo(0, 0);
     this.isKakao = this.isKakaoBrowser();
     this.isSafari = this.isSafariBrowser();
-    console.log(this.isKakao);
+    this.src = this.isMobile
+      ? "https://drive.google.com/uc?export=view&id=18EKvuGIn2sYsCCFRJH69C5bPrAJtMZg4"
+      : "https://drive.google.com/uc?export=view&id=1CSihGArbV2xHzr5_W3YSsK5_zylClYOQ";
   },
   methods: {
     isKakaoBrowser() {
