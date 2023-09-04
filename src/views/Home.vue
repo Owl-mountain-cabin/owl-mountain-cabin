@@ -1,7 +1,7 @@
 <template>
   <div class="owl-home">
     <div class="owl-home__section owl-home__first-section">
-      <Dimmed v-if="isMobile" height="100vh" />
+      <!-- <Dimmed v-if="isMobile" height="100vh" /> -->
       <FirstSection :isMobile="isMobile" />
     </div>
     <div class="owl-home__second-section">
@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import Dimmed from "@/components/Dimmed.vue";
+// import Dimmed from "@/components/Dimmed.vue";
 import FirstSection from "@/features/home/FirstSections.vue";
 import SecondSection from "@/features/home/SecondSection.vue";
 import ThirdSection from "@/features/home/ThirdSection.vue";
@@ -43,7 +43,7 @@ export default {
   name: "Home",
   metaInfo: homeMeta,
   components: {
-    Dimmed,
+    // Dimmed,
     FirstSection,
     SecondSection,
     ThirdSection,
