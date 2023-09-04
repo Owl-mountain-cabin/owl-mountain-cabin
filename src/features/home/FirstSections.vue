@@ -1,6 +1,6 @@
 <template>
   <div class="owl-home-first-wrapper">
-    <div v-if="isKakao || isSafari" class="owl-home-first__background-wrapper">
+    <div v-if="isKakao" class="owl-home-first__background-wrapper">
       <v-img
         class="owl-home-first__background"
         cover
@@ -8,7 +8,7 @@
         :src="require(`@/assets/images/home-first-section.webp`)"
       />
     </div>
-    <div v-if="isKakao || isSafari" class="owl-home-first__contents-wrapper">
+    <div v-if="isKakao" class="owl-home-first__contents-wrapper">
       <div class="owl-home-first__title-wrapper">
         <v-img
           class="owl-home-first__title"
@@ -85,7 +85,6 @@ export default {
   },
   watch: {
     isMobile: function () {
-      console.log(this.isMobile);
       this.src = this.isMobile
         ? "https://drive.google.com/uc?export=view&id=18EKvuGIn2sYsCCFRJH69C5bPrAJtMZg4"
         : "https://drive.google.com/uc?export=view&id=1CSihGArbV2xHzr5_W3YSsK5_zylClYOQ";
