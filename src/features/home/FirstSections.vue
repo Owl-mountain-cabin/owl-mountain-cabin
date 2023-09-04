@@ -1,6 +1,6 @@
 <template>
   <div class="owl-home-first-wrapper">
-    <div v-if="isKakao || isSafari" class="owl-home-first__background-wrapper">
+    <div v-if="isKakao" class="owl-home-first__background-wrapper">
       <v-img
         class="owl-home-first__background"
         cover
@@ -8,7 +8,7 @@
         :src="require(`@/assets/images/home-first-section.webp`)"
       />
     </div>
-    <div v-if="isKakao || isSafari" class="owl-home-first__contents-wrapper">
+    <div v-if="isKakao" class="owl-home-first__contents-wrapper">
       <div class="owl-home-first__title-wrapper">
         <v-img
           class="owl-home-first__title"
@@ -46,19 +46,19 @@
       </div>
     </div>
     <video
+      ref="videoRef"
       class="owl-home-first__video"
       id="main-video"
-      v-if="!isKakao && !isSafari"
+      v-if="!isKakao"
       width="auto"
       height="100%"
-      playsinline
-      autoplay="autoplay"
-      loop="loop"
-      muted="muted"
+      :playsinline="true"
+      :loop="true"
+      :muted="true"
       preload="auto"
     >
-      <source type="video/mp4" :src="src" />
-      비디오를 지원하지 않는 브라우저입니다.
+      <!-- <source type="video/mp4" :src="src" />
+      비디오를 지원하지 않는 브라우저입니다. -->
     </video>
   </div>
 </template>
@@ -85,19 +85,20 @@ export default {
   },
   watch: {
     isMobile: function () {
-      console.log(this.isMobile);
       this.src = this.isMobile
-        ? "https://drive.google.com/uc?export=view&id=18EKvuGIn2sYsCCFRJH69C5bPrAJtMZg4"
-        : "https://drive.google.com/uc?export=view&id=1CSihGArbV2xHzr5_W3YSsK5_zylClYOQ";
+        ? "https://firebasestorage.googleapis.com/v0/b/owl-company-9ccda.appspot.com/o/tiny.mp4?alt=media&token=4a7e2b79-f49e-4849-9b14-292d652ff4ff"
+        : "https://firebasestorage.googleapis.com/v0/b/owl-company-9ccda.appspot.com/o/main.mp4?alt=media&token=1ee8c865-94ec-4b46-9a0d-9e1afed4a0f6";
     },
   },
   mounted() {
     window.scrollTo(0, 0);
     this.isKakao = this.isKakaoBrowser();
     this.isSafari = this.isSafariBrowser();
-    this.src = this.isMobile
-      ? "https://drive.google.com/uc?export=view&id=18EKvuGIn2sYsCCFRJH69C5bPrAJtMZg4"
+
+    this.$refs.videoRef.src = this.isMobile
+      ? "https://firebasestorage.googleapis.com/v0/b/owl-company-9ccda.appspot.com/o/tiny.mp4?alt=media&token=4a7e2b79-f49e-4849-9b14-292d652ff4ff"
       : "https://drive.google.com/uc?export=view&id=1CSihGArbV2xHzr5_W3YSsK5_zylClYOQ";
+    this.$refs.videoRef.play();
   },
   methods: {
     isKakaoBrowser() {

@@ -5,12 +5,14 @@
         <v-img
           cover
           class="owl-company-second__image"
-          :lazy-src="require(`@/assets/images/company-owl.svg`)"
-          :src="require(`@/assets/images/company-owl.svg`)"
+          :lazy-src="require(`@/assets/images/company-logo.webp`)"
+          :src="require(`@/assets/images/company-logo.webp`)"
         />
       </div>
-      <div class="owl-company-second__title-wrapper" v-html="checkN(title)" />
       <div class="owl-company-second__desc-wrapper" v-html="checkN(desc)" />
+      <v-btn class="owl-company-second--company" elevation="0" @click="moveTo">
+        트리니티F&B 바로가기
+      </v-btn>
     </div>
   </div>
 </template>
@@ -31,6 +33,11 @@ export default {
   computed: {
     checkN() {
       return (str) => lineBreak(str);
+    },
+  },
+  methods: {
+    moveTo() {
+      window.open("http://trinityfnb.com/", "_blank");
     },
   },
 };
@@ -82,12 +89,26 @@ export default {
       }
     }
     .#{$this}__desc-wrapper {
-      margin-top: 10px;
+      margin-top: 80px;
+      line-height: 2;
       @include set-text(400, 25, rgba($color: $color-desc, $alpha: 1));
       text-align: center;
       @include tablet {
         font-size: 1rem;
       }
+    }
+  }
+  .#{$this}--company {
+    margin-top: 80px;
+    height: 70px !important;
+    width: 300px;
+    background-color: #22393d !important;
+    color: #fff !important;
+    @include set-text(400, 20, rgba($color: $color-desc, $alpha: 1));
+    @include tablet {
+      @include set-text(400, 15, rgba($color: $color-desc, $alpha: 1));
+      width: 200px;
+      height: 50px !important;
     }
   }
 }
