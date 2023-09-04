@@ -65,7 +65,7 @@
     >
       <source
         type="video/mp4"
-        src="https://res.cloudinary.com/dexj7izei/video/upload/v1690704873/main_es5md6.mp4"
+        src="https://drive.google.com/uc?export=view&id=1CSihGArbV2xHzr5_W3YSsK5_zylClYOQ"
       />
       비디오를 지원하지 않는 브라우저입니다.
     </video>
