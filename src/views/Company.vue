@@ -53,8 +53,8 @@ export default {
     position: relative;
   }
   .#{$this}__second-section {
-    padding-top: 207px;
-    padding-bottom: 207px;
+    padding-top: 157px;
+    padding-bottom: 157px;
   }
 }
 </style>
