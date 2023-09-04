@@ -46,19 +46,19 @@
       </div>
     </div>
     <video
+      ref="videoRef"
       class="owl-home-first__video"
       id="main-video"
       v-if="!isKakao"
       width="auto"
       height="100%"
       :playsinline="true"
-      :autoplay="true"
       :loop="true"
       :muted="true"
       preload="auto"
     >
-      <source type="video/mp4" :src="src" />
-      비디오를 지원하지 않는 브라우저입니다.
+      <!-- <source type="video/mp4" :src="src" />
+      비디오를 지원하지 않는 브라우저입니다. -->
     </video>
   </div>
 </template>
@@ -94,9 +94,11 @@ export default {
     window.scrollTo(0, 0);
     this.isKakao = this.isKakaoBrowser();
     this.isSafari = this.isSafariBrowser();
-    this.src = this.isMobile
+
+    this.$refs.videoRef.src = this.isMobile
       ? "https://firebasestorage.googleapis.com/v0/b/owl-company-9ccda.appspot.com/o/tiny.mp4?alt=media&token=4a7e2b79-f49e-4849-9b14-292d652ff4ff"
       : "https://drive.google.com/uc?export=view&id=1CSihGArbV2xHzr5_W3YSsK5_zylClYOQ";
+    this.$refs.videoRef.play();
   },
   methods: {
     isKakaoBrowser() {
