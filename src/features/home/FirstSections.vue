@@ -51,10 +51,10 @@
       v-if="!isKakao"
       width="auto"
       height="100%"
-      playsinline
-      autoplay="autoplay"
-      loop="loop"
-      muted="muted"
+      :playsinline="true"
+      :autoplay="true"
+      :loop="true"
+      :muted="true"
       preload="auto"
     >
       <source type="video/mp4" :src="src" />
