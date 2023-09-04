@@ -48,7 +48,7 @@
     <video
       class="owl-home-first__video"
       id="main-video"
-      v-if="!isKakao && !isSafari"
+      v-if="!isKakao"
       width="auto"
       height="100%"
       playsinline
