@@ -86,8 +86,8 @@ export default {
   watch: {
     isMobile: function () {
       this.src = this.isMobile
-        ? "https://drive.google.com/uc?export=view&id=18EKvuGIn2sYsCCFRJH69C5bPrAJtMZg4"
-        : "https://drive.google.com/uc?export=view&id=1CSihGArbV2xHzr5_W3YSsK5_zylClYOQ";
+        ? "https://firebasestorage.googleapis.com/v0/b/owl-company-9ccda.appspot.com/o/tiny.mp4?alt=media&token=4a7e2b79-f49e-4849-9b14-292d652ff4ff"
+        : "https://firebasestorage.googleapis.com/v0/b/owl-company-9ccda.appspot.com/o/main.mp4?alt=media&token=1ee8c865-94ec-4b46-9a0d-9e1afed4a0f6";
     },
   },
   mounted() {
@@ -95,7 +95,7 @@ export default {
     this.isKakao = this.isKakaoBrowser();
     this.isSafari = this.isSafariBrowser();
     this.src = this.isMobile
-      ? "https://drive.google.com/uc?export=view&id=18EKvuGIn2sYsCCFRJH69C5bPrAJtMZg4"
+      ? "https://firebasestorage.googleapis.com/v0/b/owl-company-9ccda.appspot.com/o/tiny.mp4?alt=media&token=4a7e2b79-f49e-4849-9b14-292d652ff4ff"
       : "https://drive.google.com/uc?export=view&id=1CSihGArbV2xHzr5_W3YSsK5_zylClYOQ";
   },
   methods: {
