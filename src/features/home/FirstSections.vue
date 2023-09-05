@@ -1,6 +1,9 @@
 <template>
   <div class="owl-home-first-wrapper">
-    <div v-if="isKakao" class="owl-home-first__background-wrapper">
+    <div
+      v-if="isMobile || isKakao || isSafari"
+      class="owl-home-first__background-wrapper"
+    >
       <v-img
         class="owl-home-first__background"
         cover
@@ -8,7 +11,10 @@
         :src="require(`@/assets/images/home-first-section.webp`)"
       />
     </div>
-    <div v-if="isKakao" class="owl-home-first__contents-wrapper">
+    <div
+      v-if="isMobile || isKakao || isSafari"
+      class="owl-home-first__contents-wrapper"
+    >
       <div class="owl-home-first__title-wrapper">
         <v-img
           class="owl-home-first__title"
@@ -49,7 +55,7 @@
       ref="videoRef"
       class="owl-home-first__video"
       id="main-video"
-      v-if="!isKakao"
+      v-if="!isMobile && !isKakao && !isSafari"
       width="auto"
       height="100%"
       :playsinline="true"
@@ -57,8 +63,12 @@
       :muted="true"
       preload="auto"
     >
-      <!-- <source type="video/mp4" :src="src" />
-      비디오를 지원하지 않는 브라우저입니다. -->
+      <!-- <source type="video/mp4" :src="src" /> -->
+      <source
+        type="video/mp4"
+        src="https://drive.google.com/uc?export=view&id=1CSihGArbV2xHzr5_W3YSsK5_zylClYOQ"
+      />
+      비디오를 지원하지 않는 브라우저입니다.
     </video>
   </div>
 </template>
