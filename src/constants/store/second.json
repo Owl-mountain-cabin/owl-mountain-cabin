@@ -164,11 +164,13 @@
                 "title": "부엉이산장 <strong>인하대점</strong>",
                 "desc": "대학교와 주택, 오피스단지에 인접해 있는 오피스텔 상가에 위치해 있는 매장입니다.\n 부엉이산장만의 강점인 아늑한 색감의 전면 익스테리어와 측면의 개방감 있는 유리 폴딩으로,\n 사계절의 매력을 모두 느끼며 맛있는 음식과 술을 함께 즐길 수 있는 매장입니다.\n 실내에는 프라이빗한 공간과 개방감있는 공간을 따로 조성해놓아,\n 다양한 소비층을 이루는 상권의 장점을 잘 살린 매장으로,\n 현재 연일 만석과 웨이팅을 이루는 매장으로 성업중에 있습니다.",
                 "address":"Site. 인천광역시 미추홀구 용정공원로83번길 49 인하대역 헤리움메트로타워 130호,131호",
-                "image": "store-preparing-second1.webp"
+                "image": "store-inha-second1.webp"
             },
             "third":{
                 "images": [
-                    "store-preparing-slide.webp"
+                    "store-inha-slide1.webp",
+                    "store-inha-slide2.webp",
+                    "store-inha-slide3.webp"
                 ]
             },
             "forth": {
