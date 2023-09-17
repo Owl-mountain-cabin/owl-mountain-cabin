@@ -257,7 +257,7 @@
         },
         {    
             "location": "서울",
-            "name": "이수역",
+            "name": "이수",
             "address":"서울특별시 동작구 동작대로27가길 26 1층",
             "second":{
                 "title": "부엉이산장 <strong>이수역점</strong>",
@@ -278,7 +278,7 @@
         },
         {    
             "location": "경기도",
-            "name": "구월직영점",
+            "name": "구월",
             "address":"인천광역시 남동구 인하로507번길 23-1 1층",
             "second":{
                 "title": "부엉이산장 <strong>구월직영점</strong>",
@@ -300,7 +300,7 @@
         },
         {    
             "location": "경기도",
-            "name": "청라점",
+            "name": "청라",
             "address":"인천광역시 서구 청라한내로100번길 24 1층",
             "second":{
                 "title": "부엉이산장 <strong>청라점</strong>",

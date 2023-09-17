@@ -77,20 +77,7 @@
               hide-details
               active
               color="#F0A30F"
-              :items="[
-                '연신내',
-                '강남',
-                '한양대',
-                '강남지오다노',
-                '영등포',
-                '방이',
-                '건대입구',
-                '의정부',
-                '송도',
-                '인하대',
-                '서현',
-                '광주첨단',
-              ]"
+              :items="branches"
               v-model="select"
               v-model:search="search"
             />
