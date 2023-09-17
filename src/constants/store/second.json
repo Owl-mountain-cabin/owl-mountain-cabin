@@ -254,7 +254,68 @@
             "forth": {
             "title": "어두운 골목을 환하게 비춰주어 아늑한 술자리를 느낄 수 있는 \n<strong>부엉이산장 건대입구점</strong>에 방문해보세요."
             }
+        },
+        {    
+            "location": "서울",
+            "name": "이수역",
+            "address":"서울특별시 동작구 동작대로27가길 26 1층",
+            "second":{
+                "title": "부엉이산장 <strong>이수역점</strong>",
+                "desc": "오래되고 로데오 상권은 아니지만 주변에 주거단지가 많아서 다양한 연령대의 두터운 소비층이 즐비하는 상권입니다.\n 20~40대까지 골고루 사랑받는 매장이며, \n 낮은 건물들로 구성된 오래된 상권인만큼 아늑하고 따뜻한 산장 느낌이 빛을 발휘하는 상권으로써, \n 많은 고객들에게 돋보적으로 사랑받고 있는 매장입니다.",
+                "address":"Site. 서울특별시 동작구 동작대로27가길 26 1층",
+                "image": "store-isu-second1.webp"
+            },
+            "third":{
+                "images": [
+                    "store-isu-slide1.webp",
+                    "store-isu-slide2.webp",
+                    "store-isu-slide3.webp"
+                ]
+            },
+            "forth": {
+            "title": "어두운 골목을 환하게 비춰주어 아늑한 술자리를 느낄 수 있는 \n<strong>부엉이산장 이수역점</strong>에 방문해보세요."
+            }
+        },
+        {    
+            "location": "경기도",
+            "name": "구월직영점",
+            "address":"인천광역시 남동구 인하로507번길 23-1 1층",
+            "second":{
+                "title": "부엉이산장 <strong>구월직영점</strong>",
+                "desc": "입구에서 반계단 내려가야 하는 위치라서 외부에서는 아늑하고 안으로 빨려들어가는 아늑한 산장느낌이 물씬나는 매장인데,\n 내부로 들어가면 3.8m의 높은 층고로 인해서 웅장함을 과시하며,\n 80평대의 넓은 공간감을 보여주는 perfomance를 뽐내고 있습니다. \n 건물이 주는 희소성이 돋보이는 매장이며, \n 다양한 엔틱소품들과 진짜 나무를 베어다가 연출한 벽면까지 진짜 산장안에서 먹는 것 같은 특별함을 유감없이 보여주고 있는 매장입니다.",
+                "address":"Site. 인천광역시 남동구 인하로507번길 23-1 1층",
+                "image": "store-guwal-second1.webp"
+            },
+            "third":{
+                "images": [
+                    "store-guwal-slide1.webp",
+                    "store-guwal-slide2.webp",
+                    "store-guwal-slide3.webp",
+                    "store-guwal-slide4.webp"
+                ]
+            },
+            "forth": {
+            "title": "어두운 골목을 환하게 비춰주어 아늑한 술자리를 느낄 수 있는 \n<strong>부엉이산장 구월직영점</strong>에 방문해보세요."
+            }
+        },
+        {    
+            "location": "경기도",
+            "name": "청라점",
+            "address":"인천광역시 서구 청라한내로100번길 24 1층",
+            "second":{
+                "title": "부엉이산장 <strong>청라점</strong>",
+                "desc": "신도시 상권안에 자리잡고 있는 매장으로써,\n 코너건물의 특장점을 잘살려서 평수대비 넓은 외부면적을 고객들에게 선보임으로 인해서 실제 면적보다 넓은 느낌을 자아낼 수 있는 공간입니다.\n 상권의 크기보다 주거하는 아파트 입주자가 더 많기때문에, \n 수요와 공급의 원리에 의해서 경쟁력 있는 상권에 입점해 투자대비 강력한 매출을 보여주는 매장입니다.",
+                "address":"Site. 인천광역시 서구 청라한내로100번길 24 1층",
+                "image": "store-preparing-second1.webp"
+            },
+            "third":{
+                "images": [
+                    "store-preparing-slide.webp"
+                ]
+            },
+            "forth": {
+            "title": "어두운 골목을 환하게 비춰주어 아늑한 술자리를 느낄 수 있는 \n<strong>부엉이산장 청라점</strong>에 방문해보세요."
+            }
         }
-         
     ]
 }
