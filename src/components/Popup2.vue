@@ -100,6 +100,7 @@ export default {
   }
 }
 .v-dialog__content {
+  z-index: 999 !important;
   justify-content: flex-start !important;
 }
 </style>
