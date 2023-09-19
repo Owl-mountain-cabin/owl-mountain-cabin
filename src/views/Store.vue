@@ -90,6 +90,7 @@
       <Map :cordinate="getCordinate" @click="showStoreInfo" />
     </div>
     <v-dialog
+      content-class="pop-up-map"
       v-model="dialog"
       :scrim="false"
       transition="dialog-bottom-transition"
@@ -403,7 +404,7 @@ export default {
   z-index: 800 !important;
 }
 
-.v-dialog {
+.pop-up-map {
   background: rgba($color: #fff, $alpha: 1);
   max-width: 90%;
   overflow-x: hidden;
@@ -414,7 +415,9 @@ export default {
   @include mobile {
     max-width: 100%;
   }
+}
 
+.v-dialog {
   .v-toolbar__content {
     justify-content: flex-end;
     align-items: center;
