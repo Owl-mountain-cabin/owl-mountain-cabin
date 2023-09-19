@@ -1,6 +1,6 @@
 <template>
   <div class="text-center">
-    <v-dialog v-model="popupVisible" hide-overlay>
+    <v-dialog content-class="pop-up-income" v-model="popupVisible" hide-overlay>
       <div class="owl-popup-wrapper">
         <img src="https://www.owlmtcabin-official.com/image/income.webp" />
         <div style="width: 100%; display: flex">
@@ -89,7 +89,12 @@ export default {
   height: 100%;
   width: 100%;
 }
-.v-dialog {
+
+.v-dialog__content {
+  z-index: 999 !important;
+}
+
+.pop-up-income {
   width: 515px !important;
   height: 770px;
   @include desktop-small {
@@ -98,9 +103,5 @@ export default {
   @include mobile {
     width: 300px !important;
   }
-}
-.v-dialog__content {
-  z-index: 999 !important;
-  justify-content: flex-start !important;
 }
 </style>
