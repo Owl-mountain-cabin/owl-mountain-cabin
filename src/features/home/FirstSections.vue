@@ -96,7 +96,6 @@ export default {
     videoElement.playsinline = true;
     videoElement.onloadeddata = () => {
       this.isUploading = false;
-      console.error(videoElement, "---");
       videoWrapper.append(videoElement);
       videoElement.play();
     };
