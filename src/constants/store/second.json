@@ -244,11 +244,14 @@
                 "title": "부엉이산장 <strong>건대입구점</strong>",
                 "desc": "서울내 대형상권에 위치한 부엉이산장 건대점입니다.\n 주변에는 건국대학교, 서울어린이대공원, 세종대학교 등 \n 대학생들과 젋은 세대층이 밀집한 공간입니다. \n매장 외부 인테리어는 굉장히 강한 인상을 줄 수 있도록, 건물 전체의 익스테리어가 구성되어 있고, \n 내부에는 1,2층을 통한 색다른 매력을 가진 인테리어가 구성되어 있습니다.",
                 "address":"Site. 서울 광진구 아차산로33길 32",
-                "image": "store-preparing-second1.webp"
+                "image": "store-gundae-second1.webp"
             },
             "third":{
                 "images": [
-                    "store-preparing-slide.webp"
+                            "store-gundae-slide1.webp",
+                            "store-gundae-slide2.webp",
+                            "store-gundae-slide3.webp",
+                            "store-gundae-slide4.webp"
                 ]
             },
             "forth": {
@@ -306,11 +309,14 @@
                 "title": "부엉이산장 <strong>청라점</strong>",
                 "desc": "신도시 상권안에 자리잡고 있는 매장으로써,\n 코너건물의 특장점을 잘살려서 평수대비 넓은 외부면적을 고객들에게 선보임으로 인해서 실제 면적보다 넓은 느낌을 자아낼 수 있는 공간입니다.\n 상권의 크기보다 주거하는 아파트 입주자가 더 많기때문에, \n 수요와 공급의 원리에 의해서 경쟁력 있는 상권에 입점해 투자대비 강력한 매출을 보여주는 매장입니다.",
                 "address":"Site. 인천광역시 서구 청라한내로100번길 24 1층",
-                "image": "store-preparing-second1.webp"
+                "image": "store-cheng-second1.webp"
             },
             "third":{
                 "images": [
-                    "store-preparing-slide.webp"
+                            "store-cheng-slide1.webp",
+                            "store-cheng-slide2.webp",
+                            "store-cheng-slide3.webp",
+                            "store-cheng-slide4.webp"
                 ]
             },
             "forth": {
