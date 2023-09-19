@@ -51,7 +51,11 @@
         />
       </div>
     </div>
-    <div id="video-main" v-if="!isMobile || !isKakao"></div>
+    <div
+      id="video-main"
+      style="width: 100%; height: 100%"
+      v-if="!isMobile || !isKakao"
+    ></div>
   </div>
 </template>
 
@@ -94,6 +98,9 @@ export default {
     videoElement.loop = true;
     videoElement.muted = true;
     videoElement.playsinline = true;
+    videoElement.style.width = "100%";
+    videoElement.style.height = "100%";
+    videoElement.style.objectFit = "cover";
     videoElement.onloadeddata = () => {
       this.isUploading = false;
       videoWrapper.append(videoElement);
