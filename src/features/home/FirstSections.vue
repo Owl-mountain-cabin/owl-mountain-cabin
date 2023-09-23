@@ -53,6 +53,7 @@
     </div>
     <div
       id="video-main"
+      class="owl-home-first__video"
       style="width: 100%; height: 100%"
       v-if="!isMobile || !isKakao"
     ></div>
@@ -243,6 +244,10 @@ export default {
   .#{$this}__video {
     width: 100%;
     object-fit: cover;
+    display: block;
+    @include mobile-large {
+      display: none;
+    }
   }
 }
 </style>

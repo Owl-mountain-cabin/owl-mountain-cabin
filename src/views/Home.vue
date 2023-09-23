@@ -7,6 +7,9 @@
     <div class="owl-home__second-section">
       <SecondSection />
     </div>
+    <div class="owl-home__second-half-section">
+      <SecondHalfSection />
+    </div>
     <div class="owl-home__third-section">
       <ThirdSection />
     </div>
@@ -30,6 +33,7 @@
 // import Dimmed from "@/components/Dimmed.vue";
 import FirstSection from "@/features/home/FirstSections.vue";
 import SecondSection from "@/features/home/SecondSection.vue";
+import SecondHalfSection from "@/features/home/SecondHalfSection.vue";
 import ThirdSection from "@/features/home/ThirdSection.vue";
 import ForthSection from "@/features/home/ForthSection.vue";
 import FifthSection from "@/features/home/FifthSection.vue";
@@ -46,6 +50,7 @@ export default {
     // Dimmed,
     FirstSection,
     SecondSection,
+    SecondHalfSection,
     ThirdSection,
     ForthSection,
     FifthSection,
@@ -89,6 +94,7 @@ export default {
   .#{$this}__first-section {
     // position: absolute;
   }
+
   .#{$this}__second-section {
     padding: 0 172px;
     padding-bottom: 128px;
@@ -98,6 +104,12 @@ export default {
     }
     @include mobile {
       padding: 0;
+    }
+  }
+  .#{$this}__second-half-section {
+    display: none;
+    @include mobile-large {
+      display: block;
     }
   }
   .#{$this}__third-section {

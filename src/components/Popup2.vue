@@ -2,7 +2,10 @@
   <div class="text-center">
     <v-dialog content-class="pop-up-income" v-model="popupVisible" hide-overlay>
       <div class="owl-popup-wrapper">
-        <img src="https://www.owlmtcabin-official.com/image/income.webp" />
+        <img
+          src="https://www.owlmtcabin-official.com/image/income.webp"
+          alt="income-popup"
+        />
         <div style="width: 100%; display: flex">
           <input
             type="checkbox"
@@ -11,10 +14,13 @@
               text-align: right;
               width: 30px;
               margin: 3px 0;
+              margin-top: 0;
               margin-left: 3px;
             "
           />
-          오늘 하루 이창 열지 않음
+          <span style="margin: 3px 0; margin-top: 0; margin-left: 3px">
+            오늘 하루 이창 열지 않음</span
+          >
         </div>
       </div>
     </v-dialog>
@@ -30,22 +36,22 @@ export default {
     };
   },
   mounted() {
-    if (!this.checkMobile()) {
-      // 로컬 스토리지에서 팝업 상태 확인 및 만료 확인
-      const popupState = localStorage.getItem("popupState");
-      const expiration = localStorage.getItem("popupExpiration");
-      const today = new Date().toISOString().split("T")[0];
-      if (popupState === "closed" && expiration && expiration <= today) {
-        // 팝업이 닫혀야 할 시간이 지났으면 상태 초기화
-        localStorage.removeItem("popupState");
-        localStorage.removeItem("popupExpiration");
-        this.popupVisible = true;
-      } else if (popupState === "closed" && expiration && expiration > today) {
-        this.popupVisible = false;
-      } else {
-        this.popupVisible = true;
-      }
+    // if (!this.checkMobile()) {
+    // 로컬 스토리지에서 팝업 상태 확인 및 만료 확인
+    const popupState = localStorage.getItem("popupState");
+    const expiration = localStorage.getItem("popupExpiration");
+    const today = new Date().toISOString().split("T")[0];
+    if (popupState === "closed" && expiration && expiration <= today) {
+      // 팝업이 닫혀야 할 시간이 지났으면 상태 초기화
+      localStorage.removeItem("popupState");
+      localStorage.removeItem("popupExpiration");
+      this.popupVisible = true;
+    } else if (popupState === "closed" && expiration && expiration > today) {
+      this.popupVisible = false;
+    } else {
+      this.popupVisible = true;
     }
+    // }
   },
   methods: {
     checkMobile() {
@@ -96,12 +102,17 @@ export default {
 
 .pop-up-income {
   width: 515px !important;
-  height: 770px;
+  height: auto;
   @include desktop-small {
     width: 515px !important;
   }
   @include mobile {
-    width: 300px !important;
+    width: 400px !important;
+    font-size: 14px;
+    img {
+      background-size: cover;
+      width: 100%;
+    }
   }
 }
 </style>
