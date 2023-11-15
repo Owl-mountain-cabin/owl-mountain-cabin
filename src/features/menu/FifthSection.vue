@@ -77,6 +77,9 @@ export default {
         padding: 20px 20px 50px 20px;
       }
     }
+    .v-responsive {
+      max-height: 210px !important;
+    }
     .v-responsive__sizer {
       padding-bottom: 66.586% !important;
     }
