@@ -68,6 +68,7 @@ export default {
     .#{$this}__image-box {
       width: 100%;
       height: 259px;
+      @include flex-center;
       @include tablet {
         height: auto;
       }

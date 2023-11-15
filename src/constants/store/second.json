@@ -350,11 +350,14 @@
                 "title": "부엉이산장 <strong>부평점</strong>",
                 "desc": "통건물을 사용하여 외관은 부엉이산장 플래그쉽스토어를 연상케 하는 인테리어가 특징입니다.\n 1층에는 세련되고 산장 관련된 다양한 소품들 때문에 산장다운 느낌이 나고, 2층으로 올라가면 전통주 액자부터 시그니쳐 화로가 놓여 있어 아늑하게 음식과 전통주를 페어링할 수 있는 매장입니다.",
                 "address":"Site. 인천 부평구 경원대로1403번길 39 1층",
-                "image": "store-preparing-second1.webp"
+                "image": "store-bupyeng-second1.webp"
             },
             "third":{
                 "images": [
-                    "store-preparing-slide.webp"
+                    "store-bupyeng-slide1.webp",
+                    "store-bupyeng-slide2.webp",
+                    "store-bupyeng-slide3.webp",
+                    "store-bupyeng-slide3.webp"
                 ]
             },
             "forth": {
@@ -388,11 +391,13 @@
                 "title": "부엉이산장 <strong>세종점</strong>",
                 "desc": "나성 메인상권이 위치해 평수 대비 높은 매출을 유지할 수 있는 매장이며, 내부 높은 층고를 외부에서도 경험할 수 있게끔 3.6m의 높은 대형 폴딩도어를 사용함으로써, 웅장함과 상대적으로 더 넓은 매장의 느낌을 주고 있습니다.\n 30대 비중이 크기 때문에 구매력이 있는 상권이라고 볼 수 있으며, 대전에서도 유입되는 고객층이 있기 때문에 잠재력이 있는 매장이라고 볼 수 있습니다.",
                 "address":"Site. 세종 나성로 125-16 108호,109호,110호",
-                "image": "store-preparing-second1.webp"
+                "image": "store-sejong-second1.webp"
             },
             "third":{
                 "images": [
-                    "store-preparing-slide.webp"
+                    "store-sejong-slide1.webp",
+                    "store-sejong-slide2.webp",
+                    "store-sejong-slide3.webp"
                 ]
             },
             "forth": {
