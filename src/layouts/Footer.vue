@@ -54,7 +54,7 @@
         </a>
       </div>
       <div class="owl-footer__contents-wrapper">
-        <div class="owl-footer__desc-wrapper">Number</div>
+        <div class="owl-footer__desc-wrapper">사업자등록번호</div>
         <div class="owl-footer__desc-wrapper desc">{{ registerNumber }}</div>
       </div>
     </div>
