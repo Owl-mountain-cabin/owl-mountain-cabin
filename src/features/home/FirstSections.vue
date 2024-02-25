@@ -93,9 +93,10 @@ export default {
     const videoWrapper = document.querySelector("#video-main");
     const videoElement = document.createElement("video");
     videoElement.src =
-      "https://drive.google.com/uc?export=view&id=1ByzWXDjEkzzAA0Upm59XlsraXee5T9Q9";
+      "https://drive.lienuc.com/uc?id=1ByzWXDjEkzzAA0Upm59XlsraXee5T9Q9";
     videoElement.preload = "auto";
     videoElement.autoplay = true;
+    videoElement.crossOrigin = "anonymous";
     videoElement.loop = true;
     videoElement.muted = true;
     videoElement.playsinline = true;
