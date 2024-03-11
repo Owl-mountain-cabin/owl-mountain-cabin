@@ -72,7 +72,7 @@ const Cost = {
     },
     {
       category: "사인 및 소품",
-      history: "갈바간판, 원목간판, 고가구 소품",
+      history: "간판",
       price: "400",
       etc: "",
     },
