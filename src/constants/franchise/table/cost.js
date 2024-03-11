@@ -71,8 +71,8 @@ const Cost = {
       etc: "선택적 중고가능",
     },
     {
-      category: "사인 및 소품",
-      history: "간판",
+      category: "간판",
+      history: "갈바간판, 원목간판",
       price: "400",
       etc: "",
     },
